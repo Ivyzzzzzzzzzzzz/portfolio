@@ -1,0 +1,90 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Arvo-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Arvo-Regular";
+  src: local("Arvo-Regular");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Bold", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Kumbh Sans-Bold";
+  src: local("Kumbh Sans-Bold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Kumbh Sans-Regular";
+  src: local("Kumbh Sans-Regular");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Arvo", "weight": "var(--subtitle-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Arvo";
+  src: local("Arvo");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans", "weight": "var(--caption-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: local("Kumbh Sans");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Roboto Mono-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Roboto Mono-Bold";
+  src: local("Roboto Mono-Bold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Arvo-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Arvo-Bold";
+  src: local("Arvo-Bold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Chalkduster-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Chalkduster-Regular";
+  src: local("Chalkduster-Regular");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Sen", "weight": "var(--description-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Sen";
+  src: local("Sen");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Sen-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Sen-Regular";
+  src: local("Sen-Regular");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Sen-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Sen-Bold";
+  src: local("Sen-Bold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Roboto", "weight": "var(--m3-label-large-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto");
+}
