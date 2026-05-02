@@ -20,31 +20,54 @@ a {
 
 @font-face {
   font-family: "Arvo-Regular";
-  src: local("Arvo-Regular");
+  src: local("Arvo-Regular"), url("./Arvo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 /* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Bold", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
   font-family: "Kumbh Sans-Bold";
-  src: local("Kumbh Sans-Bold");
+  src: local("Kumbh Sans-Bold"), url("./KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 /* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
   font-family: "Kumbh Sans-Regular";
-  src: local("Kumbh Sans-Regular");
+  src: local("Kumbh Sans-Regular"), url("./KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 /* @FONTWARNING[{"type": "restricted", "family": "Arvo", "weight": "var(--subtitle-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
   font-family: "Arvo";
-  src: local("Arvo");
+  src: local("Arvo"), url("./Arvo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arvo";
+  src: local("Arvo-Bold"), url("./Arvo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 /* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans", "weight": "var(--caption-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
   font-family: "Kumbh Sans";
-  src: local("Kumbh Sans");
+  src: local("Kumbh Sans"), url("./KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 /* @FONTWARNING[{"type": "restricted", "family": "Roboto Mono-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
 
@@ -52,23 +75,22 @@ a {
   font-family: "Roboto Mono-Bold";
   src: local("Roboto Mono-Bold");
 }
+/* @FONTWARNING[{"type": "restricted", "family": "Montserrat-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular");
+  font-weight: 400;
+  font-style: normal;
+}
 /* @FONTWARNING[{"type": "restricted", "family": "Arvo-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
   font-family: "Arvo-Bold";
-  src: local("Arvo-Bold");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Chalkduster-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Chalkduster-Regular";
-  src: local("Chalkduster-Regular");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Sen", "weight": "var(--description-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Sen";
-  src: local("Sen");
+  src: local("Arvo-Bold"), url("./Arvo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 /* @FONTWARNING[{"type": "restricted", "family": "Sen-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
 
@@ -81,10 +103,4 @@ a {
 @font-face {
   font-family: "Sen-Bold";
   src: local("Sen-Bold");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Roboto", "weight": "var(--m3-label-large-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto");
 }

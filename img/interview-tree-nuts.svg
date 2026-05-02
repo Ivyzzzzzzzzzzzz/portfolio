@@ -1,0 +1,10 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_interview_tree_nuts)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.1036 34C25.9061 31.4902 29.8073 27.301 29.8073 21.4325V17.0588H6.39989V21.4325C6.39989 27.301 10.3011 31.4902 18.1036 34ZM9.32582 7.64706L14.7382 6.15477C15.5757 5.92389 16.153 5.18528 16.153 4.34484V2H20.0542L19.1911 3.66587C18.7093 4.59571 19.0999 5.72639 20.0634 6.19131C20.1907 6.25273 20.3246 6.30052 20.4627 6.33383L25.9061 7.64706C30.0847 8.65515 32.6749 12.648 31.8458 16.6807L31.758 17.0588H4.44927L4.22074 16.1767C3.26051 12.4702 5.51903 8.69665 9.32582 7.64706Z" stroke="#FB6D3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_interview_tree_nuts">
+<rect width="36" height="36" rx="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>
