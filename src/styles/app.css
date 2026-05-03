@@ -1,0 +1,256 @@
+body {
+  background-color: #fffbf8;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.portfolio-shell {
+  width: min(100%, 1512px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 64px 96px 96px;
+  color: #081f3b;
+  font-family: "Kumbh Sans", Helvetica, sans-serif;
+}
+
+.portfolio-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  border: 1px solid #0b0b4180;
+  background-color: #fffbf8;
+}
+
+.portfolio-wordmark,
+.portfolio-nav-link,
+.portfolio-back-link,
+.case-study-back-link {
+  color: #0b0b41;
+  font-family: "Arvo-Regular", Helvetica, serif;
+  font-size: 20px;
+}
+
+.portfolio-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 96px;
+  align-items: center;
+  min-height: 620px;
+}
+
+.portfolio-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 780px;
+}
+
+.portfolio-kicker {
+  margin: 0;
+  color: #fb6d3a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.portfolio-hero h1,
+.portfolio-message h1 {
+  margin: 0;
+  color: #0b0b41;
+  font-family: "Arvo-Bold", Helvetica, serif;
+  font-size: 64px;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.portfolio-hero-media {
+  display: grid;
+  grid-template-columns: 240px 240px;
+  gap: 24px;
+  align-items: end;
+}
+
+.portfolio-hero-media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.portfolio-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.portfolio-section-heading h2 {
+  margin: 0;
+  color: #0b0b41;
+  font-family: "Arvo-Regular", Helvetica, serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.portfolio-section-heading p,
+.portfolio-message p {
+  max-width: 520px;
+  margin: 0;
+  color: #636e7a;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.portfolio-project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.portfolio-card {
+  border: 1px solid var(--variable-collection-color);
+  background-color: #fffbf8;
+}
+
+.portfolio-card a {
+  display: grid;
+  grid-template-rows: 260px auto;
+  min-height: 100%;
+  color: inherit;
+}
+
+.portfolio-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--variable-collection-color);
+}
+
+.portfolio-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.portfolio-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.portfolio-card-meta h3 {
+  margin: 0;
+  color: #0b0b41;
+  font-family: "Arvo-Regular", Helvetica, serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.portfolio-card-meta span,
+.portfolio-card-subtitle,
+.portfolio-card-summary {
+  margin: 0;
+  color: #636e7a;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.portfolio-card-subtitle {
+  color: #0b0b41;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.portfolio-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.portfolio-pill {
+  padding: 3px 0;
+  border-bottom: 1px solid #636e7a;
+  color: #636e7a;
+  font-family: "Arvo-Regular", Helvetica, serif;
+  font-size: 14px;
+}
+
+.portfolio-card-draft .portfolio-card-media {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+.portfolio-message {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.case-study-page {
+  background-color: #fffbf8;
+}
+
+.case-study-toolbar {
+  width: min(100%, 1512px);
+  margin: 0 auto;
+  padding: 16px 96px 0;
+}
+
+.case-study-back-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #0b0b4180;
+  background-color: #fffbf8;
+}
+
+.case-study-content {
+  overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+  .portfolio-shell {
+    padding: 24px;
+  }
+
+  .portfolio-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: auto;
+    padding: 72px 0;
+  }
+
+  .portfolio-hero h1,
+  .portfolio-message h1 {
+    font-size: 42px;
+  }
+
+  .portfolio-hero-media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .portfolio-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-toolbar {
+    padding: 16px 24px 0;
+  }
+}

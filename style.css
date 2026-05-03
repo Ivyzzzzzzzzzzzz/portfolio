@@ -3871,3 +3871,181 @@
   width: 70px;
   aspect-ratio: 2.33;
 }
+
+/* Case study typography cleanup: keep the exported layout, normalize the type scale. */
+.macbook-pro {
+  --case-font-heading: "Arvo", Helvetica, serif;
+  --case-font-body: "Kumbh Sans", Helvetica, sans-serif;
+  --case-text-color: #0b0b41;
+  --case-muted-color: #636e7a;
+
+  font-family: var(--case-font-body);
+  color: var(--case-text-color);
+}
+
+.macbook-pro :is(
+  .div-2,
+  .p,
+  .text-wrapper-8,
+  .text-wrapper-9,
+  .text-wrapper-10,
+  .text-wrapper-11,
+  .text-wrapper-12,
+  .text-wrapper-15,
+  .text-wrapper-17,
+  .text-wrapper-30,
+  .text-wrapper-31,
+  .text-wrapper-33,
+  .text-wrapper-34,
+  .text-wrapper-35,
+  .text-wrapper-39,
+  .text-wrapper-40,
+  .text-wrapper-55,
+  .text-wrapper-56,
+  .comprehensive-food,
+  .context-aware-body,
+  .context-aware-emphasis,
+  .context-aware-muted,
+  .dish-type-caption,
+  .dish-type-caption-secondary,
+  .interview-name,
+  .label-text,
+  .multiple-people-dine,
+  .reflects-real,
+  .selection-detail-caption,
+  .single-person-pick,
+  .view-group-description
+) {
+  font-family: var(--case-font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.macbook-pro :is(
+  .text-wrapper-6,
+  .text-wrapper-22,
+  .text-wrapper-23
+) {
+  font-family: var(--case-font-heading);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+
+.macbook-pro .context-aware-heading {
+  font-family: var(--case-font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.4px;
+  letter-spacing: 0;
+}
+
+.macbook-pro :is(
+  .context-aware-callout-text,
+  .context-aware-index,
+  .context-aware-title,
+  .dish-type-title,
+  .div-3,
+  .element-americans,
+  .element-of-severe,
+  .enable-fast,
+  .interview-apple,
+  .interview-quote,
+  .selection-detail-title,
+  .span,
+  .text-wrapper-2,
+  .text-wrapper-7,
+  .text-wrapper-13,
+  .text-wrapper-14,
+  .text-wrapper-16,
+  .text-wrapper-18,
+  .text-wrapper-19,
+  .text-wrapper-24,
+  .text-wrapper-25,
+  .text-wrapper-36,
+  .text-wrapper-37,
+  .text-wrapper-38,
+  .text-wrapper-41,
+  .text-wrapper-46
+) {
+  font-family: var(--case-font-body);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.macbook-pro :is(.div-3, .what-i-feel) {
+  column-gap: 4px;
+}
+
+.macbook-pro .text-wrapper {
+  font-family: var(--case-font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.4px;
+  letter-spacing: 0;
+}
+
+.macbook-pro .text-wrapper-3 {
+  font-family: var(--case-font-heading);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.macbook-pro .text-wrapper-4 {
+  font-family: var(--case-font-heading);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.macbook-pro .text-wrapper-5 {
+  font-family: var(--case-font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.macbook-pro .text-wrapper-2 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.macbook-pro :is(.text-wrapper-26, .text-wrapper-27, .text-wrapper-29) {
+  font-family: var(--case-font-heading);
+  font-size: 32px;
+  line-height: 41.8px;
+  letter-spacing: 0;
+}
+
+.macbook-pro .text-wrapper-26 {
+  font-weight: 400;
+}
+
+.macbook-pro :is(.text-wrapper-27, .text-wrapper-29) {
+  font-weight: 700;
+}
+
+.macbook-pro :is(.text-wrapper-53, .text-wrapper-54) {
+  font-family: var(--case-font-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.macbook-pro .selection-detail-icon-label {
+  font-family: var(--case-font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+}
