@@ -23,8 +23,8 @@ export default function LandingPage({ projects }) {
           <h1 id="portfolio-title">Designing clearer decisions for complex services.</h1>
         </div>
         <div className="portfolio-hero-media" aria-hidden="true">
-          <img src="/img/iPhone 13 mini - 28 1.svg" alt="" />
-          <img src="/img/iPhone 13 mini - 8.svg" alt="" />
+          <img src="/img/project-1/iPhone 13 mini - 28 1.svg" alt="" />
+          <img src="/img/project-1/iPhone 13 mini - 8.svg" alt="" />
         </div>
       </section>
 

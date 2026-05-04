@@ -1,16 +1,7 @@
-import justEatHtml from "../content/justeat.html?raw";
-import justEatCss from "../content/justeat.css?raw";
+import justEatHtml from "../content/project-1/index.html?raw";
+import justEatCss from "../content/project-1/style.css?raw";
+import HtmlCaseStudy from "./HtmlCaseStudy.jsx";
 
 export default function JustEatCaseStudy() {
-  return (
-    <main className="case-study-page">
-      <nav className="case-study-toolbar" aria-label="Case study navigation">
-        <a className="case-study-back-link" href="#/">
-          Back to projects
-        </a>
-      </nav>
-      <style>{justEatCss}</style>
-      <div className="case-study-content" dangerouslySetInnerHTML={{ __html: justEatHtml }} />
-    </main>
-  );
+  return <HtmlCaseStudy html={justEatHtml} css={justEatCss} projectId="project-1" />;
 }

@@ -8,7 +8,7 @@ export const projects = [
       "A dine-in ordering app that surfaces personal and shared allergen warnings at the exact moment people choose food.",
     disciplines: ["UX Research", "UX/UI Design", "Prototyping"],
     status: "case-study",
-    cover: "/img/iPhone 13 mini - 28 1.svg",
+    cover: "/img/project-1/iPhone 13 mini - 28 1.svg",
     accent: "#fb6d3a",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
       "Use this card for another project overview, thumbnail, and route when the work is ready.",
     disciplines: ["Product Design", "Systems"],
     status: "draft",
-    cover: "/img/frame-1437254059-1.svg",
+    cover: "/img/project-3/cover-placeholder.svg",
     accent: "#636e7a",
   },
   {
@@ -44,7 +44,7 @@ export const projects = [
       "A fourth project can be added here without touching the landing page layout code.",
     disciplines: ["Strategy", "Prototype"],
     status: "draft",
-    cover: "/img/1-homepage-dark-version-3.svg",
+    cover: "/img/project-4/cover-placeholder.svg",
     accent: "#ff6538",
   },
 ];

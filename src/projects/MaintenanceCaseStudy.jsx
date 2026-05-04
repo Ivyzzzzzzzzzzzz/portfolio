@@ -1,16 +1,7 @@
-import maintenanceHtml from "../content/maintenance.html?raw";
-import maintenanceCss from "../content/maintenance.css?raw";
+import maintenanceHtml from "../content/project-2/index.html?raw";
+import maintenanceCss from "../content/project-2/style.css?raw";
+import HtmlCaseStudy from "./HtmlCaseStudy.jsx";
 
 export default function MaintenanceCaseStudy() {
-  return (
-    <main className="case-study-page">
-      <nav className="case-study-toolbar" aria-label="Case study navigation">
-        <a className="case-study-back-link" href="#/">
-          Back to projects
-        </a>
-      </nav>
-      <style>{maintenanceCss}</style>
-      <div className="case-study-content" dangerouslySetInnerHTML={{ __html: maintenanceHtml }} />
-    </main>
-  );
+  return <HtmlCaseStudy html={maintenanceHtml} css={maintenanceCss} projectId="project-2" />;
 }
