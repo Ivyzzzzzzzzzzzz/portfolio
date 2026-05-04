@@ -25,7 +25,7 @@ a {
   font-style: normal;
   font-display: swap;
 }
-/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Bold", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
   font-family: "Kumbh Sans-Bold";
@@ -34,12 +34,12 @@ a {
   font-style: normal;
   font-display: swap;
 }
-/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans", "weight": "var(--caption-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
-  font-family: "Kumbh Sans-Regular";
-  src: local("Kumbh Sans-Regular"), url("./KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Kumbh Sans";
+  src: local("Kumbh Sans"), url("./KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -60,30 +60,16 @@ a {
   font-style: normal;
   font-display: swap;
 }
-/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans", "weight": "var(--caption-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+/* @FONTWARNING[{"type": "restricted", "family": "Kumbh Sans-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
 
 @font-face {
-  font-family: "Kumbh Sans";
-  src: local("Kumbh Sans"), url("./KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
-  font-weight: 100 900;
+  font-family: "Kumbh Sans-Regular";
+  src: local("Kumbh Sans-Regular"), url("./KumbhSans-VariableFont_YOPQ,wght.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-/* @FONTWARNING[{"type": "restricted", "family": "Roboto Mono-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Roboto Mono-Bold";
-  src: local("Roboto Mono-Bold");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Montserrat-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: local("Montserrat-Regular");
-  font-weight: 400;
-  font-style: normal;
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Arvo-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
+/* Portfolio heading alias used outside the exported case-study CSS. */
 
 @font-face {
   font-family: "Arvo-Bold";
@@ -91,16 +77,4 @@ a {
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Sen-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Sen-Regular";
-  src: local("Sen-Regular");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Sen-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Sen-Bold";
-  src: local("Sen-Bold");
 }

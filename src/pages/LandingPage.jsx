@@ -31,7 +31,7 @@ export default function LandingPage({ projects }) {
       <section className="portfolio-projects" id="projects" aria-labelledby="projects-title">
         <div className="portfolio-section-heading">
           <h2 id="projects-title">Projects</h2>
-          <p>Four case-study slots are ready. JustEat is live; the remaining three can be filled from project data.</p>
+          <p>Case studies in UX research, product design, and implementation across service workflows.</p>
         </div>
         <div className="portfolio-project-grid">
           {projects.map((project) => (

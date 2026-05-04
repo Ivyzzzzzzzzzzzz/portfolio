@@ -1,4 +1,5 @@
 import JustEatCaseStudy from "../projects/JustEatCaseStudy.jsx";
+import MaintenanceCaseStudy from "../projects/MaintenanceCaseStudy.jsx";
 
 export default function ProjectPage({ project }) {
   if (!project) {
@@ -15,6 +16,10 @@ export default function ProjectPage({ project }) {
 
   if (project.slug === "justeat") {
     return <JustEatCaseStudy />;
+  }
+
+  if (project.slug === "apt-maintenance-redesign") {
+    return <MaintenanceCaseStudy />;
   }
 
   return (
