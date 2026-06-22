@@ -1,5 +1,7 @@
 import JustEatCaseStudy from "../projects/JustEatCaseStudy.jsx";
 import MaintenanceCaseStudy from "../projects/MaintenanceCaseStudy.jsx";
+import Project3CaseStudy from "../projects/Project3CaseStudy.jsx";
+import Project4CaseStudy from "../projects/Project4CaseStudy.jsx";
 
 export default function ProjectPage({ project }) {
   if (!project) {
@@ -20,6 +22,14 @@ export default function ProjectPage({ project }) {
 
   if (project.slug === "apt-maintenance-redesign") {
     return <MaintenanceCaseStudy />;
+  }
+
+  if (project.slug === "project-three") {
+    return <Project3CaseStudy />;
+  }
+
+  if (project.slug === "living-calendar") {
+    return <Project4CaseStudy />;
   }
 
   return (

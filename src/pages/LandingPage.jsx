@@ -19,8 +19,9 @@ export default function LandingPage({ projects }) {
 
       <section className="portfolio-hero" aria-labelledby="portfolio-title">
         <div className="portfolio-hero-copy">
-          <p className="portfolio-kicker">UX Research | UX/UI Design | Prototyping</p>
-          <h1 id="portfolio-title">Designing clearer decisions for complex services.</h1>
+          <p className="portfolio-kicker">UX Research / UI Design / Prototyping</p>
+          <h1 id="portfolio-title">Clearer services, calmer decisions.</h1>
+          <p className="portfolio-hero-note">Selected product and service design work by Ivy Li.</p>
         </div>
         <div className="portfolio-hero-media" aria-hidden="true">
           <img src="/img/project-1/iPhone 13 mini - 28 1.svg" alt="" />
@@ -30,12 +31,12 @@ export default function LandingPage({ projects }) {
 
       <section className="portfolio-projects" id="projects" aria-labelledby="projects-title">
         <div className="portfolio-section-heading">
-          <h2 id="projects-title">Projects</h2>
-          <p>Case studies in UX research, product design, and implementation across service workflows.</p>
+          <h2 id="projects-title">Selected Projects</h2>
+          <p>01-04</p>
         </div>
         <div className="portfolio-project-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
       </section>

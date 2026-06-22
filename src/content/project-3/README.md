@@ -1,10 +1,12 @@
 # Project 3 Content
 
-Use this folder for Project 3 case-study files when the project is ready.
+Project 3 is `Quiq`.
 
-Suggested files:
+Current files:
 
 - `index.html`
+- `globals.css`
+- `styleguide.css`
 - `style.css`
 
 Assets should go in:

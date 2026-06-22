@@ -1,10 +1,11 @@
 # Project 4 Content
 
-Use this folder for Project 4 case-study files when the project is ready.
+Project 4 is `A Living Calendar`.
 
-Suggested files:
+Current files:
 
 - `index.html`
+- `styleguide.css`
 - `style.css`
 
 Assets should go in:
