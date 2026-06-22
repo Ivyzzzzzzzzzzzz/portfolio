@@ -8,7 +8,7 @@ export const projects = [
       "A dine-in ordering app that surfaces personal and shared allergen warnings at the exact moment people choose food.",
     disciplines: ["UX Research", "UX/UI Design", "Prototyping"],
     status: "case-study",
-    cover: "/img/project-1/iPhone 13 mini - 28 1.svg",
+    cover: "/img/project-1/cover.svg",
     accent: "#fb6d3a",
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
       "A redesign of the Expo at Forest Park maintenance flow that helps residents submit, schedule, and track urgent requests with more confidence.",
     disciplines: ["UX Research", "UX/UI Design", "Coding"],
     status: "case-study",
-    cover: "/img/project-2/frame-1437254254-1.svg",
+    cover: "/img/project-2/cover.svg",
     accent: "#1994ad",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
       "A playful, approachable over-the-counter medication brand that uses warm packaging, conversational copy, and a modular visual system to ease everyday illness.",
     disciplines: ["UX Research", "UX/UI Design", "Coding"],
     status: "case-study",
-    cover: "/img/project-3/frame-1437254370.svg",
+    cover: "/img/project-3/cover.svg",
     accent: "#f15d3b",
   },
   {
@@ -44,7 +44,7 @@ export const projects = [
       "An interactive website that reconnects seasonal time with ecology, culture, and personal reflection through the Chinese 24 Solar Terms.",
     disciplines: ["Interactive Website", "UX/UI Design", "Vibe Coding"],
     status: "case-study",
-    cover: "/img/project-4/frame-1437254446.svg",
+    cover: "/img/project-4/cover.svg",
     accent: "#6b8f45",
   },
 ];
