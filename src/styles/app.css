@@ -168,16 +168,15 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  padding: 36px;
   overflow: hidden;
   border-bottom: 1px solid #636e7a59;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .portfolio-card-media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .portfolio-card-body {
@@ -339,10 +338,6 @@ body {
 
   .portfolio-card a {
     grid-template-rows: 320px auto;
-  }
-
-  .portfolio-card-media {
-    padding: 24px;
   }
 
   .portfolio-card-title-row {
