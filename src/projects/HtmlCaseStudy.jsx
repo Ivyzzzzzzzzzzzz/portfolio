@@ -1,4 +1,9 @@
+import { rewriteAssetPaths } from "../lib/assets.js";
+
 export default function HtmlCaseStudy({ html, css, projectId }) {
+  const resolvedHtml = rewriteAssetPaths(html);
+  const resolvedCss = rewriteAssetPaths(css);
+
   return (
     <main className={`case-study-page case-study-page--${projectId}`}>
       <nav className="case-study-toolbar" aria-label="Case study navigation">
@@ -6,11 +11,11 @@ export default function HtmlCaseStudy({ html, css, projectId }) {
           Back to projects
         </a>
       </nav>
-      <style data-case-study-style={projectId}>{css}</style>
+      <style data-case-study-style={projectId}>{resolvedCss}</style>
       <div
         className="case-study-content"
         data-case-study={projectId}
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: resolvedHtml }}
       />
     </main>
   );

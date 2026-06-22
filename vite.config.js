@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import { cpSync, existsSync, mkdirSync, rmSync } from "node:fs";
 import { resolve } from "node:path";
 
+const base = process.env.VITE_BASE_PATH || "/";
+
 function copyPortfolioAssets() {
   const folders = ["img", "videos"];
 
@@ -27,5 +29,6 @@ function copyPortfolioAssets() {
 }
 
 export default defineConfig({
+  base,
   plugins: [react(), copyPortfolioAssets()],
 });

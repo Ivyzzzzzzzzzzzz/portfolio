@@ -1,4 +1,5 @@
 import ProjectCard from "../projects/ProjectCard.jsx";
+import { assetPath } from "../lib/assets.js";
 
 export default function LandingPage({ projects }) {
   const scrollToProjects = (event) => {
@@ -24,8 +25,8 @@ export default function LandingPage({ projects }) {
           <p className="portfolio-hero-note">Selected product and service design work by Ivy Li.</p>
         </div>
         <div className="portfolio-hero-media" aria-hidden="true">
-          <img src="/img/project-1/iPhone 13 mini - 28 1.svg" alt="" />
-          <img src="/img/project-1/iPhone 13 mini - 8.svg" alt="" />
+          <img src={assetPath("/img/project-1/iPhone 13 mini - 28 1.svg")} alt="" />
+          <img src={assetPath("/img/project-1/iPhone 13 mini - 8.svg")} alt="" />
         </div>
       </section>
 

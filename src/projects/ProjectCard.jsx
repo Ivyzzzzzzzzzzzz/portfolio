@@ -1,3 +1,5 @@
+import { assetPath } from "../lib/assets.js";
+
 export default function ProjectCard({ project, index }) {
   const isDraft = project.status === "draft";
   const projectNumber = String(index + 1).padStart(2, "0");
@@ -9,7 +11,7 @@ export default function ProjectCard({ project, index }) {
     >
       <a href={`#/projects/${project.slug}`} aria-label={`Open ${project.title}`}>
         <div className="portfolio-card-media">
-          <img src={project.cover} alt="" />
+          <img src={assetPath(project.cover)} alt="" />
         </div>
         <div className="portfolio-card-body">
           <div className="portfolio-card-eyebrow">
