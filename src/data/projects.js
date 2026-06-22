@@ -1,5 +1,29 @@
 export const projects = [
   {
+    slug: "living-calendar",
+    title: "A Living Calendar",
+    period: "2025.12-2026.4",
+    subtitle: "Reimagining the 24 Solar Terms",
+    summary:
+      "An interactive website that reconnects seasonal time with ecology, culture, and personal reflection through the Chinese 24 Solar Terms.",
+    disciplines: ["Interactive Website", "UX/UI Design", "Creative Coding"],
+    status: "case-study",
+    cover: "/img/project-4/cover.svg",
+    accent: "#6b8f45",
+  },
+  {
+    slug: "project-three",
+    title: "Quiq",
+    period: "2025.4",
+    subtitle: "Pharmacy brand packaging system",
+    summary:
+      "A playful, approachable over-the-counter medication brand that uses warm packaging, conversational copy, and a modular visual system to ease everyday illness.",
+    disciplines: ["UX Research", "UX/UI Design", "Coding"],
+    status: "case-study",
+    cover: "/img/project-3/cover.svg",
+    accent: "#f15d3b",
+  },
+  {
     slug: "justeat",
     title: "JustEat",
     period: "2025.08-12",
@@ -22,29 +46,5 @@ export const projects = [
     status: "case-study",
     cover: "/img/project-2/cover.svg",
     accent: "#1994ad",
-  },
-  {
-    slug: "project-three",
-    title: "Quiq",
-    period: "2025.4",
-    subtitle: "Pharmacy brand packaging system",
-    summary:
-      "A playful, approachable over-the-counter medication brand that uses warm packaging, conversational copy, and a modular visual system to ease everyday illness.",
-    disciplines: ["UX Research", "UX/UI Design", "Coding"],
-    status: "case-study",
-    cover: "/img/project-3/cover.svg",
-    accent: "#f15d3b",
-  },
-  {
-    slug: "living-calendar",
-    title: "A Living Calendar",
-    period: "2025.12-2026.4",
-    subtitle: "Reimagining the 24 Solar Terms",
-    summary:
-      "An interactive website that reconnects seasonal time with ecology, culture, and personal reflection through the Chinese 24 Solar Terms.",
-    disciplines: ["Interactive Website", "UX/UI Design", "Vibe Coding"],
-    status: "case-study",
-    cover: "/img/project-4/cover.svg",
-    accent: "#6b8f45",
   },
 ];
