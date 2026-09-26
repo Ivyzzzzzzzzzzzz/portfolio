@@ -788,14 +788,6 @@ body {
   white-space: nowrap;
 }
 
-.case-study-content {
-  overflow-x: auto;
-}
-
-.case-study-page .case-study-content .macbook-pro .frame-wrapper {
-  display: none !important;
-}
-
 @media (max-width: 1200px) {
   .portfolio-shell {
     padding: 40px 48px 80px;

@@ -1,7 +1,7 @@
-import maintenanceHtml from "../content/project-2/index.html?raw";
-import maintenanceCss from "../content/project-2/style.css?raw";
-import HtmlCaseStudy from "./HtmlCaseStudy.jsx";
+import CaseStudy from "../components/case-study/CaseStudy.jsx";
+import { content } from "../content/project-2/content.js";
+import { layout } from "../content/project-2/layout.js";
 
 export default function MaintenanceCaseStudy() {
-  return <HtmlCaseStudy html={maintenanceHtml} css={maintenanceCss} projectId="project-2" />;
+  return <CaseStudy content={content} layout={layout} />;
 }

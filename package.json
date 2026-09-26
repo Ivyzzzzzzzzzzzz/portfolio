@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "test": "node --test tests/case-study.test.mjs",
+    "verify:migration": "VERIFY_MIGRATION=1 node --test tests/case-study.test.mjs",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1"
   },

@@ -1,5 +1,4 @@
-import { rewriteAssetPaths } from "../lib/assets.js";
-import { projects } from "../data/projects.js";
+import { projects } from "../../data/projects.js";
 
 const projectSlugById = {
   "project-1": "justeat",
@@ -8,9 +7,7 @@ const projectSlugById = {
   "project-4": "living-calendar",
 };
 
-export default function HtmlCaseStudy({ html, css, projectId }) {
-  const resolvedHtml = rewriteAssetPaths(html);
-  const resolvedCss = rewriteAssetPaths(css);
+export default function CaseStudyLayout({ projectId, children }) {
   const caseStudyProjects = projects.filter((project) => project.status === "case-study");
   const currentProject = caseStudyProjects.find(
     (project) => project.slug === projectSlugById[projectId],
@@ -84,12 +81,7 @@ export default function HtmlCaseStudy({ html, css, projectId }) {
           </div>
         ) : null}
       </nav>
-      <style data-case-study-style={projectId}>{resolvedCss}</style>
-      <div
-        className="case-study-content"
-        data-case-study={projectId}
-        dangerouslySetInnerHTML={{ __html: resolvedHtml }}
-      />
+      {children}
     </main>
   );
 }
