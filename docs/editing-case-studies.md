@@ -123,6 +123,8 @@ JustEat also has section-specific presentation in `src/projects/JustEatCaseStudy
 
 At desktop widths of 1,200px and above, section navigation stays in a left sidebar and highlights the current section. On smaller screens it becomes a collapsible “On this page” menu, which closes after a selection.
 
+APT and Quiq use the same reading widths, section navigation, image-detail viewer, and evidence/takeaway grouping through `src/components/case-study/EditorialCaseStudy.jsx` and `editorial-case-study.css`. Their section-specific layouts live in `MaintenanceCaseStudy.jsx` / `maintenance.css` and `Project3CaseStudy.jsx` / `quiq.css`. Keep text and source artwork in their existing content files. APT's wireframe strips keep a shared screen height and scroll on smaller displays; Quiq's wordmark drafts also scroll on phones. “View label copy” expands Quiq's supporting packaging copy. Image frames contain the whole asset, and clicking opens a zoomable preview.
+
 ## Check an edit
 
 - Run `npm test` to catch missing files or duplicate IDs, then `npm run build`.

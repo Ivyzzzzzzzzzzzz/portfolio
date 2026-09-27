@@ -1,45 +1,8 @@
-import { useEffect, useState } from "react";
-import CaseStudy, { Block, Media, ImageExplanation, RichText } from "../components/case-study/CaseStudy.jsx";
+import CaseStudy, { Block, Media, ImageExplanation } from "../components/case-study/CaseStudy.jsx";
+import OnThisPage from "../components/case-study/OnThisPage.jsx";
 import { content } from "../content/project-1/content.js";
 import { layout } from "../content/project-1/layout.js";
 import "./justeat.css";
-
-function OnThisPage() {
-  const [active, setActive] = useState("");
-  const [expanded, setExpanded] = useState(false);
-  useEffect(() => {
-    let pending;
-    const update = () => {
-      cancelAnimationFrame(pending);
-      pending = requestAnimationFrame(() => {
-        const current = content.sections.filter(section => document.getElementById(section.id)?.getBoundingClientRect().top <= 180).at(-1);
-        setActive(current?.id || "");
-      });
-    };
-    window.addEventListener("scroll", update, { passive: true });
-    update();
-    return () => { window.removeEventListener("scroll", update); cancelAnimationFrame(pending); };
-  }, []);
-  const jumpTo = id => {
-    setExpanded(false);
-    const section = document.getElementById(id);
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    section?.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "start" });
-    section?.querySelector("h2")?.focus({ preventScroll: true });
-  };
-  return <nav className="je-chapters" aria-label="On this page">
-    <p className="je-chapter-label">On this page</p>
-    <button className="je-chapter-toggle" type="button" aria-expanded={expanded}
-      aria-controls="justeat-chapter-links" onClick={() => setExpanded(!expanded)}>
-      On this page <span aria-hidden="true">{expanded ? "−" : "+"}</span>
-    </button>
-    <div id="justeat-chapter-links" className={`je-chapter-links${expanded ? " is-expanded" : ""}`}>
-      {content.sections.map(section => <button type="button" key={section.id}
-        aria-current={active === section.id ? "location" : undefined}
-        onClick={() => jumpTo(section.id)}><RichText value={section.title} /></button>)}
-    </div>
-  </nav>;
-}
 
 function Observations({ block }) {
   return <div className="je-observations"><ImageExplanation block={block} rule={{ ratio: "2fr 1fr" }} /></div>;
@@ -213,5 +176,6 @@ const components = {
 };
 
 export default function JustEatCaseStudy() {
-  return <CaseStudy content={content} layout={layout} components={components} sidebar={<OnThisPage />} />;
+  return <CaseStudy content={content} layout={layout} components={components}
+    sidebar={<OnThisPage sections={content.sections} id="justeat-chapter-links" prefix="je" />} />;
 }

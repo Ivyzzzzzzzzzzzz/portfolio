@@ -1,0 +1,554 @@
+/* Living Calendar follows the Food Allergy case study's editorial rhythm. */
+.case-study-page--project-4 { background: #fffcf8; }
+
+.study--project-4 {
+  --lc-line: #e4e1d2;
+  --lc-paper: #fffefa;
+  --lc-soft: #f5f1df;
+  width: min(calc(100% - 2 * clamp(20px, 5vw, 80px)), 1184px);
+  padding-top: 56px;
+  line-height: 1.5;
+}
+.study--project-4 :is(.study-text, .study-label, .study-heading) { max-width: min(100%, 62ch); }
+.study--project-4 .study-text { line-height: 1.65; }
+.study--project-4 .study-image-link { cursor: zoom-in; }
+.study--project-4 .study-hero { grid-template-columns: 1fr 1.5fr; gap: 64px; padding-bottom: 48px; }
+.study--project-4 .study-hero-copy { max-width: 450px; gap: 16px; }
+.study--project-4 .study-project-meta { align-content: start; }
+.study--project-4 .study-project-link { border-radius: 4px; background: var(--lc-soft); }
+.study--project-4 .study-section {
+  margin-top: 88px;
+  padding-top: 32px;
+  border-top: 1px solid var(--lc-line);
+  scroll-margin-top: 125px;
+}
+.study--project-4 .study-section > h2 {
+  color: var(--study-ink) !important;
+  font-weight: 400 !important;
+}
+.study--project-4 .study-section-body { margin-top: 32px; gap: 48px; }
+.study--project-4 .study-section-body > .study-group { gap: 40px; }
+.study--project-4 .study-section-body > .study-group > .study-text:first-child { max-width: min(100%, 58ch); }
+.study--project-4 .study-group { gap: 24px; }
+.study--project-4 .study-space-wide { gap: 40px; }
+.study--project-4 .study-space-tight { gap: 12px; }
+.study--project-4 .study-label { line-height: 1.4; }
+.study--project-4 h2:focus { outline: none; }
+
+/* The same sticky chapter rail and compact menu used by Food Allergy. */
+.study--project-4.study-has-sidebar {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 40px;
+  width: min(calc(100% - 64px), 1384px);
+}
+.study--project-4 .study-main { min-width: 0; }
+.study--project-4 .study-sidebar {
+  position: sticky;
+  top: 94px;
+  align-self: start;
+  min-width: 0;
+  max-height: calc(100dvh - 118px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.study--project-4 .lc-chapters { background: #fffcf8; }
+.study--project-4 .lc-chapter-label {
+  padding: 0 12px 18px;
+  color: var(--study-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.study--project-4 .lc-chapter-links { display: grid; gap: 6px; }
+.study--project-4 .lc-chapter-links button {
+  padding: 12px 10px;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-radius: 0 6px 6px 0;
+  background: transparent;
+  color: var(--study-muted);
+  font: 500 12px/1.4 var(--study-body-font);
+  cursor: pointer;
+  text-align: left;
+}
+.study--project-4 .lc-chapter-links button:hover { background: #f3efdc; color: var(--study-ink); }
+.study--project-4 .lc-chapter-links button[aria-current] {
+  border-left-color: var(--study-accent);
+  background: #f2ecd1;
+  color: #75651f;
+}
+.study--project-4 .lc-chapters button:focus-visible { outline: 2px solid var(--study-accent); outline-offset: -2px; }
+.study--project-4 .lc-chapter-toggle { display: none; }
+
+/* Research hierarchy is expressed through grouping, alignment, and labeled evidence. */
+.study--project-4 :is(.lc-research-findings, .lc-audience-evidence, .lc-literature-review, .lc-takeaway-list, .lc-research-shift) {
+  color: var(--study-muted);
+  min-width: 0;
+  line-height: 1.65;
+}
+.study--project-4 :is(.lc-research-findings, .lc-evidence-panel, .lc-literature-review, .lc-takeaway-list, .lc-journey-heading) h3 {
+  margin: 0;
+  color: #4f5238;
+  font: 600 20px/1.4 var(--study-body-font);
+  text-wrap: auto;
+}
+.study--project-4 .lc-research-label {
+  margin: 0;
+  color: #686a47;
+  font: 600 12px/1.5 var(--study-body-font);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.study--project-4 .lc-research-takeaway {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 20px 24px;
+  background: #f5f2e5;
+  border-top: 1px solid var(--lc-line);
+}
+.study--project-4 .lc-research-takeaway > p:last-child { max-width: 64ch; }
+.study--project-4 .lc-research-findings { display: grid; gap: 24px; border: 1px solid var(--lc-line); border-radius: 8px; overflow: hidden; }
+.study--project-4 .lc-research-findings > h3 { padding: 24px 24px 0; }
+.study--project-4 .lc-finding-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; padding: 0 24px; }
+.study--project-4 .lc-finding-comparison > div { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 8px 24px 8px 0; }
+.study--project-4 .lc-finding-comparison > div + div { padding: 8px 0 8px 24px; border-left: 1px solid var(--lc-line); }
+.study--project-4 .lc-finding-comparison dt { color: #4f5238; font-size: 18px; font-weight: 500; }
+.study--project-4 .lc-finding-level { display: flex; align-items: center; gap: 8px; margin: 0; padding: 6px 12px; border-radius: 4px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.study--project-4 .lc-finding-level--high { background: #edf2e5; color: #526c3d; }
+.study--project-4 .lc-finding-level--low { background: #f6eae1; color: #925333; }
+
+.study--project-4 .lc-audience-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.study--project-4 .lc-evidence-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid var(--lc-line);
+  border-radius: 8px;
+  background: var(--lc-paper);
+}
+.study--project-4 .lc-evidence-panel h3 { max-width: 32ch; font-size: 18px; }
+.study--project-4 .lc-evidence-numbers { display: flex; gap: 20px; margin: 0; padding: 20px 0; border-block: 1px solid var(--lc-line); }
+.study--project-4 .lc-evidence-numbers > div { display: flex; flex: 1; flex-direction: column; gap: 6px; min-width: 0; }
+.study--project-4 .lc-evidence-numbers dt { font-size: 13px; line-height: 1.5; }
+.study--project-4 .lc-evidence-numbers dd { order: -1; margin: 0; color: #62683f; font: 400 clamp(24px, 2.4vw, 32px)/1.2 var(--study-heading-font); }
+.study--project-4 .lc-evidence-help { grid-column: 1 / -1; margin-top: -12px; font-size: 12px; }
+.study--project-4 .lc-evidence-chart { display: grid; align-content: center; min-width: 0; min-height: 250px; }
+.study--project-4 .lc-evidence-chart > .study-columns { grid-template-columns: 1.4fr 1fr; gap: 14px; align-items: center; }
+.study--project-4 .lc-evidence-chart > .study-image,
+.study--project-4 .lc-evidence-chart > .study-columns > .study-image { max-width: 100%; }
+.study--project-4 .lc-evidence-chart img { max-width: 100%; }
+
+.study--project-4 .lc-literature-review { display: grid; gap: 28px; padding-top: 32px; border-top: 1px solid var(--lc-line); }
+.study--project-4 .lc-research-intro { display: grid; gap: 12px; }
+.study--project-4 .lc-research-intro > p { max-width: 64ch; }
+.study--project-4 .lc-literature-sources { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.study--project-4 .lc-literature-source { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: subgrid; grid-row: span 3; gap: 20px; border: 1px solid var(--lc-line); border-radius: 8px; overflow: hidden; background: var(--lc-paper); }
+.study--project-4 .lc-literature-source > header { display: grid; align-content: start; gap: 6px; padding: 24px 24px 0; }
+.study--project-4 .lc-literature-source h4 { margin: 0; color: #4f5238; font: 600 18px/1.4 var(--study-body-font); text-wrap: auto; }
+.study--project-4 .lc-research-citation { font-size: 13px; }
+.study--project-4 .lc-literature-body { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: subgrid; grid-row: span 2; gap: 20px; }
+.study--project-4 .lc-core-finding { display: grid; align-content: start; gap: 8px; padding: 0 24px; }
+.study--project-4 .lc-literature-body .lc-research-takeaway { border-left: 3px solid #a5aa75; padding-left: 21px; }
+
+.study--project-4 .lc-takeaway-list { display: grid; gap: 20px; max-width: 1040px; }
+.study--project-4 .lc-takeaway-list ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; margin: 0; padding: 0; list-style: none; }
+.study--project-4 .lc-takeaway-list li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 16px; align-content: start; padding: 20px 0; border-top: 1px solid var(--lc-line); }
+.study--project-4 .lc-takeaway-number { padding-top: 2px; color: #7c8050; font-size: 13px; font-weight: 600; }
+.study--project-4 .lc-takeaway-list li p { max-width: 42ch; }
+.study--project-4 .lc-research-shift { display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; max-width: 1040px; }
+.study--project-4 .lc-research-shift > div { display: grid; align-content: start; gap: 12px; padding: 24px; border-top: 2px solid var(--lc-line); }
+.study--project-4 .lc-research-shift > div + div { background: #f5f2e5; border-color: #a5aa75; }
+.study--project-4 .lc-shift-transition { font-size: 13px; }
+.study--project-4 .lc-journey-heading { display: grid; gap: 6px; padding-top: 28px; border-top: 1px solid var(--lc-line); }
+.study--project-4 .lc-journey-heading > p { color: var(--study-muted); font-size: 14px; line-height: 1.5; }
+
+/* Research evidence uses the same bordered-card system and aligned grids. */
+.study--project-4 #understanding-existing-connections [data-content-id="how-do-people-experience-seasons-today-3"] {
+  gap: 20px;
+  align-items: stretch;
+}
+.study--project-4 #understanding-existing-connections [data-content-id="how-do-people-experience-seasons-today-3"] > .study-group,
+.study--project-4 #key-insights [data-content-id="heritage-without-experience-3"] > .study-group,
+.study--project-4 #reflection [data-content-id="1-3"] > .study-group {
+  padding: 24px;
+  border: 1px solid var(--lc-line);
+  border-radius: 10px;
+  background: var(--lc-paper);
+}
+.study--project-4 #key-insights [data-content-id="heritage-without-experience-3"] {
+  gap: 20px;
+  align-items: stretch;
+}
+.study--project-4 #key-insights .study-label { font-size: 18px; }
+.study--project-4 #design-opportunity [data-content-id="how-might-we-help-people-reconnect-with"] {
+  max-width: 52rem;
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--lc-soft);
+  font-size: clamp(22px, 2.1vw, 30px);
+  line-height: 1.4;
+}
+.study--project-4 #designing-for-three-layers-of-connection [data-content-id="ecological-layer-3"] {
+  gap: 20px;
+  align-items: stretch;
+}
+.study--project-4 #designing-for-three-layers-of-connection [data-content-id="ecological-layer-3"] > .study-card {
+  border-color: var(--lc-line);
+  border-radius: 10px;
+  background: var(--lc-paper);
+}
+.study--project-4 #designing-for-three-layers-of-connection [data-content-id="together-these-three-layers-transform-the-solar"] {
+  max-width: 42rem;
+  padding-left: 20px;
+  border-left: 3px solid var(--study-accent);
+  font-size: 18px;
+}
+
+/* Narrative/media rows mirror Food Allergy's design-decision rows. */
+.study--project-4 #from-insights-to-features [data-content-id="because-users-connected-most-strongly-through-observation-2"] {
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+.study--project-4 #from-insights-to-features [data-content-id="because-users-connected-most-strongly-through-observation"] {
+  padding: 16px 0 16px 20px;
+  border-left: 3px solid #d7c15c;
+  font-size: 18px;
+}
+
+/* Preserve the two authored process diagrams while giving them a clear web flow. */
+.study--project-4 #the-disconnect [data-content-id="before-digital-clocks-and-numerical-dates-humans-3"] {
+  grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr) 24px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.study--project-4 #time-told-by-nature-not-numbers [data-content-id="the-24-solar-terms-are-a-traditional-3"] {
+  grid-template-columns: minmax(0, 2fr) 24px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+/* Images use the available gallery width, rather than Figma's thumbnail sizes. */
+.study--project-4 :is(
+  #exploring-ways-to-experience-time,
+  #bringing-the-experience-to-life,
+  #testing-refinement,
+  #a-living-calendar
+) :is(.study-image, img) { max-width: 100%; }
+
+/* A compact reference board followed by full-width sketch comparisons. */
+.study--project-4 .lc-moodboard {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  align-items: center;
+}
+.study--project-4 .lc-moodboard > .study-image {
+  display: grid;
+  align-items: center;
+  height: 200px;
+}
+.study--project-4 .lc-moodboard img { max-height: 200px; }
+.study--project-4 .lc-concept { display: grid; gap: 28px; padding-top: 32px; border-top: 1px solid var(--lc-line); }
+.study--project-4 .lc-concept-intro { display: flex; justify-content: space-between; align-items: start; gap: 32px; }
+.study--project-4 .lc-concept-intro > .study-group { gap: 12px; }
+.study--project-4 .lc-concept-intro > .study-group > .study-text:first-child { font-weight: 600; }
+.study--project-4 .lc-concept-notes { flex: 0 0 auto; padding: 12px 16px; background: var(--lc-soft); border-radius: 6px; }
+.study--project-4 .lc-concept-notes > .study-group { gap: 8px; }
+.study--project-4 .lc-concept-notes .study-text { font-size: 14px; }
+.study--project-4 .lc-concept > .study-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+
+.study--project-4 #designing-a-seasonal-journey [data-content-id="users-familiar-with-the-solar-terms-but-3"] {
+  gap: 24px;
+}
+.study--project-4 #designing-a-seasonal-journey [data-content-id="users-familiar-with-the-solar-terms-but-3"] > .study-pair {
+  padding: 24px;
+  border: 1px solid var(--lc-line);
+  border-radius: 10px;
+  background: var(--lc-paper);
+}
+.study--project-4 .lc-storyboard {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+.study--project-4 .lc-storyboard-panel { display: grid; grid-template-rows: auto 1fr; gap: 16px; min-width: 0; }
+.study--project-4 .lc-storyboard-image { aspect-ratio: 1; display: grid; align-items: end; }
+.study--project-4 .lc-storyboard-image .study-image { max-width: 100%; }
+.study--project-4 .lc-storyboard-image :is(a, img) { width: 100%; height: 100%; max-height: 220px; object-fit: contain; }
+.study--project-4 .lc-storyboard-image .study-image { height: 100%; }
+.study--project-4 .lc-storyboard-panel .study-text { font: 400 13px/1.6 var(--study-body-font); color: var(--study-muted); }
+
+/* Read each interaction's three iterations from left to right. */
+.study--project-4 .lc-progressions { display: grid; gap: 40px; }
+.study--project-4 .lc-gallery-help { color: var(--study-muted); font-size: 13px; }
+.study--project-4 .lc-progression { display: grid; gap: 20px; padding-top: 24px; border-top: 1px solid var(--lc-line); }
+.study--project-4 .lc-progression > .study-text { font-size: 18px; font-weight: 600; }
+.study--project-4 .lc-progression-images { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.study--project-4 .lc-progression-images > figure { display: grid; gap: 12px; min-width: 0; }
+.study--project-4 .lc-iteration-label { font: 500 12px/1.4 var(--study-body-font); color: var(--study-muted); letter-spacing: .04em; }
+/* Shared frames keep every iteration row at the same visual scale. */
+.study--project-4 .lc-iteration-frame { aspect-ratio: 3 / 2; overflow: hidden; background: #f5f2e9; border: 1px solid var(--lc-line); }
+.study--project-4 #bringing-the-experience-to-life .lc-iteration-frame :is(.study-image, a, img) {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.study--project-4 #bringing-the-experience-to-life :is(
+  [data-content-id="solar-term-details-page-2"],
+  [data-content-id="calendar-2"]
+) .lc-iteration-frame img { object-fit: cover; }
+.study--project-4 :is(.lc-storyboard, .lc-progression-images):focus-visible { outline: 2px solid var(--study-accent); outline-offset: 6px; }
+
+/* The two technical studies share four aligned rows: title, summary, image, features. */
+.study--project-4 .lc-technical-studies {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 32px;
+  max-width: 1040px;
+}
+.study--project-4 .lc-technical-study {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  gap: 20px;
+  padding: 24px;
+  min-width: 0;
+  border: 1px solid var(--lc-line);
+  border-radius: 8px;
+  background: var(--lc-paper);
+}
+.study--project-4 .lc-technical-heading { display: grid; align-content: start; gap: 8px; }
+.study--project-4 .lc-technical-heading > .study-text { font-size: 12px; color: var(--study-muted); }
+.study--project-4 .lc-technical-heading h3 { font: 600 18px/1.4 var(--study-body-font); text-wrap: auto; }
+.study--project-4 .lc-technical-intro { color: var(--study-muted); font-size: 16px; line-height: 1.6; }
+.study--project-4 .lc-technical-screen { width: 100%; min-width: 0; max-width: 100%; aspect-ratio: 8 / 5; }
+.study--project-4 #bringing-the-experience-to-life .lc-technical-screen :is(figure, a, img) {
+  width: 100%; height: 100%; max-width: 100%; object-fit: contain;
+}
+.study--project-4 .lc-technical-features { display: grid; align-content: start; gap: 8px; padding-left: 18px; list-style: disc; color: var(--study-muted); font-size: 14px; line-height: 1.6; }
+.study--project-4 .lc-technical-features li::marker { color: var(--study-ink); }
+
+/* Each finished interaction is a large demonstration beside its implementation. */
+.study--project-4 #from-prototype-to-product [data-content-id="final-implementation-3"] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 48px;
+}
+.study--project-4 .lc-implementation-demo { display: grid; gap: 20px; padding-top: 28px; border-top: 1px solid var(--lc-line); }
+.study--project-4 .lc-implementation-demo > h3 { font: 500 20px/1.4 var(--study-body-font); }
+.study--project-4 .lc-demonstration-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
+.study--project-4 :is(.lc-demo-output, .lc-demo-code) {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  gap: 12px;
+  min-width: 0;
+}
+.study--project-4 .lc-demo-label { font-size: 12px; color: var(--study-muted); align-self: center; }
+.study--project-4 .lc-code-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 34px; }
+.study--project-4 .lc-code-switcher { display: flex; flex-wrap: wrap; gap: 6px; }
+.study--project-4 .lc-code-switcher button { padding: 6px 10px; border: 1px solid var(--lc-line); border-radius: 4px; background: transparent; color: var(--study-muted); font: 500 12px/1.4 var(--study-body-font); cursor: pointer; }
+.study--project-4 .lc-code-switcher button[aria-pressed="true"] { background: var(--lc-soft); border-color: #cfbe7b; color: #75651f; }
+.study--project-4 .lc-code-switcher button:focus-visible { outline: 2px solid var(--study-accent); outline-offset: 3px; }
+.study--project-4 .lc-code-screen { width: 100%; aspect-ratio: 8 / 5; overflow: hidden; background: #fff; border: 1px solid var(--lc-line); border-radius: 6px; }
+.study--project-4 #from-prototype-to-product .lc-code-screen :is(figure, a, img) { width: 100%; height: 100%; max-width: 100%; object-fit: contain; }
+.study--project-4 .lc-recording { width: 100%; aspect-ratio: 8 / 5; }
+.study--project-4 .lc-recording video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 8 / 5;
+  object-fit: contain;
+  background: #f4f0e5;
+  border: 1px solid var(--lc-line);
+  border-radius: 6px;
+}
+.study--project-4 .lc-recording video:fullscreen { object-fit: contain; background: #000; border: 0; }
+
+/* Short findings sit above large, parallel annotated screens. */
+.study--project-4 .lc-testing { display: grid; gap: 40px; }
+.study--project-4 .lc-testing-row { display: grid; gap: 24px; padding-top: 24px; border-top: 1px solid var(--lc-line); }
+.study--project-4 .lc-testing-copy .study-text { max-width: 62ch; font-family: var(--study-body-font); }
+.study--project-4 .lc-testing-copy strong { display: inline-block; margin-bottom: 8px; color: var(--study-ink); font-size: 18px; }
+.study--project-4 #testing-refinement .lc-testing-images > .study-image { max-width: 720px; }
+.study--project-4 .lc-testing-images > .study-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+
+.study--project-4 #a-living-calendar [data-content-id="https-24-solar-terms-eta-vercel-app-intro-2"] {
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: var(--lc-soft);
+}
+.study--project-4 .lc-cultural-layer { display: grid; gap: 32px; }
+.study--project-4 .lc-cultural-layer > .study-figure { gap: 20px; }
+.study--project-4 #a-living-calendar [data-content-id="a-living-calendar-frame-1437254446"] { max-width: 800px; }
+.study--project-4 #a-living-calendar .lc-cultural-layer [data-content-id="a-living-calendar-frame-153-1"] { max-width: 480px; }
+.study--project-4 .lc-cultural-layer .study-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: center; max-width: 840px; }
+.study--project-4 #a-living-calendar [data-content-id="a-living-calendar-visuals-3"] {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1120px;
+}
+.study--project-4 .lc-navigation-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 900px; }
+.study--project-4 .lc-navigation-screens > figure { display: grid; gap: 16px; min-width: 0; }
+.study--project-4 .lc-navigation-screens figcaption { font-size: 16px; color: var(--study-muted); }
+.study--project-4 #reflection [data-content-id="1-3"] { gap: 20px; align-items: stretch; }
+
+/* Native dialog supplies keyboard focus containment and Escape-to-close. */
+.lc-image-detail {
+  width: min(96vw, 1600px);
+  max-width: none;
+  max-height: 94dvh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #e4e1d2;
+  border-radius: 12px;
+  background: #fffcf8;
+  color: #5c5c5c;
+  font: 14px/1.5 "Kumbh Sans", Helvetica, sans-serif;
+  box-shadow: 0 24px 100px #0003;
+}
+.lc-image-detail::backdrop { background: #262616b3; }
+.lc-image-detail-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 1px solid #e4e1d2; }
+.lc-image-detail-toolbar h2 { margin: 0; font-size: 16px; font-weight: 600; }
+.lc-image-detail-toolbar > div { display: flex; gap: 8px; }
+.lc-image-detail button { padding: 8px 14px; border: 1px solid #d8d4bf; border-radius: 6px; background: #fffefa; color: inherit; font: inherit; cursor: pointer; }
+.lc-image-detail :is(button, [tabindex]):focus-visible { outline: 2px solid #a17b32; outline-offset: -3px; }
+.lc-image-detail-canvas { height: min(78dvh, 1000px); padding: 24px; overflow: auto; overscroll-behavior: contain; }
+.lc-image-detail-canvas img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.lc-image-detail-canvas.is-zoomed img { width: 200%; max-width: none; height: auto; max-height: none; }
+
+@media (max-width: 1199px) {
+  .study--project-4.study-has-sidebar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    width: min(calc(100% - 2 * clamp(20px, 5vw, 80px)), 1184px);
+  }
+  .study--project-4 .study-sidebar {
+    --lc-menu-top: 62px;
+    top: var(--lc-menu-top);
+    z-index: 10;
+    max-height: none;
+    overflow: visible;
+  }
+  .study--project-4 .lc-chapters { position: relative; border-block: 1px solid var(--lc-line); }
+  .study--project-4 .lc-chapter-label { display: none; }
+  .study--project-4 .lc-chapter-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 12px;
+    border: 0;
+    background: transparent;
+    color: var(--study-ink);
+    font: 600 14px/1.4 var(--study-body-font);
+    cursor: pointer;
+  }
+  .study--project-4 .lc-chapter-links {
+    display: none;
+    position: absolute;
+    inset: 100% 0 auto;
+    max-height: calc(100dvh - var(--lc-menu-top) - 76px);
+    overflow-y: auto;
+    padding: 12px;
+    border: 1px solid var(--lc-line);
+    border-radius: 0 0 8px 8px;
+    background: #fffcf8;
+    box-shadow: 0 12px 24px #25210c12;
+  }
+  .study--project-4 .lc-chapter-links.is-expanded { display: grid; }
+  .study--project-4 #from-insights-to-features [data-content-id="because-users-connected-most-strongly-through-observation-2"] { grid-template-columns: 280px minmax(0, 1fr); gap: 32px; }
+}
+
+@media (max-width: 899px) {
+  .study--project-4 { padding-top: 32px; }
+  .study--project-4 .study-hero { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
+  .study--project-4 .study-sidebar { --lc-menu-top: 98px; }
+  .study--project-4 .study-section { margin-top: 56px; padding-top: 24px; scroll-margin-top: 164px; }
+  .study--project-4 .study-section-body { margin-top: 24px; }
+  .study--project-4 .lc-moodboard { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .study--project-4 .lc-moodboard > .study-image { height: 180px; }
+  .study--project-4 .lc-moodboard img { max-height: 180px; }
+  .study--project-4 .lc-concept-intro { flex-direction: column; gap: 20px; }
+  .study--project-4 .lc-concept-notes > .study-group { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+  .study--project-4 .lc-storyboard {
+    grid-template-columns: repeat(5, minmax(190px, 1fr));
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 16px;
+  }
+  .study--project-4 .lc-storyboard-panel { scroll-snap-align: start; }
+  .study--project-4 .lc-progression-images {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 16px;
+  }
+  .study--project-4 .lc-progression-images > figure { scroll-snap-align: start; }
+  .study--project-4 .lc-cultural-layer .study-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .study--project-4 #a-living-calendar [data-content-id="a-living-calendar-visuals-3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .study--project-4 .lc-navigation-screens { grid-template-columns: minmax(0, 1fr); }
+  .study--project-4 #the-disconnect [data-content-id="before-digital-clocks-and-numerical-dates-humans-3"],
+  .study--project-4 #time-told-by-nature-not-numbers [data-content-id="the-24-solar-terms-are-a-traditional-3"],
+  .study--project-4 #from-insights-to-features [data-content-id="because-users-connected-most-strongly-through-observation-2"] { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .study--project-4 #the-disconnect :is(
+    [data-content-id="the-disconnect-expand-right-2"],
+    [data-content-id="the-disconnect-expand-right-2-2"]
+  ),
+  .study--project-4 #time-told-by-nature-not-numbers [data-content-id="time-told-by-nature-not-numbers-expand-right-2"] {
+    display: none;
+  }
+}
+
+@media (max-width: 699px) {
+  .study--project-4 :is(.lc-audience-evidence, .lc-literature-sources, .lc-research-shift) { grid-template-columns: minmax(0, 1fr); }
+  .study--project-4 :is(.lc-evidence-panel, .lc-literature-source, .lc-literature-body) { grid-template-rows: auto; grid-row: auto; }
+  .study--project-4 .lc-evidence-panel { padding: 20px; }
+  .study--project-4 .lc-evidence-chart { min-height: 0; }
+  .study--project-4 .lc-evidence-numbers { gap: 12px; }
+  .study--project-4 .lc-finding-comparison { grid-template-columns: minmax(0, 1fr); }
+  .study--project-4 .lc-finding-comparison > div { padding: 0 0 16px; }
+  .study--project-4 .lc-finding-comparison > div + div { padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--lc-line); }
+  .study--project-4 .lc-takeaway-list ul { grid-template-columns: minmax(0, 1fr); }
+  .study--project-4 .lc-takeaway-list li { padding: 16px 0; }
+  .study--project-4 .lc-technical-studies { grid-template-columns: minmax(0, 1fr); max-width: 510px; gap: 24px; }
+  .study--project-4 .lc-technical-study { grid-template-rows: auto; grid-row: auto; padding: 20px; }
+  .study--project-4 .lc-demonstration-pair { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .study--project-4 :is(.lc-demo-output, .lc-demo-code) {
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-row: auto;
+  }
+  .study--project-4 .lc-code-heading { flex-wrap: wrap; }
+}
+
+@media (max-width: 599px) {
+  .study--project-4 .lc-moodboard { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .study--project-4 .lc-moodboard > .study-image { height: 170px; }
+  .study--project-4 .lc-moodboard img { max-height: 170px; }
+  .study--project-4 .lc-concept > .study-columns { grid-template-columns: minmax(0, 1fr); }
+  .study--project-4 .lc-testing-images > .study-columns,
+  .study--project-4 .lc-cultural-layer .study-columns { grid-template-columns: minmax(0, 1fr); }
+  .study--project-4 #a-living-calendar [data-content-id="a-living-calendar-visuals-3"] { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .lc-image-detail-toolbar { padding: 12px; gap: 8px; }
+  .lc-image-detail-toolbar h2 { font-size: 14px; }
+  .lc-image-detail button { padding: 8px 10px; }
+  .lc-image-detail-canvas { padding: 12px; }
+  .study--project-4 #understanding-existing-connections [data-content-id="how-do-people-experience-seasons-today-3"] > .study-group,
+  .study--project-4 #key-insights [data-content-id="heritage-without-experience-3"] > .study-group,
+  .study--project-4 #reflection [data-content-id="1-3"] > .study-group,
+  .study--project-4 #designing-a-seasonal-journey [data-content-id="users-familiar-with-the-solar-terms-but-3"] > .study-pair {
+    padding: 20px;
+  }
+  .study--project-4 #design-opportunity [data-content-id="how-might-we-help-people-reconnect-with"] {
+    padding: 24px;
+  }
+}

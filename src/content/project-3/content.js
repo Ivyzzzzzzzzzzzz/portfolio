@@ -798,27 +798,27 @@ export const content = {
                       "type": "text",
                       "id": "conversational-s-peaking-directly-to-customers-to",
                       "text": [
-                        {"text": "Conversational: s", "tone": "lime"},
+                        {"text": "Conversational:", "tone": "lime"},
                         {"text": " "},
-                        {"text": "peaking directly to customers to create an immediate connection.", "tone": "muted"}
+                        {"text": "Speaking directly to customers to create an immediate connection.", "tone": "muted"}
                       ]
                     },
                     {
                       "type": "text",
                       "id": "supportive-a-cknowledging-that-even-minor-illnesses",
                       "text": [
-                        {"text": "Supportive: a", "tone": "lime"},
+                        {"text": "Supportive:", "tone": "lime"},
                         {"text": " "},
-                        {"text": "cknowledging that even minor illnesses can be disruptive.", "tone": "muted"}
+                        {"text": "Acknowledging that even minor illnesses can be disruptive.", "tone": "muted"}
                       ]
                     },
                     {
                       "type": "text",
                       "id": "playful-b-alancing-lighthearted-humor-with-the",
                       "text": [
-                        {"text": "Playful: b", "tone": "lime"},
+                        {"text": "Playful:", "tone": "lime"},
                         {"text": " "},
-                        {"text": "alancing lighthearted humor with the seriousness of quality.", "tone": "muted"}
+                        {"text": "Balancing lighthearted humor with the seriousness of quality.", "tone": "muted"}
                       ]
                     }
                   ]

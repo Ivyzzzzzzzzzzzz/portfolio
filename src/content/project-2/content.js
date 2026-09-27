@@ -982,7 +982,7 @@ export const content = {
                         {
                           "type": "text",
                           "id": "added-a-preferred-time-window-selection-during-2",
-                          "text": "Added a “preferred time window” selection during submission, allowing users to specify availability and feel more in control of the process."
+                          "text": "Redesigned request history as a clear, status-based timeline, with quick access to request details, updates, and maintenance notes."
                         }
                       ]
                     },

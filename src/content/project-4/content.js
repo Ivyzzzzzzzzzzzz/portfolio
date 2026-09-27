@@ -398,6 +398,11 @@ export const content = {
                 {
                   "type": "group",
                   "id": "how-do-people-notice-seasonal-change-2",
+                  "highlights": [
+                    {"value": "88.5%", "label": "Temperature"},
+                    {"value": "62%", "label": "Daylight shifts"},
+                    {"value": "60%", "label": "Plant changes"}
+                  ],
                   "items": [
                     {"type": "text", "id": "how-do-people-notice-seasonal-change", "text": "How do people notice seasonal change?"},
                     {
@@ -446,6 +451,10 @@ export const content = {
                 {
                   "type": "figure",
                   "id": "what-kinds-of-interactions-feel-meaningful-2",
+                  "highlights": [
+                    {"value": "80%", "label": "Notice something in nature"},
+                    {"value": "70%", "label": "Step outside briefly"}
+                  ],
                   "caption": {
                     "type": "text",
                     "id": "what-kinds-of-interactions-feel-meaningful",
@@ -503,7 +512,7 @@ export const content = {
                             {"text": "Key takeaway: ", "strong": true, "tone": "muted"},
                             {"text": "\n "},
                             {
-                              "text": "Unfamiliar cultural heritage is better understood through sensory, experiences, not just abstract text.",
+                              "text": "Unfamiliar cultural heritage is better understood through sensory experiences, not just abstract text.",
                               "tone": "muted"
                             }
                           ]
@@ -1404,76 +1413,82 @@ export const content = {
               ]
             },
             {
-              "type": "pair",
-              "id": "technical-prototyping-with-p5-js-3",
-              "copy": {
-                "type": "group",
-                "id": "technical-prototyping-with-p5-js-2",
-                "items": [
-                  {"type": "text", "id": "technical-prototyping-with-p5-js", "text": "Technical Prototyping with p5.js"},
-                  {"type": "label", "id": "simulating-seasonal-change", "text": "Simulating Seasonal Change"},
-                  {
-                    "type": "text",
-                    "id": "to-communicate-seasonal-transitions-more-naturally-i",
-                    "text": [
+              "type": "group",
+              "id": "technical-prototyping-studies",
+              "items": [
+                {
+                  "type": "pair",
+                  "id": "technical-prototyping-with-p5-js-3",
+                  "copy": {
+                    "type": "group",
+                    "id": "technical-prototyping-with-p5-js-2",
+                    "items": [
+                      {"type": "text", "id": "technical-prototyping-with-p5-js", "text": "Technical Prototyping with p5.js"},
+                      {"type": "label", "id": "simulating-seasonal-change", "text": "Simulating Seasonal Change"},
                       {
-                        "text": "To communicate seasonal transitions more naturally, I experimented with procedural animation using p5.js.",
-                        "strong": true,
-                        "tone": "muted"
-                      },
-                      {"text": "\n \n"},
-                      {"text": "Grass Animation: Procedural growth, Wind simulation, Seasonal transitions ", "tone": "olive"},
-                      {"text": "\n"},
-                      {"text": "Weather Effects: Rain, Snow, Frost", "tone": "olive"},
-                      {"text": "\n"},
-                      {"text": "Dynamic Interpolation: Smooth transitions between terms, Continuous seasonal progression", "tone": "olive"}
+                        "type": "text",
+                        "id": "to-communicate-seasonal-transitions-more-naturally-i",
+                        "text": [
+                          {
+                            "text": "To communicate seasonal transitions more naturally, I experimented with procedural animation using p5.js.",
+                            "strong": true,
+                            "tone": "muted"
+                          },
+                          {"text": "\n \n"},
+                          {"text": "Grass Animation: Procedural growth, Wind simulation, Seasonal transitions ", "tone": "olive"},
+                          {"text": "\n"},
+                          {"text": "Weather Effects: Rain, Snow, Frost", "tone": "olive"},
+                          {"text": "\n"},
+                          {"text": "Dynamic Interpolation: Smooth transitions between terms, Continuous seasonal progression", "tone": "olive"}
+                        ]
+                      }
                     ]
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "bringing-the-experience-to-life-image-45",
+                    "src": "/img/project-4/image-45.svg",
+                    "alt": "Technical Prototyping with p5.js — design study",
+                    "width": 422.0,
+                    "height": 257.0
                   }
-                ]
-              },
-              "media": {
-                "type": "image",
-                "id": "bringing-the-experience-to-life-image-45",
-                "src": "/img/project-4/image-45.svg",
-                "alt": "Technical Prototyping with p5.js — design study",
-                "width": 422.0,
-                "height": 257.0
-              }
-            },
-            {
-              "type": "pair",
-              "id": "building-the-navigation-system-3",
-              "copy": {
-                "type": "group",
-                "id": "building-the-navigation-system-2",
-                "items": [
-                  {"type": "text", "id": "building-the-navigation-system", "text": "Building the Navigation System"},
-                  {"type": "label", "id": "interactive-solar-term-dial", "text": "Interactive Solar Term Dial"},
-                  {
-                    "type": "text",
-                    "id": "the-dial-became-the-primary-navigation-system",
-                    "text": [
-                      {"text": "The dial became the primary navigation system.", "strong": true, "tone": "muted"},
-                      {"text": "\n \n"},
-                      {"text": "Solar longitude visualization", "tone": "olive"},
-                      {"text": "\n"},
-                      {"text": "Seasonal progression", "tone": "olive"},
-                      {"text": "\n"},
-                      {"text": "Drag interaction", "tone": "olive"},
-                      {"text": "\n"},
-                      {"text": "Direct access to Solar Term pages", "tone": "olive"}
+                },
+                {
+                  "type": "pair",
+                  "id": "building-the-navigation-system-3",
+                  "copy": {
+                    "type": "group",
+                    "id": "building-the-navigation-system-2",
+                    "items": [
+                      {"type": "text", "id": "building-the-navigation-system", "text": "Building the Navigation System"},
+                      {"type": "label", "id": "interactive-solar-term-dial", "text": "Interactive Solar Term Dial"},
+                      {
+                        "type": "text",
+                        "id": "the-dial-became-the-primary-navigation-system",
+                        "text": [
+                          {"text": "The dial became the primary navigation system.", "strong": true, "tone": "muted"},
+                          {"text": "\n \n"},
+                          {"text": "Solar longitude visualization", "tone": "olive"},
+                          {"text": "\n"},
+                          {"text": "Seasonal progression", "tone": "olive"},
+                          {"text": "\n"},
+                          {"text": "Drag interaction", "tone": "olive"},
+                          {"text": "\n"},
+                          {"text": "Direct access to Solar Term pages", "tone": "olive"}
+                        ]
+                      }
                     ]
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "bringing-the-experience-to-life-image-47",
+                    "src": "/img/project-4/image-47.svg",
+                    "alt": "Building the Navigation System — design study",
+                    "width": 418.0,
+                    "height": 254.0
                   }
-                ]
-              },
-              "media": {
-                "type": "image",
-                "id": "bringing-the-experience-to-life-image-47",
-                "src": "/img/project-4/image-47.svg",
-                "alt": "Building the Navigation System — design study",
-                "width": 418.0,
-                "height": 254.0
-              }
+                }
+              ]
             }
           ]
         }
@@ -1504,41 +1519,41 @@ export const content = {
               "id": "grass-vibe-coding-2",
               "caption": {"type": "text", "id": "grass-vibe-coding", "text": "Grass vibe coding"},
               "media": {
-                "type": "composition",
-                "id": "grass-prototype-comparison",
+                "type": "columns",
+                "id": "grass-demonstration-media",
                 "items": [
                   {
-                    "type": "image",
-                    "id": "from-prototype-to-product-image-49",
-                    "src": "/img/project-4/image-49.svg",
-                    "alt": "Grass vibe coding — design study",
-                    "width": 193.0,
-                    "height": 134.0
+                    "type": "video",
+                    "id": "grass-interaction-recording",
+                    "src": "/videos/project-4/grass-seasonal.mp4",
+                    "poster": "/videos/project-4/grass-seasonal-poster.jpg",
+                    "alt": "Grass animation across the seasons",
+                    "width": 1600,
+                    "height": 1000
                   },
                   {
-                    "type": "image",
-                    "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-45-16-1",
-                    "src": "/img/project-4/screenshot-2026-05-16-at-19-45-16-1.svg",
-                    "alt": "Grass vibe coding — design study",
-                    "width": 182.0,
-                    "height": 132.0
-                  },
-                  {
-                    "type": "image",
-                    "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-44-58-1",
-                    "src": "/img/project-4/screenshot-2026-05-16-at-19-44-58-1.svg",
-                    "alt": "Grass vibe coding — design study",
-                    "width": 182.0,
-                    "height": 132.0
-                  },
-                  {
-                    "type": "image",
-                    "id": "from-prototype-to-product-union",
-                    "src": "/img/project-4/union.svg",
-                    "alt": "",
-                    "width": 376.0,
-                    "height": 134.0,
-                    "decorative": true
+                    "type": "group",
+                    "id": "grass-implementation-code",
+                    "items": [
+                      {
+                        "type": "image",
+                        "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-45-16-1",
+                        "src": "/img/project-4/screenshot-2026-05-16-at-19-45-16-1.svg",
+                        "alt": "Weather effects implementation code",
+                        "label": "Weather effects",
+                        "width": 182,
+                        "height": 132
+                      },
+                      {
+                        "type": "image",
+                        "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-44-58-1",
+                        "src": "/img/project-4/screenshot-2026-05-16-at-19-44-58-1.svg",
+                        "alt": "Seasonal transitions implementation code",
+                        "label": "Seasonal transitions",
+                        "width": 182,
+                        "height": 132
+                      }
+                    ]
                   }
                 ]
               }
@@ -1548,33 +1563,32 @@ export const content = {
               "id": "dial-navigation-vibe-coding-2",
               "caption": {"type": "text", "id": "dial-navigation-vibe-coding", "text": "Dial navigation vibe coding"},
               "media": {
-                "type": "composition",
-                "id": "dial-prototype-comparison",
+                "type": "columns",
+                "id": "dial-demonstration-media",
                 "items": [
                   {
-                    "type": "image",
-                    "id": "from-prototype-to-product-image-48",
-                    "src": "/img/project-4/image-48.svg",
-                    "alt": "Dial navigation vibe coding — design study",
-                    "width": 131.0,
-                    "height": 133.0
+                    "type": "video",
+                    "id": "dial-interaction-recording",
+                    "src": "/videos/project-4/dial.mp4",
+                    "poster": "/videos/project-4/dial-poster.jpg",
+                    "alt": "Dragging the Solar Term dial to explore the seasons",
+                    "width": 1600,
+                    "height": 1000
                   },
                   {
-                    "type": "image",
-                    "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-37-08-1",
-                    "src": "/img/project-4/screenshot-2026-05-16-at-19-37-08-1.svg",
-                    "alt": "Dial navigation vibe coding — design study",
-                    "width": 181.0,
-                    "height": 131.0
-                  },
-                  {
-                    "type": "image",
-                    "id": "from-prototype-to-product-union-1",
-                    "src": "/img/project-4/union-1.svg",
-                    "alt": "",
-                    "width": 185.0,
-                    "height": 134.0,
-                    "decorative": true
+                    "type": "group",
+                    "id": "dial-implementation-code",
+                    "items": [
+                      {
+                        "type": "image",
+                        "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-37-08-1",
+                        "src": "/img/project-4/screenshot-2026-05-16-at-19-37-08-1.svg",
+                        "alt": "Dial navigation implementation code",
+                        "label": "Dial navigation",
+                        "width": 181,
+                        "height": 131
+                      }
+                    ]
                   }
                 ]
               }
@@ -1584,33 +1598,32 @@ export const content = {
               "id": "year-calendar-aura-effects-2",
               "caption": {"type": "text", "id": "year-calendar-aura-effects", "text": "Year Calendar aura effects"},
               "media": {
-                "type": "composition",
-                "id": "calendar-prototype-comparison",
+                "type": "columns",
+                "id": "calendar-demonstration-media",
                 "items": [
                   {
-                    "type": "image",
-                    "id": "from-prototype-to-product-screenshot-2026-04-09-at-04-34-25-1-1",
-                    "src": "/img/project-4/screenshot-2026-04-09-at-04-34-25-1-1.svg",
-                    "alt": "Year Calendar aura effects — design study",
-                    "width": 170.0,
-                    "height": 133.0
+                    "type": "video",
+                    "id": "calendar-interaction-recording",
+                    "src": "/videos/project-4/year-calendar.mp4",
+                    "poster": "/videos/project-4/year-calendar-poster.jpg",
+                    "alt": "Exploring the year calendar and its seasonal aura effects",
+                    "width": 1600,
+                    "height": 1000
                   },
                   {
-                    "type": "image",
-                    "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-52-11-1",
-                    "src": "/img/project-4/screenshot-2026-05-16-at-19-52-11-1.svg",
-                    "alt": "Year Calendar aura effects — design study",
-                    "width": 180.0,
-                    "height": 130.0
-                  },
-                  {
-                    "type": "image",
-                    "id": "from-prototype-to-product-union-2",
-                    "src": "/img/project-4/union-2.svg",
-                    "alt": "",
-                    "width": 185.0,
-                    "height": 134.0,
-                    "decorative": true
+                    "type": "group",
+                    "id": "calendar-implementation-code",
+                    "items": [
+                      {
+                        "type": "image",
+                        "id": "from-prototype-to-product-screenshot-2026-05-16-at-19-52-11-1",
+                        "src": "/img/project-4/screenshot-2026-05-16-at-19-52-11-1.svg",
+                        "alt": "Calendar aura effects implementation code",
+                        "label": "Calendar aura effects",
+                        "width": 180,
+                        "height": 130
+                      }
+                    ]
                   }
                 ]
               }
