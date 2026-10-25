@@ -234,12 +234,40 @@ export const content = {
                     ]
                   },
                   "media": {
-                    "type": "image",
+                    "type": "diaryTimeline",
                     "id": "research-within-expo-section-1",
-                    "src": "/img/project-2/section-1.svg",
-                    "alt": "Diary study findings",
-                    "width": 1319.0,
-                    "height": 254.0
+                    "label": "Sarah’s four-day diary of an AC maintenance request",
+                    "days": [
+                      {
+                        "day": 1,
+                        "stage": "Discovery",
+                        "action": "AC blows warm air at night. Thermostat adjustments fail.",
+                        "emotion": "Overheated & Irritable",
+                        "painPoint": "The issue disrupted her sleep, but she was too tired to navigate the portal at night."
+                      },
+                      {
+                        "day": 2,
+                        "stage": "Submission",
+                        "action": "Submitted a ticket via mobile between classes.",
+                        "emotion": "Confused & Regretful",
+                        "painPoint": "Confused by back-office terms.",
+                        "ambiguity": "The binary “Permission to enter” confused her."
+                      },
+                      {
+                        "day": 3,
+                        "stage": "Waiting",
+                        "action": "Checked email and portal repeatedly. Slept badly again.",
+                        "emotion": "Anxious & “In the dark”",
+                        "painPoint": "Zero updates or ETA. Unsure if the ticket was even seen."
+                      },
+                      {
+                        "day": 4,
+                        "stage": "Resolution",
+                        "action": "Napping between classes. Woken up startled by a loud knock and sudden maintenance entry.",
+                        "emotion": "Shocked, Embarrassed and Relieved",
+                        "painPoint": "Lack of scheduling/notification led to a severe privacy intrusion and awkward encounter."
+                      }
+                    ]
                   }
                 },
                 {
@@ -284,28 +312,26 @@ export const content = {
                             "id": "research-within-expo-visuals-2",
                             "items": [
                               {
-                                "type": "image",
+                                "type": "surveyMetric",
                                 "id": "research-within-expo-frame-1437254199-1",
-                                "src": "/img/project-2/frame-1437254199-1.svg",
-                                "alt": "Introduce step-by-step tracking (request submitted > reviewed — design study",
-                                "width": 190.0,
-                                "height": 148.0
+                                "label": "Progress updates",
+                                "value": 66.7,
+                                "description": "Rarely or never received progress updates."
                               },
                               {
-                                "type": "image",
+                                "type": "surveyMetric",
                                 "id": "research-within-expo-frame-1437254200-1",
-                                "src": "/img/project-2/frame-1437254200-1.svg",
-                                "alt": "Introduce step-by-step tracking (request submitted > reviewed — design study",
-                                "width": 190.0,
-                                "height": 149.0
+                                "label": "Real-time transparency",
+                                "value": 4.3,
+                                "scale": 5,
+                                "description": "Rated the importance of real-time transparency highly."
                               },
                               {
-                                "type": "image",
+                                "type": "surveyMetric",
                                 "id": "research-within-expo-frame-1437254201-1",
-                                "src": "/img/project-2/frame-1437254201-1.svg",
-                                "alt": "Introduce step-by-step tracking (request submitted > reviewed — design study",
-                                "width": 190.0,
-                                "height": 148.0
+                                "label": "Repair scheduling",
+                                "value": 93.3,
+                                "description": "Wanted to see a scheduled repair time."
                               }
                             ]
                           }
@@ -319,12 +345,11 @@ export const content = {
                             "text": "Reorganize categories into plain language."
                           },
                           "media": {
-                            "type": "image",
+                            "type": "surveyMetric",
                             "id": "research-within-expo-frame-1437254202-1",
-                            "src": "/img/project-2/frame-1437254202-1.svg",
-                            "alt": "Reorganize categories into plain language. — design study",
-                            "width": 190.0,
-                            "height": 139.0
+                            "label": "Issue categories",
+                            "value": 63.3,
+                            "description": "Felt uncertain when choosing issue categories."
                           }
                         },
                         {
@@ -336,12 +361,11 @@ export const content = {
                             "text": "Redesign can more focus on mobile size."
                           },
                           "media": {
-                            "type": "image",
+                            "type": "surveyMetric",
                             "id": "research-within-expo-frame-1437254203-1",
-                            "src": "/img/project-2/frame-1437254203-1.svg",
-                            "alt": "Redesign can more focus on mobile size. — design study",
-                            "width": 190.0,
-                            "height": 149.0
+                            "label": "Mobile access",
+                            "value": 83.3,
+                            "description": "Relied on mobile devices to access the portal."
                           }
                         }
                       ]

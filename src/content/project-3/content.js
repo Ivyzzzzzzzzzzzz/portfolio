@@ -144,56 +144,30 @@ export const content = {
                   "type": "text",
                   "id": "top-brands-like-tylenol-and-advil-hold",
                   "text": [
-                    {
-                      "text": "Top brands like Tylenol and Advil hold 62% of the European and American OTC market. However, over 90% use neutral, clinical packaging without emotional communication, and 45% still use multi-layer packaging, ",
-                      "tone": "muted"
-                    },
-                    {"text": " "},
-                    {"text": "ignoring users’ emotional and sustainability needs.", "tone": "dark"}
+                    {"text": "Leading brands dominate the over-the-counter (OTC) market, while packaging leaves "},
+                    {"text": "emotional and sustainability needs unmet", "strong": true},
+                    {"text": "."}
                   ]
                 },
                 {
-                  "type": "columns",
+                  "type": "chart",
                   "id": "top-brands-3",
-                  "items": [
+                  "variant": "donuts",
+                  "data": [
                     {
-                      "type": "figure",
-                      "id": "top-brands-2",
-                      "caption": {"type": "text", "id": "top-brands", "text": "Top brands"},
-                      "media": {
-                        "type": "image",
-                        "id": "data-collection-group-23948-1",
-                        "src": "/img/project-3/group-23948-1.svg",
-                        "alt": "Top brands — design study",
-                        "width": 88.0,
-                        "height": 88.0
-                      }
+                      "value": 62,
+                      "label": "of the OTC market is held by leading brands.",
+                      "context": "Europe & America · e.g. Tylenol and Advil"
                     },
                     {
-                      "type": "figure",
-                      "id": "neutral-clinical-packaging-2",
-                      "caption": {"type": "text", "id": "neutral-clinical-packaging", "text": "Neutral, clinical packaging"},
-                      "media": {
-                        "type": "image",
-                        "id": "data-collection-group-23987-1",
-                        "src": "/img/project-3/group-23987-1.svg",
-                        "alt": "Neutral, clinical packaging — design study",
-                        "width": 88.0,
-                        "height": 88.0
-                      }
+                      "value": 90,
+                      "qualifier": "over",
+                      "label": "of OTC brands use neutral, clinical packaging.",
+                      "context": "Without emotional messaging"
                     },
                     {
-                      "type": "figure",
-                      "id": "multi-layer-packaging-2",
-                      "caption": {"type": "text", "id": "multi-layer-packaging", "text": "multi-layer packaging"},
-                      "media": {
-                        "type": "image",
-                        "id": "data-collection-group-23954-1",
-                        "src": "/img/project-3/group-23954-1.svg",
-                        "alt": "multi-layer packaging — design study",
-                        "width": 88.0,
-                        "height": 88.0
-                      }
+                      "value": 45,
+                      "label": "of OTC brands use multiple layers of packaging."
                     }
                   ]
                 }
@@ -207,57 +181,27 @@ export const content = {
                   "type": "text",
                   "id": "brands-with-emotional-design-in-the-health",
                   "text": [
-                    {
-                      "text": "Brands with emotional design in the health sector (skincare/supplements) grow at 18% annually, but only 12% of OTC brands use non-clinical communication, ",
-                      "tone": "muted"
-                    },
-                    {"text": " "},
-                    {"text": "leaving a gap for \"efficacy + emotion\" positioning.", "tone": "dark"}
+                    {"text": "Skincare and supplement brands using emotional design are growing, while "},
+                    {"text": "warm communication remains rare in OTC", "strong": true},
+                    {"text": "."}
                   ]
                 },
                 {
-                  "type": "columns",
+                  "type": "chart",
                   "id": "health-sector-grow-4",
-                  "items": [
+                  "variant": "opportunity",
+                  "data": [
                     {
-                      "type": "pair",
-                      "id": "health-sector-grow-3",
-                      "copy": {
-                        "type": "group",
-                        "id": "health-sector-grow-3-copy",
-                        "items": [
-                          {"type": "text", "id": "health-sector-grow", "text": "Health sector grow"},
-                          {"type": "text", "id": "grow-at-18", "text": "grow at 18%"}
-                        ]
-                      },
-                      "media": {
-                        "type": "image",
-                        "id": "data-collection-group-23952-1",
-                        "src": "/img/project-3/group-23952-1.svg",
-                        "alt": "Health sector grow — design study",
-                        "width": 306.0,
-                        "height": 46.0
-                      }
+                      "value": 18,
+                      "measurement": "growth",
+                      "label": "growth for skincare & supplement brands using emotional design.",
+                      "context": "Warm, reassuring branding"
                     },
                     {
-                      "type": "pair",
-                      "id": "only-12-of-otc-brands-3",
-                      "copy": {
-                        "type": "group",
-                        "id": "only-12-of-otc-brands-3-copy",
-                        "items": [
-                          {"type": "text", "id": "only-12-of-otc-brands", "text": "Only 12% of OTC brands"},
-                          {"type": "text", "id": "use-non-clinical-communication", "text": "use non-clinical communication"}
-                        ]
-                      },
-                      "media": {
-                        "type": "image",
-                        "id": "data-collection-group-23953-1",
-                        "src": "/img/project-3/group-23953-1.svg",
-                        "alt": "Only 12% of OTC brands — design study",
-                        "width": 306.0,
-                        "height": 47.0
-                      }
+                      "value": 12,
+                      "measurement": "share",
+                      "label": "of OTC brands use non-clinical communication.",
+                      "context": "A warmer, more conversational tone"
                     }
                   ]
                 }
@@ -361,21 +305,53 @@ export const content = {
                   ]
                 },
                 {
-                  "type": "pair",
+                  "type": "group",
                   "id": "4-3",
-                  "copy": {
-                    "type": "group",
-                    "id": "4-2",
-                    "items": [{"type": "label", "id": "4", "text": "4"}, {"type": "label", "id": "opportunities", "text": "Opportunities"}]
-                  },
-                  "media": {
-                    "type": "image",
-                    "id": "target-audiences-frame-1437254302-1",
-                    "src": "/img/project-3/frame-1437254302-1.svg",
-                    "alt": "Opportunities identified for the target audience",
-                    "width": 638.0,
-                    "height": 144.0
-                  }
+                  "items": [
+                    {
+                      "type": "group",
+                      "id": "4-2",
+                      "items": [{"type": "label", "id": "4", "text": "4"}, {"type": "label", "id": "opportunities", "text": "Opportunities"}]
+                    },
+                    {
+                      "type": "columns",
+                      "id": "quiq-audience-opportunities",
+                      "items": [
+                        {
+                          "type": "group",
+                          "id": "quiq-gen-z-opportunity",
+                          "items": [
+                            {"type": "heading", "id": "quiq-gen-z-heading", "text": "Gen Z"},
+                            {"type": "text", "id": "quiq-gen-z-needs", "text": "Digital natives drawn to expressive visuals and engaging content."},
+                            {
+                              "type": "text",
+                              "id": "quiq-gen-z-direction",
+                              "text": [
+                                {"text": "For Quiq: ", "strong": true},
+                                {"text": "Use bold color and conversational copy to make everyday relief feel approachable."}
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "group",
+                          "id": "quiq-wellness-opportunity",
+                          "items": [
+                            {"type": "heading", "id": "quiq-wellness-heading", "text": "Wellness enthusiasts"},
+                            {"type": "text", "id": "quiq-wellness-needs", "text": "People who value holistic well-being, credible health information, and modern design."},
+                            {
+                              "type": "text",
+                              "id": "quiq-wellness-direction",
+                              "text": [
+                                {"text": "For Quiq: ", "strong": true},
+                                {"text": "Pair clear efficacy information with a warm, playful identity."}
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }

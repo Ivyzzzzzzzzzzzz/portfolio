@@ -571,7 +571,7 @@ export const content = {
                         "id": "what-i-feel",
                         "text": [
                           {
-                            "text": "What I feel +",
+                            "text": "What I feel",
                             "strong": true,
                             "tone": "ink"
                           }
@@ -596,7 +596,15 @@ export const content = {
                       {
                         "type": "label",
                         "id": "food-allergies-create-constant-cognitive-load",
-                        "text": "Food allergies create constant cognitive load"
+                        "text": [
+                          {
+                            "text": "Food allergies create "
+                          },
+                          {
+                            "text": "constant cognitive load",
+                            "tone": "highlight"
+                          }
+                        ]
                       }
                     ]
                   },
@@ -612,7 +620,15 @@ export const content = {
                       {
                         "type": "label",
                         "id": "allergy-safety-directly-affects-social-comfort-and",
-                        "text": "Allergy safety directly affects social comfort and participation"
+                        "text": [
+                          {
+                            "text": "Allergy safety directly affects "
+                          },
+                          {
+                            "text": "social comfort and participation",
+                            "tone": "highlight"
+                          }
+                        ]
                       }
                     ]
                   },
@@ -628,7 +644,15 @@ export const content = {
                       {
                         "type": "label",
                         "id": "current-dine-in-systems-dont-support-real-time-decisions",
-                        "text": "Current dine-in systems don’t support real-time decisions"
+                        "text": [
+                          {
+                            "text": "Current dine-in systems "
+                          },
+                          {
+                            "text": "don’t support real-time decisions",
+                            "tone": "highlight"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -884,117 +908,118 @@ export const content = {
                 "width": 939,
                 "height": 493
               }
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design-goal",
+      "title": "Design Goal",
+      "blocks": [
+        {
+          "type": "group",
+          "id": "design-goal-2",
+          "items": [
             {
-              "type": "group",
-              "id": "design-goal-2",
+              "type": "columns",
+              "id": "1-3",
               "items": [
                 {
-                  "type": "heading",
-                  "id": "design-goal",
-                  "text": "Design Goal"
-                },
-                {
-                  "type": "columns",
-                  "id": "1-3",
+                  "type": "card",
+                  "id": "1-2",
                   "items": [
                     {
-                      "type": "card",
-                      "id": "1-2",
-                      "items": [
-                        {
-                          "type": "label",
-                          "id": "1",
-                          "text": "1"
-                        },
-                        {
-                          "type": "label",
-                          "id": "enable-fast-confident-choices-at-the-table",
-                          "text": "Enable fast, confident choices at the table, during ordering, not before \nor after."
-                        }
-                      ]
+                      "type": "label",
+                      "id": "1",
+                      "text": "1"
                     },
                     {
-                      "type": "card",
-                      "id": "2-2",
-                      "items": [
-                        {
-                          "type": "label",
-                          "id": "2",
-                          "text": "2"
-                        },
-                        {
-                          "type": "label",
-                          "id": "acknowledge-group-settings-by-supporting-shared-awareness",
-                          "text": "Acknowledge group settings by supporting shared awareness without forcing awkward conversations."
-                        }
-                      ]
+                      "type": "label",
+                      "id": "enable-fast-confident-choices-at-the-table",
+                      "text": "Enable fast, confident choices at the table, during ordering, not before \nor after."
+                    }
+                  ]
+                },
+                {
+                  "type": "card",
+                  "id": "2-2",
+                  "items": [
+                    {
+                      "type": "label",
+                      "id": "2",
+                      "text": "2"
                     },
                     {
-                      "type": "card",
-                      "id": "3-2",
-                      "items": [
-                        {
-                          "type": "label",
-                          "id": "3",
-                          "text": "3"
-                        },
-                        {
-                          "type": "label",
-                          "id": "use-clear-glanceable-signals-and-prioritized-warnings",
-                          "text": "Use clear, glanceable signals and prioritized warnings."
-                        }
-                      ]
+                      "type": "label",
+                      "id": "acknowledge-group-settings-by-supporting-shared-awareness",
+                      "text": "Acknowledge group settings by supporting shared awareness without forcing awkward conversations."
+                    }
+                  ]
+                },
+                {
+                  "type": "card",
+                  "id": "3-2",
+                  "items": [
+                    {
+                      "type": "label",
+                      "id": "3",
+                      "text": "3"
+                    },
+                    {
+                      "type": "label",
+                      "id": "use-clear-glanceable-signals-and-prioritized-warnings",
+                      "text": "Use clear, glanceable signals and prioritized warnings."
                     }
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "how-might-we-provide-a-clear-and",
+          "text": [
+            {
+              "text": "How might we provide a clear and efficient way to ",
+              "tone": "muted"
             },
             {
-              "type": "text",
-              "id": "how-might-we-provide-a-clear-and",
-              "text": [
-                {
-                  "text": "How might we provide a clear and efficient way to ",
-                  "tone": "muted"
-                },
-                {
-                  "text": "identify safe dishes",
-                  "strong": true,
-                  "tone": "ink"
-                },
-                {
-                  "text": " for people with food allergies and help them ",
-                  "tone": "muted"
-                },
-                {
-                  "text": "communicate dietary needs",
-                  "strong": true,
-                  "tone": "ink"
-                },
-                {
-                  "text": " at restaurants so that they can ",
-                  "tone": "muted"
-                },
-                {
-                  "text": "dine confidently",
-                  "strong": true,
-                  "tone": "accent"
-                },
-                {
-                  "text": " and ",
-                  "tone": "muted"
-                },
-                {
-                  "text": "enjoy an inclusive, stress-free experience shared equally",
-                  "strong": true,
-                  "tone": "accent"
-                },
-                {
-                  "text": " with others.",
-                  "tone": "muted"
-                }
-              ]
+              "text": "identify safe dishes",
+              "strong": true,
+              "tone": "ink"
+            },
+            {
+              "text": " for people with food allergies and help them ",
+              "tone": "muted"
+            },
+            {
+              "text": "communicate dietary needs",
+              "strong": true,
+              "tone": "ink"
+            },
+            {
+              "text": " at restaurants so that they can ",
+              "tone": "muted"
+            },
+            {
+              "text": "dine confidently",
+              "strong": true,
+              "tone": "accent"
+            },
+            {
+              "text": " and ",
+              "tone": "muted"
+            },
+            {
+              "text": "enjoy an inclusive, stress-free experience shared equally",
+              "strong": true,
+              "tone": "accent"
+            },
+            {
+              "text": " with others.",
+              "tone": "muted"
             }
           ]
         }
@@ -1699,6 +1724,23 @@ export const content = {
                 "width": 844,
                 "height": 1674
               }
+            },
+            {
+              "type": "figure",
+              "id": "view-profile-demo",
+              "caption": {
+                "type": "label",
+                "id": "view-profile",
+                "text": "View profile"
+              },
+              "media": {
+                "type": "video",
+                "src": "/videos/project-1/view-profile.mp4",
+                "alt": "Prototype recording for viewing an allergy profile",
+                "id": "prototype-view-profile",
+                "width": 700,
+                "height": 1424
+              }
             }
           ]
         }
@@ -1727,16 +1769,7 @@ export const content = {
                   {
                     "type": "text",
                     "id": "most-allergy-filters-treat-allergens-as-binary",
-                    "text": [
-                      {
-                        "text": "Most allergy filters treat allergens as binary (avoid / allow). However, allergic reactions vary in severity, and some users with mild allergies may still choose to consume certain foods occasionally. ",
-                        "tone": "muted"
-                      },
-                      {
-                        "text": "I introduced three severity levels (Low, Medium, High) and paired them with color-coded indicators to help users make informed decisions based on their personal tolerance.",
-                        "tone": "ink"
-                      }
-                    ]
+                    "text": "Research showed that some people with milder allergies occasionally choose to eat foods containing their allergens. Binary avoid / allow filters don’t reflect those choices, so I introduced three color-coded levels—Low, Medium, and High—to support decisions based on personal tolerance."
                   }
                 ]
               },
@@ -1880,24 +1913,7 @@ export const content = {
                   {
                     "type": "text",
                     "id": "most-restaurant-menus-require-users-to-mentally",
-                    "text": [
-                      {
-                        "text": "Most restaurant menus require users to mentally re-filter ingredients every time they order. I introduced saved allergen profiles that ",
-                        "tone": "muted"
-                      },
-                      {
-                        "text": "allow users to store dietary restrictions once and reuse them in future orders. ",
-                        "tone": "ink"
-                      },
-                      {
-                        "text": "Users can also create multiple profiles (for example, for children or family members),",
-                        "tone": "muted"
-                      },
-                      {
-                        "text": " allowing the system to adjust menu safety indicators for each person automatically.",
-                        "tone": "ink"
-                      }
-                    ]
+                    "text": "Rechecking ingredients with every order adds mental effort. I used saved profiles so diners can enter restrictions once and reuse them, with separate profiles for children or family members. Menu safety indicators then adjust automatically for each person."
                   }
                 ]
               },
@@ -1925,23 +1941,7 @@ export const content = {
                   {
                     "type": "text",
                     "id": "when-dining-in-groups-people-often-need",
-                    "text": [
-                      {
-                        "text": "When dining in groups, people often need to verbally check everyone’s dietary restrictions before ordering or sharing dishes.",
-                        "tone": "muted"
-                      },
-                      {
-                        "text": "\n"
-                      },
-                      {
-                        "text": "I designed the system so users can view the allergen profiles of others in their dining group, ",
-                        "tone": "muted"
-                      },
-                      {
-                        "text": "allowing everyone at the table to understand dietary restrictions at a glance.",
-                        "tone": "ink"
-                      }
-                    ]
+                    "text": "Diners often need to ask about everyone’s restrictions before ordering or sharing dishes. Making allergen profiles visible within the dining group gives everyone the same information to coordinate their food choices."
                   }
                 ]
               },
@@ -1970,7 +1970,7 @@ export const content = {
                     {
                       "type": "text",
                       "id": "displaying-full-allergen-warnings-for-every-dish",
-                      "text": "Displaying full allergen warnings for every dish on all the pages can create visual clutter and slow down browsing. However, hiding warnings entirely can make it difficult for users to safely evaluate complex dish combinations."
+                      "text": "Full allergen warnings on every page can overwhelm browsing, while hiding them makes complex choices harder to evaluate. I adjusted the detail to the dish type, page, and dining context."
                     }
                   ]
                 },
@@ -2009,29 +2009,7 @@ export const content = {
                           {
                             "type": "text",
                             "id": "displaying-detailed-allergen-warnings-for-every-item",
-                            "text": [
-                              {
-                                "text": "Displaying detailed allergen warnings for every item can make the interface feel ",
-                                "tone": "muted"
-                              },
-                              {
-                                "text": "repetitive and visually heavy",
-                                "tone": "ink"
-                              },
-                              {
-                                "text": ", especially for simple dishes. However, complex dishes with multiple selections ",
-                                "tone": "muted"
-                              },
-                              {
-                                "text": "require clear guidance for each option to ensure safe\u00a0decision-making.",
-                                "tone": "ink"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "text",
-                            "id": "this-structure-reduces-visual-noise-for-simple",
-                            "text": "This structure reduces visual noise for simple choices while ensuring precise allergen guidance for more complex meal configurations."
+                            "text": "Diners assess a single dish as a whole, but a customizable meal involves several separate choices. I organized warnings around these different needs, reducing repetition while keeping the details needed to evaluate each option."
                           }
                         ]
                       },
@@ -2197,29 +2175,7 @@ export const content = {
                           {
                             "type": "text",
                             "id": "when-browsing-a-menu-users-need-to",
-                            "text": [
-                              {
-                                "text": "When browsing a menu, users need to ",
-                                "tone": "muted"
-                              },
-                              {
-                                "text": "quickly scan many dishes",
-                                "tone": "ink"
-                              },
-                              {
-                                "text": ". Displaying full allergen labels for every item ",
-                                "tone": "muted"
-                              },
-                              {
-                                "text": "would slow down\u00a0decision-making.",
-                                "tone": "ink"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "text",
-                            "id": "this-approach-supports-fast-menu-scanning-while",
-                            "text": "This approach supports fast menu scanning while ensuring clear safety guidance when evaluating individual dishes."
+                            "text": "The menu supports quick comparisons across dishes; the dish page supports a closer check of one choice. I used this difference to decide how much allergen detail to show at each stage."
                           }
                         ]
                       },
@@ -2381,29 +2337,7 @@ export const content = {
                           {
                             "type": "text",
                             "id": "when-dining-in-groups-users-often-only",
-                            "text": [
-                              {
-                                "text": "When dining in groups, users often only need to know whether a dish is safe for others",
-                                "tone": "muted"
-                              },
-                              {
-                                "text": ", not the exact allergens",
-                                "tone": "ink"
-                              },
-                              {
-                                "text": " each person has. Displaying every allergen detail for every diner ",
-                                "tone": "muted"
-                              },
-                              {
-                                "text": "could create unnecessary complexity and distract from the user's primary task.",
-                                "tone": "ink"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "text",
-                            "id": "this-keeps-the-interface-focused-and-lightweight",
-                            "text": "This keeps the interface focused and lightweight, while still allowing deeper information when necessary."
+                            "text": "The immediate need is to know whether a dish is suitable for others at the table. Listing every person’s exact allergens would add complexity and distract from ordering. Full allergen details remain accessible when needed."
                           }
                         ]
                       },
@@ -2428,8 +2362,8 @@ export const content = {
                                 "id": "i-designed-the-system-to-first-show-2",
                                 "copy": {
                                   "type": "text",
-                                  "id": "i-designed-the-system-to-first-show",
-                                  "text": "I designed the system to first show who at the table is affected, rather than listing all their allergens. A simple avatar indicator highlights which diners may have conflicts with the dish."
+                                "id": "i-designed-the-system-to-first-show",
+                                "text": "Avatar indicators identify diners with a potential allergen conflict."
                                 },
                                 "media": {
                                   "type": "image",

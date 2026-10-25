@@ -64,7 +64,7 @@
 .study-hero { display: grid; gap: 40px; }
 .study-project-meta { display: grid; justify-items: start; gap: 12px; }
 .study-project-title { display: flex; align-items: center; gap: 6px; }
-.study .study-project-title > .study-image-link { flex: 0 0 28px; width: 28px; }
+.study .study-project-title > .study-image-frame { flex: 0 0 28px; width: 28px; }
 .study .study-project-title > img { width: 28px; height: auto; flex-shrink: 0; }
 .study h1 { color: var(--study-accent); font-size: 22px; font-weight: 700; line-height: 1.3; }
 .study-period, .study-disciplines {
@@ -136,7 +136,7 @@
 .study-caption-first > figcaption { grid-row: 1; }
 .study-caption-first > .study-figure-media { grid-row: 2; }
 .study .study-image, .study .study-video { width: 100%; max-width: min(100%, var(--study-media-width)); }
-.study-image-link { display: block; width: 100%; max-width: 100%; }
+.study-image-frame { display: block; width: 100%; max-width: 100%; }
 .study img {
   display: block;
   width: 100%;
@@ -149,7 +149,7 @@
 .study-swatch-circle { width: 18px; border-radius: 50%; }
 .study-composition { position: relative; width: 100%; }
 .study-composition-layer { position: absolute; min-width: 0; }
-.study-composition-layer :is(a, img) { width: 100%; height: 100%; object-fit: contain; max-width: 100%; }
+.study-composition-layer :is(.study-image-frame, img) { width: 100%; height: 100%; object-fit: contain; max-width: 100%; }
 .study-decoration { pointer-events: none; }
 .study-composition-outline { position: absolute; inset: 1.4%; border: 1px solid #444; pointer-events: none; }
 .quiq-palette { display: grid; gap: 24px; min-width: 0; }

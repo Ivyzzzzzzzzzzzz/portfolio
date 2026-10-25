@@ -1,0 +1,74 @@
+.study--project-4 .lc-navigation-diagrams {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 28px;
+}
+.study--project-4 .lc-diagram-panel {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  gap: 12px;
+  min-width: 0;
+}
+.study--project-4 .lc-diagram-heading {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+}
+.study--project-4 .lc-diagram-heading .lc-journey-heading {
+  gap: 6px;
+  padding: 0;
+  border: 0;
+}
+.study--project-4 .lc-diagram-heading > .study-text { font-size: 14px; line-height: 1.5; }
+
+.study--project-4 .lc-native-diagram {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
+  color: #8a8e72;
+}
+
+.study--project-4 .lc-diagram-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: var(--study-body-font);
+}
+
+.study--project-4 .lc-diagram-canvas--narrow { display: none; }
+.study--project-4 .lc-diagram-connections { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linejoin: round; }
+.study--project-4 .lc-diagram-node :is(rect, path) { fill: #fffefa; stroke: #c7c9b5; stroke-width: 1.5; }
+.study--project-4 .lc-diagram-node text { fill: #4f5238; font-size: 14px; font-weight: 500; }
+.study--project-4 .lc-diagram-node--root rect { fill: #646d46; stroke: #646d46; }
+.study--project-4 .lc-diagram-node--root text { fill: #fffefa; }
+.study--project-4 .lc-diagram-node--section rect { fill: #edf0e3; stroke: #a9b18b; }
+.study--project-4 .lc-diagram-node--intro rect { fill: #f5f1df; stroke: #d5cba3; }
+.study--project-4 .lc-diagram-node--intro text { font-size: 13px; }
+.study--project-4 .lc-diagram-node--start rect { fill: #f4e7bd; stroke: #c8b372; }
+.study--project-4 .lc-diagram-node--decision path { fill: #f5f1df; stroke: #c6bc99; }
+.study--project-4 .lc-diagram-node--decision text { font-size: 14px; }
+.study--project-4 .lc-diagram-edge-label {
+  fill: #6b7057;
+  stroke: #fffcf8;
+  stroke-width: 8px;
+  stroke-linejoin: round;
+  paint-order: stroke;
+  font-size: 12px;
+}
+.study--project-4 [data-content-id="user-flow"] { color: #4f5238; font: 600 20px/1.4 var(--study-body-font); }
+
+@media (max-width: 999px) {
+  .study--project-4 .lc-navigation-diagrams { grid-template-columns: minmax(0, 1fr); row-gap: 24px; }
+  .study--project-4 .lc-diagram-panel { grid-template-rows: auto auto; grid-row: auto; }
+}
+
+@container (max-width: 420px) {
+  .study--project-4 .lc-diagram-canvas--wide { display: none; }
+  .study--project-4 .lc-diagram-canvas--narrow { display: block; max-width: 320px; margin-inline: auto; }
+  .study--project-4 .lc-diagram-canvas--narrow .lc-diagram-node text { font-size: 16px; }
+  .study--project-4 .lc-diagram-canvas--narrow .lc-diagram-node--intro text { font-size: 14px; }
+  .study--project-4 .lc-diagram-canvas--narrow .lc-diagram-edge-label { font-size: 16px; }
+}

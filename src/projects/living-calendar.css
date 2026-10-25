@@ -11,7 +11,6 @@
 }
 .study--project-4 :is(.study-text, .study-label, .study-heading) { max-width: min(100%, 62ch); }
 .study--project-4 .study-text { line-height: 1.65; }
-.study--project-4 .study-image-link { cursor: zoom-in; }
 .study--project-4 .study-hero { grid-template-columns: 1fr 1.5fr; gap: 64px; padding-bottom: 48px; }
 .study--project-4 .study-hero-copy { max-width: 450px; gap: 16px; }
 .study--project-4 .study-project-meta { align-content: start; }
@@ -137,12 +136,9 @@
 .study--project-4 .lc-evidence-numbers > div { display: flex; flex: 1; flex-direction: column; gap: 6px; min-width: 0; }
 .study--project-4 .lc-evidence-numbers dt { font-size: 13px; line-height: 1.5; }
 .study--project-4 .lc-evidence-numbers dd { order: -1; margin: 0; color: #62683f; font: 400 clamp(24px, 2.4vw, 32px)/1.2 var(--study-heading-font); }
-.study--project-4 .lc-evidence-help { grid-column: 1 / -1; margin-top: -12px; font-size: 12px; }
-.study--project-4 .lc-evidence-chart { display: grid; align-content: center; min-width: 0; min-height: 250px; }
-.study--project-4 .lc-evidence-chart > .study-columns { grid-template-columns: 1.4fr 1fr; gap: 14px; align-items: center; }
-.study--project-4 .lc-evidence-chart > .study-image,
-.study--project-4 .lc-evidence-chart > .study-columns > .study-image { max-width: 100%; }
-.study--project-4 .lc-evidence-chart img { max-width: 100%; }
+.study--project-4 .lc-evidence-chart { min-width: 0; }
+.study--project-4 .lc-evidence-chart .lc-survey-chart { font-size: 13px; }
+.study--project-4 .lc-evidence-chart .lc-response-bars dl { gap: 20px; }
 
 .study--project-4 .lc-literature-review { display: grid; gap: 28px; padding-top: 32px; border-top: 1px solid var(--lc-line); }
 .study--project-4 .lc-research-intro { display: grid; gap: 12px; }
@@ -168,12 +164,92 @@
 .study--project-4 .lc-journey-heading { display: grid; gap: 6px; padding-top: 28px; border-top: 1px solid var(--lc-line); }
 .study--project-4 .lc-journey-heading > p { color: var(--study-muted); font-size: 14px; line-height: 1.5; }
 
-/* Research evidence uses the same bordered-card system and aligned grids. */
-.study--project-4 #understanding-existing-connections [data-content-id="how-do-people-experience-seasons-today-3"] {
-  gap: 20px;
-  align-items: stretch;
+/* Survey data stays readable as native charts at every screen size. */
+.study--project-4 .lc-connection-evidence {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 20px;
+  color: var(--study-muted);
 }
-.study--project-4 #understanding-existing-connections [data-content-id="how-do-people-experience-seasons-today-3"] > .study-group,
+.study--project-4 .lc-connection-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 24px;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--lc-line);
+  border-radius: 10px;
+  background: var(--lc-paper);
+}
+.study--project-4 .lc-connection-panel h3 {
+  color: #4f5238;
+  font: 600 17px/1.5 var(--study-body-font);
+  text-wrap: auto;
+}
+.study--project-4 .lc-connection-stat {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 20px 0;
+  border-block: 1px solid var(--lc-line);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.study--project-4 .lc-connection-stat > strong {
+  color: #62683f;
+  font: 400 clamp(30px, 2.8vw, 38px)/1.2 var(--study-heading-font);
+  font-variant-numeric: tabular-nums;
+}
+.study--project-4 .lc-survey-chart { min-width: 0; font-size: 12px; line-height: 1.5; }
+.study--project-4 .lc-connection-donut { display: grid; gap: 16px; }
+.study--project-4 .lc-donut-visual { position: relative; width: min(100%, 180px); margin: 0 auto; }
+.study--project-4 .lc-donut-visual svg { display: block; width: 100%; height: auto; }
+.study--project-4 .lc-donut-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+}
+.study--project-4 .lc-donut-value strong { color: #65523f; font: 400 28px/1.2 var(--study-heading-font); }
+.study--project-4 .lc-donut-value > span { max-width: 100px; font-size: 11px; }
+.study--project-4 .lc-chart-legend { display: grid; gap: 2px; padding: 0; list-style: none; }
+.study--project-4 .lc-chart-legend button {
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 36px;
+  padding: 6px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.study--project-4 .lc-chart-legend button:is(:hover, [aria-pressed="true"]) { background: #f5f1e4; color: #4f5238; }
+.study--project-4 .lc-chart-legend button:focus-visible { outline: 2px solid #858952; outline-offset: 1px; }
+.study--project-4 .lc-chart-swatch { display: inline-block; flex: 0 0 8px; width: 8px; height: 8px; border-radius: 50%; background: #83895b; }
+.study--project-4 .lc-chart-scale { display: flex; justify-content: space-between; gap: 8px; color: #727462; font-size: 11px; }
+.study--project-4 .lc-response-bars dl { display: grid; gap: 18px; margin: 20px 0 0; }
+.study--project-4 .lc-response-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 7px 10px; }
+.study--project-4 .lc-response-row dd { display: contents; margin: 0; }
+.study--project-4 .lc-response-value { color: #4f5238; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.study--project-4 .lc-response-count { margin-right: 6px; color: var(--study-muted); font-size: 11px; font-weight: 400; }
+.study--project-4 .lc-response-track { grid-column: 1 / -1; height: 7px; overflow: hidden; border-radius: 3px; background: #f0ede3; }
+.study--project-4 .lc-response-track > span { display: block; height: 100%; border-radius: inherit; background: #c7c9ac; }
+.study--project-4 .lc-response-row[data-highlighted] .lc-response-track > span { background: #83895b; }
+.study--project-4 .lc-chart-note { display: flex; align-items: baseline; gap: 8px; margin-top: 22px; color: #727462; font-size: 11px; }
+
+/* Research evidence uses the same bordered-card system and aligned grids. */
 .study--project-4 #key-insights [data-content-id="heritage-without-experience-3"] > .study-group,
 .study--project-4 #reflection [data-content-id="1-3"] > .study-group {
   padding: 24px;
@@ -281,13 +357,12 @@
 .study--project-4 .lc-storyboard-panel { display: grid; grid-template-rows: auto 1fr; gap: 16px; min-width: 0; }
 .study--project-4 .lc-storyboard-image { aspect-ratio: 1; display: grid; align-items: end; }
 .study--project-4 .lc-storyboard-image .study-image { max-width: 100%; }
-.study--project-4 .lc-storyboard-image :is(a, img) { width: 100%; height: 100%; max-height: 220px; object-fit: contain; }
+.study--project-4 .lc-storyboard-image :is(.study-image-frame, img) { width: 100%; height: 100%; max-height: 220px; object-fit: contain; }
 .study--project-4 .lc-storyboard-image .study-image { height: 100%; }
 .study--project-4 .lc-storyboard-panel .study-text { font: 400 13px/1.6 var(--study-body-font); color: var(--study-muted); }
 
 /* Read each interaction's three iterations from left to right. */
 .study--project-4 .lc-progressions { display: grid; gap: 40px; }
-.study--project-4 .lc-gallery-help { color: var(--study-muted); font-size: 13px; }
 .study--project-4 .lc-progression { display: grid; gap: 20px; padding-top: 24px; border-top: 1px solid var(--lc-line); }
 .study--project-4 .lc-progression > .study-text { font-size: 18px; font-weight: 600; }
 .study--project-4 .lc-progression-images { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
@@ -295,7 +370,7 @@
 .study--project-4 .lc-iteration-label { font: 500 12px/1.4 var(--study-body-font); color: var(--study-muted); letter-spacing: .04em; }
 /* Shared frames keep every iteration row at the same visual scale. */
 .study--project-4 .lc-iteration-frame { aspect-ratio: 3 / 2; overflow: hidden; background: #f5f2e9; border: 1px solid var(--lc-line); }
-.study--project-4 #bringing-the-experience-to-life .lc-iteration-frame :is(.study-image, a, img) {
+.study--project-4 #bringing-the-experience-to-life .lc-iteration-frame :is(.study-image, .study-image-frame, img) {
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -331,7 +406,7 @@
 .study--project-4 .lc-technical-heading h3 { font: 600 18px/1.4 var(--study-body-font); text-wrap: auto; }
 .study--project-4 .lc-technical-intro { color: var(--study-muted); font-size: 16px; line-height: 1.6; }
 .study--project-4 .lc-technical-screen { width: 100%; min-width: 0; max-width: 100%; aspect-ratio: 8 / 5; }
-.study--project-4 #bringing-the-experience-to-life .lc-technical-screen :is(figure, a, img) {
+.study--project-4 #bringing-the-experience-to-life .lc-technical-screen :is(figure, .study-image-frame, img) {
   width: 100%; height: 100%; max-width: 100%; object-fit: contain;
 }
 .study--project-4 .lc-technical-features { display: grid; align-content: start; gap: 8px; padding-left: 18px; list-style: disc; color: var(--study-muted); font-size: 14px; line-height: 1.6; }
@@ -360,7 +435,7 @@
 .study--project-4 .lc-code-switcher button[aria-pressed="true"] { background: var(--lc-soft); border-color: #cfbe7b; color: #75651f; }
 .study--project-4 .lc-code-switcher button:focus-visible { outline: 2px solid var(--study-accent); outline-offset: 3px; }
 .study--project-4 .lc-code-screen { width: 100%; aspect-ratio: 8 / 5; overflow: hidden; background: #fff; border: 1px solid var(--lc-line); border-radius: 6px; }
-.study--project-4 #from-prototype-to-product .lc-code-screen :is(figure, a, img) { width: 100%; height: 100%; max-width: 100%; object-fit: contain; }
+.study--project-4 #from-prototype-to-product .lc-code-screen :is(figure, .study-image-frame, img) { width: 100%; height: 100%; max-width: 100%; object-fit: contain; }
 .study--project-4 .lc-recording { width: 100%; aspect-ratio: 8 / 5; }
 .study--project-4 .lc-recording video {
   display: block;
@@ -377,10 +452,45 @@
 /* Short findings sit above large, parallel annotated screens. */
 .study--project-4 .lc-testing { display: grid; gap: 40px; }
 .study--project-4 .lc-testing-row { display: grid; gap: 24px; padding-top: 24px; border-top: 1px solid var(--lc-line); }
-.study--project-4 .lc-testing-copy .study-text { max-width: 62ch; font-family: var(--study-body-font); }
-.study--project-4 .lc-testing-copy strong { display: inline-block; margin-bottom: 8px; color: var(--study-ink); font-size: 18px; }
+.study--project-4 .lc-testing-copy { display: grid; gap: 16px; max-width: 78ch; color: var(--study-muted); }
+.study--project-4 .lc-testing-copy > .study-heading { color: var(--study-ink); font: 600 18px/1.4 var(--study-body-font); }
+.study--project-4 .lc-testing-copy ul { display: grid; gap: 10px; padding-left: 1.25rem; list-style: disc; }
+.study--project-4 .lc-testing-copy .study-text { max-width: 100%; font-family: var(--study-body-font); }
+.study--project-4 .lc-testing-copy strong { font-weight: 600; }
 .study--project-4 #testing-refinement .lc-testing-images > .study-image { max-width: 720px; }
 .study--project-4 .lc-testing-images > .study-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+
+/* Large source images with handwritten marks and readable margin notes. */
+.study--project-4 .lc-annotated-studies { display: grid; gap: 40px; container-type: inline-size; }
+.study--project-4 .lc-annotated-screen { --annotation-ink: #a34f37; min-width: 0; }
+.study--project-4 .lc-annotation-board { position: relative; }
+.study--project-4 .lc-annotation-stage { position: relative; width: 62%; margin-inline: auto; }
+.study--project-4 .lc-annotation-marks { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; color: var(--annotation-ink); }
+.study--project-4 .lc-annotation-marks path { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.study--project-4 .lc-annotation-outline { stroke-width: 2; }
+.study--project-4 .lc-annotation-leader { stroke-width: 1.25; }
+.study--project-4 .lc-annotation-endpoint { fill: currentColor; }
+.study--project-4 .lc-annotation-pin { position: absolute; transform: translate(-50%, -50%); display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--annotation-ink); color: #fffdf8; font-size: 11px; font-weight: 600; line-height: 1; pointer-events: none; }
+.study--project-4 .lc-annotation-notes { margin: 0; padding: 0; list-style: none; }
+.study--project-4 .lc-annotation-notes li { position: absolute; top: var(--annotation-position); width: 17%; transform: translateY(-50%); display: flex; align-items: baseline; gap: 8px; }
+.study--project-4 .lc-annotation-notes li[data-side="left"] { left: 0; }
+.study--project-4 .lc-annotation-notes li[data-side="right"] { right: 0; }
+.study--project-4 .lc-annotation-number { flex: 0 0 auto; color: var(--annotation-ink); font-size: 12px; font-weight: 600; }
+.study--project-4 .lc-annotation-notes h4 { margin: 0 0 6px; color: var(--annotation-ink); font-size: 15px; font-weight: 600; line-height: 1.4; }
+.study--project-4 .lc-annotation-notes p { color: var(--study-muted); font-size: 13px; line-height: 1.55; }
+.study--project-4 .lc-testing-refinement { max-width: 78ch; padding: 16px 20px; border-left: 3px solid #a34f37; border-radius: 0 4px 4px 0; background: #a34f370a; }
+.study--project-4 .lc-testing-refinement .study-text { max-width: 100%; color: #544840; font-size: 16px; }
+.study--project-4 .lc-testing-refinement strong { color: #a34f37; font-weight: 600; }
+
+@container (max-width: 960px) {
+  .study--project-4 .lc-annotation-stage { width: 100%; }
+  .study--project-4 .lc-annotation-leader, .study--project-4 .lc-annotation-endpoint { display: none; }
+  .study--project-4 .lc-annotation-notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; margin-top: 20px; }
+  .study--project-4 .lc-annotation-notes li { position: static; width: auto; transform: none; }
+}
+@container (max-width: 480px) {
+  .study--project-4 .lc-annotation-notes { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
 
 .study--project-4 #a-living-calendar [data-content-id="https-24-solar-terms-eta-vercel-app-intro-2"] {
   padding: 10px 14px;
@@ -401,30 +511,6 @@
 .study--project-4 .lc-navigation-screens > figure { display: grid; gap: 16px; min-width: 0; }
 .study--project-4 .lc-navigation-screens figcaption { font-size: 16px; color: var(--study-muted); }
 .study--project-4 #reflection [data-content-id="1-3"] { gap: 20px; align-items: stretch; }
-
-/* Native dialog supplies keyboard focus containment and Escape-to-close. */
-.lc-image-detail {
-  width: min(96vw, 1600px);
-  max-width: none;
-  max-height: 94dvh;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #e4e1d2;
-  border-radius: 12px;
-  background: #fffcf8;
-  color: #5c5c5c;
-  font: 14px/1.5 "Kumbh Sans", Helvetica, sans-serif;
-  box-shadow: 0 24px 100px #0003;
-}
-.lc-image-detail::backdrop { background: #262616b3; }
-.lc-image-detail-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 1px solid #e4e1d2; }
-.lc-image-detail-toolbar h2 { margin: 0; font-size: 16px; font-weight: 600; }
-.lc-image-detail-toolbar > div { display: flex; gap: 8px; }
-.lc-image-detail button { padding: 8px 14px; border: 1px solid #d8d4bf; border-radius: 6px; background: #fffefa; color: inherit; font: inherit; cursor: pointer; }
-.lc-image-detail :is(button, [tabindex]):focus-visible { outline: 2px solid #a17b32; outline-offset: -3px; }
-.lc-image-detail-canvas { height: min(78dvh, 1000px); padding: 24px; overflow: auto; overscroll-behavior: contain; }
-.lc-image-detail-canvas img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.lc-image-detail-canvas.is-zoomed img { width: 200%; max-width: none; height: auto; max-height: none; }
 
 @media (max-width: 1199px) {
   .study--project-4.study-has-sidebar {
@@ -470,6 +556,9 @@
 }
 
 @media (max-width: 899px) {
+  .study--project-4 .lc-connection-evidence { grid-template-columns: minmax(0, 1fr); }
+  .study--project-4 .lc-connection-panel { grid-template-rows: auto; grid-row: auto; }
+  .study--project-4 .lc-connection-donut { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 24px; }
   .study--project-4 { padding-top: 32px; }
   .study--project-4 .study-hero { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
   .study--project-4 .study-sidebar { --lc-menu-top: 98px; }
@@ -513,7 +602,6 @@
   .study--project-4 :is(.lc-audience-evidence, .lc-literature-sources, .lc-research-shift) { grid-template-columns: minmax(0, 1fr); }
   .study--project-4 :is(.lc-evidence-panel, .lc-literature-source, .lc-literature-body) { grid-template-rows: auto; grid-row: auto; }
   .study--project-4 .lc-evidence-panel { padding: 20px; }
-  .study--project-4 .lc-evidence-chart { min-height: 0; }
   .study--project-4 .lc-evidence-numbers { gap: 12px; }
   .study--project-4 .lc-finding-comparison { grid-template-columns: minmax(0, 1fr); }
   .study--project-4 .lc-finding-comparison > div { padding: 0 0 16px; }
@@ -531,6 +619,9 @@
 }
 
 @media (max-width: 599px) {
+  .study--project-4 .lc-response-count { display: block; margin-right: 0; }
+  .study--project-4 .lc-connection-panel { padding: 20px; }
+  .study--project-4 .lc-connection-donut { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .study--project-4 .lc-moodboard { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .study--project-4 .lc-moodboard > .study-image { height: 170px; }
   .study--project-4 .lc-moodboard img { max-height: 170px; }
@@ -538,11 +629,6 @@
   .study--project-4 .lc-testing-images > .study-columns,
   .study--project-4 .lc-cultural-layer .study-columns { grid-template-columns: minmax(0, 1fr); }
   .study--project-4 #a-living-calendar [data-content-id="a-living-calendar-visuals-3"] { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .lc-image-detail-toolbar { padding: 12px; gap: 8px; }
-  .lc-image-detail-toolbar h2 { font-size: 14px; }
-  .lc-image-detail button { padding: 8px 10px; }
-  .lc-image-detail-canvas { padding: 12px; }
-  .study--project-4 #understanding-existing-connections [data-content-id="how-do-people-experience-seasons-today-3"] > .study-group,
   .study--project-4 #key-insights [data-content-id="heritage-without-experience-3"] > .study-group,
   .study--project-4 #reflection [data-content-id="1-3"] > .study-group,
   .study--project-4 #designing-a-seasonal-journey [data-content-id="users-familiar-with-the-solar-terms-but-3"] > .study-pair {

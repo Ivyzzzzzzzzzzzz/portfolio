@@ -1,7 +1,8 @@
 import { Block, FigureComposition, RichText } from "../components/case-study/CaseStudy.jsx";
-import EditorialCaseStudy, { Copy, FigureGallery, Heading, MediaHelp, StepHeader, Takeaway, textOf } from "../components/case-study/EditorialCaseStudy.jsx";
+import EditorialCaseStudy, { Copy, FigureGallery, Heading, StepHeader, Takeaway, textOf } from "../components/case-study/EditorialCaseStudy.jsx";
 import { content } from "../content/project-3/content.js";
 import { layout } from "../content/project-3/layout.js";
+import QuiqMarketChart from "./QuiqMarketCharts.jsx";
 import "./quiq.css";
 
 // These coordinates describe one illustration, not the surrounding page layout.
@@ -38,9 +39,9 @@ function ContextJourney({ block }) {
 function MarketData({ block }) {
   return <div className="quiq-market-data" data-content-id={block.id}>
     {block.items.map((item, index) => <article className="ed-note-panel" key={item.id} data-content-id={item.id}>
-      <h3 className="ed-heading">{index === 0 ? "The current OTC landscape" : "The opportunity for emotional design"}</h3>
-      <Copy block={item.items[0]} />
-      <div className="quiq-market-chart"><Block block={item.items[1]} /></div>
+      <h3 className="ed-heading">{index === 0 ? "The current OTC landscape" : "The opportunity: efficacy + emotion"}</h3>
+      <p className="ed-copy quiq-market-summary" data-content-id={item.items[0].id}><RichText value={item.items[0].text} /></p>
+      <Block block={item.items[1]} />
     </article>)}
   </div>;
 }
@@ -55,7 +56,17 @@ function TargetAudiences({ block }) {
       <article><StepHeader block={values} /></article>
     </div>
     <article className="quiq-audience-opportunity" data-content-id={opportunity.id}>
-      <StepHeader block={opportunity.copy} /><div className="ed-media"><Block block={opportunity.media} /></div>
+      <StepHeader block={opportunity.items[0]} />
+      <div className="quiq-audience-opportunity-grid" data-content-id={opportunity.items[1].id}>
+        {opportunity.items[1].items.map(audience => {
+          const [heading, needs, direction] = audience.items;
+          return <section key={audience.id} data-content-id={audience.id} aria-labelledby={heading.id}>
+            <Heading block={heading} level={4} />
+            <Copy block={needs} />
+            <p className="quiq-audience-direction" data-content-id={direction.id}><RichText value={direction.text} /></p>
+          </section>;
+        })}
+      </div>
     </article>
   </div>;
 }
@@ -141,7 +152,7 @@ function Brainstorming({ block }) {
       </article>)}
     </div>
     <section className="quiq-draft-study" data-content-id={drafts.id}>
-      <StepHeader block={drafts.items[0]} /><MediaHelp /><FigureGallery block={drafts.items[1]} className="quiq-drafts" scrollLabel="Wordmark drafts; scroll to compare on smaller displays" />
+      <StepHeader block={drafts.items[0]} /><FigureGallery block={drafts.items[1]} className="quiq-drafts" scrollLabel="Wordmark drafts; scroll to compare on smaller displays" />
     </section>
     <Block block={development} />
   </div>;
@@ -195,7 +206,6 @@ function DesignConcepts({ block }) {
         <div className="quiq-concept-images ed-media">{media.map(image => <div className="ed-image-stage" key={image.id}><Block block={image} /></div>)}</div>
       </article>;
     })}
-    <MediaHelp />
   </div>;
 }
 
@@ -214,6 +224,8 @@ const components = {
   "brand-palette": BrandPalette,
   "i-often-had-headaches-and-fevers-back-3": ContextJourney,
   "top-brands-like-tylenol-and-advil-hold-3": MarketData,
+  "top-brands-3": QuiqMarketChart,
+  "health-sector-grow-4": QuiqMarketChart,
   "1-4": TargetAudiences,
   "1-8": UserNeeds,
   "1-12": MarketInsights,

@@ -99,9 +99,8 @@ export function Media({ media, rule = {} }) {
     width={media.width} height={media.height} loading="lazy" decoding="async"
     style={presentation(rule)} />;
   if (media.decorative) return image;
-  return <a className="study-image-link" href={assetPath(media.src)} target="_blank"
-    style={media.width && media.height ? { aspectRatio: `${media.width} / ${media.height}` } : undefined}
-    rel="noopener noreferrer" aria-label={`Open full-size image: ${media.alt}`}>{image}</a>;
+  return <span className="study-image-frame"
+    style={media.width && media.height ? { aspectRatio: `${media.width} / ${media.height}` } : undefined}>{image}</span>;
 }
 
 /** Copy comes first in the DOM; desktop placement is a presentation choice. */

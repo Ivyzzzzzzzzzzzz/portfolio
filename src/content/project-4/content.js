@@ -253,28 +253,21 @@ export const content = {
                     {
                       "type": "text",
                       "id": "70-of-them-feel-only-somewhat-connected",
-                      "text": "70% of them feel only \"somewhat connected\" to seasonal changes in daily life."
+                      "text": "feel only somewhat connected to seasonal changes in daily life."
                     },
                     {
-                      "type": "columns",
-                      "id": "understanding-existing-connections-visuals",
-                      "items": [
-                        {
-                          "type": "image",
-                          "id": "understanding-existing-connections-image-39",
-                          "src": "/img/project-4/image-39.svg",
-                          "alt": "How do people experience seasons today? — design study",
-                          "width": 201.0,
-                          "height": 202.0
-                        },
-                        {
-                          "type": "image",
-                          "id": "understanding-existing-connections-image-38",
-                          "src": "/img/project-4/image-38.svg",
-                          "alt": "How do people experience seasons today? — design study",
-                          "width": 145.0,
-                          "height": 71.0
-                        }
+                      "type": "chart",
+                      "id": "seasonal-connection-chart",
+                      "variant": "donut",
+                      "label": "Connection to seasonal changes",
+                      "highlight": ["Somewhat connected"],
+                      // Transcribed from image-39.svg and its legend in image-38.svg.
+                      // The three nonzero slices total 100%; Not connected has no slice.
+                      "data": [
+                        {"label": "Somewhat connected", "value": 70, "color": "#b98358"},
+                        {"label": "Moderately connected", "value": 20, "color": "#d6bb76"},
+                        {"label": "Very connected", "value": 10, "color": "#83895b"},
+                        {"label": "Not connected", "value": 0, "color": "#b6bec2"}
                       ]
                     }
                   ]
@@ -284,14 +277,22 @@ export const content = {
                   "id": "how-familiar-are-you-with-the-24-2",
                   "items": [
                     {"type": "text", "id": "how-familiar-are-you-with-the-24", "text": "How familiar are you with the 24 Solar Terms?"},
-                    {"type": "text", "id": "more-than-half-of-them-understand-24", "text": "More than half of them understand 24 ST"},
+                    {"type": "text", "id": "more-than-half-of-them-understand-24", "text": "are very or moderately familiar with the 24 Solar Terms."},
                     {
-                      "type": "image",
-                      "id": "understanding-existing-connections-group-23981-1",
-                      "src": "/img/project-4/group-23981-1.svg",
-                      "alt": "How familiar are you with the 24 — design study",
-                      "width": 334.0,
-                      "height": 268.0
+                      "type": "chart",
+                      "id": "solar-term-familiarity-chart",
+                      "variant": "bars",
+                      "label": "Familiarity with the 24 Solar Terms",
+                      "highlight": ["Very familiar", "Moderately familiar"],
+                      // Original percentages from group-23981-1.svg, without re-rounding.
+                      "data": [
+                        {"label": "Very familiar", "value": 13.79},
+                        {"label": "Moderately familiar", "value": 41.38},
+                        {"label": "Slightly familiar", "value": 36.78},
+                        {"label": "Only know the name", "value": 4.6},
+                        {"label": "Barely familiar", "value": 3.45},
+                        {"label": "Not familiar at all", "value": 0}
+                      ]
                     }
                   ]
                 },
@@ -307,15 +308,21 @@ export const content = {
                     {
                       "type": "text",
                       "id": "people-feel-disconnected-from-nature-due-to",
-                      "text": "People feel disconnected from nature due to fast-paced indoor life (75%)"
+                      "text": "say modern life makes them less aware of seasonal changes, at least a little."
                     },
                     {
-                      "type": "image",
-                      "id": "understanding-existing-connections-group-23982-1",
-                      "src": "/img/project-4/group-23982-1.svg",
-                      "alt": "Do you think modern life makes you — design study",
-                      "width": 237.0,
-                      "height": 250.0
+                      "type": "chart",
+                      "id": "modern-life-awareness-chart",
+                      "variant": "bars",
+                      "label": "Does modern life reduce seasonal awareness?",
+                      "highlight": ["Yes", "A little"],
+                      // Original percentages from group-23982-1.svg; displayed total is 100.01% due to rounding.
+                      "data": [
+                        {"label": "Yes", "value": 28.74},
+                        {"label": "A little", "value": 45.98},
+                        {"label": "No", "value": 22.99},
+                        {"label": "Hard to say", "value": 2.3}
+                      ]
                     }
                   ]
                 }
@@ -399,51 +406,38 @@ export const content = {
                   "type": "group",
                   "id": "how-do-people-notice-seasonal-change-2",
                   "highlights": [
-                    {"value": "88.5%", "label": "Temperature"},
-                    {"value": "62%", "label": "Daylight shifts"},
-                    {"value": "60%", "label": "Plant changes"}
+                    {"dataLabel": "Temperature change", "label": "Temperature"},
+                    {"dataLabel": "Daylight length", "label": "Daylight shifts"},
+                    {"dataLabel": "Plant changes", "label": "Plant changes"}
                   ],
                   "items": [
                     {"type": "text", "id": "how-do-people-notice-seasonal-change", "text": "How do people notice seasonal change?"},
                     {
                       "type": "text",
                       "id": "top-cues-for-seasons-temperature-88-5-daylight",
-                      "text": "Top cues for seasons: Temperature (88.5%), daylight shifts (62%), plant changes (60%)."
+                      "text": "Top cues for seasons: Temperature (88.51%), daylight shifts (62.07%), plant changes (59.77%)."
                     },
                     {
-                      "type": "columns",
-                      "id": "expanding-the-audience-visuals-2",
-                      "items": [
-                        {
-                          "type": "image",
-                          "id": "expanding-the-audience-image-37",
-                          "src": "/img/project-4/image-37.svg",
-                          "alt": "How do people notice seasonal change? — design study",
-                          "width": 280.0,
-                          "height": 158.0
-                        },
-                        {
-                          "type": "group",
-                          "id": "expanding-the-audience-visuals",
-                          "items": [
-                            {
-                              "type": "image",
-                              "id": "expanding-the-audience-image-40",
-                              "src": "/img/project-4/image-40.svg",
-                              "alt": "How do people notice seasonal change? — design study",
-                              "width": 180.0,
-                              "height": 54.0
-                            },
-                            {
-                              "type": "image",
-                              "id": "expanding-the-audience-group-11",
-                              "src": "/img/project-4/group-11.svg",
-                              "alt": "How do people notice seasonal change? — design study",
-                              "width": 111.0,
-                              "height": 57.0
-                            }
-                          ]
-                        }
+                      "type": "chart",
+                      "id": "seasonal-cues-chart",
+                      "variant": "bars",
+                      "selectionMode": "multiple",
+                      "sampleSize": 10,
+                      "label": "How people notice seasonal change",
+                      "scaleLabel": "Respondents selecting each option",
+                      "highlight": ["Temperature change", "Daylight length", "Plant changes"],
+                      // Read from image-37.svg and its legends in image-40.svg / group-11.svg.
+                      // Dressing change and Holiday tradition have no identifiable slices.
+                      // The 37.93% slice has no matching legend color; the 2.3% label reads "Athe [Details]".
+                      // Keep those unresolved entries out of the chart rather than assign or invent values.
+                      "data": [
+                        {"label": "Temperature change", "value": 88.51},
+                        {"label": "Daylight length", "value": 62.07},
+                        {"label": "Plant changes", "value": 59.77},
+                        {"label": "Air smell / humidity", "value": 25.29},
+                        {"label": "Weather change", "value": 56.32},
+                        {"label": "Seasonal food", "value": 25.29},
+                        {"label": "Not likely to notice", "value": 59.77}
                       ]
                     }
                   ]
@@ -452,8 +446,8 @@ export const content = {
                   "type": "figure",
                   "id": "what-kinds-of-interactions-feel-meaningful-2",
                   "highlights": [
-                    {"value": "80%", "label": "Notice something in nature"},
-                    {"value": "70%", "label": "Step outside briefly"}
+                    {"dataLabel": "Notice something in nature", "label": "Notice something in nature"},
+                    {"dataLabel": "Step outside briefly", "label": "Step outside briefly"}
                   ],
                   "caption": {
                     "type": "text",
@@ -461,12 +455,24 @@ export const content = {
                     "text": "What kinds of interactions feel meaningful?"
                   },
                   "media": {
-                    "type": "image",
-                    "id": "expanding-the-audience-group-12-1",
-                    "src": "/img/project-4/group-12-1.svg",
-                    "alt": "What kinds of interactions feel meaningful? — design study",
-                    "width": 563.0,
-                    "height": 260.0
+                    "type": "chart",
+                    "id": "meaningful-interactions-chart",
+                    "variant": "bars",
+                    "selectionMode": "multiple",
+                    "sampleSize": 10,
+                    "label": "Interactions that feel meaningful",
+                    "scaleLabel": "Respondents selecting each option",
+                    "highlight": ["Notice something in nature", "Step outside briefly"],
+                    // Counts and percentages transcribed from group-12-1.svg.
+                    "data": [
+                      {"label": "Notice something in nature", "value": 80, "count": 8},
+                      {"label": "Step outside briefly", "value": 70, "count": 7},
+                      {"label": "Light journaling", "value": 20, "count": 2},
+                      {"label": "Small wellness ritual", "value": 20, "count": 2},
+                      {"label": "Reflect on an intention", "value": 10, "count": 1},
+                      {"label": "I prefer no action", "value": 10, "count": 1},
+                      {"label": "Other", "value": 0, "count": 0}
+                    ]
                   }
                 }
               ]
@@ -766,7 +772,6 @@ export const content = {
               "id": "i-explored-several-approaches-for-presenting-the",
               "text": "I explored several approaches for presenting the Solar Terms digitally."
             },
-            {"type": "text", "id": "visual-references", "text": "Visual References"},
             {
               "type": "text",
               "id": "visual-references-exploring-traditional-chinese-aesthetics-and",
@@ -1127,38 +1132,73 @@ export const content = {
               ]
             },
             {
-              "type": "figure",
-              "id": "sitemap-how-should-information-be-organized-2",
-              "caption": {
-                "type": "text",
-                "id": "sitemap-how-should-information-be-organized",
-                "text": [
-                  {"text": "Sitemap ", "strong": true, "tone": "muted"},
-                  {"text": "(How should information be organized?)", "strong": true, "tone": "olive"}
-                ]
-              },
-              "media": {
-                "type": "image",
-                "id": "designing-a-seasonal-journey-group-23984-1",
-                "src": "/img/project-4/group-23984-1.svg",
-                "alt": "Sitemap (How should information be organized?) — design study",
-                "width": 706.0,
-                "height": 217.0
-              }
-            },
-            {"type": "text", "id": "user-flow", "text": "User Flow"},
-            {
-              "type": "text",
-              "id": "with-the-overall-structure-established-i-mapped",
-              "text": "With the overall structure established, I mapped how users would navigate between these layers."
-            },
-            {
-              "type": "image",
-              "id": "designing-a-seasonal-journey-user-map-1-1",
-              "src": "/img/project-4/user-map-1-1.svg",
-              "alt": "User Flow — design study",
-              "width": 747.0,
-              "height": 144.0
+              "type": "group",
+              "id": "sitemap-and-user-flow",
+              "items": [
+                {
+                  "type": "figure",
+                  "id": "sitemap-how-should-information-be-organized-2",
+                  "caption": {
+                    "type": "text",
+                    "id": "sitemap-how-should-information-be-organized",
+                    "text": [
+                      {"text": "Sitemap ", "strong": true, "tone": "muted"},
+                      {"text": "(How should information be organized?)", "strong": true, "tone": "olive"}
+                    ]
+                  },
+                  "media": {
+                    "type": "diagram",
+                    "id": "designing-a-seasonal-journey-group-23984-1",
+                    "variant": "sitemap",
+                    "label": "Living Calendar sitemap",
+                    "description": "Home branches into Term wheel and Intro, an introduction to the 24 Solar Terms. The Term wheel leads to Terms, with four content areas: Rituals, Ecological Signals, Calendar, and Personal Reflection.",
+                    "nodes": [
+                      {"key": "home", "lines": ["Home"], "kind": "root"},
+                      {"key": "wheel", "lines": ["Term wheel"], "kind": "section"},
+                      {"key": "intro", "lines": ["Intro", "What are the 24 Solar Terms?"], "narrowLines": ["Intro", "What are the", "24 Solar Terms?"], "kind": "intro"},
+                      {"key": "terms", "lines": ["Terms"], "kind": "section"},
+                      {"key": "rituals", "lines": ["Rituals"]},
+                      {"key": "ecology", "lines": ["Ecological Signals"]},
+                      {"key": "calendar", "lines": ["Calendar"]},
+                      {"key": "reflection", "lines": ["Personal Reflection"]}
+                    ],
+                    "edges": [
+                      {"key": "home-wheel", "from": "home", "to": "wheel"},
+                      {"key": "home-intro", "from": "home", "to": "intro"},
+                      {"key": "wheel-terms", "from": "wheel", "to": "terms"}
+                    ]
+                  }
+                },
+                {"type": "heading", "id": "user-flow", "text": "User Flow"},
+                {
+                  "type": "text",
+                  "id": "with-the-overall-structure-established-i-mapped",
+                  "text": "With the overall structure established, I mapped how users would navigate between these layers."
+                },
+                {
+                  "type": "diagram",
+                  "id": "designing-a-seasonal-journey-user-map-1-1",
+                  "variant": "userFlow",
+                  "label": "Living Calendar user flow",
+                  "description": "Start by viewing the current Solar Term, then choose a path: browse the Solar Term list or open the current term's details. From the details, return to the Solar Term list or continue to another Solar Term's details.",
+                  "nodes": [
+                    {"key": "start", "lines": ["Start"], "kind": "start"},
+                    {"key": "current", "lines": ["View current Solar Term"], "kind": "section"},
+                    {"key": "choice", "lines": ["Choose a path"], "kind": "decision"},
+                    {"key": "list", "lines": ["Solar Term list"]},
+                    {"key": "details", "lines": ["Solar Term details"], "kind": "section"},
+                    {"key": "another", "lines": ["Another Solar Term’s details"]}
+                  ],
+                  "edges": [
+                    {"key": "start-current", "from": "start", "to": "current"},
+                    {"key": "current-choice", "from": "current", "to": "choice"},
+                    {"key": "choice-list", "from": "choice", "to": "list", "label": "Browse terms"},
+                    {"key": "choice-details", "from": "choice", "to": "details", "label": "Open details"},
+                    {"key": "details-list", "from": "details", "to": "list", "label": "Back to list"},
+                    {"key": "details-another", "from": "details", "to": "another"}
+                  ]
+                }
+              ]
             },
             {
               "type": "text",
@@ -1341,10 +1381,10 @@ export const content = {
                     {
                       "type": "image",
                       "id": "bringing-the-experience-to-life-image-50",
-                      "src": "/img/project-4/image-50.svg",
-                      "alt": "Solar Term Details Page — design study",
-                      "width": 186.0,
-                      "height": 115.0
+                      "src": "/img/project-4/solar-term-details-iteration-03.png",
+                      "alt": "Solar Term Details Page — Iteration 03, Winter Solstice rituals",
+                      "width": 3024,
+                      "height": 1890
                     }
                   ]
                 },
@@ -1645,11 +1685,18 @@ export const content = {
               "id": "to-validate-the-usability-and-experience-of",
               "text": [
                 {
-                  "text": "To validate the usability and experience of the website, I conducted moderated usability testing ",
+                  "text": "I conducted moderated usability testing with ",
                   "tone": "gold"
                 },
-                {"text": "(3‑task 6 users)", "strong": true, "tone": "muted"},
-                {"text": " focusing on discoverability, interaction intuitiveness, and cross-page consistency.", "tone": "gold"}
+                {
+                  "text": "six participants across three tasks",
+                  "strong": true,
+                  "tone": "muted"
+                },
+                {
+                  "text": " to evaluate discoverability, navigation, and interaction clarity. The findings below highlight what worked and where the experience needed refinement.",
+                  "tone": "gold"
+                }
               ]
             },
             {
@@ -1660,41 +1707,101 @@ export const content = {
                   "type": "pair",
                   "id": "landing-page-users-understood-the-wheels-cyclical-2",
                   "copy": {
-                    "type": "text",
+                    "type": "heading",
                     "id": "landing-page-users-understood-the-wheels-cyclical",
-                    "text": [
-                      {"text": "Landing Page ", "strong": true, "tone": "muted"},
-                      {"text": "\n "},
-                      {
-                        "text": "Users understood the wheel’s cyclical time concept. Some hesitated to find the wheel’s interactive features.",
-                        "tone": "muted"
-                      }
-                    ]
+                    "text": "Landing Page"
                   },
+                  "findings": [
+                    {
+                      "type": "text",
+                      "id": "testing-landing-concept",
+                      "text": [
+                        {
+                          "text": "What worked: ",
+                          "strong": true
+                        },
+                        {
+                          "text": "Participants understood the wheel as a cyclical view of time."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "testing-landing-priority",
+                      "text": [
+                        {
+                          "text": "Refinement priority: ",
+                          "strong": true
+                        },
+                        {
+                          "text": "Make rotation easier to discover and support selecting a term directly from its label."
+                        }
+                      ]
+                    }
+                  ],
                   "media": {
                     "type": "image",
                     "id": "testing-refinement-31-1",
-                    "src": "/img/project-4/31-1.svg",
-                    "alt": "Landing Page Users understood the wheel’s cyclical — design study",
-                    "width": 231.0,
-                    "height": 152.0
+                    "src": "/img/project-4/testing-landing-clean.png",
+                    "alt": "Clean landing-page screenshot with clickable date controls and the circular solar-term wheel.",
+                    "width": 1512,
+                    "height": 945,
+                    "annotations": {
+                      "notes": [
+                        {
+                          "number": "1",
+                          "side": "left",
+                          "position": 25,
+                          "title": "Clickable date controls",
+                          "text": "Both calendar dates can be clicked, offering a direct way to choose a date."
+                        },
+                        {
+                          "number": "2",
+                          "side": "right",
+                          "position": 61,
+                          "title": "Clicking felt more natural",
+                          "text": "One participant clicked the term labels instead of dragging the wheel. The drag gesture needed a clearer cue."
+                        }
+                      ]
+                    }
                   }
                 },
                 {
                   "type": "pair",
                   "id": "winter-solstice-detail-page-users-understood-the-2",
                   "copy": {
-                    "type": "text",
+                    "type": "heading",
                     "id": "winter-solstice-detail-page-users-understood-the",
-                    "text": [
-                      {"text": "Winter Solstice Detail Page", "strong": true, "tone": "muted"},
-                      {"text": "\n "},
-                      {
-                        "text": "Users understood the three solar‑term phases. The solar longitude panel was unclear. Navigation lacked obvious visual cues. Bilingual content was easy to follow.",
-                        "tone": "muted"
-                      }
-                    ]
+                    "text": "Winter Solstice Detail Page"
                   },
+                  "findings": [
+                    {
+                      "type": "text",
+                      "id": "testing-detail-comprehension",
+                      "text": [
+                        {
+                          "text": "What worked: ",
+                          "strong": true
+                        },
+                        {
+                          "text": "Participants understood the three solar-term phases and could follow the bilingual content."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "testing-detail-priority",
+                      "text": [
+                        {
+                          "text": "Refinement priority: ",
+                          "strong": true
+                        },
+                        {
+                          "text": "Clarify clickable targets and the solar graphic, and make content changes explicit and user-controlled."
+                        }
+                      ]
+                    }
+                  ],
                   "media": {
                     "type": "columns",
                     "id": "testing-refinement-visuals",
@@ -1702,18 +1809,49 @@ export const content = {
                       {
                         "type": "image",
                         "id": "testing-refinement-36-1",
-                        "src": "/img/project-4/36-1.svg",
-                        "alt": "Winter Solstice Detail Page Users understood the — design study",
-                        "width": 260.0,
-                        "height": 152.0
-                      },
-                      {
-                        "type": "image",
-                        "id": "testing-refinement-30-1",
-                        "src": "/img/project-4/30-1.svg",
-                        "alt": "Winter Solstice Detail Page Users understood the — design study",
-                        "width": 259.0,
-                        "height": 151.0
+                        "src": "/img/project-4/testing-winter-solstice-clean.png",
+                        "alt": "Clean Winter Solstice detail page with a Back button, solar-longitude panel, content card, and circular navigation.",
+                        "annotations": {
+                          "notes": [
+                            {
+                              "number": "3",
+                              "side": "left",
+                              "position": 14,
+                              "title": "A visible, unused exit",
+                              "text": "Participants noticed the Back button, but rarely used it."
+                            },
+                            {
+                              "number": "4",
+                              "side": "left",
+                              "position": 43,
+                              "title": "Navigation was expected here",
+                              "text": "One participant looked to the solar-term title for navigation."
+                            },
+                            {
+                              "number": "5",
+                              "side": "right",
+                              "position": 24,
+                              "title": "The graphic needed explaining",
+                              "text": "The solar-longitude panel needed accompanying text before its meaning was clear."
+                            },
+                            {
+                              "number": "6",
+                              "side": "right",
+                              "position": 64,
+                              "title": "An unclear control",
+                              "text": "Participants were unsure how to use the circle or which content it controlled."
+                            },
+                            {
+                              "number": "7",
+                              "side": "left",
+                              "position": 79,
+                              "title": "Autoplay broke the connection",
+                              "text": "Automatic content changes made it hard to connect the menu with the current text."
+                            }
+                          ]
+                        },
+                        "width": 1512,
+                        "height": 945
                       }
                     ]
                   }
@@ -1722,36 +1860,67 @@ export const content = {
                   "type": "pair",
                   "id": "year-calendar-page-users-grasped-the-grids-2",
                   "copy": {
-                    "type": "text",
+                    "type": "heading",
                     "id": "year-calendar-page-users-grasped-the-grids",
-                    "text": [
-                      {"text": "Year Calendar Page", "strong": true, "tone": "muted"},
-                      {"text": "\n "},
-                      {
-                        "text": "Users grasped the grid’s yearly overview. Wheel‑grid visual links were unclear. Some interactions felt disconnected. Users viewed the page as both tool and artwork.",
-                        "tone": "muted"
-                      }
-                    ]
+                    "text": "Year Calendar Page"
                   },
+                  "findings": [
+                    {
+                      "type": "text",
+                      "id": "testing-calendar-expectations",
+                      "text": [
+                        {
+                          "text": "What worked: ",
+                          "strong": true
+                        },
+                        {
+                          "text": "Participants understood the yearly overview; their expectations ranged from date lookup to visual exploration."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "testing-calendar-priority",
+                      "text": [
+                        {
+                          "text": "Refinement priority: ",
+                          "strong": true
+                        },
+                        {
+                          "text": "Give the date toggle a clear label and visible state so users can move between reading dates and exploring seasonal color."
+                        }
+                      ]
+                    }
+                  ],
                   "media": {
                     "type": "columns",
                     "id": "testing-refinement-visuals-2",
                     "items": [
                       {
                         "type": "image",
-                        "id": "testing-refinement-33-1",
-                        "src": "/img/project-4/33-1.svg",
-                        "alt": "Year Calendar Page Users grasped the grid’s — design study",
-                        "width": 238.0,
-                        "height": 151.0
-                      },
-                      {
-                        "type": "image",
                         "id": "testing-refinement-32-1",
-                        "src": "/img/project-4/32-1.svg",
-                        "alt": "Year Calendar Page Users grasped the grid’s — design study",
-                        "width": 239.0,
-                        "height": 152.0
+                        "src": "/img/project-4/testing-year-calendar-clean.png",
+                        "alt": "Clean year-calendar screenshot showing seasonal color bands, daily dates, and the TEXT / 日期 toggle.",
+                        "width": 1512,
+                        "height": 945,
+                        "annotations": {
+                          "notes": [
+                            {
+                              "number": "8",
+                              "side": "right",
+                              "position": 18,
+                              "title": "A hidden date toggle",
+                              "text": "The TEXT / 日期 control was overlooked or did not look clickable. Showing or hiding dates was hard to discover."
+                            },
+                            {
+                              "number": "9",
+                              "side": "left",
+                              "position": 65,
+                              "title": "Two ways to read the calendar",
+                              "text": "Some participants wanted a practical date tool; others valued the seasonal color experience."
+                            }
+                          ]
+                        }
                       }
                     ]
                   }

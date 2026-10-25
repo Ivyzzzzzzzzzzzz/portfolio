@@ -1,11 +1,40 @@
-import CaseStudy, { Block, Media, ImageExplanation } from "../components/case-study/CaseStudy.jsx";
+import CaseStudy, { Block, Media, ImageExplanation, RichText } from "../components/case-study/CaseStudy.jsx";
 import OnThisPage from "../components/case-study/OnThisPage.jsx";
 import { content } from "../content/project-1/content.js";
+import { decisionHeadlines } from "../content/project-1/decision-headlines.js";
 import { layout } from "../content/project-1/layout.js";
 import "./justeat.css";
 
 function Observations({ block }) {
-  return <div className="je-observations"><ImageExplanation block={block} rule={{ ratio: "2fr 1fr" }} /></div>;
+  const [headings, ...observations] = block.copy.items;
+
+  return <div className="je-observations" data-content-id={block.id}>
+    <div className="je-observation-findings">
+      <div className="je-observation-headings" data-content-id={headings.id}>
+        <Block block={headings.items[0]} />
+        <Block block={headings.items[1]} />
+      </div>
+      <dl className="je-observation-list" data-content-id={block.copy.id}>
+        {observations.map((observation, index) => <div className="je-observation-row" data-content-id={observation.id} key={observation.id}>
+          <dt className="je-observation-experience">
+            <span className="je-observation-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+            <Block block={observation.items[0]} />
+          </dt>
+          <dd className="je-observation-insight">
+            <span className="je-observation-mobile-label">Insight</span>
+            <Block block={observation.items[1]} />
+          </dd>
+        </div>)}
+      </dl>
+    </div>
+    <figure className="je-observation-evidence">
+      <figcaption>
+        <span className="je-observation-evidence-label">From the study</span>
+        <p>Salt + Smoke menu and allergen guide</p>
+      </figcaption>
+      <div className="je-observation-evidence-media"><Block block={block.media} /></div>
+    </figure>
+  </div>;
 }
 
 function InterviewGrid({ block }) {
@@ -21,7 +50,7 @@ function InterviewGrid({ block }) {
 function BrainstormingBoard({ block }) {
   return <div className="je-brainstorming-grid" data-content-id={block.id}>
     {block.items.map(figure => <figure key={figure.id} data-content-id={figure.id}
-      className={`je-concept-card${figure.id === "qr-code-filter-2" ? " je-concept-featured" : ""}`}>
+      className="je-concept-card">
       <figcaption><Block block={figure.caption} /></figcaption>
       <div className="je-sketch-stage"><Media media={figure.media} /></div>
     </figure>)}
@@ -53,8 +82,20 @@ function PrototypeGallery({ block }) {
 }
 
 function DecisionRow({ block }) {
+  const headings = block.copy.items.filter(item => item.type !== "text");
+  const reasoning = block.copy.items.filter(item => item.type === "text");
+  const headingId = `je-decision-${block.id}`;
+
   return <div className="je-decision-row" data-content-id={block.id} data-image-explanation="true">
-    <div className="study-pair-copy"><Block block={block.copy} /></div>
+    <div className="study-pair-copy je-decision-copy" data-content-id={block.copy.id}>
+      <div className="je-decision-topic">
+        {headings.map(item => <Block block={item} key={item.id} />)}
+      </div>
+      <h3 className="je-decision-takeaway" id={headingId}><RichText value={decisionHeadlines[block.id]} /></h3>
+      <div className="je-decision-reasoning">
+        {reasoning.map(item => <Block block={item} key={item.id} />)}
+      </div>
+    </div>
     <div className={`study-pair-media${block.media.type === "image" ? " je-single-screen" : ""}`}>
       <Block block={block.media} />
     </div>
@@ -144,10 +185,29 @@ function WireframeStudy({ block }) {
 function DesignSystem({ block }) {
   const [responsive, library] = block.items;
   const [foundations, components] = library.items;
+  const [typography, illustrations, colorTitle, colors] = foundations.items;
+  const [cards, buttons, icons] = components.items;
+  const panels = [
+    { key: "typography", title: typography.caption, items: [typography.media] },
+    { key: "colors", title: colorTitle, items: [colors] },
+    { key: "illustrations", title: illustrations.caption, items: [illustrations.media] },
+    { key: "cards", title: cards.items[0], items: cards.items.slice(1) },
+    { key: "buttons", title: buttons.caption, items: [buttons.media] },
+    { key: "icons", title: icons.items[0], items: icons.items.slice(1) },
+  ];
   return <div className="je-system" data-content-id={block.id}>
     <div className="je-responsive-study"><Block block={responsive} /></div>
-    <div className="je-system-panels">
-      {[foundations, ...components.items].map(item => <div className="je-system-panel" key={item.id}><Block block={item} /></div>)}
+    <div className="je-system-panels" data-content-id={library.id}>
+      {panels.map((panel, index) => <section className={`je-system-panel je-system-panel--${panel.key}`}
+        key={panel.key} aria-labelledby={`je-system-${panel.key}`}>
+        <header className="je-system-panel-heading">
+          <span className="je-system-panel-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+          <h3 id={`je-system-${panel.key}`} data-content-id={panel.title.id}><RichText value={panel.title.text} /></h3>
+        </header>
+        <div className="je-system-panel-body">
+          {panel.items.map(item => <Block block={item} key={item.id} />)}
+        </div>
+      </section>)}
     </div>
   </div>;
 }

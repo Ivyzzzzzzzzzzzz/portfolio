@@ -50,7 +50,7 @@ Edit the individual strings, including the spaces between them. `strong` means b
 }
 ```
 
-Those dimensions reserve proportional space while the image loads. They do not fix the size of the page. A `maxWidth` in `layout.js` limits enlargement; the image still shrinks on a narrow screen. Clicking an instructional image opens the original at full size.
+Those dimensions reserve proportional space while the image loads. They do not fix the size of the page. A `maxWidth` in `layout.js` limits enlargement; the image still shrinks on a narrow screen. Images display inline without click-to-enlarge behavior.
 
 Text drawn inside an illustration remains part of the image. To change that text, update the artwork and replace its asset. The surrounding explanation remains editable in the content file.
 
@@ -123,7 +123,7 @@ JustEat also has section-specific presentation in `src/projects/JustEatCaseStudy
 
 At desktop widths of 1,200px and above, section navigation stays in a left sidebar and highlights the current section. On smaller screens it becomes a collapsible “On this page” menu, which closes after a selection.
 
-APT and Quiq use the same reading widths, section navigation, image-detail viewer, and evidence/takeaway grouping through `src/components/case-study/EditorialCaseStudy.jsx` and `editorial-case-study.css`. Their section-specific layouts live in `MaintenanceCaseStudy.jsx` / `maintenance.css` and `Project3CaseStudy.jsx` / `quiq.css`. Keep text and source artwork in their existing content files. APT's wireframe strips keep a shared screen height and scroll on smaller displays; Quiq's wordmark drafts also scroll on phones. “View label copy” expands Quiq's supporting packaging copy. Image frames contain the whole asset, and clicking opens a zoomable preview.
+APT and Quiq use the same reading widths, section navigation, and evidence/takeaway grouping through `src/components/case-study/EditorialCaseStudy.jsx` and `editorial-case-study.css`. Their section-specific layouts live in `MaintenanceCaseStudy.jsx` / `maintenance.css` and `Project3CaseStudy.jsx` / `quiq.css`. Keep text and source artwork in their existing content files. APT's wireframe strips keep a shared screen height and scroll on smaller displays; Quiq's wordmark drafts also scroll on phones. “View label copy” expands Quiq's supporting packaging copy. Image frames contain the whole asset and display it inline.
 
 ## Check an edit
 

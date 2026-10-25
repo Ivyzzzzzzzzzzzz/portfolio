@@ -5,25 +5,62 @@
 .ed-case-study .study--project-3 #context [data-content-id="why-shouldnt-their-packaging-feel-warm-and"] { padding: 24px; border-left: 3px solid var(--ed-accent); background: var(--ed-soft); font-size: 22px; max-width: 48ch; }
 .ed-case-study .quiq-market-data { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .ed-case-study .quiq-market-data > article { grid-template-rows: subgrid; grid-row: span 3; }
-.ed-case-study .quiq-market-chart { align-self: start; }
-.ed-case-study .quiq-market-chart [data-content-id="top-brands-3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.ed-case-study .quiq-market-chart .study-figure { justify-items: center; text-align: center; }
-.ed-case-study .quiq-market-chart .study-figure .study-image { width: 100px; max-width: 100%; }
-.ed-case-study .quiq-market-chart .study-figure figcaption .study-text { font-size: 13px; }
-.ed-case-study .quiq-market-chart [data-content-id="health-sector-grow-4"] { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-.ed-case-study .quiq-market-chart .study-pair { grid-template-columns: minmax(0, 1fr); gap: 10px; }
-.ed-case-study .quiq-market-chart .study-pair .study-image { max-width: 340px; }
-.ed-case-study .quiq-market-chart .study-pair-copy > .study-group { display: flex; flex-wrap: wrap; gap: 4px 6px; }
-.ed-case-study .quiq-market-chart .study-text { font-size: 14px; }
+.ed-case-study .quiq-market-summary strong { color: var(--ed-heading); font-weight: 600; }
+.ed-case-study .quiq-market-chart { --quiq-chart-fill: #c07a47; --quiq-chart-track: #f1e9df; align-self: start; min-width: 0; padding-top: 24px; border-top: 1px solid var(--ed-line); container: quiq-chart / inline-size; }
+.ed-case-study .quiq-market-donuts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.ed-case-study .quiq-market-metric { display: grid; grid-template-rows: auto 1fr; justify-items: center; align-content: start; gap: 18px; min-width: 0; margin: 0; text-align: center; }
+.ed-case-study .quiq-market-ring { display: grid; place-items: center; width: min(100%, 120px); aspect-ratio: 1; }
+.ed-case-study .quiq-market-ring > * { grid-area: 1 / 1; }
+.ed-case-study .quiq-market-ring svg { display: block; width: 100%; height: auto; overflow: visible; }
+.ed-case-study .quiq-market-ring circle { fill: none; stroke-width: 10; }
+.ed-case-study .quiq-market-ring-track { stroke: var(--quiq-chart-track); }
+.ed-case-study .quiq-market-ring-fill { stroke: var(--quiq-chart-fill); }
+.ed-case-study .quiq-market-value { color: var(--ed-heading); font: 600 30px/1 var(--study-body-font); letter-spacing: -.04em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ed-case-study .quiq-market-percent { margin-left: 1px; font-size: .58em; letter-spacing: 0; }
+.ed-case-study .quiq-market-qualifier { margin-right: 2px; font-size: .65em; }
+.ed-case-study .quiq-market-metric figcaption { display: grid; align-content: start; gap: 8px; }
+.ed-case-study .quiq-market-label { color: var(--ed-heading); font-size: 13px; font-weight: 600; line-height: 1.45; }
+.ed-case-study .quiq-market-context { color: var(--study-muted); font-size: 12px; line-height: 1.5; }
+.ed-case-study .quiq-opportunity-metrics { display: grid; gap: 24px; }
+.ed-case-study .quiq-opportunity-metric { display: grid; gap: 12px; margin: 0; }
+.ed-case-study .quiq-opportunity-metric + .quiq-opportunity-metric { padding-top: 24px; border-top: 1px solid var(--ed-line); }
+.ed-case-study .quiq-opportunity-metric figcaption { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: start; gap: 16px; }
+.ed-case-study .quiq-opportunity-copy { display: grid; gap: 6px; }
+.ed-case-study .quiq-opportunity-value { display: grid; gap: 5px; padding-top: 2px; }
+.ed-case-study .quiq-growth-chart { display: grid; gap: 12px; padding-top: 4px; }
+.ed-case-study .quiq-growth-comparison { display: grid; gap: 12px; margin: 0; }
+.ed-case-study .quiq-growth-comparison > div { display: grid; grid-template-columns: 78px minmax(0, 1fr); align-items: center; gap: 12px; }
+.ed-case-study .quiq-growth-comparison dt { color: var(--study-muted); font-size: 12px; line-height: 1.4; }
+.ed-case-study .quiq-growth-comparison dd { display: grid; grid-template-columns: minmax(0, 1fr) 3ch; align-items: center; gap: 10px; margin: 0; }
+.ed-case-study .quiq-growth-comparison strong { color: var(--ed-heading); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+.ed-case-study .quiq-growth-track { display: flex; height: 16px; overflow: hidden; border-radius: 3px; background: var(--quiq-chart-track); }
+.ed-case-study .quiq-growth-baseline { height: 100%; background: #d9b995; }
+.ed-case-study .quiq-growth-increase { height: 100%; background: var(--quiq-chart-fill); }
+.ed-case-study .quiq-opportunity-track { position: relative; height: 14px; overflow: hidden; border-radius: 3px; background: var(--quiq-chart-track); }
+.ed-case-study .quiq-opportunity-track::after { position: absolute; inset: 0; content: ""; background: linear-gradient(to right, transparent calc(50% - .5px), var(--ed-paper) calc(50% - .5px), var(--ed-paper) calc(50% + .5px), transparent calc(50% + .5px)); }
+.ed-case-study .quiq-opportunity-fill { display: block; height: 100%; background: var(--quiq-chart-fill); }
+.ed-case-study .quiq-opportunity-scale { display: grid; grid-template-columns: 1fr 0 1fr; margin-top: -5px; color: var(--study-muted); font-size: 10px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.ed-case-study .quiq-opportunity-scale > :nth-child(2) { justify-self: center; }
+.ed-case-study .quiq-opportunity-scale > :last-child { justify-self: end; }
+@container quiq-chart (max-width: 359px) {
+  .ed-case-study .quiq-market-donuts { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .ed-case-study .quiq-market-metric { grid-template-columns: 88px minmax(0, 1fr); grid-template-rows: auto; align-items: center; justify-items: stretch; gap: 18px; text-align: left; }
+  .ed-case-study .quiq-market-metric + .quiq-market-metric { padding-top: 18px; border-top: 1px solid var(--ed-line); }
+  .ed-case-study .quiq-market-ring .quiq-market-value { font-size: 26px; justify-self: center; }
+  .ed-case-study .quiq-market-metric figcaption { gap: 5px; }
+}
 .ed-case-study .quiq-audiences { display: grid; gap: 40px; }
 .ed-case-study .quiq-audience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .ed-case-study .quiq-audience-grid > article { display: grid; align-content: start; gap: 24px; padding-top: 24px; border-top: 1px solid var(--ed-line); }
 .ed-case-study .quiq-audience-grid [data-content-id="busy-professionals-3"] { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .ed-case-study .quiq-audience-grid figcaption .study-text { font-size: 13px; }
 .ed-case-study .quiq-audience-grid .study-figure-media { aspect-ratio: 3 / 2; }
-.ed-case-study .quiq-audience-grid .study-figure-media :is(.study-image, a, img) { width: 100%; height: 100%; object-fit: contain; }
+.ed-case-study .quiq-audience-grid .study-figure-media :is(.study-image, .study-image-frame, img) { width: 100%; height: 100%; object-fit: contain; }
 .ed-case-study .quiq-audience-opportunity { display: grid; gap: 24px; padding: 24px; background: var(--ed-soft); border-radius: 8px; }
-.ed-case-study .quiq-audience-opportunity .ed-media { max-width: 850px; }
+.ed-case-study .quiq-audience-opportunity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; }
+.ed-case-study .quiq-audience-opportunity-grid > section { display: grid; grid-template-rows: subgrid; grid-row: span 3; min-width: 0; gap: 12px; padding-top: 20px; border-top: 1px solid var(--ed-line); }
+.ed-case-study .quiq-audience-direction { color: var(--study-muted); font-size: 14px; line-height: 1.65; }
+.ed-case-study .quiq-audience-direction strong { color: var(--ed-accent); font-weight: 600; }
 .ed-case-study .quiq-needs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .ed-case-study .quiq-market-insights { display: grid; gap: 32px; }
 .ed-case-study .quiq-market-studies { display: grid; gap: 40px; }
@@ -33,7 +70,7 @@
 .ed-case-study .quiq-product-examples .ed-image-stage { height: 140px; }
 .ed-case-study .quiq-brand-examples h4 { font-size: 16px; }
 .ed-case-study .quiq-wellness-examples > .study-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.ed-case-study .quiq-wellness-examples :is(.study-image, a, img) { height: 180px; object-fit: contain; }
+.ed-case-study .quiq-wellness-examples :is(.study-image, .study-image-frame, img) { height: 180px; object-fit: contain; }
 .ed-case-study .quiq-brand-approach { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .ed-case-study .quiq-brand-approach > article { grid-template-rows: subgrid; grid-row: span 3; }
 .ed-case-study .quiq-brand-brief { overflow: hidden; border: 1px solid var(--ed-line); border-radius: 8px; background: var(--ed-paper); }
@@ -50,7 +87,6 @@
 .ed-case-study .quiq-reference-studies > article { display: grid; grid-template-rows: subgrid; grid-row: span 2; gap: 24px; }
 .ed-case-study .quiq-reference-studies .ed-image-stage { aspect-ratio: 5 / 3; }
 .ed-case-study .quiq-draft-study { display: grid; gap: 20px; padding-top: 28px; border-top: 1px solid var(--ed-line); }
-.ed-case-study .quiq-draft-study .ed-media-help { margin: 0; }
 .ed-case-study .quiq-drafts { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
 .ed-case-study .quiq-drafts .ed-image-stage { aspect-ratio: 3 / 2; padding: 12px; background: #fff; border: 1px solid var(--ed-line); border-radius: 6px; }
 .ed-case-study .quiq-packaging-copy { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 24px; }
@@ -87,7 +123,7 @@
 .ed-case-study .study--project-3 #packaging-design [data-content-id="packaging-design-frame-1437254370"] { max-width: 100%; }
 .ed-case-study .study--project-3 #packaging-design [data-content-id="packaging-design-frame-1437254370"] img { max-width: 100%; }
 .ed-case-study .study--project-3 #packaging-design [data-content-id="packaging-design-visuals"] { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
-.ed-case-study .study--project-3 #packaging-design [data-content-id="packaging-design-visuals"] :is(.study-image, a, img) { width: 100%; height: 100%; aspect-ratio: 1; object-fit: contain; max-width: 100%; }
+.ed-case-study .study--project-3 #packaging-design [data-content-id="packaging-design-visuals"] :is(.study-image, .study-image-frame, img) { width: 100%; height: 100%; aspect-ratio: 1; object-fit: contain; max-width: 100%; }
 
 @media (max-width: 1099px) {
   .ed-case-study .quiq-concepts > article { grid-template-columns: minmax(0, 1fr); }
@@ -107,15 +143,16 @@
   .ed-case-study .quiq-symptoms h3 { grid-column: 1 / -1; }
 }
 @media (max-width: 699px) {
+  .ed-case-study .quiq-audience-opportunity-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .ed-case-study .quiq-audience-opportunity-grid > section { grid-template-rows: auto; grid-row: auto; }
   .ed-case-study :is(.quiq-context-journey, .quiq-market-data, .quiq-brief-guidelines, .quiq-reference-studies) { grid-template-columns: minmax(0, 1fr); }
   .ed-case-study :is(.quiq-context-journey > article, .quiq-market-data > article, .quiq-reference-studies > article) { grid-template-rows: auto; grid-row: auto; }
   .ed-case-study .quiq-context-journey .ed-image-stage { height: 200px; }
-  .ed-case-study .quiq-market-chart [data-content-id="top-brands-3"] { gap: 10px; }
   .ed-case-study .quiq-brief-guidelines { padding: 20px; }
   .ed-case-study .quiq-brief-guidelines > :nth-child(n+2) { padding-top: 20px; border-top: 1px solid var(--ed-line); }
   .ed-case-study .quiq-product-examples { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
   .ed-case-study .quiq-wellness-examples > .study-columns { gap: 16px; }
-  .ed-case-study .quiq-wellness-examples :is(.study-image, a, img) { height: 120px; }
+  .ed-case-study .quiq-wellness-examples :is(.study-image, .study-image-frame, img) { height: 120px; }
   .ed-case-study .quiq-drafts { grid-template-columns: repeat(7, 260px); gap: 20px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 16px; }
   .ed-case-study .quiq-drafts > figure { scroll-snap-align: start; }
   .ed-case-study .quiq-drafts .ed-image-stage { padding: 4px; }

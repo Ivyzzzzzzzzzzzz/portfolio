@@ -1,4 +1,5 @@
 import { Block, RichText } from "../components/case-study/CaseStudy.jsx";
+import { ExistingConnections, SurveyChart, percent } from "./LivingCalendarCharts.jsx";
 
 const plainText = value => typeof value === "string" ? value : value.map(run => run.text).join("");
 const authoredLines = value => plainText(value).split(/\n+/).map(line => line.trim()).filter(Boolean);
@@ -38,13 +39,12 @@ function AudienceEvidence({ block }) {
         <dl className="lc-evidence-numbers" data-content-id={summary?.id} aria-label={summary?.text}>
           {item.highlights.map(stat => <div key={stat.label}>
             <dt>{stat.label}</dt>
-            <dd>{stat.value}</dd>
+            <dd>{percent(media.data.find(row => row.label === stat.dataLabel).value)}</dd>
           </div>)}
         </dl>
         <div className="lc-evidence-chart"><Block block={media} /></div>
       </article>;
     })}
-    <p className="lc-evidence-help">Select a chart to explore the details.</p>
   </div>;
 }
 
@@ -123,6 +123,12 @@ function JourneyHeading({ block }) {
 }
 
 export const researchComponents = {
+  "how-do-people-experience-seasons-today-3": ExistingConnections,
+  "seasonal-connection-chart": SurveyChart,
+  "solar-term-familiarity-chart": SurveyChart,
+  "modern-life-awareness-chart": SurveyChart,
+  "seasonal-cues-chart": SurveyChart,
+  "meaningful-interactions-chart": SurveyChart,
   "key-findings-2": ResearchFindings,
   "how-do-people-notice-seasonal-change-3": AudienceEvidence,
   "literature-review-3": LiteratureReview,

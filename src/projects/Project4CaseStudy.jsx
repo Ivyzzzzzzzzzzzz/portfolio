@@ -6,6 +6,8 @@ import { content } from "../content/project-4/content.js";
 import { layout } from "../content/project-4/layout.js";
 import "./living-calendar.css";
 import { researchComponents } from "./LivingCalendarResearch.jsx";
+import AnnotatedTestingScreens from "./LivingCalendarAnnotations.jsx";
+import { NativeDiagram, NavigationDiagrams } from "./LivingCalendarDiagrams.jsx";
 
 function SeasonalObservationCollage({ block }) {
   return <FigureComposition block={block} width={309} height={216} layers={[
@@ -130,7 +132,6 @@ function Storyboard({ block }) {
 
 function InteractionProgression({ block }) {
   return <div className="lc-progressions" data-content-id={block.id}>
-    <p className="lc-gallery-help">Select an image to explore the details.</p>
     {block.items.map(group => <div className="lc-progression" key={group.id} data-content-id={group.id}>
       <Block block={group.items[0]} />
       <div className="lc-progression-images" tabIndex={0} role="region"
@@ -146,10 +147,18 @@ function InteractionProgression({ block }) {
 
 function TestingFindings({ block }) {
   return <div className="lc-testing" data-content-id={block.id}>
-    {block.items.map(item => <article className="lc-testing-row" key={item.id} data-content-id={item.id}>
-      <div className="lc-testing-copy"><Block block={item.copy} /></div>
-      <div className="lc-testing-images"><Block block={item.media} /></div>
-    </article>)}
+    {block.items.map(item => {
+      const annotated = item.media.annotations || item.media.items?.some(media => media.annotations);
+      return <article className="lc-testing-row" key={item.id} data-content-id={item.id}>
+        <div className="lc-testing-copy">
+          <Block block={item.copy} />
+          {annotated ? <Block block={item.findings[0]} /> :
+            <ul>{item.findings.map(finding => <li key={finding.id}><Block block={finding} /></li>)}</ul>}
+        </div>
+        <div className="lc-testing-images"><Block block={item.media} /></div>
+        {annotated && <div className="lc-testing-refinement"><Block block={item.findings.at(-1)} /></div>}
+      </article>;
+    })}
   </div>;
 }
 
@@ -170,44 +179,11 @@ function NavigationScreens({ block }) {
   </div>;
 }
 
-// Keep image links as a new-tab fallback; ordinary clicks open an accessible dialog.
-function ImageDetail({ image, onClose, trigger }) {
-  const dialogRef = useRef(null);
-  const [zoomed, setZoomed] = useState(false);
-
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    const previousOverflow = document.body.style.overflow;
-    dialog.showModal();
-    document.body.style.overflow = "hidden";
-    return () => {
-      dialog.close();
-      document.body.style.overflow = previousOverflow;
-      trigger?.focus({ preventScroll: true });
-    };
-  }, [trigger]);
-
-  return <dialog ref={dialogRef} className="lc-image-detail" aria-labelledby="lc-image-detail-title"
-    onClose={event => { if (!event.currentTarget.open) onClose(); }}
-    onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
-    <div className="lc-image-detail-toolbar">
-      <h2 id="lc-image-detail-title">Image detail</h2>
-      <div>
-        <button type="button" onClick={() => setZoomed(value => !value)} aria-pressed={zoomed}>
-          {zoomed ? "Fit image" : "Zoom in"}
-        </button>
-        <button type="button" onClick={onClose} autoFocus>Close <span aria-hidden="true">×</span></button>
-      </div>
-    </div>
-    <div className={`lc-image-detail-canvas${zoomed ? " is-zoomed" : ""}`} tabIndex={0}
-      role="region" aria-label="Image preview; scroll to explore when zoomed">
-      <img src={image.src} alt={image.alt} />
-    </div>
-  </dialog>;
-}
-
 const components = {
   ...researchComponents,
+  "sitemap-and-user-flow": NavigationDiagrams,
+  "designing-a-seasonal-journey-group-23984-1": NativeDiagram,
+  "designing-a-seasonal-journey-user-map-1-1": NativeDiagram,
   "seasonal-observation-collage": SeasonalObservationCollage,
   "grass-interaction-recording": InteractionRecording,
   "dial-interaction-recording": InteractionRecording,
@@ -222,25 +198,15 @@ const components = {
   "maya-feels-overwhelmed-by-numbered-calendars-days-3": Storyboard,
   "dial-navigation-3": InteractionProgression,
   "landing-page-users-understood-the-wheels-cyclical-3": TestingFindings,
+  "testing-refinement-visuals": AnnotatedTestingScreens,
+  "testing-refinement-31-1": AnnotatedTestingScreens,
+  "testing-refinement-visuals-2": AnnotatedTestingScreens,
   "rituals-3": CulturalLayer,
   "a-living-calendar-visuals-4": NavigationScreens,
   "dial-calendar": () => null,
 };
 
 export default function Project4CaseStudy() {
-  const [selectedImage, setSelectedImage] = useState(null);
-  function openImage(event) {
-    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const link = event.target.closest(".study-image-link");
-    if (!link) return;
-    event.preventDefault();
-    setSelectedImage({ src: link.href, alt: link.querySelector("img")?.alt || "Project image", trigger: link });
-  }
-  return <>
-    <div onClick={openImage}>
-      <CaseStudy content={content} layout={layout} components={components}
-        sidebar={<OnThisPage sections={content.sections} id="living-calendar-chapter-links" prefix="lc" />} />
-    </div>
-    {selectedImage && <ImageDetail image={selectedImage} trigger={selectedImage.trigger} onClose={() => setSelectedImage(null)} />}
-  </>;
+  return <CaseStudy content={content} layout={layout} components={components}
+    sidebar={<OnThisPage sections={content.sections} id="living-calendar-chapter-links" prefix="lc" />} />;
 }
