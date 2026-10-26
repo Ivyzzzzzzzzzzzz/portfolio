@@ -47,10 +47,22 @@ function InterviewGrid({ block }) {
   </div>;
 }
 
+function CompetitorReview({ block }) {
+  const opportunity = block.items.find(item => item.id.endsWith("-competitor-opportunity"));
+
+  return <article className="je-competitor" data-content-id={block.id}>
+    <div className="je-competitor-card">
+      {block.items.filter(item => item !== opportunity).map(item => <Block block={item} key={item.id} />)}
+    </div>
+    <Block block={opportunity} />
+  </article>;
+}
+
 function BrainstormingBoard({ block }) {
-  return <div className="je-brainstorming-grid" data-content-id={block.id}>
+  return <div className="je-brainstorming-grid" data-content-id={block.id}
+    tabIndex={0} role="region" aria-label="Brainstorming sketches; scroll horizontally to view all concepts">
     {block.items.map(figure => <figure key={figure.id} data-content-id={figure.id}
-      className="je-concept-card">
+      className="je-concept-card" data-selected={figure.selected || undefined}>
       <figcaption><Block block={figure.caption} /></figcaption>
       <div className="je-sketch-stage"><Media media={figure.media} /></div>
     </figure>)}
@@ -64,6 +76,8 @@ function BrainstormingExploration({ block }) {
 }
 
 function Storyboards({ block }) {
+  if (block.hidden) return null;
+
   return <div className="je-storyboards" data-content-id={block.id}>
     {block.items.map(item => <figure className="je-storyboard" key={item.id} data-content-id={item.id}>
       <figcaption><Block block={item.copy || item.caption} /></figcaption>
@@ -187,27 +201,48 @@ function DesignSystem({ block }) {
   const [foundations, components] = library.items;
   const [typography, illustrations, colorTitle, colors] = foundations.items;
   const [cards, buttons, icons] = components.items;
-  const panels = [
+  const foundationPanels = [
     { key: "typography", title: typography.caption, items: [typography.media] },
     { key: "colors", title: colorTitle, items: [colors] },
     { key: "illustrations", title: illustrations.caption, items: [illustrations.media] },
-    { key: "cards", title: cards.items[0], items: cards.items.slice(1) },
+  ];
+  const componentPanels = [
     { key: "buttons", title: buttons.caption, items: [buttons.media] },
     { key: "icons", title: icons.items[0], items: icons.items.slice(1) },
   ];
   return <div className="je-system" data-content-id={block.id}>
     <div className="je-responsive-study"><Block block={responsive} /></div>
-    <div className="je-system-panels" data-content-id={library.id}>
-      {panels.map((panel, index) => <section className={`je-system-panel je-system-panel--${panel.key}`}
-        key={panel.key} aria-labelledby={`je-system-${panel.key}`}>
-        <header className="je-system-panel-heading">
-          <span className="je-system-panel-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-          <h3 id={`je-system-${panel.key}`} data-content-id={panel.title.id}><RichText value={panel.title.text} /></h3>
-        </header>
-        <div className="je-system-panel-body">
-          {panel.items.map(item => <Block block={item} key={item.id} />)}
+    <div className="je-system-library" data-content-id={library.id}>
+      <section className="je-system-cards" data-content-id={cards.id} aria-labelledby="je-system-cards">
+        <h3 id="je-system-cards" data-content-id={cards.items[0].id}><RichText value={cards.items[0].text} /></h3>
+        <div className="je-system-card-grid">
+          {cards.items.slice(1).map(figure => <figure key={figure.id} data-content-id={figure.id}>
+            <div className="je-system-card-stage" data-content-id={figure.media.id}><Media media={figure.media} /></div>
+            <figcaption><Block block={figure.caption} /></figcaption>
+          </figure>)}
         </div>
-      </section>)}
+      </section>
+      <section className="je-visual-foundations" data-content-id={foundations.id} aria-labelledby="je-visual-foundations">
+        <h3 id="je-visual-foundations"><RichText value={foundations.title} /></h3>
+        <div className="je-foundation-grid">
+          {foundationPanels.map(panel => <div className={`je-foundation je-foundation--${panel.key}`} key={panel.key}>
+            <h4 data-content-id={panel.title.id}><RichText value={panel.title.text} /></h4>
+            {panel.items.map(item => <Block block={item} key={item.id} />)}
+          </div>)}
+        </div>
+      </section>
+      <details className="je-component-library" data-content-id={components.id}>
+        <summary>
+          <h3><RichText value={components.title} /><span><RichText value={buttons.caption.text} /> &amp; <RichText value={icons.items[0].text} /></span></h3>
+        </summary>
+        <div className="je-component-grid">
+          {componentPanels.map(panel => <section className={`je-component je-component--${panel.key}`}
+            key={panel.key} aria-labelledby={`je-system-${panel.key}`}>
+            <h4 id={`je-system-${panel.key}`} data-content-id={panel.title.id}><RichText value={panel.title.text} /></h4>
+            {panel.items.map(item => <Block block={item} key={item.id} />)}
+          </section>)}
+        </div>
+      </details>
     </div>
   </div>;
 }
@@ -215,6 +250,9 @@ function DesignSystem({ block }) {
 const components = {
   "constant-mental-reminders-you-cant-eat-that-4": Observations,
   "interview-grid": InterviewGrid,
+  "fig-3": CompetitorReview,
+  "intoleapp-2": CompetitorReview,
+  "find-me-gluten-free-3": CompetitorReview,
   "brainstorming-board": BrainstormingBoard,
   "smart-glasses-4": BrainstormingExploration,
   "multiple-people-dine-in-1-input-table-3": Storyboards,

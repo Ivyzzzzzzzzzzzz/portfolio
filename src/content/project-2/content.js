@@ -8,9 +8,9 @@ export const content = {
     "period": "2026.1 - 2026.2",
     "disciplines": ["UX Research", "UX/UI Design", "Coding"],
     "subtitle": [
-      { "text": "Giving residents " },
-      { "text": "clarity and control", "tone": "highlight" },
-      { "text": " over repairs." }
+      { "text": "Making apartment maintenance " },
+      { "text": "more predictable", "tone": "highlight" },
+      { "text": ", from request to repair." }
     ],
     "problem": "Expo residents were left guessing how to file a repair request, when someone would enter their home, and what was happening after submission.",
     "description": "I designed and prototyped a maintenance flow with guided reporting, team-assigned priority, preferred visit windows, and a status timeline.",

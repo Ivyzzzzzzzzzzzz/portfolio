@@ -24,7 +24,7 @@ export const content = {
       }
     ],
     "problem": "Diners with food allergies have to cross-check ingredients and explain dietary needs while everyone else is ready to order.",
-    "description": "I designed a dine-in ordering app that puts dish-level allergen warnings and shared dietary profiles directly in the menu, so diners can check for themselves and their table.",
+    "description": "I designed a QR-based dine-in ordering experience that connects personal allergy profiles to restaurant menus, highlights potential allergen conflicts at the dish and option levels, and helps groups coordinate their orders.",
     "logo": {
       "type": "image",
       "id": "introduction-group-8261",
@@ -47,7 +47,7 @@ export const content = {
             {
               "type": "text",
               "id": "eating-out-with-a-food-allergy-is",
-              "text": "At a restaurant table, checking a dish means piecing together menu details, separate allergen lists, and answers from staff while other diners wait. This project focuses on making that check part of ordering."
+              "text": "For diners with food allergies, choosing a meal often involves checking a separate allergen guide and confirming ingredients with restaurant staff. This process can interrupt both the ordering experience and the social interaction around the table."
             },
             {
               "type": "columns",
@@ -58,11 +58,11 @@ export const content = {
                   "id": "33-000-000-americans-have-food-allergies",
                   "text": [
                     {
-                      "text": "33 million",
+                      "text": "33M",
                       "strong": true
                     },
                     {
-                      "text": " Americans have food allergies."
+                      "text": " Americans live with food allergies."
                     }
                   ]
                 },
@@ -71,11 +71,11 @@ export const content = {
                   "id": "25-of-severe-reactions-happen-in-food",
                   "text": [
                     {
-                      "text": "25%",
+                      "text": "1 in 3",
                       "strong": true
                     },
                     {
-                      "text": " of severe reactions happen in food service."
+                      "text": " People with food allergies report experiencing a reaction at a restaurant."
                     }
                   ]
                 },
@@ -84,486 +84,20 @@ export const content = {
                   "id": "more-than-50-of-restaurant-related-allergic-reactions",
                   "text": [
                     {
-                      "text": "More than 50%",
+                      "text": "53.9%",
                       "strong": true
                     },
                     {
-                      "text": " of restaurant-related allergic reactions occur after diners inform staff of their allergy."
+                      "text": " Of reported restaurant reactions in one study occurred despite staff being informed."
                     }
                   ]
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gap",
-      "title": "Gap",
-      "takeaway": [
-        {
-          "text": "The apps I reviewed helped with preparation, but left a gap "
-        },
-        {
-          "text": "at the restaurant table",
-          "strong": true,
-          "tone": "highlight"
-        },
-        {
-          "text": "."
-        }
-      ],
-      "blocks": [
-        {
-          "type": "group",
-          "id": "existing-apps-largely-focus-on-individual-preparation-2",
-          "items": [
-            {
-              "type": "text",
-              "id": "existing-apps-largely-focus-on-individual-preparation",
-              "text": "I reviewed ingredient lookup, packaged-food scanning, and restaurant discovery to see what each offered a diner already choosing from a menu."
             },
             {
-              "type": "columns",
-              "id": "fig-4",
-              "items": [
-                {
-                  "type": "group",
-                  "id": "fig-3",
-                  "items": [
-                    {
-                      "type": "label",
-                      "id": "fig",
-                      "text": "Fig"
-                    },
-                    {
-                      "type": "iconLabel",
-                      "id": "personalized-ingredient-and-dietary-restriction-2",
-                      "icon": {
-                        "type": "image",
-                        "id": "gap-images-1",
-                        "src": "/img/project-1/images-1.svg",
-                        "alt": "",
-                        "width": 41,
-                        "height": 41,
-                        "decorative": true
-                      },
-                      "copy": {
-                        "type": "text",
-                        "id": "personalized-ingredient-and-dietary-restriction",
-                        "text": "Personalized ingredient and dietary restriction"
-                      }
-                    },
-                    {
-                      "type": "columns",
-                      "id": "gap-visuals",
-                      "items": [
-                        {
-                          "type": "image",
-                          "id": "gap-img-2939",
-                          "src": "/img/project-1/IMG-2939.svg",
-                          "alt": "Personalized ingredient and dietary restriction — design study",
-                          "width": 86,
-                          "height": 187
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2940",
-                          "src": "/img/project-1/IMG-2940.svg",
-                          "alt": "Personalized ingredient and dietary restriction — design study",
-                          "width": 86,
-                          "height": 187
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2944",
-                          "src": "/img/project-1/IMG-2944.svg",
-                          "alt": "Personalized ingredient and dietary restriction — design study",
-                          "width": 87,
-                          "height": 189
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2945",
-                          "src": "/img/project-1/IMG-2945.svg",
-                          "alt": "Personalized ingredient and dietary restriction — design study",
-                          "width": 87,
-                          "height": 188
-                        }
-                      ]
-                    },
-                    {
-                      "type": "group",
-                      "id": "level-of-severity-3",
-                      "items": [
-                        {
-                          "type": "iconLabel",
-                          "id": "level-of-severity-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "level-of-severity",
-                            "text": "Level of severity"
-                          }
-                        },
-                        {
-                          "type": "iconLabel",
-                          "id": "clear-warning-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-2",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "clear-warning",
-                            "text": "Clear warning"
-                          }
-                        },
-                        {
-                          "type": "iconLabel",
-                          "id": "comprehensive-food-restrictions-and-allergies-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-3",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "comprehensive-food-restrictions-and-allergies",
-                            "text": "Comprehensive food restrictions and allergies"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "iconLabel",
-                      "id": "heavy-reading-2",
-                      "icon": {
-                        "type": "image",
-                        "id": "gap-icon-1-1",
-                        "src": "/img/project-1/Icon-1 1.svg",
-                        "alt": "",
-                        "width": 10,
-                        "height": 10,
-                        "decorative": true
-                      },
-                      "copy": {
-                        "type": "text",
-                        "id": "heavy-reading",
-                        "text": "Heavy reading"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "group",
-                  "id": "intoleapp-2",
-                  "items": [
-                    {
-                      "type": "label",
-                      "id": "intoleapp",
-                      "text": "IntoleApp"
-                    },
-                    {
-                      "type": "iconLabel",
-                      "id": "food-product-packaged-goods-scanning-2",
-                      "icon": {
-                        "type": "image",
-                        "id": "gap-unnamed-1",
-                        "src": "/img/project-1/unnamed-1.svg",
-                        "alt": "",
-                        "width": 41,
-                        "height": 41,
-                        "decorative": true
-                      },
-                      "copy": {
-                        "type": "text",
-                        "id": "food-product-packaged-goods-scanning",
-                        "text": "Food product / packaged goods scanning"
-                      }
-                    },
-                    {
-                      "type": "columns",
-                      "id": "gap-visuals-2",
-                      "items": [
-                        {
-                          "type": "image",
-                          "id": "gap-img-2951",
-                          "src": "/img/project-1/IMG-2951.svg",
-                          "alt": "Food product / packaged goods scanning — design study",
-                          "width": 87,
-                          "height": 188
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2959",
-                          "src": "/img/project-1/IMG-2959.svg",
-                          "alt": "Food product / packaged goods scanning — design study",
-                          "width": 86,
-                          "height": 188
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2953",
-                          "src": "/img/project-1/IMG-2953.svg",
-                          "alt": "Food product / packaged goods scanning — design study",
-                          "width": 87,
-                          "height": 188
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2950",
-                          "src": "/img/project-1/IMG-2950.svg",
-                          "alt": "Food product / packaged goods scanning — design study",
-                          "width": 87,
-                          "height": 188
-                        }
-                      ]
-                    },
-                    {
-                      "type": "group",
-                      "id": "diary-entry-3",
-                      "items": [
-                        {
-                          "type": "iconLabel",
-                          "id": "diary-entry-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-4",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "diary-entry",
-                            "text": "Diary Entry"
-                          }
-                        },
-                        {
-                          "type": "iconLabel",
-                          "id": "scanning-interaction-clear-hierachy-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-5",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "scanning-interaction-clear-hierachy",
-                            "text": "Scanning interaction & clear hierarchy"
-                          }
-                        },
-                        {
-                          "type": "iconLabel",
-                          "id": "category-based-browsing-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-6",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "category-based-browsing",
-                            "text": "Category-based browsing"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "iconLabel",
-                      "id": "non-user-friendly-terminology-2",
-                      "icon": {
-                        "type": "image",
-                        "id": "gap-icon-1-1-2",
-                        "src": "/img/project-1/Icon-1 1.svg",
-                        "alt": "",
-                        "width": 10,
-                        "height": 10,
-                        "decorative": true
-                      },
-                      "copy": {
-                        "type": "text",
-                        "id": "non-user-friendly-terminology",
-                        "text": "Non-User-Friendly Terminology"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "group",
-                  "id": "find-me-gluten-free-3",
-                  "items": [
-                    {
-                      "type": "label",
-                      "id": "find-me-gluten-free",
-                      "text": "Find Me Gluten Free"
-                    },
-                    {
-                      "type": "iconLabel",
-                      "id": "discover-gf-friendly-restaurants-2",
-                      "icon": {
-                        "type": "image",
-                        "id": "gap-1200x630wa-2",
-                        "src": "/img/project-1/1200x630wa-2.svg",
-                        "alt": "",
-                        "width": 41,
-                        "height": 41,
-                        "decorative": true
-                      },
-                      "copy": {
-                        "type": "text",
-                        "id": "discover-gf-friendly-restaurants",
-                        "text": "Discover GF-friendly restaurants"
-                      }
-                    },
-                    {
-                      "type": "columns",
-                      "id": "gap-visuals-3",
-                      "items": [
-                        {
-                          "type": "image",
-                          "id": "gap-img-2949",
-                          "src": "/img/project-1/IMG-2949.svg",
-                          "alt": "Discover GF-friendly restaurants — design study",
-                          "width": 87,
-                          "height": 188
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2960",
-                          "src": "/img/project-1/IMG-2960.svg",
-                          "alt": "Discover GF-friendly restaurants — design study",
-                          "width": 86,
-                          "height": 187
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2962",
-                          "src": "/img/project-1/IMG-2962.svg",
-                          "alt": "Discover GF-friendly restaurants — design study",
-                          "width": 87,
-                          "height": 188
-                        },
-                        {
-                          "type": "image",
-                          "id": "gap-img-2961",
-                          "src": "/img/project-1/IMG-2961.svg",
-                          "alt": "Discover GF-friendly restaurants — design study",
-                          "width": 87,
-                          "height": 188
-                        }
-                      ]
-                    },
-                    {
-                      "type": "group",
-                      "id": "community-reviews-3",
-                      "items": [
-                        {
-                          "type": "iconLabel",
-                          "id": "community-reviews-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-7",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "community-reviews",
-                            "text": "Community reviews"
-                          }
-                        },
-                        {
-                          "type": "iconLabel",
-                          "id": "promotes-education-and-awareness-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-8",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "promotes-education-and-awareness",
-                            "text": "Promotes education and awareness"
-                          }
-                        },
-                        {
-                          "type": "iconLabel",
-                          "id": "practical-communication-2",
-                          "icon": {
-                            "type": "image",
-                            "id": "gap-icon-1-9",
-                            "src": "/img/project-1/Icon 1.svg",
-                            "alt": "",
-                            "width": 10,
-                            "height": 10,
-                            "decorative": true
-                          },
-                          "copy": {
-                            "type": "text",
-                            "id": "practical-communication",
-                            "text": "Practical communication"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "iconLabel",
-                      "id": "features-misaligned-with-core-purpose-2",
-                      "icon": {
-                        "type": "image",
-                        "id": "gap-icon-1-1-3",
-                        "src": "/img/project-1/Icon-1 1.svg",
-                        "alt": "",
-                        "width": 10,
-                        "height": 10,
-                        "decorative": true
-                      },
-                      "copy": {
-                        "type": "text",
-                        "id": "features-misaligned-with-core-purpose",
-                        "text": "Discovery does not resolve dish-level questions"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "type": "text",
+              "id": "background-statistics-sources",
+              "text": "Sources: FARE; CDC Restaurant Food Safety; Oriel et al., 2021."
             }
           ]
         }
@@ -812,6 +346,38 @@ export const content = {
                     },
                     {
                       "type": "card",
+                      "id": "jason-3",
+                      "items": [
+                        {
+                          "type": "text",
+                          "id": "jason",
+                          "text": "Jason"
+                        },
+                        {
+                          "type": "label",
+                          "id": "fuji-apple",
+                          "text": "Fuji Apple"
+                        },
+                        {
+                          "type": "label",
+                          "id": "theres-no-way-i-can-know-what",
+                          "text": [
+                            {
+                              "text": "“"
+                            },
+                            {
+                              "text": "There’s no way I can know",
+                              "strong": true
+                            },
+                            {
+                              "text": " what kind of apple I’m eating.”"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "card",
                       "id": "alex-3",
                       "items": [
                         {
@@ -968,36 +534,69 @@ export const content = {
                           ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "interview-patterns",
+              "items": [
+                {
+                  "type": "heading",
+                  "id": "interview-patterns-title",
+                  "text": "Summary"
+                },
+                {
+                  "type": "columns",
+                  "id": "interview-patterns-grid",
+                  "items": [
                     {
-                      "type": "card",
-                      "id": "jason-3",
+                      "type": "group",
+                      "id": "interview-pattern-ingredient-uncertainty",
                       "items": [
                         {
+                          "type": "label",
+                          "id": "interview-pattern-ingredient-uncertainty-title",
+                          "text": "01 — Ingredient Information Is Often Incomplete"
+                        },
+                        {
                           "type": "text",
-                          "id": "jason",
-                          "text": "Jason"
-                        },
+                          "id": "interview-pattern-ingredient-uncertainty-description",
+                          "text": "Diners struggled to verify specific ingredients, substitutions, and preparation details that were not clearly disclosed."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "interview-pattern-loss-of-control",
+                      "items": [
                         {
                           "type": "label",
-                          "id": "fuji-apple",
-                          "text": "Fuji Apple"
+                          "id": "interview-pattern-loss-of-control-title",
+                          "text": "02 — Group Dining Creates Social Pressure"
                         },
                         {
+                          "type": "text",
+                          "id": "interview-pattern-loss-of-control-description",
+                          "text": "Dietary restrictions affected more than food choices; they also shaped how comfortable diners felt participating in group meals."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "interview-pattern-social-pressure",
+                      "items": [
+                        {
                           "type": "label",
-                          "id": "theres-no-way-i-can-know-what",
-                          "text": [
-                            {
-                              "text": "“"
-                            },
-                            {
-                              "text": "There’s no way I can know",
-                              "strong": true
-                            },
-                            {
-                              "text": " what kind of apple I’m eating.”"
-                            }
-                          ]
+                          "id": "interview-pattern-social-pressure-title",
+                          "text": "03 — Food Decisions Aren't Always Binary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "interview-pattern-social-pressure-description",
+                          "text": "One participant described knowingly weighing physical discomfort against the desire to participate in a shared meal. This revealed that dietary decisions can involve personal trade-offs beyond a simple avoid-or-allow choice."
                         }
                       ]
                     }
@@ -1027,6 +626,520 @@ export const content = {
                 "width": 939,
                 "height": 493
               }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "title": "Gap",
+      "takeaway": [
+        {
+          "text": "The apps I reviewed helped with preparation, but left a gap "
+        },
+        {
+          "text": "at the restaurant table",
+          "strong": true,
+          "tone": "highlight"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "group",
+          "id": "existing-apps-largely-focus-on-individual-preparation-2",
+          "items": [
+            {
+              "type": "columns",
+              "id": "fig-4",
+              "items": [
+                {
+                  "type": "group",
+                  "id": "fig-3",
+                  "items": [
+                    {
+                      "type": "iconLabel",
+                      "id": "personalized-ingredient-and-dietary-restriction-2",
+                      "icon": {
+                        "type": "image",
+                        "id": "gap-images-1",
+                        "src": "/img/project-1/images-1.svg",
+                        "alt": "",
+                        "width": 41,
+                        "height": 41,
+                        "decorative": true
+                      },
+                      "copy": {
+                        "type": "label",
+                        "id": "fig",
+                        "text": "Fig"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "personalized-ingredient-and-dietary-restriction",
+                      "text": "Personalized ingredient and dietary restriction"
+                    },
+                    {
+                      "type": "columns",
+                      "id": "gap-visuals",
+                      "items": [
+                        {
+                          "type": "image",
+                          "id": "gap-img-2939",
+                          "src": "/img/project-1/IMG-2939.svg",
+                          "alt": "Personalized ingredient and dietary restriction — design study",
+                          "width": 86,
+                          "height": 187
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2940",
+                          "src": "/img/project-1/IMG-2940.svg",
+                          "alt": "Personalized ingredient and dietary restriction — design study",
+                          "width": 86,
+                          "height": 187
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2944",
+                          "src": "/img/project-1/IMG-2944.svg",
+                          "alt": "Personalized ingredient and dietary restriction — design study",
+                          "width": 87,
+                          "height": 189
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2945",
+                          "src": "/img/project-1/IMG-2945.svg",
+                          "alt": "Personalized ingredient and dietary restriction — design study",
+                          "width": 87,
+                          "height": 188
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "level-of-severity-3",
+                      "items": [
+                        {
+                          "type": "iconLabel",
+                          "id": "level-of-severity-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "level-of-severity",
+                            "text": "Level of severity"
+                          }
+                        },
+                        {
+                          "type": "iconLabel",
+                          "id": "clear-warning-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-2",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "clear-warning",
+                            "text": "Clear warning"
+                          }
+                        },
+                        {
+                          "type": "iconLabel",
+                          "id": "comprehensive-food-restrictions-and-allergies-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-3",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "comprehensive-food-restrictions-and-allergies",
+                            "text": "Comprehensive food restrictions and allergies"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "iconLabel",
+                      "id": "heavy-reading-2",
+                      "icon": {
+                        "type": "image",
+                        "id": "gap-icon-1-1",
+                        "src": "/img/project-1/Icon-1 1.svg",
+                        "alt": "",
+                        "width": 10,
+                        "height": 10,
+                        "decorative": true
+                      },
+                      "copy": {
+                        "type": "text",
+                        "id": "heavy-reading",
+                        "text": "Heavy reading"
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "id": "fig-competitor-opportunity",
+                      "items": [
+                        {
+                          "type": "label",
+                          "id": "fig-opportunity-title",
+                          "text": "Opportunity"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fig-opportunity-description",
+                          "text": "Bring ingredient checks into the dine-in menu experience"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "intoleapp-2",
+                  "items": [
+                    {
+                      "type": "iconLabel",
+                      "id": "food-product-packaged-goods-scanning-2",
+                      "icon": {
+                        "type": "image",
+                        "id": "gap-unnamed-1",
+                        "src": "/img/project-1/unnamed-1.svg",
+                        "alt": "",
+                        "width": 41,
+                        "height": 41,
+                        "decorative": true
+                      },
+                      "copy": {
+                        "type": "label",
+                        "id": "intoleapp",
+                        "text": "IntoleApp"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "food-product-packaged-goods-scanning",
+                      "text": "Food product / packaged goods scanning"
+                    },
+                    {
+                      "type": "columns",
+                      "id": "gap-visuals-2",
+                      "items": [
+                        {
+                          "type": "image",
+                          "id": "gap-img-2951",
+                          "src": "/img/project-1/IMG-2951.svg",
+                          "alt": "Food product / packaged goods scanning — design study",
+                          "width": 87,
+                          "height": 188
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2959",
+                          "src": "/img/project-1/IMG-2959.svg",
+                          "alt": "Food product / packaged goods scanning — design study",
+                          "width": 86,
+                          "height": 188
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2953",
+                          "src": "/img/project-1/IMG-2953.svg",
+                          "alt": "Food product / packaged goods scanning — design study",
+                          "width": 87,
+                          "height": 188
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2950",
+                          "src": "/img/project-1/IMG-2950.svg",
+                          "alt": "Food product / packaged goods scanning — design study",
+                          "width": 87,
+                          "height": 188
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "diary-entry-3",
+                      "items": [
+                        {
+                          "type": "iconLabel",
+                          "id": "diary-entry-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-4",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "diary-entry",
+                            "text": "Diary Entry"
+                          }
+                        },
+                        {
+                          "type": "iconLabel",
+                          "id": "scanning-interaction-clear-hierachy-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-5",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "scanning-interaction-clear-hierachy",
+                            "text": "Scanning interaction & clear hierarchy"
+                          }
+                        },
+                        {
+                          "type": "iconLabel",
+                          "id": "category-based-browsing-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-6",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "category-based-browsing",
+                            "text": "Category-based browsing"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "iconLabel",
+                      "id": "non-user-friendly-terminology-2",
+                      "icon": {
+                        "type": "image",
+                        "id": "gap-icon-1-1-2",
+                        "src": "/img/project-1/Icon-1 1.svg",
+                        "alt": "",
+                        "width": 10,
+                        "height": 10,
+                        "decorative": true
+                      },
+                      "copy": {
+                        "type": "text",
+                        "id": "non-user-friendly-terminology",
+                        "text": "Non-User-Friendly Terminology"
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "id": "intoleapp-competitor-opportunity",
+                      "items": [
+                        {
+                          "type": "label",
+                          "id": "intoleapp-opportunity-title",
+                          "text": "Opportunity"
+                        },
+                        {
+                          "type": "text",
+                          "id": "intoleapp-opportunity-description",
+                          "text": "Support checking prepared restaurant dishes"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "find-me-gluten-free-3",
+                  "items": [
+                    {
+                      "type": "iconLabel",
+                      "id": "discover-gf-friendly-restaurants-2",
+                      "icon": {
+                        "type": "image",
+                        "id": "gap-1200x630wa-2",
+                        "src": "/img/project-1/1200x630wa-2.svg",
+                        "alt": "",
+                        "width": 41,
+                        "height": 41,
+                        "decorative": true
+                      },
+                      "copy": {
+                        "type": "label",
+                        "id": "find-me-gluten-free",
+                        "text": "Find Me Gluten Free"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "discover-gf-friendly-restaurants",
+                      "text": "Discover GF-friendly restaurants"
+                    },
+                    {
+                      "type": "columns",
+                      "id": "gap-visuals-3",
+                      "items": [
+                        {
+                          "type": "image",
+                          "id": "gap-img-2949",
+                          "src": "/img/project-1/IMG-2949.svg",
+                          "alt": "Discover GF-friendly restaurants — design study",
+                          "width": 87,
+                          "height": 188
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2960",
+                          "src": "/img/project-1/IMG-2960.svg",
+                          "alt": "Discover GF-friendly restaurants — design study",
+                          "width": 86,
+                          "height": 187
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2962",
+                          "src": "/img/project-1/IMG-2962.svg",
+                          "alt": "Discover GF-friendly restaurants — design study",
+                          "width": 87,
+                          "height": 188
+                        },
+                        {
+                          "type": "image",
+                          "id": "gap-img-2961",
+                          "src": "/img/project-1/IMG-2961.svg",
+                          "alt": "Discover GF-friendly restaurants — design study",
+                          "width": 87,
+                          "height": 188
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "community-reviews-3",
+                      "items": [
+                        {
+                          "type": "iconLabel",
+                          "id": "community-reviews-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-7",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "community-reviews",
+                            "text": "Community reviews"
+                          }
+                        },
+                        {
+                          "type": "iconLabel",
+                          "id": "promotes-education-and-awareness-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-8",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "promotes-education-and-awareness",
+                            "text": "Promotes education and awareness"
+                          }
+                        },
+                        {
+                          "type": "iconLabel",
+                          "id": "practical-communication-2",
+                          "icon": {
+                            "type": "image",
+                            "id": "gap-icon-1-9",
+                            "src": "/img/project-1/Icon 1.svg",
+                            "alt": "",
+                            "width": 10,
+                            "height": 10,
+                            "decorative": true
+                          },
+                          "copy": {
+                            "type": "text",
+                            "id": "practical-communication",
+                            "text": "Practical communication"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "iconLabel",
+                      "id": "features-misaligned-with-core-purpose-2",
+                      "icon": {
+                        "type": "image",
+                        "id": "gap-icon-1-1-3",
+                        "src": "/img/project-1/Icon-1 1.svg",
+                        "alt": "",
+                        "width": 10,
+                        "height": 10,
+                        "decorative": true
+                      },
+                      "copy": {
+                        "type": "text",
+                        "id": "features-misaligned-with-core-purpose",
+                        "text": "Discovery does not resolve dish-level questions"
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "id": "find-me-gluten-free-competitor-opportunity",
+                      "items": [
+                        {
+                          "type": "label",
+                          "id": "find-me-gluten-free-opportunity-title",
+                          "text": "Opportunity"
+                        },
+                        {
+                          "type": "text",
+                          "id": "find-me-gluten-free-opportunity-description",
+                          "text": "Extend guidance to individual dishes and customizable options"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -1065,12 +1178,17 @@ export const content = {
             {
               "type": "text",
               "id": "in-the-brainstorming-phase-i-explored-a",
-              "text": "I explored ways to bring ingredient checks into the meal. The sketches cover wearables, communication aids, and a QR-linked menu; the storyboards compare group dining with individual pickup."
+              "text": "I explored ways to bring ingredient checks into the meal. The sketches cover wearables, communication aids, and a QR-linked menu."
             },
             {
               "type": "columns",
               "id": "smart-glasses-4",
               "items": [
+                {
+                  "type": "heading",
+                  "id": "ideation-sketches-title",
+                  "text": "Ideation Sketches"
+                },
                 {
                   "type": "columns",
                   "id": "brainstorming-board",
@@ -1098,16 +1216,17 @@ export const content = {
                       "caption": {
                         "type": "label",
                         "id": "qr-code-filter",
-                        "text": "QR Code filter"
+                        "text": "QR-Based Menu"
                       },
                       "media": {
                         "type": "image",
                         "id": "brainstorming-1-201",
                         "src": "/img/project-1/1-201.svg",
-                        "alt": "QR Code filter — design study",
+                        "alt": "QR-Based Menu — design study",
                         "width": 302,
                         "height": 378
-                      }
+                      },
+                      "selected": true
                     },
                     {
                       "type": "figure",
@@ -1198,41 +1317,17 @@ export const content = {
                 },
                 {
                   "type": "group",
-                  "id": "multiple-people-dine-in-1-input-table-3",
+                  "id": "qr-menu-rationale",
                   "items": [
                     {
-                      "type": "pair",
-                      "id": "multiple-people-dine-in-1-input-table-2",
-                      "copy": {
-                        "type": "text",
-                        "id": "multiple-people-dine-in-1-input-table",
-                        "text": "Group dining: connect to a table, enter dietary needs, and check dishes on a phone while ordering together. This became the main scenario."
-                      },
-                      "media": {
-                        "type": "image",
-                        "id": "brainstorming-untitled-artwork-7-1",
-                        "src": "/img/project-1/untitled-artwork-7-1.svg",
-                        "alt": "Multiple people dine in: 1. Input table — design study",
-                        "width": 214,
-                        "height": 146
-                      }
+                      "type": "heading",
+                      "id": "why-a-qr-based-menu",
+                      "text": "Why a QR-Based Menu?"
                     },
                     {
-                      "type": "figure",
-                      "id": "single-person-pick-up-1-input-allergens-2-2",
-                      "caption": {
-                        "type": "text",
-                        "id": "single-person-pick-up-1-input-allergens-2",
-                        "text": "Individual pickup: enter dietary needs and order on a restaurant tablet. This exploration informed the tablet layout."
-                      },
-                      "media": {
-                        "type": "image",
-                        "id": "brainstorming-untitled-artwork-8",
-                        "src": "/img/project-1/untitled-artwork-8.svg",
-                        "alt": "Single person pick-up: 1. Input Allergens 2. — design study",
-                        "width": 214,
-                        "height": 133
-                      }
+                      "type": "text",
+                      "id": "qr-menu-rationale-description",
+                      "text": "I prioritized the QR-based menu because it could support ingredient checks at the moment of ordering, without requiring additional hardware. It also provided a shared entry point for diners at the same table."
                     }
                   ]
                 }
@@ -1266,7 +1361,48 @@ export const content = {
             {
               "type": "text",
               "id": "concept-selection-rationale",
-              "text": "I chose a table-linked mobile menu because it puts ingredient checks where the delay occurred: while choosing dishes. The core flow serves one diner; saved family profiles and table sharing extend that check to people ordering together."
+              "text": "The core flow serves one diner; saved family profiles and table sharing extend that check to people ordering together."
+            },
+            {
+              "type": "group",
+              "id": "multiple-people-dine-in-1-input-table-3",
+              "hidden": true,
+              "items": [
+                {
+                  "type": "pair",
+                  "id": "multiple-people-dine-in-1-input-table-2",
+                  "copy": {
+                    "type": "text",
+                    "id": "multiple-people-dine-in-1-input-table",
+                    "text": "Group dining: connect to a table, enter dietary needs, and check dishes on a phone while ordering together. This became the main scenario."
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "brainstorming-untitled-artwork-7-1",
+                    "src": "/img/project-1/untitled-artwork-7-1.svg",
+                    "alt": "Multiple people dine in: 1. Input table — design study",
+                    "width": 214,
+                    "height": 146
+                  }
+                },
+                {
+                  "type": "figure",
+                  "id": "single-person-pick-up-1-input-allergens-2-2",
+                  "caption": {
+                    "type": "text",
+                    "id": "single-person-pick-up-1-input-allergens-2",
+                    "text": "Individual pickup: enter dietary needs and order on a restaurant tablet. This exploration informed the tablet layout."
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "brainstorming-untitled-artwork-8",
+                    "src": "/img/project-1/untitled-artwork-8.svg",
+                    "alt": "Single person pick-up: 1. Input Allergens 2. — design study",
+                    "width": 214,
+                    "height": 133
+                  }
+                }
+              ]
             },
             {
               "type": "columns",
@@ -1282,7 +1418,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "scan-the-qr-code",
-                        "text": "Scan the QR Code"
+                        "text": "Scan to Access Menu"
                       },
                       {
                         "type": "text",
@@ -1310,7 +1446,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "set-profiles",
-                        "text": "Set Profiles"
+                        "text": "Select Dietary Profile"
                       },
                       {
                         "type": "text",
@@ -1338,7 +1474,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "warn-decide",
-                        "text": "Warn & Decide"
+                        "text": "Review Allergen Information"
                       },
                       {
                         "type": "text",
@@ -1366,7 +1502,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "checkout",
-                        "text": "Checkout"
+                        "text": "Review & Place Order"
                       },
                       {
                         "type": "text",
@@ -1692,12 +1828,12 @@ export const content = {
                   {
                     "type": "label",
                     "id": "scan-qr-code-and-create-allergen-profile",
-                    "text": "Set dietary needs"
+                    "text": "01 — Set Up Dietary Needs"
                   },
                   {
                     "type": "text",
                     "id": "scan-qr-code-and-create-allergen-profile-2-purpose",
-                    "text": "Enter dietary needs before browsing, so later dish warnings have a profile to reference."
+                    "text": "Create or select a profile before browsing the menu."
                   }
                 ]
               },
@@ -1720,12 +1856,12 @@ export const content = {
                   {
                     "type": "label",
                     "id": "place-an-order",
-                    "text": "Review warnings and order"
+                    "text": "02 — Check Dishes and Place an Order"
                   },
                   {
                     "type": "text",
                     "id": "place-an-order-2-purpose",
-                    "text": "Move from menu cues to dish details and the cart, keeping the ingredient check within ordering."
+                    "text": "Move from menu-level warnings to detailed dish information and order review."
                   }
                 ]
               },
@@ -1748,12 +1884,12 @@ export const content = {
                   {
                     "type": "label",
                     "id": "view-profile",
-                    "text": "Reuse saved profiles"
+                    "text": "03 — Reuse Saved Profiles"
                   },
                   {
                     "type": "text",
                     "id": "view-profile-demo-purpose",
-                    "text": "Revisit saved profiles to check existing settings instead of rebuilding them for another order."
+                    "text": "Access existing dietary settings without entering them again."
                   }
                 ]
               },
@@ -1778,206 +1914,6 @@ export const content = {
           "type": "group",
           "id": "three-levels-of-allergy-severity-4",
           "items": [
-            {
-              "type": "pair",
-              "id": "three-levels-of-allergy-severity-3",
-              "copy": {
-                "type": "group",
-                "id": "three-levels-of-allergy-severity-2",
-                "items": [
-                  {
-                    "type": "label",
-                    "id": "three-levels-of-allergy-severity",
-                    "text": "Three Levels of Allergy Severity"
-                  },
-                  {
-                    "type": "text",
-                    "id": "most-allergy-filters-treat-allergens-as-binary",
-                    "text": "Research showed that some people with milder allergies occasionally choose to eat foods containing their allergens. Binary avoid / allow filters don’t reflect those choices, so I introduced three color-coded levels—Low, Medium, and High—to support decisions based on personal tolerance."
-                  }
-                ]
-              },
-              "media": {
-                "type": "pair",
-                "id": "mild-6",
-                "copy": {
-                  "type": "group",
-                  "id": "mild-5",
-                  "items": [
-                    {
-                      "type": "group",
-                      "id": "mild-4",
-                      "items": [
-                        {
-                          "type": "columns",
-                          "id": "mild-3",
-                          "items": [
-                            {
-                              "type": "columns",
-                              "id": "mild-2",
-                              "items": [
-                                {
-                                  "type": "swatch",
-                                  "color": "rgb(255, 210, 76)",
-                                  "shape": "circle"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "mild",
-                                  "text": "Mild"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "id": "occasionally-acceptable",
-                              "text": "occasionally acceptable"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "columns",
-                          "id": "moderate-3",
-                          "items": [
-                            {
-                              "type": "columns",
-                              "id": "moderate-2",
-                              "items": [
-                                {
-                                  "type": "swatch",
-                                  "color": "rgb(255, 143, 38)",
-                                  "shape": "circle"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "moderate",
-                                  "text": "Moderate"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "id": "eat-with-caution",
-                              "text": "eat with caution"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "columns",
-                          "id": "severe-3",
-                          "items": [
-                            {
-                              "type": "columns",
-                              "id": "severe-2",
-                              "items": [
-                                {
-                                  "type": "swatch",
-                                  "color": "rgb(255, 83, 83)",
-                                  "shape": "circle"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "severe",
-                                  "text": "Severe"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "id": "avoid-completely",
-                              "text": "avoid completely"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "reflects-real-behavior-some-eat-mild-allergens",
-                      "text": "Reflects real behavior: \nsome eat mild allergens occasionally.\n\nMore flexible, less mental load, and clearer risk visibility."
-                    }
-                  ]
-                },
-                "media": {
-                  "type": "columns",
-                  "id": "design-decision-visuals",
-                  "items": [
-                    {
-                      "type": "image",
-                      "id": "design-decision-severity-level-allergen-indicators-in-a-dish-det",
-                      "src": "/img/project-1/iphone-13-mini-23.svg",
-                      "alt": "Severity-level allergen indicators in a dish detail screen",
-                      "width": 176,
-                      "height": 380
-                    },
-                    {
-                      "type": "image",
-                      "id": "design-decision-example-dish-row-showing-allergen-warning-labels",
-                      "src": "/img/project-1/Frame 8285 1.svg",
-                      "alt": "Color-coded Low, Medium, and High allergy severity labels",
-                      "width": 118,
-                      "height": 107
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "type": "pair",
-              "id": "family-profiles",
-              "copy": {
-                "type": "group",
-                "id": "profile-log-family-profiles-2",
-                "items": [
-                  {
-                    "type": "label",
-                    "id": "profile-log-family-profiles",
-                    "text": "Profile Log & Family Profiles"
-                  },
-                  {
-                    "type": "text",
-                    "id": "most-restaurant-menus-require-users-to-mentally",
-                    "text": "Rechecking ingredients with every order adds mental effort. I used saved profiles so diners can enter restrictions once and reuse them, with separate profiles for children or family members. Menu safety indicators then adjust automatically for each person."
-                  }
-                ]
-              },
-              "media": {
-                "type": "image",
-                "id": "design-decision-iphone-13-mini-43-1-1-1",
-                "src": "/img/project-1/iphone-13-mini-43-1-1-1.svg",
-                "alt": "Saved allergy profiles for an individual and their family",
-                "width": 219,
-                "height": 280
-              }
-            },
-            {
-              "type": "pair",
-              "id": "shared-allergen-visibility-3",
-              "copy": {
-                "type": "group",
-                "id": "shared-allergen-visibility-2",
-                "items": [
-                  {
-                    "type": "label",
-                    "id": "shared-allergen-visibility",
-                    "text": "Shared Allergen Visibility"
-                  },
-                  {
-                    "type": "text",
-                    "id": "when-dining-in-groups-people-often-need",
-                    "text": "Diners often need to ask about everyone’s restrictions before ordering or sharing dishes. Making allergen profiles visible within the dining group gives everyone the same information to coordinate their food choices."
-                  }
-                ]
-              },
-              "media": {
-                "type": "image",
-                "id": "design-decision-iphone-13-mini-47-1-1",
-                "src": "/img/project-1/iphone-13-mini-47-1-1.svg",
-                "alt": "Shared Allergen Visibility — design study",
-                "width": 176,
-                "height": 380
-              }
-            },
             {
               "type": "group",
               "id": "context-aware-allergen-warning-systems-3",
@@ -2021,19 +1957,14 @@ export const content = {
                               {
                                 "type": "text",
                                 "id": "dish-type",
-                                "text": "Dish Type:"
-                              },
-                              {
-                                "type": "text",
-                                "id": "single-vs-multi-selection",
-                                "text": "Single vs. Multi-Selection"
+                                "text": "Contextual Warnings for Customizable Meals"
                               }
                             ]
                           },
                           {
                             "type": "text",
                             "id": "displaying-detailed-allergen-warnings-for-every-item",
-                            "text": "Diners assess a single dish as a whole, but a customizable meal involves several separate choices. I organized warnings around these different needs, reducing repetition while keeping the details needed to evaluate each option."
+                            "text": "A fixed dish can be evaluated as a whole, while a customizable meal requires diners to check individual options. I designed the warning layout to match each selection type, keeping allergen information close to the specific choice it affects."
                           }
                         ]
                       },
@@ -2187,19 +2118,19 @@ export const content = {
                               {
                                 "type": "text",
                                 "id": "selection-layered-detail",
-                                "text": "Selection Layered Detail:"
+                                "text": "Progressive Allergen Disclosure:"
                               },
                               {
                                 "type": "text",
                                 "id": "menu-view-vs-dish-detail-view",
-                                "text": "Menu View vs. Dish Detail View"
+                                "text": "From Menu to Dish Detail"
                               }
                             ]
                           },
                           {
                             "type": "text",
                             "id": "when-browsing-a-menu-users-need-to",
-                            "text": "The menu supports quick comparisons across dishes; the dish page supports a closer check of one choice. I used this difference to decide how much allergen detail to show at each stage."
+                            "text": "Diners need to compare dishes quickly, but also need detailed information before making a selection. I used compact allergen indicators on the menu and expanded warnings on dish-detail pages to support both levels of evaluation."
                           }
                         ]
                       },
@@ -2349,19 +2280,14 @@ export const content = {
                               {
                                 "type": "text",
                                 "id": "view-group-context",
-                                "text": "View Group Context:"
-                              },
-                              {
-                                "type": "text",
-                                "id": "sharing-awareness",
-                                "text": "Sharing Awareness"
+                                "text": "Group Allergen Awareness"
                               }
                             ]
                           },
                           {
                             "type": "text",
                             "id": "when-dining-in-groups-users-often-only",
-                            "text": "The immediate need is to know whether a dish is suitable for others at the table. Listing every person’s exact allergens would add complexity and distract from ordering. Full allergen details remain accessible when needed."
+                            "text": "Shared dishes introduce another layer of decision-making: identifying who may be affected by a menu item. I designed group indicators that highlight potential conflicts for individual diners, while keeping detailed allergen information accessible when needed."
                           }
                         ]
                       },
@@ -2422,6 +2348,206 @@ export const content = {
                   ]
                 }
               ]
+            },
+            {
+              "type": "pair",
+              "id": "three-levels-of-allergy-severity-3",
+              "copy": {
+                "type": "group",
+                "id": "three-levels-of-allergy-severity-2",
+                "items": [
+                  {
+                    "type": "label",
+                    "id": "three-levels-of-allergy-severity",
+                    "text": "Personalized Allergen Concern Levels"
+                  },
+                  {
+                    "type": "text",
+                    "id": "most-allergy-filters-treat-allergens-as-binary",
+                    "text": "Research showed that some people with milder allergies occasionally choose to eat foods containing their allergens. Binary avoid / allow filters don’t reflect those choices, so I introduced three color-coded levels—Low, Medium, and High—to support decisions based on personal tolerance."
+                  }
+                ]
+              },
+              "media": {
+                "type": "pair",
+                "id": "mild-6",
+                "copy": {
+                  "type": "group",
+                  "id": "mild-5",
+                  "items": [
+                    {
+                      "type": "group",
+                      "id": "mild-4",
+                      "items": [
+                        {
+                          "type": "columns",
+                          "id": "mild-3",
+                          "items": [
+                            {
+                              "type": "columns",
+                              "id": "mild-2",
+                              "items": [
+                                {
+                                  "type": "swatch",
+                                  "color": "rgb(255, 210, 76)",
+                                  "shape": "circle"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "mild",
+                                  "text": "Mild"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "occasionally-acceptable",
+                              "text": "occasionally acceptable"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "columns",
+                          "id": "moderate-3",
+                          "items": [
+                            {
+                              "type": "columns",
+                              "id": "moderate-2",
+                              "items": [
+                                {
+                                  "type": "swatch",
+                                  "color": "rgb(255, 143, 38)",
+                                  "shape": "circle"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "moderate",
+                                  "text": "Moderate"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "eat-with-caution",
+                              "text": "eat with caution"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "columns",
+                          "id": "severe-3",
+                          "items": [
+                            {
+                              "type": "columns",
+                              "id": "severe-2",
+                              "items": [
+                                {
+                                  "type": "swatch",
+                                  "color": "rgb(255, 83, 83)",
+                                  "shape": "circle"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "severe",
+                                  "text": "Severe"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "avoid-completely",
+                              "text": "avoid completely"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "reflects-real-behavior-some-eat-mild-allergens",
+                      "text": "Reflects real behavior: \nsome eat mild allergens occasionally.\n\nMore flexible, less mental load, and clearer risk visibility."
+                    }
+                  ]
+                },
+                "media": {
+                  "type": "columns",
+                  "id": "design-decision-visuals",
+                  "items": [
+                    {
+                      "type": "image",
+                      "id": "design-decision-severity-level-allergen-indicators-in-a-dish-det",
+                      "src": "/img/project-1/iphone-13-mini-23.svg",
+                      "alt": "Severity-level allergen indicators in a dish detail screen",
+                      "width": 176,
+                      "height": 380
+                    },
+                    {
+                      "type": "image",
+                      "id": "design-decision-example-dish-row-showing-allergen-warning-labels",
+                      "src": "/img/project-1/Frame 8285 1.svg",
+                      "alt": "Color-coded Low, Medium, and High allergy severity labels",
+                      "width": 118,
+                      "height": 107
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "pair",
+              "id": "family-profiles",
+              "copy": {
+                "type": "group",
+                "id": "profile-log-family-profiles-2",
+                "items": [
+                  {
+                    "type": "label",
+                    "id": "profile-log-family-profiles",
+                    "text": "Reusable Allergy Profiles"
+                  },
+                  {
+                    "type": "text",
+                    "id": "most-restaurant-menus-require-users-to-mentally",
+                    "text": "Repeatedly entering dietary restrictions adds unnecessary effort to ordering. I designed reusable profiles that let diners save personal or family dietary needs and switch between profiles when reviewing the menu."
+                  }
+                ]
+              },
+              "media": {
+                "type": "image",
+                "id": "design-decision-iphone-13-mini-43-1-1-1",
+                "src": "/img/project-1/iphone-13-mini-43-1-1-1.svg",
+                "alt": "Saved allergy profiles for an individual and their family",
+                "width": 219,
+                "height": 280
+              }
+            },
+            {
+              "type": "pair",
+              "id": "shared-allergen-visibility-3",
+              "copy": {
+                "type": "group",
+                "id": "shared-allergen-visibility-2",
+                "items": [
+                  {
+                    "type": "label",
+                    "id": "shared-allergen-visibility",
+                    "text": "Shared Allergen Visibility"
+                  },
+                  {
+                    "type": "text",
+                    "id": "when-dining-in-groups-people-often-need",
+                    "text": "Diners often need to ask about everyone’s restrictions before ordering or sharing dishes. Making allergen profiles visible within the dining group gives everyone the same information to coordinate their food choices."
+                  }
+                ]
+              },
+              "media": {
+                "type": "image",
+                "id": "design-decision-iphone-13-mini-47-1-1",
+                "src": "/img/project-1/iphone-13-mini-47-1-1.svg",
+                "alt": "Shared Allergen Visibility — design study",
+                "width": 176,
+                "height": 380
+              }
             }
           ]
         }
@@ -2522,7 +2648,7 @@ export const content = {
                     {
                       "type": "label",
                       "id": "color-system",
-                      "text": "Color system"
+                      "text": "Colors"
                     },
                     {
                       "type": "columns",
@@ -2594,7 +2720,8 @@ export const content = {
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "title": "Visual Foundations"
                 },
                 {
                   "type": "columns",
@@ -2747,11 +2874,23 @@ export const content = {
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "title": "Component Library"
                 }
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "what-i-learned",
+      "title": "What I Learned",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "what-i-learned-reflection",
+          "text": "Designing JustEat showed me that better allergy information is not simply about displaying more details. It is about presenting the right information at the right moment, while preserving users' control over their decisions."
         }
       ]
     }
