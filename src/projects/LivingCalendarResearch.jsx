@@ -134,10 +134,7 @@ export const researchComponents = {
   "how-do-people-notice-seasonal-change-3": AudienceEvidence,
   "literature-review-3": LiteratureReview,
   "key-findings-4": TakeawayList,
-  "shared-needs-2": TakeawayList,
-  "opportunities-2": TakeawayList,
   "i-initially-assumed-this-was-a-cultural": ResearchShift,
-  "journey-map-what-challenges-do-they-face": JourneyHeading,
   "sitemap-how-should-information-be-organized": JourneyHeading,
   "storyboard-what-should-the-experience-feel-like": JourneyHeading,
 };

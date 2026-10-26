@@ -725,40 +725,6 @@ export const content = {
       ]
     },
     {
-      "id": "from-insights-to-features",
-      "title": "From Insights to Features",
-      "takeaway": [
-        {"text": "Prioritize "},
-        {"text": "exploration and reflection", "strong": true, "tone": "highlight"},
-        {"text": " over content-heavy learning."}
-      ],
-      "blocks": [
-        {
-          "type": "group",
-          "id": "using-the-research-insights-i-translated-user-2",
-          "items": [
-            {
-              "type": "pair",
-              "id": "because-users-connected-most-strongly-through-observation-2",
-              "copy": {
-                "type": "text",
-                "id": "because-users-connected-most-strongly-through-observation",
-                "text": "80% chose noticing nature and 70% stepping outside as meaningful interactions."
-              },
-              "media": {
-                "type": "image",
-                "id": "from-insights-to-features-group-23983-1",
-                "src": "/img/project-4/group-23983-1.svg",
-                "alt": "Because users connected most strongly through observation — design study",
-                "width": 928.0,
-                "height": 536.0
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "exploring-ways-to-experience-time",
       "title": "Exploring Ways to Experience Time",
       "takeaway": [
@@ -1011,6 +977,7 @@ export const content = {
                 "Linear calendar",
                 "Circular / cyclical model"
               ],
+              "columnRoles": [null, "Calendar feature", "Landing page"],
               "rows": [
                 {
                   "criterion": "First-use clarity",
@@ -1052,7 +1019,7 @@ export const content = {
                     "strong": true
                   },
                   {
-                    "text": "I chose the circular dial for seasonal exploration and kept a year calendar for date lookup. This prioritized seasonal connection, while accepting a less familiar interaction that would need clearer cues."
+                    "text": "The final experience combines both approaches. I used the circular dial on the landing page to introduce the seasonal cycle, and added a calendar feature on a separate page for date lookup and a yearly overview."
                   }
                 ]
               }
@@ -1063,7 +1030,7 @@ export const content = {
     },
     {
       "id": "designing-a-seasonal-journey",
-      "title": "Designing a Seasonal Journey",
+      "title": "Research artifacts gallery",
       "blocks": [
         {
           "type": "group",
@@ -1074,103 +1041,41 @@ export const content = {
               "id": "users-familiar-with-the-solar-terms-but-3",
               "items": [
                 {
-                  "type": "pair",
-                  "id": "users-familiar-with-the-solar-terms-but-2",
-                  "copy": {
-                    "type": "group",
-                    "id": "users-familiar-with-the-solar-terms-but",
-                    "items": [
-                      {
-                        "type": "heading",
-                        "id": "familiar-audience-title",
-                        "text": [
-                          {"text": "Chinese Cultural Background", "tone": "highlight"}
-                        ]
-                      },
-                      {
-                        "type": "text",
-                        "id": "familiar-audience-need",
-                        "text": "Familiar with the Solar Terms through family traditions, but seeking a closer connection to nature in everyday life."
-                      }
-                    ]
-                  },
-                  "media": {
-                    "type": "image",
-                    "id": "designing-a-seasonal-journey-frame-1437254417-1",
-                    "src": "/img/project-4/frame-1437254417-1.svg",
-                    "alt": "Persona for an audience with a Chinese cultural background seeking to reconnect familiar Solar Term traditions with everyday nature",
-                    "width": 628.0,
-                    "height": 637.0
-                  }
+                  "type": "image",
+                  "id": "designing-a-seasonal-journey-frame-1437254417-1",
+                  "label": "Persona · Chinese Cultural Background",
+                  "src": "/img/project-4/frame-1437254417-1.svg",
+                  "alt": "Persona for an audience with a Chinese cultural background seeking to reconnect familiar Solar Term traditions with everyday nature",
+                  "width": 628.0,
+                  "height": 637.0
                 },
                 {
-                  "type": "pair",
-                  "id": "users-unfamiliar-with-the-solar-terms-but-2",
-                  "copy": {
-                    "type": "group",
-                    "id": "users-unfamiliar-with-the-solar-terms-but",
-                    "items": [
-                      {
-                        "type": "heading",
-                        "id": "new-audience-title",
-                        "text": [
-                          {"text": "Global Audience", "tone": "highlight"}
-                        ]
-                      },
-                      {
-                        "type": "text",
-                        "id": "new-audience-need",
-                        "text": "Curious about seasonal change and Chinese culture; need an accessible introduction to the Solar Terms."
-                      }
-                    ]
-                  },
-                  "media": {
-                    "type": "image",
-                    "id": "designing-a-seasonal-journey-frame-1437254418-1",
-                    "src": "/img/project-4/frame-1437254418-1.svg",
-                    "alt": "Persona for a global audience discovering the Solar Terms through an interest in seasonal change and Chinese culture",
-                    "width": 628.0,
-                    "height": 637.0
-                  }
+                  "type": "image",
+                  "id": "designing-a-seasonal-journey-frame-1437254418-1",
+                  "label": "Persona · Global Audience",
+                  "src": "/img/project-4/frame-1437254418-1.svg",
+                  "alt": "Persona for a global audience discovering the Solar Terms through an interest in seasonal change and Chinese culture",
+                  "width": 628.0,
+                  "height": 637.0
+                },
+                {
+                  "type": "image",
+                  "id": "designing-a-seasonal-journey-journey-map-1",
+                  "label": "Journey map",
+                  "src": "/img/project-4/journey-map-1.svg",
+                  "alt": "Living Calendar journey map showing users’ challenges and opportunities for seasonal connection",
+                  "width": 578.0,
+                  "height": 494.0
+                },
+                {
+                  "type": "image",
+                  "id": "from-insights-to-features-group-23983-1",
+                  "label": "Prioritization matrix",
+                  "src": "/img/project-4/group-23983-1.svg",
+                  "alt": "Prioritization matrix mapping early Living Calendar concepts by impact and effort",
+                  "width": 928.0,
+                  "height": 536.0
                 }
-              ]
-            },
-            {
-              "type": "group",
-              "id": "shared-needs-2",
-              "items": [
-                {"type": "text", "id": "shared-needs", "text": "Shared Needs:"},
-                {"type": "text", "id": "low-friction-experience", "text": "Low-friction experience"},
-                {"type": "text", "id": "stronger-awareness-of-seasonal-change", "text": "Stronger awareness of seasonal change"},
-                {"type": "text", "id": "visual-and-sensory-learning", "text": "Visual and sensory learning"},
-                {"type": "text", "id": "connections-between-nature-and-daily-life", "text": "Connections between nature and daily life"}
-              ]
-            },
-            {
-              "type": "text",
-              "id": "journey-map-what-challenges-do-they-face",
-              "text": [
-                {"text": "Journey Map ", "strong": true, "tone": "muted"},
-                {"text": "(What challenges do they face?)", "strong": true, "tone": "olive"}
-              ]
-            },
-            {
-              "type": "image",
-              "id": "designing-a-seasonal-journey-journey-map-1",
-              "src": "/img/project-4/journey-map-1.svg",
-              "alt": "Journey Map (What challenges do they face?) — design study",
-              "width": 578.0,
-              "height": 494.0
-            },
-            {
-              "type": "group",
-              "id": "opportunities-2",
-              "items": [
-                {"type": "text", "id": "opportunities", "text": "Opportunities:"},
-                {"type": "text", "id": "lower-the-entry-barrier", "text": "Lower the Entry Barrier"},
-                {"type": "text", "id": "visualize-seasonal-change", "text": "Visualize Seasonal Change"},
-                {"type": "text", "id": "bridge-ecology-and-culture", "text": "Bridge Ecology and Culture"},
-                {"type": "text", "id": "design-for-cross-cultural-understanding", "text": "Design for Cross-Cultural Understanding"}
               ]
             },
             {
@@ -1610,7 +1515,7 @@ export const content = {
                         "type": "text",
                         "id": "the-dial-became-the-primary-navigation-system",
                         "text": [
-                          {"text": "The dial became the primary navigation system.", "strong": true, "tone": "muted"},
+                          {"text": "The dial became the landing page’s main navigation.", "strong": true, "tone": "muted"},
                           {"text": "\n \n"},
                           {"text": "Solar longitude visualization", "tone": "olive"},
                           {"text": "\n"},
@@ -1781,72 +1686,11 @@ export const content = {
     {
       "id": "testing-refinement",
       "title": "Testing & Refinement",
-      "takeaway": [
-        {"text": "Participants understood the seasonal concept, but needed "},
-        {"text": "clearer interaction cues", "strong": true, "tone": "highlight"},
-        {"text": "."}
-      ],
       "blocks": [
         {
           "type": "group",
           "id": "to-validate-the-usability-and-experience-of-2",
           "items": [
-            {
-              "type": "text",
-              "id": "to-validate-the-usability-and-experience-of",
-              "text": [
-                {
-                  "text": "I conducted moderated usability testing with ",
-                  "tone": "muted"
-                },
-                {
-                  "text": "six participants across three tasks",
-                  "strong": true,
-                  "tone": "muted"
-                },
-                {
-                  "text": " to evaluate discoverability, navigation, and interaction clarity.",
-                  "tone": "muted"
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "id": "testing-change-status",
-              "items": [
-                {
-                  "type": "heading",
-                  "id": "testing-change-status-title",
-                  "text": "What Changed — and What Remains Proposed"
-                },
-                {
-                  "type": "text",
-                  "id": "testing-built-status",
-                  "text": [
-                    {
-                      "text": "Already built: ",
-                      "strong": true
-                    },
-                    {
-                      "text": "The circular dial, seasonal animations, and year calendar are shown in the implementation recordings."
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "testing-post-test-status",
-                  "text": [
-                    {
-                      "text": "Changes after testing: ",
-                      "strong": true
-                    },
-                    {
-                      "text": "No completed fixes or follow-up test results are documented. The improvements below remain proposals, not validated outcomes."
-                    }
-                  ]
-                }
-              ]
-            },
             {
               "type": "columns",
               "id": "landing-page-users-understood-the-wheels-cyclical-3",
@@ -2129,7 +1973,7 @@ export const content = {
                 "type": "image",
                 "id": "a-living-calendar-frame-1437254446",
                 "src": "/img/project-4/frame-1437254446.svg",
-                "alt": "The Ecological Layer, which shows changes in — design study",
+                "alt": "Seasonal landscape and shadow studies for the Ecological Layer",
                 "width": 706.0,
                 "height": 192.0
               }
@@ -2140,7 +1984,7 @@ export const content = {
               "text": [
                 {"text": "The ", "tone": "muted"},
                 {"text": "Cultural Layer", "tone": "teal"},
-                {"text": ", where each Solar Term’s stories, poem, and traditions come alive.", "tone": "muted"}
+                {"text": ", where each Solar Term’s stories, poems, and traditions come alive.", "tone": "muted"}
               ]
             },
             {
@@ -2247,7 +2091,7 @@ export const content = {
                 "text": [
                   {"text": "The ", "tone": "muted"},
                   {"text": "Personal Layer", "tone": "coral"},
-                  {"text": ", which encourages users experience the season on their own.", "tone": "muted"}
+                  {"text": ", which invites users to experience the season through personal reflection.", "tone": "muted"}
                 ]
               },
               "media": {

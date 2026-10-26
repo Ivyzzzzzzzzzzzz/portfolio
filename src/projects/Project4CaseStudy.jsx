@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import CaseStudy, { Block, FigureComposition, RichText } from "../components/case-study/CaseStudy.jsx";
 import OnThisPage from "../components/case-study/OnThisPage.jsx";
+import ResearchArtifactGallery from "../components/case-study/ResearchArtifactGallery.jsx";
 import { assetPath } from "../lib/assets.js";
 import { content } from "../content/project-4/content.js";
 import { layout } from "../content/project-4/layout.js";
@@ -149,10 +150,17 @@ function ConceptComparison({ block }) {
   return <section className="lc-concept-comparison" data-content-id={block.id} aria-labelledby={block.heading.id}>
     <h3 id={block.heading.id} data-content-id={block.heading.id}><RichText value={block.heading.text} /></h3>
     <table aria-labelledby={block.heading.id}>
-      <thead><tr>{block.columns.map(column => <th key={column} scope="col">{column}</th>)}</tr></thead>
+      <thead><tr>{block.columns.map((column, index) => <th key={column} scope="col">
+        <span>{column}</span>
+        {block.columnRoles[index] && <span className="lc-concept-role">
+          <span aria-hidden="true">✓</span>{block.columnRoles[index]}
+        </span>}
+      </th>)}</tr></thead>
       <tbody>{block.rows.map(row => <tr key={row.criterion}>
         <th scope="row">{row.criterion}</th>
-        {row.cells.map(cell => <td key={cell.id}><Block block={cell} /></td>)}
+        {row.cells.map(cell => <td key={cell.id}>
+          <Block block={cell} />
+        </td>)}
       </tr>)}</tbody>
     </table>
     <div className="lc-concept-decision"><Block block={block.decision} /></div>
@@ -218,6 +226,7 @@ function NavigationScreens({ block }) {
 
 const components = {
   ...researchComponents,
+  "users-familiar-with-the-solar-terms-but-3": ResearchArtifactGallery,
   "final-prototype-showcase": PrototypeShowcase,
   "sitemap-and-user-flow": NavigationDiagrams,
   "designing-a-seasonal-journey-group-23984-1": NativeDiagram,

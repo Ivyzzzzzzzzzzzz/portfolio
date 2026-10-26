@@ -319,7 +319,6 @@ function PrototypeFlows({ block }) {
 
 const components = {
   "maintenance-staff-and-contractors-frequently-entered-units-2": NumberedPoints,
-  "current-maintenance-systems-fail-to-address-users-2": ({ block }) => <Takeaway emphasis label="Key findings"><div className="ed-response-grid" data-content-id={block.id}>{block.items.map(item => <Copy block={item} key={item.id} />)}</div></Takeaway>,
   "1-2": StepHeader,
   "2-2": StepHeader,
   "3-2": StepHeader,

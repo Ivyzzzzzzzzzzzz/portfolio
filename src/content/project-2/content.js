@@ -88,23 +88,6 @@ export const content = {
                       "height": 225.0
                     }
                   ]
-                },
-                {"type": "label", "id": "insights", "text": "Focus for the redesign"},
-                {
-                  "type": "columns",
-                  "id": "current-maintenance-systems-fail-to-address-users-2",
-                  "items": [
-                    {
-                      "type": "text",
-                      "id": "current-maintenance-systems-fail-to-address-users",
-                      "text": "Reporting asks residents to interpret maintenance terminology and assess priority before they know when help will arrive."
-                    },
-                    {
-                      "type": "label",
-                      "id": "inadequate-maintenance-services-damage-user-trust-and",
-                      "text": "The opportunity is to support the whole request: describe the problem, plan for entry, and follow progress through completion."
-                    }
-                  ]
                 }
               ]
             }

@@ -222,9 +222,6 @@
   .study--project-3 [data-content-id="packaging-form-exploration-3"] {
     grid-template-columns: minmax(0, 1fr);
   }
-  .study--project-4 [data-content-id="because-users-connected-most-strongly-through-observation-2"] {
-    grid-template-columns: minmax(260px, 1fr) minmax(0, 2.25fr);
-  }
 }
 @media (max-width: 899px) {
   .case-study-page .case-study-toolbar {
