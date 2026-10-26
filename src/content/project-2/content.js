@@ -104,9 +104,15 @@ export const content = {
           "id": "i-needed-to-uncover-exactly-where-the-2",
           "items": [
             {
-              "type": "text",
-              "id": "i-needed-to-uncover-exactly-where-the",
-              "text": "I combined 5 resident interviews, a four-day diary study, and a survey of 30 residents, then tested the existing workflow with 3 first-time users and reviewed Everly’s portal. The research pointed to three gaps: confusing reporting, unpredictable visits, and limited progress updates."
+              "type": "group",
+              "id": "research-methods",
+              "items": [
+                {"type": "text", "id": "research-method-interviews", "text": "5 resident interviews"},
+                {"type": "text", "id": "research-method-diary", "text": "4-day diary study"},
+                {"type": "text", "id": "research-method-survey", "text": "30 survey responses"},
+                {"type": "text", "id": "research-method-testing", "text": "3 usability participants"},
+                {"type": "text", "id": "research-method-competitor", "text": "1 competitor review"}
+              ]
             },
             {
               "type": "group",
@@ -398,7 +404,7 @@ export const content = {
             {
               "type": "text",
               "id": "to-evaluate-usability-i-tested-the-expo",
-              "text": "I tested two tasks in the existing Expo portal with 3 users who had no prior experience: submit a request and locate it in history. Users hesitated over labels, controls, and feedback. The annotated screens below document problems in the original workflow; they do not measure the redesign’s usability."
+              "text": "I tested two tasks in the existing Expo portal with 3 users who had no prior experience: submit a request and locate it in history."
             },
             {
               "type": "group",

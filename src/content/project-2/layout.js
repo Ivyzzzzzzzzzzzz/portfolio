@@ -20,7 +20,6 @@ export const layout = {
   "research-3": {"space": "wide"},
   "in-the-summer-of-2025-a-severe-3": {"space": "wide"},
   "research-within-expo": {"headingSize": 20.0, "headingWeight": 400.0, "headingFont": "serif", "color": "rgb(25, 148, 173)"},
-  "i-needed-to-uncover-exactly-where-the": {"measure": 303, "color": "rgb(93, 93, 93)"},
   "1": {"color": "rgb(2, 146, 154)"},
   "i-conducted-in-depth-interviews-with-5-expo": {"color": "rgb(93, 93, 93)", "measure": 302},
   "1-2": {"space": "tight"},

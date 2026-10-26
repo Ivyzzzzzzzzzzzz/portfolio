@@ -7,6 +7,12 @@ import { layout } from "../content/project-2/layout.js";
 import { assetPath } from "../lib/assets.js";
 import "./maintenance.css";
 
+function ResearchMethodTags({ block }) {
+  return <ul className="apt-research-tags" data-content-id={block.id} aria-label="Research methods">
+    {block.items.map(item => <li key={item.id} data-content-id={item.id}>{textOf(item.text)}</li>)}
+  </ul>;
+}
+
 function DiaryDetails({ block }) {
   const fields = [...textOf(block.text).matchAll(/(?:^|\n)\s*(Goal|Participant|Maintenance Request):\s*([\s\S]*?)(?=\n\s*(?:Goal|Participant|Maintenance Request):|$)/g)];
   return <dl className="ed-facts" data-content-id={block.id}>{fields.map(([, label, value]) => <div key={label}><dt>{label}</dt><dd>{value.trim()}</dd></div>)}</dl>;
@@ -318,6 +324,7 @@ function PrototypeFlows({ block }) {
 }
 
 const components = {
+  "research-methods": ResearchMethodTags,
   "maintenance-staff-and-contractors-frequently-entered-units-2": NumberedPoints,
   "1-2": StepHeader,
   "2-2": StepHeader,

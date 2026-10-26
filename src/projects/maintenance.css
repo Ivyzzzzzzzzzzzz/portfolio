@@ -1,4 +1,6 @@
 /* APT: readable research evidence and larger comparisons at a shared phone scale. */
+.ed-case-study .apt-research-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.ed-case-study .apt-research-tags li { padding: 7px 12px; border: 1px solid var(--ed-line); border-radius: 999px; background: var(--ed-soft); color: var(--ed-heading); font-size: 13px; font-weight: 500; line-height: 1.5; }
 .ed-case-study .apt-research-study { display: grid; gap: 24px; padding-top: 28px; border-top: 1px solid var(--ed-line); }
 .ed-case-study .apt-research-study > .ed-media { max-width: 1100px; }
 .ed-case-study .apt-research-study [data-content-id="research-within-expo-visuals"] { grid-template-columns: 1.7fr 1fr; gap: 32px; max-width: 1050px; }
