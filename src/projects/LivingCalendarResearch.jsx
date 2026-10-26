@@ -5,10 +5,24 @@ const plainText = value => typeof value === "string" ? value : value.map(run => 
 const authoredLines = value => plainText(value).split(/\n+/).map(line => line.trim()).filter(Boolean);
 const labelText = value => plainText(value).replace(/:\s*$/, "");
 
+function ResearchSubsection({ block }) {
+  return <section className="lc-research-subsection" id={block.id} data-content-id={block.id}
+    aria-labelledby={`${block.id}-title`}>
+    <header className="lc-research-subsection-heading">
+      <span className="lc-research-step" aria-hidden="true">{block.step}</span>
+      <h3 className="study-label" id={`${block.id}-title`}><RichText value={block.title} /></h3>
+    </header>
+    <div className="lc-research-subsection-body">
+      {block.takeaway && <p className="lc-story-takeaway"><RichText value={block.takeaway} /></p>}
+      {block.items.map(item => <Block key={item.id} block={item} />)}
+    </div>
+  </section>;
+}
+
 function ResearchFindings({ block }) {
   const [heading, comparison, conclusion] = block.items;
   return <section className="lc-research-findings" data-content-id={block.id} aria-labelledby={heading.id}>
-    <h3 id={heading.id} data-content-id={heading.id}>{labelText(heading.text)}</h3>
+    <h4 id={heading.id} data-content-id={heading.id}>{labelText(heading.text)}</h4>
     <dl className="lc-finding-comparison" data-content-id={comparison.id}>
       {comparison.items.map(item => {
         const [level, subject] = item.items;
@@ -35,7 +49,7 @@ function AudienceEvidence({ block }) {
       const summary = isFigure ? null : item.items[1];
       const media = isFigure ? item.media : item.items[2];
       return <article className="lc-evidence-panel" key={item.id} data-content-id={item.id} aria-labelledby={heading.id}>
-        <h3 id={heading.id} data-content-id={heading.id}><RichText value={heading.text} /></h3>
+        <h4 id={heading.id} data-content-id={heading.id}><RichText value={heading.text} /></h4>
         <dl className="lc-evidence-numbers" data-content-id={summary?.id} aria-label={summary?.text}>
           {item.highlights.map(stat => <div key={stat.label}>
             <dt>{stat.label}</dt>
@@ -52,7 +66,7 @@ function LiteratureReview({ block }) {
   const [heading, introduction, sources] = block.items;
   return <section className="lc-literature-review" data-content-id={block.id} aria-labelledby={heading.id}>
     <header className="lc-research-intro">
-      <h3 id={heading.id} data-content-id={heading.id}>{heading.text}</h3>
+      <h4 id={heading.id} data-content-id={heading.id}>{heading.text}</h4>
       <p data-content-id={introduction.id}><RichText value={introduction.text} /></p>
     </header>
     <div className="lc-literature-sources" data-content-id={sources.id}>
@@ -63,7 +77,7 @@ function LiteratureReview({ block }) {
         const [findingLabel, finding, takeawayLabel, takeaway] = authoredLines(body.text);
         return <article className="lc-literature-source" key={source.id} data-content-id={source.id} aria-labelledby={heading.id}>
           <header data-content-id={heading.id}>
-            <h4 id={heading.id}>{title.text.trim()}</h4>
+            <h5 id={heading.id}>{title.text.trim()}</h5>
             <p className="lc-research-citation">{plainText(citation).trim()}</p>
           </header>
           <div className="lc-literature-body" data-content-id={body.id}>
@@ -82,34 +96,17 @@ function LiteratureReview({ block }) {
   </section>;
 }
 
-function TakeawayList({ block }) {
-  const [heading, ...copy] = block.items;
-  const isMultiline = copy.length === 1;
-  const items = isMultiline
-    ? authoredLines(copy[0].text).map((text, index) => ({ id: `${copy[0].id}-${index + 1}`, text }))
-    : copy;
-  return <section className="lc-takeaway-list" data-content-id={block.id} aria-labelledby={heading.id}>
-    <h3 id={heading.id} data-content-id={heading.id}>{labelText(heading.text)}</h3>
-    <ul data-content-id={isMultiline ? copy[0].id : undefined}>
-      {items.map((item, index) => <li key={item.id} data-content-id={item.id}>
-        <span className="lc-takeaway-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-        <p><RichText value={plainText(item.text)} /></p>
-      </li>)}
-    </ul>
-  </section>;
-}
-
 function ResearchShift({ block }) {
-  const [assumption, , finding] = authoredLines(block.text);
+  const [assumption, finding] = authoredLines(block.text);
   return <div className="lc-research-shift" data-content-id={block.id}>
     <div>
-      <p className="lc-research-label">Initial assumption</p>
-      <h3><RichText value={block.assumptionTitle} /></h3>
+      <p className="lc-research-label"><RichText value={block.assumptionLabel} /></p>
+      <h4><RichText value={block.assumptionTitle} /></h4>
       <p><RichText value={assumption} /></p>
     </div>
     <div>
-      <p className="lc-research-label">Research finding</p>
-      <h3><RichText value={block.findingTitle} /></h3>
+      <p className="lc-research-label"><RichText value={block.findingLabel} /></p>
+      <h4><RichText value={block.findingTitle} /></h4>
       <p><RichText value={finding} /></p>
     </div>
   </div>;
@@ -124,6 +121,9 @@ function JourneyHeading({ block }) {
 }
 
 export const researchComponents = {
+  "understanding-existing-connections": ResearchSubsection,
+  "a-different-problem-emerged": ResearchSubsection,
+  "expanding-the-audience": ResearchSubsection,
   "how-do-people-experience-seasons-today-3": ExistingConnections,
   "seasonal-connection-chart": SurveyChart,
   "solar-term-familiarity-chart": SurveyChart,
@@ -133,7 +133,6 @@ export const researchComponents = {
   "key-findings-2": ResearchFindings,
   "how-do-people-notice-seasonal-change-3": AudienceEvidence,
   "literature-review-3": LiteratureReview,
-  "key-findings-4": TakeawayList,
   "i-initially-assumed-this-was-a-cultural": ResearchShift,
   "sitemap-how-should-information-be-organized": JourneyHeading,
   "storyboard-what-should-the-experience-feel-like": JourneyHeading,

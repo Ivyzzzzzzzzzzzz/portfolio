@@ -18,187 +18,176 @@ export const content = {
   },
   "sections": [
     {
-      "id": "message-from-home",
-      "title": "Message from home",
-      "takeaway": [
-        {"text": "A family ritual revealed my own "},
-        {"text": "distance from seasonal life", "strong": true, "tone": "highlight"},
-        {"text": "."}
-      ],
+      "id": "the-story-and-context",
+      "title": "The Story & Context",
       "blocks": [
         {
           "type": "group",
-          "id": "today-is-the-beginning-of-winter-did-3",
+          "id": "message-from-home",
+          "step": "01",
+          "title": "Message from Home",
           "items": [
             {
-              "type": "heading",
-              "id": "today-is-the-beginning-of-winter-did",
-              "text": "\"Today is the Beginning of Winter. Did you eat dumplings?\""
-            },
-            {
-              "type": "text",
-              "id": "growing-up-in-china-the-24-solar",
-              "text": "In China, seasonal foods and family traditions connected me to the Solar Terms. After moving abroad, I barely noticed their calendar notifications."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "the-disconnect",
-      "title": "The Disconnect",
-      "takeaway": [
-        {"text": "Modern calendars organize our schedules while "},
-        {"text": "seasonal change fades into the background", "strong": true, "tone": "highlight"},
-        {"text": "."}
-      ],
-      "blocks": [
-        {
-          "type": "group",
-          "id": "a-temporal-gap-emerges-as-modern-calendrical-2",
-          "items": [
-            {
-              "type": "columns",
-              "id": "before-digital-clocks-and-numerical-dates-humans-3",
+              "type": "group",
+              "id": "today-is-the-beginning-of-winter-did-3",
               "items": [
                 {
-                  "type": "pair",
-                  "id": "before-digital-clocks-and-numerical-dates-humans-2",
-                  "copy": {
-                    "type": "text",
-                    "id": "before-digital-clocks-and-numerical-dates-humans",
-                    "text": "Light, wind, and shadows once helped people read seasonal change."
-                  },
-                  "media": {
-                    "type": "composition",
-                    "id": "seasonal-observation-collage",
-                    "items": [
-                      {
-                        "type": "image",
-                        "id": "the-disconnect-what-s-the-weather-forecast-at-work-1",
-                        "src": "/img/project-4/what-s-the-weather-forecast-at-work-1.svg",
-                        "alt": "Weather as a cue for observing seasonal change",
-                        "width": 143.0,
-                        "height": 100.0
+                  "type": "heading",
+                  "id": "today-is-the-beginning-of-winter-did",
+                  "text": "\"Today is the Beginning of Winter. Did you eat dumplings?\""
+                },
+                {
+                  "type": "text",
+                  "id": "growing-up-in-china-the-24-solar",
+                  "text": "Growing up in China, the 24 Solar Terms were woven into seasonal foods and family traditions. After moving abroad, I still saw their names on my calendar, but rarely noticed the seasonal changes happening around me."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "time-told-by-nature-not-numbers",
+          "step": "02",
+          "title": [
+            {"text": "Time Told by "},
+            {"text": "Nature, Not Numbers", "tone": "highlight"}
+          ],
+          "items": [
+            {
+              "type": "group",
+              "id": "whats-24-solar-terms-2",
+              "items": [
+                {
+                  "type": "columns",
+                  "id": "the-24-solar-terms-are-a-traditional-3",
+                  "items": [
+                    {
+                      "type": "pair",
+                      "id": "the-24-solar-terms-are-a-traditional-2",
+                      "copy": {
+                        "type": "text",
+                        "id": "the-24-solar-terms-are-a-traditional",
+                        "text": "Originating in China, the 24 Solar Terms divide the year into 24 seasonal periods based on the Sun's annual movement. Historically used to guide agriculture, they also shaped seasonal rituals, food traditions, and poetry."
                       },
-                      {
+                      "media": {
                         "type": "image",
-                        "id": "the-disconnect-wolfgang-hasselmann-br-gllg7bs-unsplash-2-ver-1-1",
-                        "src": "/img/project-4/wolfgang-hasselmann-br-gllg7bs-unsplash-2-ver-1-1.svg",
-                        "alt": "A landscape showing environmental and seasonal change",
-                        "width": 160.0,
-                        "height": 112.0
-                      },
-                      {
-                        "type": "image",
-                        "id": "the-disconnect-photo-dark-and-stormy-cloudscape-istock-1125x534",
-                        "src": "/img/project-4/photo-dark-and-stormy-cloudscape-istock-1125x534-landscape-1.svg",
-                        "alt": "Dark storm clouds as a natural time cue",
-                        "width": 161.0,
-                        "height": 100.0
-                      },
-                      {
-                        "type": "image",
-                        "id": "the-disconnect-transparent-window-shadow-overlay-template-47987",
-                        "src": "/img/project-4/transparent-window-shadow-overlay-template-47987-19967-1.svg",
-                        "alt": "Window shadows showing changes in natural light",
-                        "width": 142.0,
-                        "height": 111.0
+                        "id": "time-told-by-nature-not-numbers-group-2",
+                        "src": "/img/project-4/group-2.svg",
+                        "alt": "The 24 Solar Terms are a traditional — design study",
+                        "width": 188.0,
+                        "height": 201.0
                       }
-                    ]
-                  }
-                },
-                {
-                  "type": "image",
-                  "id": "the-disconnect-expand-right-2",
-                  "src": "/img/project-4/expand-right-2.svg",
-                  "alt": "",
-                  "width": 24.0,
-                  "height": 24.0,
-                  "decorative": true
-                },
-                {
-                  "type": "pair",
-                  "id": "today-our-modern-calendar-shows-holidays-deadlines-2",
-                  "copy": {
-                    "type": "text",
-                    "id": "today-our-modern-calendar-shows-holidays-deadlines",
-                    "text": "Digital calendars foreground holidays, deadlines, and meetings."
-                  },
-                  "media": {
-                    "type": "image",
-                    "id": "the-disconnect-behind-the-screen-look-at-my-digital-calendar-1",
-                    "src": "/img/project-4/behind-the-screen-look-at-my-digital-calendar-1.svg",
-                    "alt": "Today, our modern calendar shows holidays, deadlines, — design study",
-                    "width": 330.0,
-                    "height": 237.0
-                  }
-                },
-                {
-                  "type": "image",
-                  "id": "the-disconnect-expand-right-2-2",
-                  "src": "/img/project-4/expand-right-2.svg",
-                  "alt": "",
-                  "width": 24.0,
-                  "height": 24.0,
-                  "decorative": true
-                },
-                {
-                  "type": "heading",
-                  "id": "ecology-gets-flattened-and-removed-so-the",
-                  "text": "Environmental cues disappear from our view of time."
+                    },
+                    {
+                      "type": "heading",
+                      "id": "the-system-functions-not-only-as-a",
+                      "text": "Seasonal observation connected farming with everyday rituals."
+                    }
+                  ]
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "time-told-by-nature-not-numbers",
-      "title": [
-        {"text": "Time Told by "},
-        {"text": "Nature, Not Numbers", "tone": "highlight"}
-      ],
-      "blocks": [
+        },
         {
           "type": "group",
-          "id": "whats-24-solar-terms-2",
+          "id": "the-disconnect",
+          "step": "03",
+          "title": "The Disconnect",
+          "takeaway": [
+            {"text": "Modern calendars organize our schedules while "},
+            {"text": "seasonal change fades into the background", "strong": true, "tone": "highlight"},
+            {"text": "."}
+          ],
           "items": [
             {
-              "type": "columns",
-              "id": "the-24-solar-terms-are-a-traditional-3",
+              "type": "group",
+              "id": "a-temporal-gap-emerges-as-modern-calendrical-2",
               "items": [
                 {
-                  "type": "pair",
-                  "id": "the-24-solar-terms-are-a-traditional-2",
-                  "copy": {
-                    "type": "text",
-                    "id": "the-24-solar-terms-are-a-traditional",
-                    "text": "The 24 Solar Terms mark seasonal changes, from spring rain to frost. This traditional East Asian calendar guided sowing, harvesting, and preparation for changing conditions. It also shaped food customs, poetry, and festivals."
-                  },
-                  "media": {
-                    "type": "image",
-                    "id": "time-told-by-nature-not-numbers-group-2",
-                    "src": "/img/project-4/group-2.svg",
-                    "alt": "The 24 Solar Terms are a traditional — design study",
-                    "width": 188.0,
-                    "height": 201.0
-                  }
-                },
-                {
-                  "type": "image",
-                  "id": "time-told-by-nature-not-numbers-expand-right-2",
-                  "src": "/img/project-4/expand-right-2.svg",
-                  "alt": "",
-                  "width": 24.0,
-                  "height": 24.0,
-                  "decorative": true
-                },
-                {
-                  "type": "heading",
-                  "id": "the-system-functions-not-only-as-a",
-                  "text": "Seasonal observation connected farming with everyday rituals."
+                  "type": "columns",
+                  "id": "before-digital-clocks-and-numerical-dates-humans-3",
+                  "items": [
+                    {
+                      "type": "pair",
+                      "id": "before-digital-clocks-and-numerical-dates-humans-2",
+                      "copy": {
+                        "type": "text",
+                        "id": "before-digital-clocks-and-numerical-dates-humans",
+                        "text": "Light, wind, and shadows once helped people read seasonal change."
+                      },
+                      "media": {
+                        "type": "composition",
+                        "id": "seasonal-observation-collage",
+                        "items": [
+                          {
+                            "type": "image",
+                            "id": "the-disconnect-what-s-the-weather-forecast-at-work-1",
+                            "src": "/img/project-4/what-s-the-weather-forecast-at-work-1.svg",
+                            "alt": "Weather as a cue for observing seasonal change",
+                            "width": 143.0,
+                            "height": 100.0
+                          },
+                          {
+                            "type": "image",
+                            "id": "the-disconnect-wolfgang-hasselmann-br-gllg7bs-unsplash-2-ver-1-1",
+                            "src": "/img/project-4/wolfgang-hasselmann-br-gllg7bs-unsplash-2-ver-1-1.svg",
+                            "alt": "A landscape showing environmental and seasonal change",
+                            "width": 160.0,
+                            "height": 112.0
+                          },
+                          {
+                            "type": "image",
+                            "id": "the-disconnect-photo-dark-and-stormy-cloudscape-istock-1125x534",
+                            "src": "/img/project-4/photo-dark-and-stormy-cloudscape-istock-1125x534-landscape-1.svg",
+                            "alt": "Dark storm clouds as a natural time cue",
+                            "width": 161.0,
+                            "height": 100.0
+                          },
+                          {
+                            "type": "image",
+                            "id": "the-disconnect-transparent-window-shadow-overlay-template-47987",
+                            "src": "/img/project-4/transparent-window-shadow-overlay-template-47987-19967-1.svg",
+                            "alt": "Window shadows showing changes in natural light",
+                            "width": 142.0,
+                            "height": 111.0
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "id": "the-disconnect-expand-right-2",
+                      "src": "/img/project-4/expand-right-2.svg",
+                      "alt": "",
+                      "width": 24.0,
+                      "height": 24.0,
+                      "decorative": true
+                    },
+                    {
+                      "type": "pair",
+                      "id": "today-our-modern-calendar-shows-holidays-deadlines-2",
+                      "copy": {
+                        "type": "text",
+                        "id": "today-our-modern-calendar-shows-holidays-deadlines",
+                        "text": "Dates, meetings, and deadlines structure how we experience time."
+                      },
+                      "media": {
+                        "type": "image",
+                        "id": "the-disconnect-behind-the-screen-look-at-my-digital-calendar-1",
+                        "src": "/img/project-4/google-calendar-week.jpg",
+                        "alt": "Google Calendar week view filled with color-coded meetings, appointments, and tasks.",
+                        "width": 3680,
+                        "height": 2390
+                      }
+                    },
+                    {
+                      "type": "heading",
+                      "id": "ecology-gets-flattened-and-removed-so-the",
+                      "text": "What if a calendar could reconnect the passage of time with the natural world?"
+                    }
+                  ]
                 }
               ]
             }
@@ -207,366 +196,352 @@ export const content = {
       ]
     },
     {
-      "id": "understanding-existing-connections",
-      "title": "Understanding Existing Connections",
-      "takeaway": [
-        {"text": "Cultural recognition was high; "},
-        {"text": "everyday engagement was low", "strong": true, "tone": "highlight"},
-        {"text": "."}
-      ],
+      "id": "research-and-reframing",
+      "title": "Research & Reframing",
       "blocks": [
         {
           "type": "group",
-          "id": "since-the-solar-terms-originated-in-chinese-2",
+          "step": "01",
+          "id": "understanding-existing-connections",
+          "title": "Initial Research",
+          "items": [
+            {
+              "type": "group",
+              "id": "since-the-solar-terms-originated-in-chinese-2",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "since-the-solar-terms-originated-in-chinese",
+                  "text": "I asked people who grew up with the Solar Terms how they relate to them today."
+                },
+                {
+                  "type": "columns",
+                  "id": "how-do-people-experience-seasons-today-3",
+                  "items": [
+                    {
+                      "type": "group",
+                      "id": "how-do-people-experience-seasons-today-2",
+                      "items": [
+                        {"type": "text", "id": "how-do-people-experience-seasons-today", "text": "How do people experience seasons today?"},
+                        {
+                          "type": "text",
+                          "id": "70-of-them-feel-only-somewhat-connected",
+                          "text": "feel only somewhat connected to seasonal changes in daily life."
+                        },
+                        {
+                          "type": "chart",
+                          "id": "seasonal-connection-chart",
+                          "variant": "donut",
+                          "label": "Connection to seasonal changes",
+                          "highlight": ["Somewhat connected"],
+                          // Transcribed from image-39.svg and its legend in image-38.svg.
+                          // The three nonzero slices total 100%; Not connected has no slice.
+                          "data": [
+                            {"label": "Somewhat connected", "value": 70, "color": "#b98358"},
+                            {"label": "Moderately connected", "value": 20, "color": "#d6bb76"},
+                            {"label": "Very connected", "value": 10, "color": "#83895b"},
+                            {"label": "Not connected", "value": 0, "color": "#b6bec2"}
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "how-familiar-are-you-with-the-24-2",
+                      "items": [
+                        {"type": "text", "id": "how-familiar-are-you-with-the-24", "text": "How familiar are you with the 24 Solar Terms?"},
+                        {"type": "text", "id": "more-than-half-of-them-understand-24", "text": "are very or moderately familiar with the 24 Solar Terms."},
+                        {
+                          "type": "chart",
+                          "id": "solar-term-familiarity-chart",
+                          "variant": "bars",
+                          "label": "Familiarity with the 24 Solar Terms",
+                          "highlight": ["Very familiar", "Moderately familiar"],
+                          // Original percentages from group-23981-1.svg, without re-rounding.
+                          "data": [
+                            {"label": "Very familiar", "value": 13.79},
+                            {"label": "Moderately familiar", "value": 41.38},
+                            {"label": "Slightly familiar", "value": 36.78},
+                            {"label": "Only know the name", "value": 4.6},
+                            {"label": "Barely familiar", "value": 3.45},
+                            {"label": "Not familiar at all", "value": 0}
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "do-you-think-modern-life-makes-you-2",
+                      "items": [
+                        {
+                          "type": "text",
+                          "id": "do-you-think-modern-life-makes-you",
+                          "text": "Do you think modern life makes you less aware of seasonal changes?"
+                        },
+                        {
+                          "type": "text",
+                          "id": "people-feel-disconnected-from-nature-due-to",
+                          "text": "say modern life makes them less aware of seasonal changes, at least a little."
+                        },
+                        {
+                          "type": "chart",
+                          "id": "modern-life-awareness-chart",
+                          "variant": "bars",
+                          "label": "Does modern life reduce seasonal awareness?",
+                          "highlight": ["Yes", "A little"],
+                          // Original percentages from group-23982-1.svg; displayed total is 100.01% due to rounding.
+                          "data": [
+                            {"label": "Yes", "value": 28.74},
+                            {"label": "A little", "value": 45.98},
+                            {"label": "No", "value": 22.99},
+                            {"label": "Hard to say", "value": 2.3}
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "key-findings-2",
+                  "items": [
+                    {"type": "text", "id": "key-findings", "text": "Key findings:"},
+                    {
+                      "type": "columns",
+                      "id": "high-3",
+                      "items": [
+                        {
+                          "type": "group",
+                          "id": "high-2",
+                          "items": [
+                            {"type": "label", "id": "high", "text": "High"},
+                            {"type": "text", "id": "awareness-recognition", "text": "Awareness + Recognition"}
+                          ]
+                        },
+                        {
+                          "type": "group",
+                          "id": "low-2",
+                          "items": [
+                            {"type": "label", "id": "low", "text": "Low"},
+                            {"type": "text", "id": "active-engagement", "text": "Active engagement"}
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "most-participants-associate-them-with-cultural-heritage",
+                      "text": [
+                        {"text": "Most participants associate them with "},
+                        {"text": "cultural heritage rather than ecological awareness", "strong": true}
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "step": "02",
+          "id": "a-different-problem-emerged",
+          "title": "Reframing the Problem",
+          "takeaway": [
+            {"text": "The focus shifted from preserving cultural knowledge to "},
+            {"text": "reconnecting people with seasonal change", "strong": true, "tone": "highlight"},
+            {"text": "."}
+          ],
           "items": [
             {
               "type": "text",
-              "id": "since-the-solar-terms-originated-in-chinese",
-              "text": "I asked people who grew up with the Solar Terms how they relate to them today."
-            },
-            {
-              "type": "columns",
-              "id": "how-do-people-experience-seasons-today-3",
-              "items": [
-                {
-                  "type": "group",
-                  "id": "how-do-people-experience-seasons-today-2",
-                  "items": [
-                    {"type": "text", "id": "how-do-people-experience-seasons-today", "text": "How do people experience seasons today?"},
-                    {
-                      "type": "text",
-                      "id": "70-of-them-feel-only-somewhat-connected",
-                      "text": "feel only somewhat connected to seasonal changes in daily life."
-                    },
-                    {
-                      "type": "chart",
-                      "id": "seasonal-connection-chart",
-                      "variant": "donut",
-                      "label": "Connection to seasonal changes",
-                      "highlight": ["Somewhat connected"],
-                      // Transcribed from image-39.svg and its legend in image-38.svg.
-                      // The three nonzero slices total 100%; Not connected has no slice.
-                      "data": [
-                        {"label": "Somewhat connected", "value": 70, "color": "#b98358"},
-                        {"label": "Moderately connected", "value": 20, "color": "#d6bb76"},
-                        {"label": "Very connected", "value": 10, "color": "#83895b"},
-                        {"label": "Not connected", "value": 0, "color": "#b6bec2"}
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "group",
-                  "id": "how-familiar-are-you-with-the-24-2",
-                  "items": [
-                    {"type": "text", "id": "how-familiar-are-you-with-the-24", "text": "How familiar are you with the 24 Solar Terms?"},
-                    {"type": "text", "id": "more-than-half-of-them-understand-24", "text": "are very or moderately familiar with the 24 Solar Terms."},
-                    {
-                      "type": "chart",
-                      "id": "solar-term-familiarity-chart",
-                      "variant": "bars",
-                      "label": "Familiarity with the 24 Solar Terms",
-                      "highlight": ["Very familiar", "Moderately familiar"],
-                      // Original percentages from group-23981-1.svg, without re-rounding.
-                      "data": [
-                        {"label": "Very familiar", "value": 13.79},
-                        {"label": "Moderately familiar", "value": 41.38},
-                        {"label": "Slightly familiar", "value": 36.78},
-                        {"label": "Only know the name", "value": 4.6},
-                        {"label": "Barely familiar", "value": 3.45},
-                        {"label": "Not familiar at all", "value": 0}
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "group",
-                  "id": "do-you-think-modern-life-makes-you-2",
-                  "items": [
-                    {
-                      "type": "text",
-                      "id": "do-you-think-modern-life-makes-you",
-                      "text": "Do you think modern life makes you less aware of seasonal changes?"
-                    },
-                    {
-                      "type": "text",
-                      "id": "people-feel-disconnected-from-nature-due-to",
-                      "text": "say modern life makes them less aware of seasonal changes, at least a little."
-                    },
-                    {
-                      "type": "chart",
-                      "id": "modern-life-awareness-chart",
-                      "variant": "bars",
-                      "label": "Does modern life reduce seasonal awareness?",
-                      "highlight": ["Yes", "A little"],
-                      // Original percentages from group-23982-1.svg; displayed total is 100.01% due to rounding.
-                      "data": [
-                        {"label": "Yes", "value": 28.74},
-                        {"label": "A little", "value": 45.98},
-                        {"label": "No", "value": 22.99},
-                        {"label": "Hard to say", "value": 2.3}
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "id": "key-findings-2",
-              "items": [
-                {"type": "text", "id": "key-findings", "text": "Key findings:"},
-                {
-                  "type": "columns",
-                  "id": "high-3",
-                  "items": [
-                    {
-                      "type": "group",
-                      "id": "high-2",
-                      "items": [
-                        {"type": "label", "id": "high", "text": "High"},
-                        {"type": "text", "id": "awareness-recognition", "text": "Awareness + Recognition"}
-                      ]
-                    },
-                    {
-                      "type": "group",
-                      "id": "low-2",
-                      "items": [
-                        {"type": "label", "id": "low", "text": "Low"},
-                        {"type": "text", "id": "active-engagement", "text": "Active engagement"}
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "most-participants-associate-them-with-cultural-heritage",
-                  "text": [
-                    {"text": "Most participants associate them with "},
-                    {"text": "cultural heritage rather than ecological awareness", "strong": true}
-                  ]
-                }
-              ]
+              "id": "i-initially-assumed-this-was-a-cultural",
+              "assumptionLabel": "Initial assumption",
+              "assumptionTitle": "Cultural Preservation",
+              "findingLabel": "Reframed focus",
+              "findingTitle": "Ecological Connection",
+              "text": "I initially approached this as a cultural preservation problem.\nResearch revealed a different gap: participants recognized the Solar Terms, but rarely connected them to the seasonal changes they experienced in daily life."
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "a-different-problem-emerged",
-      "title": "A Different Problem Emerged",
-      "takeaway": [
-        {"text": "The focus shifted from preserving cultural knowledge to "},
-        {"text": "reconnecting people with seasonal change", "strong": true, "tone": "highlight"},
-        {"text": "."}
-      ],
-      "blocks": [
-        {
-          "type": "text",
-          "id": "i-initially-assumed-this-was-a-cultural",
-          "assumptionTitle": "Cultural preservation",
-          "findingTitle": "Ecological disconnection",
-          "text": "I expected cultural knowledge to be fading.\nThe research shifted the focus.\nParticipants recognized the Solar Terms but felt disconnected from their ecological meaning."
-        }
-      ]
-    },
-    {
-      "id": "expanding-the-audience",
-      "title": "Expanding the Audience",
-      "takeaway": [
-        {"text": "Sensory cues offer a "},
-        {"text": "shared entry point across cultures", "strong": true, "tone": "highlight"},
-        {"text": "."}
-      ],
-      "blocks": [
+        },
         {
           "type": "group",
-          "id": "if-awareness-alone-wasn-t-enough-what-actually-2",
+          "step": "03",
+          "id": "expanding-the-audience",
+          "title": "Finding a Shared Entry Point",
+          "takeaway": [
+            {"text": "Sensory cues offer a "},
+            {"text": "shared entry point across cultures", "strong": true, "tone": "highlight"},
+            {"text": "."}
+          ],
           "items": [
             {
-              "type": "columns",
-              "id": "how-do-people-notice-seasonal-change-3",
-              "items": [
-                {
-                  "type": "group",
-                  "id": "how-do-people-notice-seasonal-change-2",
-                  "highlights": [
-                    {"dataLabel": "Temperature change", "label": "Temperature"},
-                    {"dataLabel": "Daylight length", "label": "Daylight shifts"},
-                    {"dataLabel": "Plant changes", "label": "Plant changes"}
-                  ],
-                  "items": [
-                    {"type": "text", "id": "how-do-people-notice-seasonal-change", "text": "How do people notice seasonal change?"},
-                    {
-                      "type": "text",
-                      "id": "top-cues-for-seasons-temperature-88-5-daylight",
-                      "text": "Top cues for seasons: Temperature (88.51%), daylight shifts (62.07%), plant changes (59.77%)."
-                    },
-                    {
-                      "type": "chart",
-                      "id": "seasonal-cues-chart",
-                      "variant": "bars",
-                      "selectionMode": "multiple",
-                      "sampleSize": 10,
-                      "label": "How people notice seasonal change",
-                      "scaleLabel": "Respondents selecting each option",
-                      "highlight": ["Temperature change", "Daylight length", "Plant changes"],
-                      // Read from image-37.svg and its legends in image-40.svg / group-11.svg.
-                      // Dressing change and Holiday tradition have no identifiable slices.
-                      // The 37.93% slice has no matching legend color; the 2.3% label reads "Athe [Details]".
-                      // Keep those unresolved entries out of the chart rather than assign or invent values.
-                      "data": [
-                        {"label": "Temperature change", "value": 88.51},
-                        {"label": "Daylight length", "value": 62.07},
-                        {"label": "Plant changes", "value": 59.77},
-                        {"label": "Air smell / humidity", "value": 25.29},
-                        {"label": "Weather change", "value": 56.32},
-                        {"label": "Seasonal food", "value": 25.29},
-                        {"label": "Not likely to notice", "value": 59.77}
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "figure",
-                  "id": "what-kinds-of-interactions-feel-meaningful-2",
-                  "highlights": [
-                    {"dataLabel": "Notice something in nature", "label": "Notice something in nature"},
-                    {"dataLabel": "Step outside briefly", "label": "Step outside briefly"}
-                  ],
-                  "caption": {
-                    "type": "text",
-                    "id": "what-kinds-of-interactions-feel-meaningful",
-                    "text": "What kinds of interactions feel meaningful?"
-                  },
-                  "media": {
-                    "type": "chart",
-                    "id": "meaningful-interactions-chart",
-                    "variant": "bars",
-                    "selectionMode": "multiple",
-                    "sampleSize": 10,
-                    "label": "Interactions that feel meaningful",
-                    "scaleLabel": "Respondents selecting each option",
-                    "highlight": ["Notice something in nature", "Step outside briefly"],
-                    // Counts and percentages transcribed from group-12-1.svg.
-                    "data": [
-                      {"label": "Notice something in nature", "value": 80, "count": 8},
-                      {"label": "Step outside briefly", "value": 70, "count": 7},
-                      {"label": "Light journaling", "value": 20, "count": 2},
-                      {"label": "Small wellness ritual", "value": 20, "count": 2},
-                      {"label": "Reflect on an intention", "value": 10, "count": 1},
-                      {"label": "I prefer no action", "value": 10, "count": 1},
-                      {"label": "Other", "value": 0, "count": 0}
-                    ]
-                  }
-                }
-              ]
-            },
-            {
               "type": "group",
-              "id": "literature-review-3",
+              "id": "if-awareness-alone-wasn-t-enough-what-actually-2",
               "items": [
-                {"type": "text", "id": "literature-review", "text": "Literature Review"},
-                {
-                  "type": "text",
-                  "id": "to-better-understand-how-cultural-knowledge-can",
-                  "text": "Research on cultural memory and phenology informed the sensory approach."
-                },
                 {
                   "type": "columns",
-                  "id": "public-memory-place-hoelscher-alderman-3",
+                  "id": "how-do-people-notice-seasonal-change-3",
                   "items": [
                     {
                       "type": "group",
-                      "id": "public-memory-place-hoelscher-alderman-2",
+                      "id": "how-do-people-notice-seasonal-change-2",
+                      "highlights": [
+                        {"dataLabel": "Temperature change", "label": "Temperature"},
+                        {"dataLabel": "Daylight length", "label": "Daylight shifts"},
+                        {"dataLabel": "Plant changes", "label": "Plant changes"}
+                      ],
                       "items": [
+                        {"type": "text", "id": "how-do-people-notice-seasonal-change", "text": "How do people notice seasonal change?"},
                         {
                           "type": "text",
-                          "id": "public-memory-place-hoelscher-alderman",
-                          "text": [
-                            {"text": "Public Memory & Place ", "strong": true, "tone": "muted"},
-                            {"text": " "},
-                            {"text": "Hoelscher & Alderman (2004)", "tone": "muted"}
-                          ]
+                          "id": "top-cues-for-seasons-temperature-88-5-daylight",
+                          "text": "Top cues for seasons: Temperature (88.51%), daylight shifts (62.07%), plant changes (59.77%)."
                         },
                         {
-                          "type": "text",
-                          "id": "core-finding-cultural-memory-becomes-accessible-when",
-                          "text": [
-                            {"text": "Core finding: ", "strong": true, "tone": "muted"},
-                            {"text": "\n "},
-                            {
-                              "text": "Cultural memory becomes accessible when tied to sensory cues and spatial storytelling.",
-                              "tone": "muted"
-                            },
-                            {"text": "\n\n "},
-                            {"text": "Key takeaway: ", "strong": true, "tone": "muted"},
-                            {"text": "\n "},
-                            {
-                              "text": "Unfamiliar cultural heritage is better understood through sensory experiences, not just abstract text.",
-                              "tone": "muted"
-                            }
+                          "type": "chart",
+                          "id": "seasonal-cues-chart",
+                          "variant": "bars",
+                          "selectionMode": "multiple",
+                          "sampleSize": 10,
+                          "label": "How people notice seasonal change",
+                          "scaleLabel": "Respondents selecting each option",
+                          "highlight": ["Temperature change", "Daylight length", "Plant changes"],
+                          // Read from image-37.svg and its legends in image-40.svg / group-11.svg.
+                          // Dressing change and Holiday tradition have no identifiable slices.
+                          // The 37.93% slice has no matching legend color; the 2.3% label reads "Athe [Details]".
+                          // Keep those unresolved entries out of the chart rather than assign or invent values.
+                          "data": [
+                            {"label": "Temperature change", "value": 88.51},
+                            {"label": "Daylight length", "value": 62.07},
+                            {"label": "Plant changes", "value": 59.77},
+                            {"label": "Air smell / humidity", "value": 25.29},
+                            {"label": "Weather change", "value": 56.32},
+                            {"label": "Seasonal food", "value": 25.29},
+                            {"label": "Not likely to notice", "value": 59.77}
                           ]
                         }
                       ]
                     },
                     {
-                      "type": "group",
-                      "id": "phenology-seasonal-change-forrest-miller-rushing-2",
+                      "type": "figure",
+                      "id": "what-kinds-of-interactions-feel-meaningful-2",
+                      "highlights": [
+                        {"dataLabel": "Notice something in nature", "label": "Notice something in nature"},
+                        {"dataLabel": "Step outside briefly", "label": "Step outside briefly"}
+                      ],
+                      "caption": {
+                        "type": "text",
+                        "id": "what-kinds-of-interactions-feel-meaningful",
+                        "text": "What kinds of interactions feel meaningful?"
+                      },
+                      "media": {
+                        "type": "chart",
+                        "id": "meaningful-interactions-chart",
+                        "variant": "bars",
+                        "selectionMode": "multiple",
+                        "sampleSize": 10,
+                        "label": "Interactions that feel meaningful",
+                        "scaleLabel": "Respondents selecting each option",
+                        "highlight": ["Notice something in nature", "Step outside briefly"],
+                        // Counts and percentages transcribed from group-12-1.svg.
+                        "data": [
+                          {"label": "Notice something in nature", "value": 80, "count": 8},
+                          {"label": "Step outside briefly", "value": 70, "count": 7},
+                          {"label": "Light journaling", "value": 20, "count": 2},
+                          {"label": "Small wellness ritual", "value": 20, "count": 2},
+                          {"label": "Reflect on an intention", "value": 10, "count": 1},
+                          {"label": "I prefer no action", "value": 10, "count": 1},
+                          {"label": "Other", "value": 0, "count": 0}
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "literature-review-3",
+                  "items": [
+                    {"type": "text", "id": "literature-review", "text": "Literature Review"},
+                    {
+                      "type": "text",
+                      "id": "to-better-understand-how-cultural-knowledge-can",
+                      "text": "Research on cultural memory and phenology informed the sensory approach."
+                    },
+                    {
+                      "type": "columns",
+                      "id": "public-memory-place-hoelscher-alderman-3",
                       "items": [
                         {
-                          "type": "text",
-                          "id": "phenology-seasonal-change-forrest-miller-rushing",
-                          "text": [
-                            {"text": "Phenology & Seasonal Change ", "strong": true, "tone": "muted"},
-                            {"text": " "},
-                            {"text": "Forrest & Miller-Rushing (2010)", "tone": "muted"}
+                          "type": "group",
+                          "id": "public-memory-place-hoelscher-alderman-2",
+                          "items": [
+                            {
+                              "type": "text",
+                              "id": "public-memory-place-hoelscher-alderman",
+                              "text": [
+                                {"text": "Public Memory & Place ", "strong": true, "tone": "muted"},
+                                {"text": " "},
+                                {"text": "Hoelscher & Alderman (2004)", "tone": "muted"}
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "core-finding-cultural-memory-becomes-accessible-when",
+                              "text": [
+                                {"text": "Core finding: ", "strong": true, "tone": "muted"},
+                                {"text": "\n "},
+                                {
+                                  "text": "Cultural memory becomes accessible when tied to sensory cues and spatial storytelling.",
+                                  "tone": "muted"
+                                },
+                                {"text": "\n\n "},
+                                {"text": "Key takeaway: ", "strong": true, "tone": "muted"},
+                                {"text": "\n "},
+                                {
+                                  "text": "Unfamiliar cultural heritage is better understood through sensory experiences, not just abstract text.",
+                                  "tone": "muted"
+                                }
+                              ]
+                            }
                           ]
                         },
                         {
-                          "type": "text",
-                          "id": "core-finding-phenological-events-plant-animal-cycles-are",
-                          "text": [
-                            {"text": "Core finding: ", "strong": true, "tone": "muted"},
-                            {"text": "\n "},
+                          "type": "group",
+                          "id": "phenology-seasonal-change-forrest-miller-rushing-2",
+                          "items": [
                             {
-                              "text": "Phenological events (plant/animal cycles) are sensitive, universal indicators of seasonal change.",
-                              "tone": "muted"
+                              "type": "text",
+                              "id": "phenology-seasonal-change-forrest-miller-rushing",
+                              "text": [
+                                {"text": "Phenology & Seasonal Change ", "strong": true, "tone": "muted"},
+                                {"text": " "},
+                                {"text": "Forrest & Miller-Rushing (2010)", "tone": "muted"}
+                              ]
                             },
-                            {"text": "\n\n "},
-                            {"text": "Key takeaway: ", "strong": true, "tone": "muted"},
-                            {"text": "\n "},
                             {
-                              "text": "Natural seasonal cues act as a cross-cultural \"language\" to connect users to ecological rhythms.",
-                              "tone": "muted"
+                              "type": "text",
+                              "id": "core-finding-phenological-events-plant-animal-cycles-are",
+                              "text": [
+                                {"text": "Core finding: ", "strong": true, "tone": "muted"},
+                                {"text": "\n "},
+                                {
+                                  "text": "Phenological events (plant/animal cycles) are sensitive, universal indicators of seasonal change.",
+                                  "tone": "muted"
+                                },
+                                {"text": "\n\n "},
+                                {"text": "Key takeaway: ", "strong": true, "tone": "muted"},
+                                {"text": "\n "},
+                                {
+                                  "text": "Natural seasonal cues act as a cross-cultural \"language\" to connect users to ecological rhythms.",
+                                  "tone": "muted"
+                                }
+                              ]
                             }
                           ]
                         }
                       ]
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "id": "key-findings-4",
-              "items": [
-                {"type": "text", "id": "key-findings-3", "text": "Key findings:"},
-                {
-                  "type": "text",
-                  "id": "people-connect-through-sensory-experiences-weather-and",
-                  "text": [
-                    {"text": "People connect through ", "strong": true, "tone": "olive"},
-                    {"text": "sensory experiences.", "strong": true, "tone": "muted"},
-                    {"text": "\n"},
-                    {"text": "Weather and environmental changes", "strong": true, "tone": "muted"},
-                    {"text": " are more memorable than facts.", "strong": true, "tone": "olive"},
-                    {"text": "\n"},
-                    {"text": "Reflection and observation", "strong": true, "tone": "muted"},
-                    {"text": " feel meaningful.", "strong": true, "tone": "olive"},
-                    {"text": "\n"},
-                    {"text": "Seasonal awareness is universal.", "strong": true, "tone": "muted"}
                   ]
                 }
               ]
@@ -663,7 +638,7 @@ export const content = {
         {
           "type": "text",
           "id": "how-might-we-help-people-reconnect-with",
-          "text": [{"text": "How might we help people "}, {"text": "reconnect with seasonal rhythms", "strong": true, "tone": "highlight"}, {"text": " through the 24 Solar Terms, across cultures?"}]
+          "text": [{"text": "How might we transform the 24 Solar Terms into an interactive experience that helps people "}, {"text": "notice, explore, and reflect on seasonal change", "strong": true, "tone": "highlight"}, {"text": "?"}]
         }
       ]
     },
@@ -686,11 +661,16 @@ export const content = {
                   "type": "card",
                   "id": "ecological-layer-2",
                   "items": [
-                    {"type": "label", "id": "ecological-layer", "text": "Ecological Layer"},
+                    {"type": "label", "id": "ecological-layer", "text": "01 — Ecological Layer"},
+                    {
+                      "type": "text",
+                      "id": "ecological-layer-intent",
+                      "text": [{"text": "Make seasonal change perceptible.", "strong": true}]
+                    },
                     {
                       "type": "text",
                       "id": "helping-users-notice-seasonal-changes-through-environmental",
-                      "text": "Notice seasonal changes through weather, daylight, and shadows."
+                      "text": "Translate natural rhythms into sensory experiences that encourage users to notice environmental changes beyond calendar dates."
                     }
                   ]
                 },
@@ -698,11 +678,16 @@ export const content = {
                   "type": "card",
                   "id": "cultural-layer-2",
                   "items": [
-                    {"type": "label", "id": "cultural-layer", "text": "Cultural Layer"},
+                    {"type": "label", "id": "cultural-layer", "text": "02 — Cultural Layer"},
+                    {
+                      "type": "text",
+                      "id": "cultural-layer-intent",
+                      "text": [{"text": "Make cultural knowledge approachable.", "strong": true}]
+                    },
                     {
                       "type": "text",
                       "id": "providing-access-to-the-traditions-rituals-stories",
-                      "text": "Explore each term’s traditions, rituals, stories, and poems."
+                      "text": "Connect seasonal observations with the traditions, stories, and meanings behind each Solar Term."
                     }
                   ]
                 },
@@ -710,11 +695,16 @@ export const content = {
                   "type": "card",
                   "id": "personal-layer-2",
                   "items": [
-                    {"type": "label", "id": "personal-layer", "text": "Personal Layer"},
+                    {"type": "label", "id": "personal-layer", "text": "03 — Personal Layer"},
+                    {
+                      "type": "text",
+                      "id": "personal-layer-intent",
+                      "text": [{"text": "Encourage reflection without obligation.", "strong": true}]
+                    },
                     {
                       "type": "text",
                       "id": "creating-opportunities-for-users-to-reflect-on",
-                      "text": "Relate seasonal change to personal observations and everyday life."
+                      "text": "Create lightweight opportunities for users to relate seasonal rhythms to their own observations and everyday lives."
                     }
                   ]
                 }
@@ -1515,7 +1505,7 @@ export const content = {
                         "type": "text",
                         "id": "the-dial-became-the-primary-navigation-system",
                         "text": [
-                          {"text": "The dial became the landing page’s main navigation.", "strong": true, "tone": "muted"},
+                          {"text": "I translated the annual solar cycle into a draggable navigation dial, allowing users to explore all 24 Solar Terms spatially instead of scrolling through a chronological list.", "strong": true, "tone": "muted"},
                           {"text": "\n \n"},
                           {"text": "Solar longitude visualization", "tone": "olive"},
                           {"text": "\n"},
@@ -1688,6 +1678,11 @@ export const content = {
       "title": "Testing & Refinement",
       "blocks": [
         {
+          "type": "text",
+          "id": "testing-overview",
+          "text": "I evaluated the interactive website with 5 participants across three areas: seasonal dial navigation, Solar Term details, and yearly calendar exploration. The sessions examined whether participants understood the visual metaphors and could discover the available controls."
+        },
+        {
           "type": "group",
           "id": "to-validate-the-usability-and-experience-of-2",
           "items": [
@@ -1714,19 +1709,6 @@ export const content = {
                         },
                         {
                           "text": "Participants understood the wheel as a cyclical view of time."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "testing-landing-friction",
-                      "text": [
-                        {
-                          "text": "Struggled with: ",
-                          "strong": true
-                        },
-                        {
-                          "text": "Some participants preferred clicking term labels over dragging; the wheel’s interactive behavior was not obvious."
                         }
                       ]
                     },
@@ -1782,19 +1764,6 @@ export const content = {
                         },
                         {
                           "text": "Participants understood the three solar-term phases and could follow the bilingual content."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "testing-detail-friction",
-                      "text": [
-                        {
-                          "text": "Struggled with: ",
-                          "strong": true
-                        },
-                        {
-                          "text": "Navigation controls and the solar-longitude panel were unclear. Automatic content changes reduced control and obscured the link between the menu and current text."
                         }
                       ]
                     },
@@ -1882,19 +1851,6 @@ export const content = {
                     },
                     {
                       "type": "text",
-                      "id": "testing-calendar-friction",
-                      "text": [
-                        {
-                          "text": "Struggled with: ",
-                          "strong": true
-                        },
-                        {
-                          "text": "The date toggle was overlooked, wheel-to-grid links were unclear, and some interactions felt disconnected."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
                       "id": "testing-calendar-priority",
                       "text": [{"text": "Proposed improvement: ", "strong": true}, {"text": "Label the date toggle, show its current state, and clarify the relationship between the wheel and grid."}]
                     }
@@ -1940,7 +1896,7 @@ export const content = {
     },
     {
       "id": "a-living-calendar",
-      "title": "A Living Calendar",
+      "title": "Final Experience",
       "takeaway": [
         {"text": "An interactive calendar brings "},
         {"text": "ecology, culture, and personal reflection", "strong": true, "tone": "highlight"},
@@ -1963,11 +1919,8 @@ export const content = {
               "copy": {
                 "type": "text",
                 "id": "the-ecological-layer-which-shows-changes-in",
-                "text": [
-                  {"text": "The ", "tone": "muted"},
-                  {"text": "Ecological Layer", "tone": "green"},
-                  {"text": ", which shows changes in daylight, shadows, and seasonal signals.", "tone": "muted"}
-                ]
+                "title": [{"text": "Ecological Experience", "tone": "green"}],
+                "text": "Animated light, shadows, and seasonal cues help users connect each Solar Term with observable changes in nature."
               },
               "media": {
                 "type": "image",
@@ -1981,11 +1934,8 @@ export const content = {
             {
               "type": "text",
               "id": "the-cultural-layer-where-each-solar-terms",
-              "text": [
-                {"text": "The ", "tone": "muted"},
-                {"text": "Cultural Layer", "tone": "teal"},
-                {"text": ", where each Solar Term’s stories, poems, and traditions come alive.", "tone": "muted"}
-              ]
+              "title": [{"text": "Cultural Exploration", "tone": "teal"}],
+              "text": "Each Solar Term brings together traditional rituals, poetry, and three seasonal phases, making cultural knowledge accessible through exploration."
             },
             {
               "type": "columns",
@@ -2088,11 +2038,8 @@ export const content = {
               "copy": {
                 "type": "text",
                 "id": "the-personal-layer-which-encourages-users-experience",
-                "text": [
-                  {"text": "The ", "tone": "muted"},
-                  {"text": "Personal Layer", "tone": "coral"},
-                  {"text": ", which invites users to experience the season through personal reflection.", "tone": "muted"}
-                ]
+                "title": [{"text": "Personal Reflection", "tone": "coral"}],
+                "text": "Optional prompts invite users to relate seasonal themes to their own observations and everyday life."
               },
               "media": {
                 "type": "columns",
@@ -2181,7 +2128,12 @@ export const content = {
                 ]
               }
             },
-            {"type": "text", "id": "navigation-system", "text": "Navigation System"},
+            {
+              "type": "text",
+              "id": "navigation-system",
+              "title": [{"text": "Dual Navigation", "tone": "green"}],
+              "text": "The circular dial supports seasonal exploration, while the yearly calendar offers a familiar way to browse dates."
+            },
             {"type": "text", "id": "dial-calendar", "text": "Dial\nCalendar"},
             {
               "type": "columns",

@@ -11,7 +11,10 @@
 .ed-case-study .study .study-text [class^="study-tone-"] { color: inherit; }
 .ed-case-study .study :is(.study-label, .study-heading) { font: 600 18px/1.4 var(--study-body-font); color: var(--ed-heading); text-wrap: auto; }
 .ed-case-study .study .study-section { margin-top: 88px; padding-top: 32px; border-top: 1px solid var(--ed-line); scroll-margin-top: 125px; }
-.ed-case-study .study .study-section > h2 { max-width: 38ch; color: var(--ed-heading) !important; font: 400 24px/1.4 var(--study-heading-font) !important; }
+.ed-case-study .study .study-section > h2,
+.ed-case-study .study .study-section-disclosure > summary > h2 { max-width: 38ch; color: var(--ed-heading) !important; font: 400 24px/1.4 var(--study-heading-font) !important; }
+.ed-case-study .study-section-disclosure > summary { padding: 16px 20px; border: 1px solid var(--ed-line); border-radius: 8px; background: var(--ed-soft); color: var(--ed-heading); }
+.ed-case-study .study-section-disclosure > summary:hover { border-color: var(--ed-accent); }
 .ed-case-study .study h2:focus { outline: none; }
 .ed-case-study .study .study-section-body { margin-top: 32px; gap: 48px; }
 .ed-case-study .study .study-section-body > .study-group { gap: 40px; }
@@ -45,7 +48,7 @@
 .ed-case-study .ed-facts dt { font-size: 13px; font-weight: 600; color: var(--ed-heading); }
 .ed-case-study .ed-facts dd { margin: 0; max-width: 58ch; }
 .ed-case-study .ed-response-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 24px; }
-.ed-case-study .ed-response-card { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: subgrid; grid-row: span 3; gap: 20px; overflow: hidden; border: 1px solid var(--ed-line); border-radius: 8px; background: var(--ed-paper); }
+.ed-case-study .ed-response-card { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: subgrid; grid-row: span 2; gap: 20px; overflow: hidden; border: 1px solid var(--ed-line); border-radius: 8px; background: var(--ed-paper); }
 .ed-case-study .ed-response-card > header { padding: 24px 24px 0; }
 .ed-case-study .ed-observation { display: grid; align-content: start; gap: 10px; padding: 20px 24px; }
 .ed-case-study .ed-response-card > .ed-observation { padding-block: 0; }

@@ -80,7 +80,7 @@ export function ExistingConnections({ block }) {
         .reduce((sum, row) => sum + row.value, 0);
       return <article className="lc-connection-panel" key={item.id} data-content-id={item.id}
         aria-labelledby={heading.id}>
-        <h3 id={heading.id} data-content-id={heading.id}><RichText value={heading.text} /></h3>
+        <h4 id={heading.id} data-content-id={heading.id}><RichText value={heading.text} /></h4>
         <p className="lc-connection-stat" data-content-id={summary.id}>
           <strong>{percent(total)}</strong>
           <span><RichText value={summary.text} /></span>

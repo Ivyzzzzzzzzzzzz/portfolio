@@ -12,8 +12,8 @@ export const content = {
       { "text": "more predictable", "tone": "highlight" },
       { "text": ", from request to repair." }
     ],
-    "problem": "Expo residents were left guessing how to file a repair request, when someone would enter their home, and what was happening after submission.",
-    "description": "I designed and prototyped a maintenance flow with guided reporting, team-assigned priority, preferred visit windows, and a status timeline.",
+    "problem": "Expo residents struggled with confusing repair forms, unpredictable maintenance visits, and limited visibility into request progress.",
+    "description": "I redesigned the maintenance experience around guided issue reporting, preferred visit windows, and a transparent repair timeline, shifting priority assessment to the maintenance team.",
     "logo": {
       "type": "image",
       "id": "introduction-frame-1437254185-1-1",
@@ -39,7 +39,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "in-the-summer-of-2025-a-severe",
-                  "text": "After a 2025 tornado damaged my apartment building, Expo at Forest Park in St. Louis, residents faced broken windows, leaking roofs, water disruptions, and prolonged AC outages. They relied on the resident portal to request repairs while maintenance staff and contractors inspected units."
+                  "text": "Following a 2025 tornado at Expo at Forest Park, residents relied heavily on the maintenance portal to report damage and coordinate repairs. This experience prompted me to investigate how the system supported residents through reporting, communication, and maintenance visits."
                 }
               ]
             },
@@ -51,43 +51,45 @@ export const content = {
                   "type": "group",
                   "id": "research-2",
                   "items": [
-                    {"type": "label", "id": "research", "text": "Broader context"},
+                    {"type": "heading", "id": "research", "text": "Broader Context"},
                     {
                       "type": "text",
                       "id": "to-verify-this-anxiety-is-universal-i",
-                      "text": "To explore whether similar challenges extend beyond this building, I reviewed secondary research on renters’ maintenance experiences."
+                      "text": "Secondary research suggests that maintenance is a major factor in renters' living experience, extending beyond the challenges observed at Expo."
                     }
                   ]
                 },
                 {
-                  "type": "columns",
+                  "type": "secondaryResearch",
                   "id": "background-visuals",
-                  "items": [
-                    {
-                      "type": "image",
-                      "id": "background-frame-1437254189-2",
-                      "src": "/img/project-2/frame-1437254189-2.svg",
-                      "alt": "Secondary-research graphic ranking maintenance as a renter priority; source citation is not included in the artwork.",
-                      "width": 300.0,
-                      "height": 222.0
-                    },
-                    {
-                      "type": "image",
-                      "id": "background-frame-1437254190-1",
-                      "src": "/img/project-2/frame-1437254190-1.svg",
-                      "alt": "Secondary-research graphic comparing renter and homeowner anxiety; source and sample definitions are not included in the artwork.",
-                      "width": 300.0,
-                      "height": 271.0
-                    },
-                    {
-                      "type": "image",
-                      "id": "background-frame-1437254191-1",
-                      "src": "/img/project-2/frame-1437254191-1.svg",
-                      "alt": "Secondary-research graphic about maintenance complaints in rental reviews; source and sample definitions are not included in the artwork.",
-                      "width": 300.0,
-                      "height": 225.0
+                  "ranking": {
+                    "value": 1,
+                    "label": "Maintenance repairs ranked first",
+                    "description": "Among renters' top living experience priorities in Zego's 2024 survey.",
+                    "chartLabel": "Renters' top three living experience priorities",
+                    "chartNote": "Share choosing each in their top two · top three shown",
+                    "priorities": [
+                      { "label": "Maintenance repairs", "value": 47 },
+                      { "label": "Community security", "value": 46 },
+                      { "label": "Appearance / cleanliness", "value": 34 }
+                    ],
+                    "source": {
+                      "label": "Zego (2024)",
+                      "href": "https://www.gozego.com/wp-content/uploads/2024/06/2024-Resident-Experience-Management-Report-Zego-eBook.pdf"
                     }
-                  ]
+                  },
+                  "reviews": {
+                    "value": 86.9,
+                    "label": "Reviews mentioned maintenance issues",
+                    "description": "Among 2,299 UK rental property reviews analyzed by Marks Out Of Tenancy (2025).",
+                    "chartNote": "Each square represents 1% of the reviews analyzed.",
+                    "mentionedLabel": "Mentioned maintenance issues",
+                    "remainingLabel": "Did not mention maintenance issues",
+                    "source": {
+                      "label": "Marks Out Of Tenancy (2025)",
+                      "href": "https://www.marksoutoftenancy.com/blog/2025/July/repairs-and-maintenance-tenant-satisfaction"
+                    }
+                  }
                 }
               ]
             }
@@ -236,156 +238,41 @@ export const content = {
                       "id": "3-2",
                       "items": [
                         {"type": "label", "id": "3", "text": "3"},
-                        {
-                          "type": "columns",
-                          "id": "survey-2",
-                          "items": [
-                            {"type": "label", "id": "survey", "text": "Survey"},
-                            {"type": "label", "id": "visual", "text": "+"},
-                            {"type": "label", "id": "opportunities", "text": "Opportunities"}
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "surveyed-30-residents-to-quantify-maintenance-habits",
-                          "text": "I surveyed 30 residents about the existing maintenance experience. These self-reported findings describe this sample; the adjacent opportunities are proposed responses, not measured redesign results."
-                        }
+                        {"type": "label", "id": "survey-2", "text": "Survey"}
                       ]
                     },
                     {
-                      "type": "columns",
+                      "type": "surveyResults",
                       "id": "introduce-step-by-step-tracking-request-submitted-reviewed-3",
+                      "sample": "30 Expo respondents",
                       "items": [
                         {
-                          "type": "pair",
-                          "id": "introduce-step-by-step-tracking-request-submitted-reviewed-2",
-                          "copy": {
-                            "type": "text",
-                            "id": "introduce-step-by-step-tracking-request-submitted-reviewed",
-                            "text": "Show request progress and visit information together, from submission through completion."
-                          },
-                          "media": {
-                            "type": "columns",
-                            "id": "research-within-expo-visuals-2",
-                            "items": [
-                              {
-                                "type": "surveyMetric",
-                                "id": "research-within-expo-frame-1437254199-1",
-                                "label": "Progress updates",
-                                "value": 66.7,
-                                "description": "Rarely or never received progress updates."
-                              },
-                              {
-                                "type": "surveyMetric",
-                                "id": "research-within-expo-frame-1437254200-1",
-                                "label": "Real-time transparency",
-                                "value": 4.3,
-                                "scale": 5,
-                                "description": "Rated the importance of real-time transparency highly."
-                              },
-                              {
-                                "type": "surveyMetric",
-                                "id": "research-within-expo-frame-1437254201-1",
-                                "label": "Repair scheduling",
-                                "value": 93.3,
-                                "description": "Wanted to see a scheduled repair time."
-                              }
-                            ]
-                          }
+                          "type": "surveyMetric",
+                          "id": "research-within-expo-frame-1437254199-1",
+                          "value": 66.7,
+                          "description": "Rarely or never received repair progress updates."
                         },
                         {
-                          "type": "figure",
-                          "id": "reorganize-categories-into-plain-language-2",
-                          "caption": {
-                            "type": "text",
-                            "id": "reorganize-categories-into-plain-language",
-                            "text": "Reorganize categories into plain language."
-                          },
-                          "media": {
-                            "type": "surveyMetric",
-                            "id": "research-within-expo-frame-1437254202-1",
-                            "label": "Issue categories",
-                            "value": 63.3,
-                            "description": "Felt uncertain when choosing issue categories."
-                          }
+                          "type": "surveyMetric",
+                          "id": "research-within-expo-frame-1437254201-1",
+                          "value": 93.3,
+                          "description": "Wanted visibility into scheduled repair times."
                         },
                         {
-                          "type": "figure",
-                          "id": "redesign-can-more-focus-on-mobile-size-2",
-                          "caption": {
-                            "type": "text",
-                            "id": "redesign-can-more-focus-on-mobile-size",
-                            "text": "Prioritize reporting and tracking on mobile, where most respondents accessed the portal."
-                          },
-                          "media": {
-                            "type": "surveyMetric",
-                            "id": "research-within-expo-frame-1437254203-1",
-                            "label": "Mobile access",
-                            "value": 83.3,
-                            "description": "Relied on mobile devices to access the portal."
-                          }
+                          "type": "surveyMetric",
+                          "id": "research-within-expo-frame-1437254202-1",
+                          "value": 63.3,
+                          "description": "Felt uncertain when selecting issue categories."
+                        },
+                        {
+                          "type": "surveyMetric",
+                          "id": "research-within-expo-frame-1437254203-1",
+                          "value": 83.3,
+                          "description": "Accessed the maintenance portal on mobile."
                         }
                       ]
                     }
                   ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "how-might-we",
-      "title": "How might we...",
-      "blocks": [
-        {
-          "type": "columns",
-          "id": "submit-request-4",
-          "items": [
-            {
-              "type": "group",
-              "id": "submit-request-3",
-              "items": [
-                {
-                  "type": "card",
-                  "id": "submit-request-2",
-                  "items": [
-                    {"type": "label", "id": "submit-request", "text": "Submit Request"},
-                    {
-                      "type": "text",
-                      "id": "residents-dont-feel-guided-while-filing-a",
-                      "text": "Residents questioned priority selection, struggled with categories, and wanted advance notice of maintenance entry."
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "how-might-we-help-residents-file-with",
-                  "text": "How might we guide residents through describing a problem and sharing a preferred visit window?"
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "id": "request-history-3",
-              "items": [
-                {
-                  "type": "card",
-                  "id": "request-history-2",
-                  "items": [
-                    {"type": "label", "id": "request-history", "text": "Request History"},
-                    {
-                      "type": "text",
-                      "id": "after-submitting-residents-dont-feel-in-the",
-                      "text": "Interviewees described missing updates and unclear completion information; the diary captured repeated checking while waiting for a repair."
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "how-might-we-keep-residents-transparent-and",
-                  "text": "How might we show where a request stands, what happens next, and what work was completed?"
                 }
               ]
             }
@@ -395,7 +282,7 @@ export const content = {
     },
     {
       "id": "current-workflow-heuristic-analysis-user-testing",
-      "title": "Current Workflow \nHeuristic Analysis \nUser Testing",
+      "title": "Existing Portal Evaluation",
       "blocks": [
         {
           "type": "group",
@@ -410,7 +297,7 @@ export const content = {
               "type": "group",
               "id": "flow-a-submit-a-maintenance-request-3",
               "items": [
-                {"type": "label", "id": "flow-a-submit-a-maintenance-request", "text": "Flow A: Submit a Maintenance Request"},
+                {"type": "label", "id": "flow-a-submit-a-maintenance-request", "text": "Flow A — Submit a Request"},
                 {
                   "type": "text",
                   "id": "product-expo-resident-portal-task-submit-a",
@@ -438,7 +325,12 @@ export const content = {
                     }
                   ]
                 },
-                {"type": "label", "id": "flow-b-view-maintenance-history", "text": "Flow B: View Maintenance History"},
+                {
+                  "type": "text",
+                  "id": "flow-a-finding",
+                  "text": "Technical categories, resident-set priority, and unclear visit expectations made request submission harder to navigate."
+                },
+                {"type": "label", "id": "flow-b-view-maintenance-history", "text": "Flow B — Review Request History"},
                 {
                   "type": "text",
                   "id": "product-expo-resident-portal-task-locate-a",
@@ -465,6 +357,11 @@ export const content = {
                       "height": 368.0
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "id": "flow-b-finding",
+                  "text": "Progress and completion information were not sufficiently prominent within request details."
                 }
               ]
             }
@@ -573,6 +470,7 @@ export const content = {
     {
       "id": "persona-storyboard-user-journey",
       "title": "Research Artifacts Gallery",
+      "collapsible": true,
       "blocks": [
         {
           "type": "columns",
@@ -617,7 +515,7 @@ export const content = {
     },
     {
       "id": "research-summary",
-      "title": "Research Summary",
+      "title": "Key Research Findings",
       "blocks": [
         {
           "type": "columns",
@@ -626,17 +524,68 @@ export const content = {
             {
               "type": "label",
               "id": "maintenance-staff-and-contractors-frequently-entered-units",
-              "text": "Reporting was confusing: residents had to interpret technical categories and assign their own request priority."
+              "heading": "Reporting",
+              "text": "Technical categories and resident-set priority created unnecessary guesswork."
             },
             {
               "type": "label",
               "id": "residents-relied-on-the-expo-residential-app",
-              "text": "Entry was hard to plan for: permission to enter did not tell residents when someone would arrive."
+              "heading": "Entry",
+              "text": "Entry permission offered no clarity on when maintenance would arrive."
             },
             {
               "type": "label",
               "id": "the-maintenance-section-of-the-app-felt",
-              "text": "Progress was hard to follow: residents reported missing updates and uncertainty about what happened after submission."
+              "heading": "Tracking",
+              "text": "Limited updates made repair progress and completion difficult to follow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-might-we",
+      "title": "How might we...",
+      "blocks": [
+        {
+          "type": "columns",
+          "id": "submit-request-4",
+          "items": [
+            {
+              "type": "group",
+              "id": "submit-request-3",
+              "items": [
+                {
+                  "type": "card",
+                  "id": "submit-request-2",
+                  "items": [
+                    {"type": "label", "id": "submit-request", "text": "Submit Request"}
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "how-might-we-help-residents-file-with",
+                  "text": "How might we guide residents through describing a problem and sharing a preferred visit window?"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "request-history-3",
+              "items": [
+                {
+                  "type": "card",
+                  "id": "request-history-2",
+                  "items": [
+                    {"type": "label", "id": "request-history", "text": "Request History"}
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "how-might-we-keep-residents-transparent-and",
+                  "text": "How might we show where a request stands, what happens next, and what work was completed?"
+                }
+              ]
             }
           ]
         }
@@ -668,15 +617,15 @@ export const content = {
                 "id": "decision-priority-finding",
                 "text": [
                   {
-                    "text": "In the resident interviews, Harry "
+                    "text": "Interviewers "
                   },
                   {
-                    "text": "questioned why anyone would choose below “High”",
+                    "text": "questioned why anyone would select a priority below “High,”",
                     "strong": true,
                     "tone": "highlight"
                   },
                   {
-                    "text": "."
+                    "text": " exposing ambiguity in self-assigned urgency."
                   }
                 ]
               },
@@ -730,7 +679,7 @@ export const content = {
               "rationale": {
                 "type": "text",
                 "id": "decision-priority-rationale",
-                "text": "I removed the resident priority selector and proposed maintenance-led assessment so residents can describe the problem without judging its urgency relative to other repairs."
+                "text": "Shift priority assessment to the maintenance team, allowing residents to focus on describing the issue."
               }
             },
             {
@@ -746,12 +695,12 @@ export const content = {
                 "id": "decision-input-finding",
                 "text": [
                   {
-                    "text": "63.3% of survey respondents were unsure which category to choose",
+                    "text": "63.3% of survey respondents were uncertain about issue categories",
                     "strong": true,
                     "tone": "highlight"
                   },
                   {
-                    "text": "; original-workflow observations also documented confusion over “HVAC” and free-text instructions."
+                    "text": ", while the original form relied on technical terminology."
                   }
                 ]
               },
@@ -855,7 +804,7 @@ export const content = {
               "rationale": {
                 "type": "text",
                 "id": "decision-input-rationale",
-                "text": "I simplified the input structure to Location → Category → Description, using familiar labels such as “AC” and suggested issues. The intent is to reduce terminology guesswork and help residents give useful details."
+                "text": "Restructure reporting into Location → Category → Description, using familiar labels and suggested issues to reduce guesswork."
               }
             },
             {
@@ -871,10 +820,10 @@ export const content = {
                 "id": "decision-arrival-finding",
                 "text": [
                   {
-                    "text": "Sarah’s diary documented an unexpected entry; "
+                    "text": "The diary study revealed an unexpected maintenance visit, while "
                   },
                   {
-                    "text": "93.3% of survey respondents wanted a scheduled repair time",
+                    "text": "93.3% of survey respondents wanted visibility into repair timing",
                     "strong": true,
                     "tone": "highlight"
                   },
@@ -961,22 +910,19 @@ export const content = {
               "rationale": {
                 "type": "text",
                 "id": "decision-arrival-rationale",
-                "text": "I introduced preferred 2–3-hour visit windows to help residents plan while leaving room for maintenance scheduling. A preferred window would need team confirmation."
+                "text": "Allow residents to request a preferred three-hour visit window, subject to confirmation by the maintenance team."
               },
               "constraint": {
                 "type": "text",
                 "id": "decision-arrival-constraint",
                 "text": [
                   {
-                    "text": "Planning assumption: "
-                  },
-                  {
-                    "text": "narrow slots may be difficult for maintenance to meet",
+                    "text": "Visit preferences are not confirmed appointments.",
                     "strong": true,
                     "tone": "highlight"
                   },
                   {
-                    "text": "; scheduling feasibility still needs validation with the team."
+                    "text": " Actual availability and scheduling must be coordinated with maintenance staff."
                   }
                 ]
               }
@@ -994,15 +940,12 @@ export const content = {
                 "id": "decision-progress-finding",
                 "text": [
                   {
-                    "text": "In the survey, "
-                  },
-                  {
-                    "text": "66.7% rarely or never received progress updates",
+                    "text": "66.7% of respondents reported infrequent updates",
                     "strong": true,
                     "tone": "highlight"
                   },
                   {
-                    "text": "; Sarah’s diary also recorded repeated checking while waiting."
+                    "text": ", while the diary study captured repeated checking during the waiting period."
                   }
                 ]
               },
@@ -1084,7 +1027,7 @@ export const content = {
               "rationale": {
                 "type": "text",
                 "id": "decision-progress-rationale",
-                "text": "I turned history into an In Review → In Progress → Completed timeline with maintenance notes, aiming to make the current stage and completed work easier to understand. Its usefulness depends on maintenance keeping those updates current."
+                "text": "Replace static request history with a status timeline and maintenance notes, making progress and completed work easier to understand."
               }
             }
           ]
@@ -1093,7 +1036,7 @@ export const content = {
     },
     {
       "id": "redesign-workflow",
-      "title": "Redesign Workflow",
+      "title": "Redesigned User Flows",
       "blocks": [
         {
           "type": "columns",
@@ -1103,7 +1046,7 @@ export const content = {
               "type": "image",
               "id": "redesign-workflow-frame-1437254251-1",
               "src": "/img/project-2/frame-1437254251-1.svg",
-              "alt": "Redesign Workflow — design study",
+              "alt": "Redesigned User Flows — design study",
               "width": 789.0,
               "height": 442.0
             },
@@ -1111,7 +1054,7 @@ export const content = {
               "type": "image",
               "id": "redesign-workflow-frame-1437254252-1",
               "src": "/img/project-2/frame-1437254252-1.svg",
-              "alt": "Redesign Workflow — design study",
+              "alt": "Redesigned User Flows — design study",
               "width": 477.0,
               "height": 442.0
             }
@@ -1172,7 +1115,7 @@ export const content = {
     },
     {
       "id": "high-fi-prototype",
-      "title": "High-fi Prototype",
+      "title": "Final Prototype",
       "blocks": [
         {
           "type": "prototypeFlows",
@@ -1189,7 +1132,7 @@ export const content = {
               "description": {
                 "type": "text",
                 "id": "prototype-submit-description",
-                "text": "Describe the issue, share a preferred visit window, and submit the request. The window expresses a preference; confirming availability would require coordination with maintenance."
+                "text": "Report an issue through guided inputs and request a preferred visit window, pending maintenance confirmation."
               },
               "legend": [
                 {
@@ -1208,7 +1151,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-submit-01-caption",
-                    "text": "Start a new request"
+                    "text": "Start a Request"
                   },
                   "media": {
                     "type": "image",
@@ -1251,7 +1194,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-submit-02-caption",
-                    "text": "Add issue details"
+                    "text": "Describe the Issue"
                   },
                   "media": {
                     "type": "image",
@@ -1294,7 +1237,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-submit-03-caption",
-                    "text": "Choose a preferred visit date"
+                    "text": "Select a Preferred Date"
                   },
                   "media": {
                     "type": "image",
@@ -1337,7 +1280,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-submit-04-caption",
-                    "text": "Choose a preferred window and submit"
+                    "text": "Request a Visit Window"
                   },
                   "media": {
                     "type": "image",
@@ -1377,7 +1320,7 @@ export const content = {
               "description": {
                 "type": "text",
                 "id": "prototype-track-description",
-                "text": "Confirm receipt, review request history, and check progress and maintenance notes."
+                "text": "Track repair progress, review status updates, and see what work has been completed."
               },
               "items": [
                 {
@@ -1386,7 +1329,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-track-01-caption",
-                    "text": "Receive confirmation"
+                    "text": "Request Received"
                   },
                   "media": {
                     "type": "image",
@@ -1403,7 +1346,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-track-02-caption",
-                    "text": "Browse request history"
+                    "text": "View Request History"
                   },
                   "media": {
                     "type": "image",
@@ -1420,7 +1363,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-track-03-caption",
-                    "text": "Check request progress"
+                    "text": "Track Repair Progress"
                   },
                   "media": {
                     "type": "image",
@@ -1437,7 +1380,7 @@ export const content = {
                   "caption": {
                     "type": "text",
                     "id": "prototype-track-04-caption",
-                    "text": "Review completed work"
+                    "text": "Review Completed Work"
                   },
                   "media": {
                     "type": "image",
@@ -1465,7 +1408,7 @@ export const content = {
             {
               "type": "text",
               "id": "to-validate-the-technical-feasibility-and-ensure",
-              "text": "I built a functional Flutter prototype to explore how the redesigned screens and interactions could be implemented. Live scheduling integration and evaluation with residents remain future work."
+              "text": "I implemented the redesigned interface in Flutter, translating Figma components into reusable widgets and building a functional prototype of the core interactions."
             },
             {
               "type": "image",
@@ -1494,6 +1437,49 @@ export const content = {
               "alt": "Reusable Flutter widgets and corresponding maintenance interface components.",
               "width": 1223.0,
               "height": 604.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reflection-and-next-steps",
+      "title": "Reflection & Next Steps",
+      "blocks": [
+        {
+          "type": "group",
+          "id": "reflection-learned",
+          "items": [
+            {
+              "type": "heading",
+              "id": "reflection-learned-heading",
+              "text": "What I Learned"
+            },
+            {
+              "type": "text",
+              "id": "reflection-learned-insight",
+              "text": "This project showed me that maintenance transparency depends on more than interface design."
+            },
+            {
+              "type": "text",
+              "id": "reflection-learned-copy",
+              "text": "Clear communication also requires coordination between residents, maintenance teams, and property management."
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "reflection-validation",
+          "items": [
+            {
+              "type": "heading",
+              "id": "reflection-validation-heading",
+              "text": "What I Would Validate Next"
+            },
+            {
+              "type": "text",
+              "id": "reflection-validation-list",
+              "text": "Test the redesigned reporting and tracking flows with residents.\nWork with maintenance staff to validate priority assessment, visit scheduling, and status updates.\nExplore backend integration for confirmed appointments and real-time repair progress."
             }
           ]
         }

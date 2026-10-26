@@ -1,4 +1,34 @@
 /* APT: readable research evidence and larger comparisons at a shared phone scale. */
+.ed-case-study .apt-context { --apt-context-fill: #398b92; --apt-context-secondary: #9bbfbe; --apt-context-track: #e6ece7; }
+.ed-case-study .apt-context-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.ed-case-study .apt-context-card { display: flex; flex-direction: column; gap: 30px; min-width: 0; margin: 0; padding: 28px; border: 1px solid var(--ed-line); border-radius: 10px; background: var(--ed-paper); }
+.ed-case-study .apt-context-card figcaption { display: grid; gap: 12px; }
+.ed-case-study .apt-context-value { margin: 0 0 4px; color: var(--ed-accent); font-size: clamp(52px, 5vw, 72px); font-weight: 600; line-height: 1; letter-spacing: -.055em; font-variant-numeric: tabular-nums; }
+.ed-case-study .apt-context-value > span { font-size: .55em; letter-spacing: -.02em; }
+.ed-case-study .apt-context-card h4 { margin: 0; color: var(--ed-heading); font-size: 19px; font-weight: 600; line-height: 1.4; text-wrap: pretty; }
+.ed-case-study .apt-context-description { margin: 0; color: var(--study-muted); font-size: 14px; line-height: 1.6; text-wrap: pretty; }
+.ed-case-study .apt-context-chart { display: grid; align-content: start; gap: 16px; margin-top: auto; }
+.ed-case-study .apt-context-ranking { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.ed-case-study .apt-context-bar-label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; font-size: 12px; line-height: 1.5; }
+.ed-case-study .apt-context-bar-label strong { color: var(--ed-heading); font-weight: 600; font-variant-numeric: tabular-nums; }
+.ed-case-study .apt-context-ranking li:first-child .apt-context-bar-label { color: var(--ed-heading); font-weight: 600; }
+.ed-case-study .apt-context-bar-track { height: 9px; overflow: hidden; border-radius: 2px; background: var(--apt-context-track); }
+.ed-case-study .apt-context-bar-track > span { display: block; height: 100%; background: var(--apt-context-secondary); }
+.ed-case-study .apt-context-bar-track > .is-primary { background: var(--apt-context-fill); }
+.ed-case-study .apt-context-waffle { display: grid; grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 4px; }
+.ed-case-study .apt-context-waffle > span { aspect-ratio: 1; overflow: hidden; border-radius: 2px; background: var(--apt-context-track); }
+.ed-case-study .apt-context-waffle > span > span { display: block; height: 100%; background: var(--apt-context-fill); }
+.ed-case-study .apt-context-legend { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 11px; line-height: 1.5; }
+.ed-case-study .apt-context-legend li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ed-case-study .apt-context-legend li > span { display: flex; align-items: baseline; gap: 8px; }
+.ed-case-study .apt-context-legend i { flex: 0 0 8px; width: 8px; height: 8px; border-radius: 1px; background: var(--apt-context-fill); }
+.ed-case-study .apt-context-legend .is-remaining { background: var(--apt-context-track); box-shadow: inset 0 0 0 1px #c3cfca; }
+.ed-case-study .apt-context-legend strong { flex-shrink: 0; color: var(--ed-heading); font-weight: 600; font-variant-numeric: tabular-nums; }
+.ed-case-study .apt-context-chart-note { margin: 0; color: var(--study-muted); font-size: 11px; line-height: 1.5; }
+.ed-case-study .apt-context-sources { margin: 16px 0 0; color: var(--study-muted); font-size: 12px; line-height: 1.7; }
+.ed-case-study .apt-context-sources a { color: var(--ed-accent); text-decoration: underline; text-underline-offset: 3px; }
+.ed-case-study .apt-context-sources a:hover { color: var(--ed-heading); }
+.ed-case-study .apt-context-sources a:focus-visible { outline: 2px solid var(--ed-accent); outline-offset: 4px; border-radius: 2px; }
 .ed-case-study .apt-research-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .ed-case-study .apt-research-tags li { padding: 7px 12px; border: 1px solid var(--ed-line); border-radius: 999px; background: var(--ed-soft); color: var(--ed-heading); font-size: 13px; font-weight: 500; line-height: 1.5; }
 .ed-case-study .apt-research-study { display: grid; gap: 24px; padding-top: 28px; border-top: 1px solid var(--ed-line); }
@@ -21,38 +51,15 @@
 .ed-case-study .apt-diary-finding { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--ed-line); }
 .ed-case-study .apt-diary-finding dd + dt { margin-top: 10px; }
 .ed-case-study .study [data-content-id="3-3"] { gap: 24px; }
-.ed-case-study .apt-survey-opportunities { --apt-chart-fill: #52a7ae; --apt-chart-track: #e4efed; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.ed-case-study .apt-survey-opportunities > article { display: grid; grid-template-rows: 1fr auto; border: 1px solid var(--ed-line); border-radius: 8px; overflow: hidden; background: var(--ed-paper); }
-.ed-case-study .apt-survey-opportunities > article:first-child { grid-column: 1 / -1; }
-.ed-case-study .apt-survey-chart { min-width: 0; padding: 20px; }
-.ed-case-study .apt-survey-chart > .study-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 0; }
-.ed-case-study .apt-survey-metric { display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: center; gap: 14px; min-width: 0; margin: 0; }
-.ed-case-study .apt-survey-chart > .study-columns > .apt-survey-metric { padding-inline: 16px; }
-.ed-case-study .apt-survey-chart > .study-columns > .apt-survey-metric:first-child { padding-left: 0; }
-.ed-case-study .apt-survey-chart > .study-columns > .apt-survey-metric:last-child { padding-right: 0; }
-.ed-case-study .apt-survey-chart > .study-columns > .apt-survey-metric + .apt-survey-metric { border-left: 1px solid var(--ed-line); }
-.ed-case-study .apt-metric-visual { position: relative; width: 96px; height: 96px; }
-.ed-case-study .apt-metric-visual svg { display: block; width: 100%; height: 100%; fill: none; stroke-width: 10; }
-.ed-case-study .apt-metric-track { stroke: var(--apt-chart-track); }
-.ed-case-study .apt-metric-fill { stroke: var(--apt-chart-fill); }
-.ed-case-study .apt-metric-value { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
-.ed-case-study .apt-metric-value strong { color: var(--ed-heading); font-size: 24px; font-weight: 600; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
-.ed-case-study .apt-metric-value strong > span { font-size: 14px; letter-spacing: -.02em; }
-.ed-case-study .apt-metric-value > span { color: var(--study-muted); font-size: 10px; line-height: 1.4; }
-.ed-case-study .apt-metric-rating .apt-metric-value { bottom: 20px; }
-.ed-case-study .apt-metric-rating strong { font-size: 30px; }
-.ed-case-study .apt-rating-scale { position: absolute; inset: auto 0 3px; }
-.ed-case-study .apt-rating-segments { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 3px; }
-.ed-case-study .apt-rating-segments > span { height: 6px; overflow: hidden; border-radius: 2px; background: var(--apt-chart-track); }
-.ed-case-study .apt-rating-segments > span > span { display: block; height: 100%; background: var(--apt-chart-fill); }
-.ed-case-study .apt-rating-endpoints { display: flex; justify-content: space-between; margin-top: 4px; color: var(--study-muted); font-size: 10px; line-height: 1; }
-.ed-case-study .apt-survey-metric figcaption { display: grid; align-content: start; gap: 6px; min-width: 0; }
-.ed-case-study .apt-survey-opportunities .ed-eyebrow { font-size: 11px; }
-.ed-case-study .apt-metric-description { margin: 0; color: var(--ed-heading); font-size: 14px; font-weight: 500; line-height: 1.5; text-wrap: pretty; }
-.ed-case-study .apt-survey-opportunities .ed-takeaway { grid-template-columns: max-content minmax(0, 1fr); align-items: baseline; gap: 16px; padding: 12px 20px; }
-.ed-case-study .apt-survey-opportunities .ed-takeaway > .ed-eyebrow { font-weight: 700; white-space: nowrap; }
-.ed-case-study .apt-survey-opportunities .ed-takeaway .ed-copy { max-width: none; color: var(--ed-heading); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.ed-case-study .apt-survey-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.ed-case-study .apt-survey-metric { display: grid; align-content: start; gap: 20px; min-width: 0; margin: 0; padding: 24px; border: 1px solid var(--ed-line); border-radius: 8px; background: var(--ed-paper); }
+.ed-case-study .apt-metric-value { margin: 0; color: var(--ed-accent); font-size: clamp(40px, 4vw, 56px); font-weight: 600; line-height: 1; letter-spacing: -.05em; font-variant-numeric: tabular-nums; }
+.ed-case-study .apt-metric-value > span { font-size: .6em; letter-spacing: -.02em; }
+.ed-case-study .apt-metric-description { margin: 0; color: var(--ed-heading); font-size: 14px; font-weight: 500; line-height: 1.6; text-wrap: pretty; }
+.ed-case-study .apt-survey-sample { margin: 16px 0 0; color: var(--study-muted); font-size: 12px; line-height: 1.5; }
+.ed-case-study .apt-research-findings > li { padding-top: 0; border-top: 0; }
 .ed-case-study .apt-workflow-tests { display: grid; gap: 40px; }
+.ed-case-study .apt-workflow-finding { max-width: 72ch; color: var(--ed-heading); font-size: 18px; font-weight: 500; }
 .ed-case-study .apt-workflow-tests > article { display: grid; gap: 20px; padding-top: 28px; border-top: 1px solid var(--ed-line); }
 .ed-case-study .apt-workflow-tests .ed-copy-list { display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 0; list-style: none; font-size: 14px; }
 .ed-case-study .apt-workflow-evidence > .study-columns { grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 32px; align-items: start; }
@@ -208,6 +215,22 @@
 .ed-case-study .study--project-2 #coding :is(.study-image, img) { max-width: 100%; }
 .ed-case-study .study--project-2 #coding .study-image { max-width: 1000px; }
 
+/* A closing reflection and three next steps share one quiet, balanced panel. */
+.ed-case-study #reflection-and-next-steps > .study-section-body { grid-template-columns: minmax(0, .95fr) minmax(0, 1.15fr); gap: 0; overflow: hidden; border: 1px solid var(--ed-line); border-radius: 10px; background: var(--ed-paper); }
+.ed-case-study :is(.apt-reflection-lesson, .apt-reflection-next) { min-width: 0; padding: 32px; }
+.ed-case-study :is(.apt-reflection-lesson, .apt-reflection-next) > .ed-heading { margin-bottom: 24px; color: var(--ed-accent); font-size: 12px; font-weight: 600; letter-spacing: .065em; line-height: 1.5; text-transform: uppercase; }
+.ed-case-study .apt-reflection-lesson { background: var(--ed-soft); }
+.ed-case-study .apt-reflection-lesson > .apt-reflection-insight { margin-bottom: 20px; color: var(--ed-heading); font-size: clamp(22px, 2.1vw, 27px); font-weight: 500; line-height: 1.4; letter-spacing: -.025em; text-wrap: pretty; }
+.ed-case-study .apt-reflection-lesson > .ed-copy:last-child { font-size: 15px; line-height: 1.7; }
+.ed-case-study .apt-reflection-next { border-left: 1px solid var(--ed-line); }
+.ed-case-study .apt-reflection-steps { margin: 0; padding: 0; list-style: none; }
+.ed-case-study .apt-reflection-steps > li { display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: baseline; gap: 14px; padding: 20px 0; }
+.ed-case-study .apt-reflection-steps > li:first-child { padding-top: 0; }
+.ed-case-study .apt-reflection-steps > li:last-child { padding-bottom: 0; }
+.ed-case-study .apt-reflection-steps > li + li { border-top: 1px solid var(--ed-line); }
+.ed-case-study .apt-reflection-step { color: var(--ed-accent); font: 400 12px/1.5 var(--portfolio-font-mono); }
+.ed-case-study .apt-reflection-steps .ed-copy { color: var(--ed-heading); font-size: 15px; line-height: 1.7; }
+
 @media (max-width: 1199px) {
   .ed-case-study .apt-prototype-flow { --apt-flow-gap: 28px; }
   .ed-case-study .apt-prototype-strip { grid-template-columns: repeat(4, 248px); }
@@ -215,16 +238,19 @@
 }
 
 @media (max-width: 899px) {
+  .ed-case-study #reflection-and-next-steps > .study-section-body { grid-template-columns: minmax(0, 1fr); }
+  .ed-case-study .apt-reflection-next { border-left: 0; border-top: 1px solid var(--ed-line); }
   .ed-case-study .apt-diary-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ed-case-study .apt-survey-chart > .study-columns > .apt-survey-metric { grid-template-columns: minmax(0, 1fr); align-content: start; gap: 12px; }
-  .ed-case-study .apt-survey-opportunities > article:not(:first-child) .ed-takeaway { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .ed-case-study .apt-survey-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ed-case-study .apt-workflow-evidence > .study-columns { grid-template-columns: minmax(0, 1fr); }
   .ed-case-study .apt-workflow-evidence > .study-columns > .study-image:first-child { max-width: 440px; }
 }
 @media (max-width: 699px) {
+  .ed-case-study .apt-context-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .ed-case-study .apt-context-card { gap: 24px; padding: 22px; }
   .ed-case-study .apt-diary-study .ed-facts { grid-template-columns: minmax(0, 1fr); }
   .ed-case-study .apt-diary-study .ed-facts > div:first-child { grid-template-columns: minmax(0, 1fr); gap: 4px; }
-  .ed-case-study :is(.apt-survey-opportunities, .apt-competitor-grid) { grid-template-columns: minmax(0, 1fr); }
+  .ed-case-study .apt-competitor-grid { grid-template-columns: minmax(0, 1fr); }
   .ed-case-study .apt-artifact-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 85%; gap: 16px; overflow-x: auto; padding-bottom: 16px; scroll-snap-type: x proximity; }
   .ed-case-study .apt-artifact-card { scroll-snap-align: start; }
   .ed-case-study .apt-artifact-thumbnail { height: 200px; }
@@ -241,18 +267,13 @@
   .ed-case-study .apt-competitor-response { padding: 16px 18px; }
   .ed-case-study .apt-research-study [data-content-id="research-within-expo-visuals"] { grid-template-columns: minmax(0, 1fr); }
   .ed-case-study .apt-research-study [data-content-id="research-within-expo-visuals"] > .study-image:last-child { max-width: 420px; }
-  .ed-case-study .apt-survey-chart { padding: 16px; }
-  .ed-case-study .apt-survey-chart > .study-columns { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  .ed-case-study .apt-survey-metric,
-  .ed-case-study .apt-survey-chart > .study-columns > .apt-survey-metric { grid-template-columns: 88px minmax(0, 1fr); align-items: center; gap: 14px; padding: 0; }
-  .ed-case-study .apt-survey-chart > .study-columns > .apt-survey-metric + .apt-survey-metric { padding-top: 12px; border-top: 1px solid var(--ed-line); border-left: 0; }
-  .ed-case-study .apt-metric-visual { width: 88px; height: 88px; }
-  .ed-case-study .apt-metric-value strong { font-size: 22px; }
-  .ed-case-study .apt-metric-rating strong { font-size: 28px; }
-  .ed-case-study .apt-survey-opportunities .ed-takeaway { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 16px; }
   .ed-case-study .study--project-2 #redesign-workflow .study-columns { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 599px) {
+  .ed-case-study :is(.apt-reflection-lesson, .apt-reflection-next) { padding: 24px; }
+  .ed-case-study :is(.apt-reflection-lesson, .apt-reflection-next) > .ed-heading { margin-bottom: 20px; }
+  .ed-case-study .apt-survey-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .ed-case-study .apt-survey-metric { gap: 12px; padding: 20px; }
   .ed-case-study .apt-diary-timeline { grid-template-columns: minmax(0, 1fr); }
 }

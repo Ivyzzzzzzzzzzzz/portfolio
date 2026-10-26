@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import CaseStudy, { Block, FigureComposition, RichText } from "../components/case-study/CaseStudy.jsx";
+import CaseStudy, { Block, Media, RichText } from "../components/case-study/CaseStudy.jsx";
 import OnThisPage from "../components/case-study/OnThisPage.jsx";
 import ResearchArtifactGallery from "../components/case-study/ResearchArtifactGallery.jsx";
 import { assetPath } from "../lib/assets.js";
@@ -10,13 +10,76 @@ import { researchComponents } from "./LivingCalendarResearch.jsx";
 import AnnotatedTestingScreens from "./LivingCalendarAnnotations.jsx";
 import { NativeDiagram, NavigationDiagrams } from "./LivingCalendarDiagrams.jsx";
 
+function StoryContextSubsection({ block }) {
+  return <section className="lc-story-subsection" id={block.id} data-content-id={block.id}
+    aria-labelledby={`${block.id}-title`}>
+    <header className="lc-story-subsection-heading">
+      <span className="lc-story-step" aria-hidden="true">{block.step}</span>
+      <h3 className="study-label" id={`${block.id}-title`}><RichText value={block.title} /></h3>
+    </header>
+    {block.id === "message-from-home" ? <HomeStory block={block} /> : <div className="lc-story-body">
+      {block.takeaway && <p className="lc-story-takeaway"><RichText value={block.takeaway} /></p>}
+      {block.items.map(item => <Block key={item.id} block={item} />)}
+    </div>}
+  </section>;
+}
+
+function HomeStory({ block }) {
+  const [story] = block.items;
+  const [quote, ...paragraphs] = story.items;
+  return <div className="lc-home-story" data-content-id={story.id}>
+    <div className="lc-home-message"><Block block={quote} /></div>
+    <div className="lc-home-reflection">
+      {paragraphs.map(paragraph => <Block key={paragraph.id} block={paragraph} />)}
+    </div>
+  </div>;
+}
+
+function ContextEvidence({ block, calendar = false }) {
+  return <figure className="lc-context-evidence" data-content-id={block.id} data-image-explanation="true">
+    <div className={`lc-context-media${calendar ? " lc-context-media--calendar" : ""}`}><Block block={block.media} /></div>
+    <figcaption><Block block={block.copy} /></figcaption>
+  </figure>;
+}
+
+function ContextComparison({ block }) {
+  const [nature, comparisonArrow, calendar, question] = block.items;
+  return <div className="lc-context-comparison" data-content-id={block.id}>
+    <div className="lc-context-evidence-grid">
+      <ContextEvidence block={nature} />
+      <div className="lc-context-arrow"><Block block={comparisonArrow} /></div>
+      <ContextEvidence block={calendar} calendar />
+    </div>
+    <div className="lc-context-question">
+      <Block block={question} />
+    </div>
+  </div>;
+}
+
+function SeasonalContext({ block }) {
+  const [explanation, insight] = block.items;
+  return <div className="lc-seasonal-context" data-content-id={block.id}>
+    <div className="lc-seasonal-pair" data-content-id={explanation.id} data-image-explanation="true">
+      <div className="lc-seasonal-wheel"><Block block={explanation.media} /></div>
+      <div className="lc-seasonal-copy">
+        <Block block={explanation.copy} />
+        <div className="lc-seasonal-insight"><Block block={insight} /></div>
+      </div>
+    </div>
+  </div>;
+}
+
+function StoryContextStatement({ block }) {
+  const Tag = block.id === "today-is-the-beginning-of-winter-did" ? "blockquote" : "h4";
+  return <Tag className="study-heading lc-story-statement" data-content-id={block.id}
+    style={{ color: layout[block.id]?.color }}><RichText value={block.text} /></Tag>;
+}
+
 function SeasonalObservationCollage({ block }) {
-  return <FigureComposition block={block} width={309} height={216} layers={[
-    { x: 166, y: 0, width: 143, height: 100 },
-    { x: 0, y: 104, width: 160, height: 112 },
-    { x: 0, y: 0, width: 160, height: 100 },
-    { x: 167, y: 105, width: 142, height: 111 },
-  ]} />;
+  const [weather, landscape, clouds, shadows] = block.items;
+  return <figure className="lc-seasonal-collage" data-content-id={block.id}>
+    {[clouds, weather, landscape, shadows].map(media => <Media key={media.id} media={media} />)}
+  </figure>;
 }
 
 function InteractionRecording({ block }) {
@@ -207,6 +270,13 @@ function TestingFindings({ block }) {
   </div>;
 }
 
+function ExperienceIntro({ block }) {
+  return <header className="lc-experience-intro" data-content-id={block.id}>
+    <h3 className="study-label"><RichText value={block.title} /></h3>
+    <p className="study-text"><RichText value={block.text} /></p>
+  </header>;
+}
+
 function CulturalLayer({ block }) {
   const [rituals, stories] = block.items;
   return <div className="lc-cultural-layer" data-content-id={block.id}>
@@ -226,6 +296,14 @@ function NavigationScreens({ block }) {
 
 const components = {
   ...researchComponents,
+  "message-from-home": StoryContextSubsection,
+  "the-disconnect": StoryContextSubsection,
+  "time-told-by-nature-not-numbers": StoryContextSubsection,
+  "today-is-the-beginning-of-winter-did": StoryContextStatement,
+  "ecology-gets-flattened-and-removed-so-the": StoryContextStatement,
+  "the-system-functions-not-only-as-a": StoryContextStatement,
+  "before-digital-clocks-and-numerical-dates-humans-3": ContextComparison,
+  "the-24-solar-terms-are-a-traditional-3": SeasonalContext,
   "users-familiar-with-the-solar-terms-but-3": ResearchArtifactGallery,
   "final-prototype-showcase": PrototypeShowcase,
   "sitemap-and-user-flow": NavigationDiagrams,
@@ -249,6 +327,10 @@ const components = {
   "testing-refinement-visuals": AnnotatedTestingScreens,
   "testing-refinement-31-1": AnnotatedTestingScreens,
   "testing-refinement-visuals-2": AnnotatedTestingScreens,
+  "the-ecological-layer-which-shows-changes-in": ExperienceIntro,
+  "the-cultural-layer-where-each-solar-terms": ExperienceIntro,
+  "the-personal-layer-which-encourages-users-experience": ExperienceIntro,
+  "navigation-system": ExperienceIntro,
   "rituals-3": CulturalLayer,
   "a-living-calendar-visuals-4": NavigationScreens,
   "dial-calendar": () => null,

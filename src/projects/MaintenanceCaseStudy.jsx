@@ -1,11 +1,59 @@
 import { useEffect, useRef, useState } from "react";
 import { Block, Media } from "../components/case-study/CaseStudy.jsx";
-import EditorialCaseStudy, { Copy, CopyList, Heading, NumberedPoints, StepHeader, Takeaway, textOf } from "../components/case-study/EditorialCaseStudy.jsx";
+import EditorialCaseStudy, { Copy, CopyList, Heading, StepHeader, Takeaway, textOf } from "../components/case-study/EditorialCaseStudy.jsx";
 import MaintenanceDecisions from "./MaintenanceDecisions.jsx";
 import { content } from "../content/project-2/content.js";
 import { layout } from "../content/project-2/layout.js";
 import { assetPath } from "../lib/assets.js";
 import "./maintenance.css";
+
+function SecondaryResearch({ block }) {
+  const { ranking, reviews } = block;
+  return <div className="apt-context" data-content-id={block.id}>
+    <div className="apt-context-grid">
+      <figure className="apt-context-card" aria-labelledby={`${block.id}-ranking`}>
+        <figcaption>
+          <p className="apt-context-value"><span>#</span>{ranking.value}</p>
+          <h4 id={`${block.id}-ranking`}>{ranking.label}</h4>
+          <p className="apt-context-description">{ranking.description}</p>
+        </figcaption>
+        <div className="apt-context-chart">
+          <ol className="apt-context-ranking" aria-label={ranking.chartLabel}>
+            {ranking.priorities.map((priority, index) => <li key={priority.label}>
+              <div className="apt-context-bar-label"><span>{priority.label}</span><strong>{priority.value}%</strong></div>
+              <div className="apt-context-bar-track" aria-hidden="true">
+                <span className={index === 0 ? "is-primary" : undefined} style={{ width: `${priority.value}%` }} />
+              </div>
+            </li>)}
+          </ol>
+          <p className="apt-context-chart-note">{ranking.chartNote}</p>
+        </div>
+      </figure>
+      <figure className="apt-context-card" aria-labelledby={`${block.id}-reviews`}>
+        <figcaption>
+          <p className="apt-context-value">{reviews.value}<span>%</span></p>
+          <h4 id={`${block.id}-reviews`}>{reviews.label}</h4>
+          <p className="apt-context-description">{reviews.description}</p>
+        </figcaption>
+        <div className="apt-context-chart">
+          <div className="apt-context-waffle" aria-hidden="true">
+            {Array.from({ length: 100 }, (_, index) => <span key={index}>
+              <span style={{ width: `${Math.min(1, Math.max(0, reviews.value - index)) * 100}%` }} />
+            </span>)}
+          </div>
+          <ul className="apt-context-legend">
+            <li><span><i aria-hidden="true" />{reviews.mentionedLabel}</span><strong>{reviews.value}%</strong></li>
+            <li><span><i className="is-remaining" aria-hidden="true" />{reviews.remainingLabel}</span><strong>{(100 - reviews.value).toFixed(1)}%</strong></li>
+          </ul>
+          <p className="apt-context-chart-note">{reviews.chartNote}</p>
+        </div>
+      </figure>
+    </div>
+    <p className="apt-context-sources">Sources: {([ranking.source, reviews.source]).map((source, index) => <span key={source.href}>
+      {index > 0 && "; "}<a href={source.href} target="_blank" rel="noopener noreferrer">{source.label}<span aria-hidden="true"> ↗</span></a>
+    </span>)}.</p>
+  </div>;
+}
 
 function ResearchMethodTags({ block }) {
   return <ul className="apt-research-tags" data-content-id={block.id} aria-label="Research methods">
@@ -59,41 +107,28 @@ function DiaryTimeline({ block }) {
 }
 
 function SurveyMetric({ block }) {
-  const isRating = Boolean(block.scale);
   return <figure className="apt-survey-metric" data-content-id={block.id} aria-labelledby={`${block.id}-label`}>
-    <div className={`apt-metric-visual${isRating ? " apt-metric-rating" : ""}`}>
-      {!isRating && <svg viewBox="0 0 144 144" aria-hidden="true" focusable="false">
-        <circle className="apt-metric-track" cx="72" cy="72" r="62" />
-        <circle className="apt-metric-fill" cx="72" cy="72" r="62" pathLength="100"
-          strokeDasharray={`${block.value} ${100 - block.value}`} transform="rotate(-90 72 72)" />
-      </svg>}
-      <div className="apt-metric-value">
-        <strong>{block.value}<span>{isRating ? `/${block.scale}` : "%"}</span></strong>
-        <span>{isRating ? "importance rating" : "of residents"}</span>
-      </div>
-      {isRating && <div className="apt-rating-scale" aria-hidden="true">
-        <div className="apt-rating-segments">
-          {Array.from({ length: block.scale }, (_, index) => <span key={index}>
-            <span style={{ width: `${Math.min(1, Math.max(0, block.value - index)) * 100}%` }} />
-          </span>)}
-        </div>
-        <div className="apt-rating-endpoints"><span>0</span><span>{block.scale}</span></div>
-      </div>}
-    </div>
-    <figcaption>
-      <p className="ed-eyebrow" id={`${block.id}-label`}>{block.label}</p>
-      <p className="apt-metric-description">{block.description}</p>
-    </figcaption>
+    <p className="apt-metric-value">{block.value}<span>%</span></p>
+    <figcaption className="apt-metric-description" id={`${block.id}-label`}>{block.description}</figcaption>
   </figure>;
 }
 
-function SurveyOpportunities({ block }) {
-  return <div className="apt-survey-opportunities" data-content-id={block.id}>
-    {block.items.map(item => <article key={item.id} data-content-id={item.id}>
-      <div className="apt-survey-chart"><Block block={item.media} /></div>
-      <Takeaway label="Design opportunity"><Copy block={item.copy || item.caption} /></Takeaway>
-    </article>)}
+function SurveyResults({ block }) {
+  return <div className="apt-survey-results" data-content-id={block.id}>
+    <div className="apt-survey-grid">
+      {block.items.map(item => <Block block={item} key={item.id} />)}
+    </div>
+    <p className="apt-survey-sample">{block.sample}</p>
   </div>;
+}
+
+function ResearchFindings({ block }) {
+  return <ul className="ed-numbered-points apt-research-findings" data-content-id={block.id}>
+    {block.items.map((item, index) => <li key={item.id}>
+      <h3 className="ed-heading">{String(index + 1).padStart(2, "0")} · {item.heading}</h3>
+      <Copy block={item} />
+    </li>)}
+  </ul>;
 }
 
 function ProblemQuestions({ block }) {
@@ -102,7 +137,6 @@ function ProblemQuestions({ block }) {
       const [problem, question] = item.items;
       return <article className="ed-response-card" key={item.id} data-content-id={item.id}>
         <header data-content-id={problem.id}><Heading block={problem.items[0]} /></header>
-        <div className="ed-observation"><p className="ed-eyebrow">Resident experience</p><Copy block={problem.items[1]} /></div>
         <Takeaway label="Design question"><Copy block={question} /></Takeaway>
       </article>;
     })}
@@ -111,10 +145,11 @@ function ProblemQuestions({ block }) {
 
 function WorkflowTests({ block }) {
   return <div className="apt-workflow-tests" data-content-id={block.id}>
-    {[0, 3].map(index => <article key={block.items[index].id}>
+    {[0, 4].map(index => <article key={block.items[index].id}>
       <Heading block={block.items[index]} />
       <CopyList block={block.items[index + 1]} />
       <div className="apt-workflow-evidence ed-media"><Block block={block.items[index + 2]} /></div>
+      <Takeaway label="Finding"><Copy block={block.items[index + 3]} className="apt-workflow-finding" /></Takeaway>
     </article>)}
   </div>;
 }
@@ -323,9 +358,32 @@ function PrototypeFlows({ block }) {
   </div>;
 }
 
+function ReflectionLesson({ block }) {
+  const [heading, insight, copy] = block.items;
+  return <article className="apt-reflection-lesson" data-content-id={block.id} aria-labelledby={heading.id}>
+    <Heading block={heading} />
+    <Copy block={insight} className="apt-reflection-insight" />
+    <Copy block={copy} />
+  </article>;
+}
+
+function ReflectionNextSteps({ block }) {
+  const [heading, steps] = block.items;
+  return <article className="apt-reflection-next" data-content-id={block.id} aria-labelledby={heading.id}>
+    <Heading block={heading} />
+    <ol className="apt-reflection-steps" data-content-id={steps.id}>
+      {textOf(steps.text).split(/\n+/).filter(Boolean).map((text, index) => <li key={text}>
+        <span className="apt-reflection-step" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+        <Copy block={{ text }} />
+      </li>)}
+    </ol>
+  </article>;
+}
+
 const components = {
+  "background-visuals": SecondaryResearch,
   "research-methods": ResearchMethodTags,
-  "maintenance-staff-and-contractors-frequently-entered-units-2": NumberedPoints,
+  "maintenance-staff-and-contractors-frequently-entered-units-2": ResearchFindings,
   "1-2": StepHeader,
   "2-2": StepHeader,
   "3-2": StepHeader,
@@ -333,9 +391,8 @@ const components = {
   "1-3": ResearchStudy,
   "2-3": DiaryStudy,
   "research-within-expo-section-1": DiaryTimeline,
-  "introduce-step-by-step-tracking-request-submitted-reviewed-3": SurveyOpportunities,
+  "introduce-step-by-step-tracking-request-submitted-reviewed-3": SurveyResults,
   "research-within-expo-frame-1437254199-1": SurveyMetric,
-  "research-within-expo-frame-1437254200-1": SurveyMetric,
   "research-within-expo-frame-1437254201-1": SurveyMetric,
   "research-within-expo-frame-1437254202-1": SurveyMetric,
   "research-within-expo-frame-1437254203-1": SurveyMetric,
@@ -346,6 +403,8 @@ const components = {
   "submit-requests-3": Wireframes,
   "high-fi-prototype-visuals": PrototypeFlows,
   "based-on-usability-testing-i-identified-several-3": MaintenanceDecisions,
+  "reflection-learned": ReflectionLesson,
+  "reflection-validation": ReflectionNextSteps,
 };
 
 export default function MaintenanceCaseStudy() {

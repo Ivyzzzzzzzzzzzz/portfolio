@@ -163,16 +163,22 @@ export function Block({ block }) {
 export function CaseStudySection({ section, children }) {
   const layout = useContext(LayoutContext);
   const rule = layout[section.id] || {};
-  return <section className="study-section" id={section.id} aria-labelledby={`${section.id}-title`}>
-    <h2 id={`${section.id}-title`} tabIndex={-1} style={{ color: rule.color,
+  const heading = <h2 id={`${section.id}-title`} tabIndex={-1} style={{ color: rule.color,
       fontSize: rule.headingSize ? `${rule.headingSize / 16}rem` : undefined,
       fontWeight: rule.headingWeight,
       fontFamily: rule.headingFont === "body" ? "var(--study-body-font)" : undefined,
-    }}><RichText value={section.title} /></h2>
+    }}><RichText value={section.title} /></h2>;
+  const body = <>
     {section.takeaway && <p className="study-section-takeaway"><RichText value={section.takeaway} /></p>}
     <div className="study-section-body">
       {children || section.blocks.map((block, index) => <Block block={block} key={block.id || index} />)}
     </div>
+  </>;
+  return <section className="study-section" id={section.id} aria-labelledby={`${section.id}-title`}>
+    {section.collapsible ? <details className="study-section-disclosure">
+      <summary>{heading}</summary>
+      {body}
+    </details> : <>{heading}{body}</>}
   </section>;
 }
 

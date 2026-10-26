@@ -27,9 +27,11 @@ export default function OnThisPage({ sections, id, prefix }) {
   const jumpTo = (sectionId) => {
     setExpanded(false);
     const section = document.getElementById(sectionId);
+    const disclosure = section?.querySelector(":scope > .study-section-disclosure");
+    if (disclosure) disclosure.open = true;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     section?.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "start" });
-    section?.querySelector("h2")?.focus({ preventScroll: true });
+    (disclosure?.querySelector("summary") || section?.querySelector("h2"))?.focus({ preventScroll: true });
   };
 
   return <nav className={`${prefix}-chapters`} aria-label="On this page">
