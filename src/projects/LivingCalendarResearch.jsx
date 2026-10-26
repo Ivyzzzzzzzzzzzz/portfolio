@@ -100,15 +100,16 @@ function TakeawayList({ block }) {
 }
 
 function ResearchShift({ block }) {
-  const [assumption, transition, finding] = authoredLines(block.text);
+  const [assumption, , finding] = authoredLines(block.text);
   return <div className="lc-research-shift" data-content-id={block.id}>
     <div>
-      <h3 className="lc-research-label">Initial assumption</h3>
+      <p className="lc-research-label">Initial assumption</p>
+      <h3><RichText value={block.assumptionTitle} /></h3>
       <p><RichText value={assumption} /></p>
     </div>
     <div>
-      <h3 className="lc-research-label">Research finding</h3>
-      <p className="lc-shift-transition"><RichText value={transition} /></p>
+      <p className="lc-research-label">Research finding</p>
+      <h3><RichText value={block.findingTitle} /></h3>
       <p><RichText value={finding} /></p>
     </div>
   </div>;
@@ -136,7 +137,6 @@ export const researchComponents = {
   "shared-needs-2": TakeawayList,
   "opportunities-2": TakeawayList,
   "i-initially-assumed-this-was-a-cultural": ResearchShift,
-  "personas-who-am-i-designing-for": JourneyHeading,
   "journey-map-what-challenges-do-they-face": JourneyHeading,
   "sitemap-how-should-information-be-organized": JourneyHeading,
   "storyboard-what-should-the-experience-feel-like": JourneyHeading,

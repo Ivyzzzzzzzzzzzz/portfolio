@@ -4,8 +4,8 @@
   --home-muted: #65665e;
   --home-line: #bdbeb3;
   --home-blue: #244bd8;
-  --home-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --home-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --home-sans: var(--portfolio-font-sans);
+  --home-mono: var(--portfolio-font-mono);
   min-height: 100vh;
   padding: 0 max(32px, calc((100vw - 1440px) / 2));
   background: var(--home-paper);

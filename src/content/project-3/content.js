@@ -6,9 +6,14 @@ export const content = {
   "hero": {
     "title": "Quiq",
     "period": "2025.4",
-    "disciplines": ["UX Research", "UX/UI Design", "Coding"],
-    "subtitle": "Pharmacy Brand: Bringing Joy to Everyday Illnesses",
-    "description": "A playful, approachable line of over-the-counter medications to ease the stress of dealing with minor illnesses."
+    "disciplines": ["Brand Design", "Visual Identity", "Packaging Design"],
+    "subtitle": [
+      { "text": "Translating everyday symptoms into " },
+      { "text": "playful medicine packaging", "tone": "highlight" },
+      { "text": "." }
+    ],
+    "problem": "Medicine packaging often feels clinical and impersonal, leaving little room to acknowledge the discomfort and frustration of being unwell.",
+    "description": "I designed Quiq’s brand identity and packaging around the sensations of everyday symptoms. Distinct colors and patterns express allergies, colds, and muscle pain, while a pill-inspired wordmark and humorous, conversational labels bring warmth to the product line."
   },
   "sections": [
     {

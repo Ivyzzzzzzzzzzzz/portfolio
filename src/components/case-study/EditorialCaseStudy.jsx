@@ -39,8 +39,8 @@ export function NumberedPoints({ block }) {
   </ul>;
 }
 
-export function Takeaway({ label = "Design response", children }) {
-  return <div className="ed-takeaway"><p className="ed-eyebrow">{label}</p>{children}</div>;
+export function Takeaway({ label = "Design response", emphasis = false, children }) {
+  return <div className={`ed-takeaway${emphasis ? " ed-takeaway--emphasis" : ""}`}><p className="ed-eyebrow">{label}</p>{children}</div>;
 }
 
 export function FigureGallery({ block, className = "", label, scrollLabel }) {

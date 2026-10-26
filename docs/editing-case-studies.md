@@ -11,6 +11,10 @@ Each project has one `content.js` file for its words and images. Open that file 
 
 Run `npm run dev` and open the URL it prints. Saving your content file updates the preview.
 
+## Edit a project opening
+
+Each `hero` leads with a concrete design direction in `subtitle`, followed by `problem` (who faces what difficulty) and `description` (your design response, written in the first person). Keep each supporting field to one short sentence. Use one `tone: "highlight"` text run in `subtitle` for the phrase readers should remember. Describe implemented design choices without implying measured outcomes unless the case study has evidence. Keep project title, dates, disciplines, and the optional live-project link in the metadata column. All four openings share their layout in `case-study.css`.
+
 ## Change a paragraph or heading
 
 Change the string following `text`, `title`, or the introductory `description`. Keep the surrounding quotes and commas. For a quote inside a double-quoted string, use `\"`.
@@ -32,6 +36,12 @@ Some paragraphs contain several text segments to preserve emphasis:
 ```
 
 Edit the individual strings, including the spaces between them. `strong` means bold and `emphasis` means italic. `tone` refers to an existing color in the case-study styles. A plain paragraph can also be a single string. `\n` creates a deliberate line break; ordinary text wraps automatically.
+
+Living Calendar uses one main emphasis per section. If the `title` already communicates the point, use structured text runs with `tone: "highlight"` on its key phrase and omit `takeaway`. For narrative or process titles, add an optional `takeaway`: one short conclusion with `strong: true, tone: "highlight"` on one phrase. The design-opportunity question is itself the focal point and does not need another summary. Keep necessary audience, method, or context information in ordinary body text; remove introductions that simply repeat the heading or conclusion. Title highlights appear in the section, while the chapter menu keeps plain labels. The research-shift block has editable `assumptionTitle` and `findingTitle` fields for its two comparison headings.
+
+The seasonal-journey section opens directly with two audience cards: “Chinese Cultural Background” and “Global Audience.” Their descriptions explain the different cultural connections to the Solar Terms and related needs. Each card names its audience in a highlighted heading, states its need in ordinary body text, and keeps the corresponding persona image below. These two concrete group names replace a generic section takeaway or additional persona introduction.
+
+“Bringing the Experience to Life” opens with `final-prototype-showcase`. Its `copy` holds the heading and prototype link; `media.items` holds four recordings in order: Landing, Intro, Term Details, and Calendar. Landing is the default preview. Each recording has a button `label`, video `src`, `poster`, accessible `alt`, and intrinsic `width` / `height`. The switcher mounts only the selected recording and pauses the previous one on replacement. The preview reuses the accessible video controls and reduced-motion behavior of the other interaction recordings. The MP4s in `videos/project-4/prototype-*.mp4` are web copies of the user's original Desktop MOV recordings. Their full duration is retained; the top 76 source pixels are cropped to remove the recorded black system bar and recording indicator, then the videos are scaled to 1920 × 1198. Posters use the same crop. The prototype link still opens the deployed interactive website.
 
 ## Replace an image
 
@@ -121,9 +131,13 @@ Common choices are `columns`, `ratio`, `mediaSide`, `space` (`tight` or `wide`),
 
 JustEat also has section-specific presentation in `src/projects/JustEatCaseStudy.jsx` and `src/projects/justeat.css`. Its research cards, sketch gallery, prototype videos, and nested comparisons use deliberate shared alignments. Their text and media still come from `content.js`. The image stages constrain how large an illustration appears, while captions and paragraphs grow normally. These stages contain the entire image without cropping. The section navigation derives its labels directly from the content file.
 
+JustEat uses the orange marker selectively for findings and design intent: the Gap, UX Research, and Design Concept takeaways, the Design Goal question, and the existing observation insights and decision headlines. A `takeaway` is optional; add one only when it communicates a conclusion that the nearby title, caption, or artwork does not already convey. Background relies on prominent statistics and ordinary context. Brainstorming and User Flow keep short, unmarked introductions. Wireframes, Prototype, and Design System open directly with their labeled artifacts; Prototype needs no extra explanatory summary. Interview quotes use selective bold emphasis while preserving their wording, without another summary above them.
+
 At desktop widths of 1,200px and above, section navigation stays in a left sidebar and highlights the current section. On smaller screens it becomes a collapsible “On this page” menu, which closes after a selection.
 
 APT and Quiq use the same reading widths, section navigation, and evidence/takeaway grouping through `src/components/case-study/EditorialCaseStudy.jsx` and `editorial-case-study.css`. Their section-specific layouts live in `MaintenanceCaseStudy.jsx` / `maintenance.css` and `Project3CaseStudy.jsx` / `quiq.css`. Keep text and source artwork in their existing content files. APT's wireframe strips keep a shared screen height and scroll on smaller displays; Quiq's wordmark drafts also scroll on phones. “View label copy” expands Quiq's supporting packaging copy. Image frames contain the whole asset and display it inline.
+
+APT's “Design Decisions Based on User Testing” presents three main decisions: priority assessment, arrival planning, and communication after submission. Each decision in `src/content/project-2/content.js` has a short `heading`, a one-sentence `finding` shown as “Observed,” a one-sentence `rationale` shown as “My decision,” and visual `before` / `after` panels. Keep observations grounded in the existing research and describe design intent without claiming unmeasured results. The form-order refinement has `supporting: true` and appears last with a supporting label. All four comparisons remain visible; do not collapse the supporting content. Findings use structured `text` runs with `strong: true, tone: "highlight"` on the key observation. These runs render directly through `RichText` in this component so emphasis is preserved. Arrival planning also has a separate `constraint` field for maintenance scheduling limits. Its rationale explains why broader 2–3-hour windows balance tenant predictability with maintenance flexibility, and the annotation identifies the selected 3-hour window. `MaintenanceDecisions.jsx` renders these layouts. Screenshot panels use `crop: [x, y, width, height]` in the original asset's coordinates; `notes` contain a short label, numbered `region`, and vertical `position` for the connecting line. These are focused views of existing images, not modified image files. Below 950px of section width, notes move beneath the image; below 620px the comparison stacks in reading order. The priority comparison uses a two-role diagram instead of another screenshot.
 
 ## Check an edit
 

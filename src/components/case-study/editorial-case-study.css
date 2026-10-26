@@ -1,6 +1,7 @@
 /* Shared reading and comparison system for APT and Quiq. */
 .ed-case-study { --ed-paper: #fffefa; --ed-page: #fffcf8; --ed-line: #e2e2d9; --ed-soft: #eef4f3; --ed-accent: #267b85; --ed-heading: #315c62; }
-.ed-case-study--project-3 { --ed-line: #e8dfd5; --ed-soft: #f8eee6; --ed-accent: #b65236; --ed-heading: #714634; }
+/* Quiq's existing brand blue leads the case study; artwork keeps its original palette. */
+.ed-case-study--project-3 { --ed-line: #d8e1e9; --ed-soft: #edf2f7; --ed-accent: #1d4673; --ed-heading: #23415f; }
 .ed-case-study .case-study-page { background: var(--ed-page); }
 .ed-case-study .study { width: min(calc(100% - 64px), 1384px); padding-top: 56px; line-height: 1.65; color: var(--study-muted); }
 .ed-case-study .study.study-has-sidebar { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 40px; }
@@ -9,9 +10,6 @@
 .ed-case-study .study .study-text { color: var(--study-muted); font: 400 16px/1.65 var(--study-body-font); }
 .ed-case-study .study .study-text [class^="study-tone-"] { color: inherit; }
 .ed-case-study .study :is(.study-label, .study-heading) { font: 600 18px/1.4 var(--study-body-font); color: var(--ed-heading); text-wrap: auto; }
-.ed-case-study .study .study-hero { grid-template-columns: 1fr 1.5fr; gap: 64px; padding-bottom: 48px; }
-.ed-case-study .study .study-hero-copy { max-width: 450px; gap: 16px; }
-.ed-case-study .study .study-project-meta { align-content: start; }
 .ed-case-study .study .study-section { margin-top: 88px; padding-top: 32px; border-top: 1px solid var(--ed-line); scroll-margin-top: 125px; }
 .ed-case-study .study .study-section > h2 { max-width: 38ch; color: var(--ed-heading) !important; font: 400 24px/1.4 var(--study-heading-font) !important; }
 .ed-case-study .study h2:focus { outline: none; }
@@ -74,7 +72,6 @@
 }
 @media (max-width: 899px) {
   .ed-case-study .study { padding-top: 32px; }
-  .ed-case-study .study .study-hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 32px; }
   .ed-case-study .study-sidebar { --ed-menu-top: 98px; }
   .ed-case-study .study .study-section { margin-top: 56px; padding-top: 24px; scroll-margin-top: 164px; }
   .ed-case-study .study .study-section-body { margin-top: 24px; }

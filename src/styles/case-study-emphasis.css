@@ -1,0 +1,104 @@
+/* Secondary colors mark the core promise, research conclusion, and design
+   direction. Keep routine headings, navigation, charts, and artwork primary. */
+.study--project-1 {
+  --study-secondary: #21695f;
+  --study-secondary-soft: #edf4ef;
+  --study-secondary-marker: #d4e8dd;
+}
+
+.study--project-2 {
+  --study-secondary: #865b18;
+  --study-secondary-soft: #faf2df;
+  --study-secondary-marker: #f1dfb0;
+}
+
+.study--project-3 {
+  --study-secondary: #ad482c;
+  --study-secondary-soft: #fcf0e8;
+  --study-secondary-marker: #fbe5d8;
+}
+
+.study--project-4 {
+  --study-secondary: #a34f37;
+  --study-secondary-soft: #fbf0e8;
+  --study-secondary-marker: #f8e5da;
+}
+
+/* Use the existing marked phrase in each introduction, not the whole title. */
+.case-study-page .study .study-subtitle .study-tone-highlight {
+  color: var(--study-secondary);
+  background: linear-gradient(
+    transparent 62%,
+    var(--study-secondary-marker) 62%,
+    var(--study-secondary-marker) 94%,
+    transparent 94%
+  );
+}
+
+/* Explicit opt-in: only the principal findings/opportunity use this treatment. */
+.case-study-page .study .ed-takeaway--emphasis {
+  background: var(--study-secondary-soft);
+  border-left-color: var(--study-secondary);
+}
+
+.case-study-page .study .ed-takeaway--emphasis > .ed-eyebrow {
+  color: var(--study-secondary);
+}
+
+/* JustEat: the research conclusion, design goal, and decision keywords. */
+.study--project-1 #design-goal [data-content-id="how-might-we-provide-a-clear-and"] {
+  background: var(--study-secondary-soft);
+  box-shadow: inset 3px 0 0 var(--study-secondary);
+}
+
+.study--project-1 #ux-research > .study-section-takeaway .study-tone-highlight,
+.study--project-1 .je-decision-takeaway .study-tone-highlight,
+.study--project-1 #design-goal .study-tone-highlight {
+  color: var(--study-secondary);
+  background: linear-gradient(
+    transparent 52%,
+    var(--study-secondary-marker) 52%,
+    var(--study-secondary-marker) 94%,
+    transparent 94%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Maintenance: the few findings that directly explain the redesign choices. */
+.case-study-page .study--project-2 .apt-decision-finding .study-tone-highlight {
+  color: var(--study-secondary);
+  background: var(--study-secondary-marker);
+}
+
+/* Quiq: a small return of its brand orange at the defining brand brief. */
+.study--project-3 .quiq-brand-brief > header {
+  background: var(--study-secondary-soft);
+  border-bottom-color: var(--study-secondary-marker);
+  box-shadow: inset 3px 0 0 var(--study-secondary);
+}
+
+.study--project-3 .quiq-brand-brief > header h3 {
+  color: var(--study-secondary);
+}
+
+/* Living Calendar: the central insight and the question guiding the design. */
+.study--project-4 #design-opportunity [data-content-id="how-might-we-help-people-reconnect-with"] {
+  background: var(--study-secondary-soft);
+  box-shadow: inset 3px 0 0 var(--study-secondary);
+}
+
+.study--project-4 #key-insights > .study-section-takeaway .study-tone-highlight,
+.study--project-4 #design-opportunity .study-tone-highlight {
+  color: var(--study-secondary);
+  background: linear-gradient(
+    transparent 52%,
+    var(--study-secondary-marker) 52%,
+    var(--study-secondary-marker) 94%,
+    transparent 94%
+  );
+}
+
+.study--project-4 #design-opportunity .study-tone-highlight strong {
+  color: inherit;
+}

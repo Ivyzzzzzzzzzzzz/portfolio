@@ -15,13 +15,13 @@ export const projects = [
     slug: "project-three",
     title: "Quiq",
     period: "2025.4",
-    subtitle: "Pharmacy brand packaging system",
+    subtitle: "Medicine brand identity & packaging",
     summary:
-      "A playful, approachable over-the-counter medication brand that uses warm packaging, conversational copy, and a modular visual system to ease everyday illness.",
-    disciplines: ["UX Research", "UX/UI Design", "Coding"],
+      "A medicine brand and packaging system that translates everyday symptoms into expressive patterns, distinct colors, and humorous, conversational labels.",
+    disciplines: ["Brand Design", "Visual Identity", "Packaging Design"],
     status: "case-study",
     cover: "/img/project-3/cover.svg",
-    accent: "#f15d3b",
+    accent: "#1d4673",
   },
   {
     slug: "justeat",

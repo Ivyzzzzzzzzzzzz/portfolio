@@ -1,7 +1,9 @@
-import { Block } from "../components/case-study/CaseStudy.jsx";
-import EditorialCaseStudy, { Copy, CopyList, FigureGallery, Heading, NumberedPoints, StepHeader, Takeaway, textOf } from "../components/case-study/EditorialCaseStudy.jsx";
+import { Block, Media } from "../components/case-study/CaseStudy.jsx";
+import EditorialCaseStudy, { Copy, CopyList, Heading, NumberedPoints, StepHeader, Takeaway, textOf } from "../components/case-study/EditorialCaseStudy.jsx";
+import MaintenanceDecisions from "./MaintenanceDecisions.jsx";
 import { content } from "../content/project-2/content.js";
 import { layout } from "../content/project-2/layout.js";
+import { assetPath } from "../lib/assets.js";
 import "./maintenance.css";
 
 function DiaryDetails({ block }) {
@@ -110,15 +112,53 @@ function WorkflowTests({ block }) {
   </div>;
 }
 
+function CompetitorScreen({ screen }) {
+  return <figure className="apt-competitor-screen">
+    <svg viewBox={screen.viewBox} role="img" aria-labelledby={`${screen.id}-image-title`}>
+      <title id={`${screen.id}-image-title`}>{`${screen.media.alt} Numbered outlines correspond to the findings below.`}</title>
+      <image href={assetPath(screen.media.src)} width={screen.media.width} height={screen.media.height} />
+      {screen.findings.filter(finding => finding.region).map(finding => {
+        const [x, y, width, height] = finding.region;
+        return <g key={finding.number} className={`apt-screen-mark apt-tone-${finding.tone}`} aria-hidden="true">
+          <rect x={x} y={y} width={width} height={height} rx="2" />
+          <circle cx={x + width} cy={y + 5} r="6" />
+          <text x={x + width} y={y + 5} dy=".35em" textAnchor="middle">{finding.number}</text>
+        </g>;
+      })}
+    </svg>
+    <figcaption>{screen.caption}</figcaption>
+  </figure>;
+}
+
 function CompetitorStudy({ block }) {
-  const [notes, workflow, screens] = block.items;
   return <div className="apt-competitor" data-content-id={block.id}>
-    <div className="ed-response-grid" data-content-id={notes.id}>
-      {[0, 2].map(index => <article className="ed-note-panel" key={notes.items[index].id}>
-        <Heading block={notes.items[index]} /><CopyList block={notes.items[index + 1]} />
+    <div className="apt-competitor-heading">
+      <p className="ed-eyebrow">Everly · Resident portal</p>
+      <div className="apt-competitor-legend" aria-label="Annotation key">
+        <span className="apt-tone-strength"><b aria-hidden="true">+</b> Strength</span>
+        <span className="apt-tone-weakness"><b aria-hidden="true">−</b> Weakness</span>
+      </div>
+    </div>
+    <div className="apt-competitor-grid">
+      {block.screens.map(screen => <article className="apt-competitor-card" key={screen.id} data-content-id={screen.id}>
+        <header><span className="ed-eyebrow">{screen.flow}</span><h3 className="ed-heading">{screen.title}</h3></header>
+        <CompetitorScreen screen={screen} />
+        <div className="apt-competitor-findings">
+          {screen.findings.map(finding => <div className={`apt-competitor-finding apt-tone-${finding.tone}`} key={finding.number}>
+            <span className="apt-finding-number" aria-hidden="true">{finding.number}</span>
+            <div>
+              <p className="apt-finding-label">{finding.tone === "strength" ? "Strength" : "Weakness"}{finding.source && ` · ${finding.source}`}</p>
+              <h4>{finding.title}</h4>
+              <p>{finding.text}</p>
+              {finding.steps && <ol className="apt-competitor-flow" aria-label={finding.flowLabel}>
+                {finding.steps.map(step => <li key={step}>{step}</li>)}
+              </ol>}
+            </div>
+          </div>)}
+        </div>
+        <div className="apt-competitor-response"><p className="ed-eyebrow">For my redesign</p><p>{screen.takeaway}</p></div>
       </article>)}
     </div>
-    <div className="apt-competitor-images ed-media"><Block block={workflow} /><Block block={screens} /></div>
   </div>;
 }
 
@@ -145,53 +185,47 @@ function Wireframes({ block }) {
   </div>;
 }
 
-function InputComparison({ block }) {
-  const [details, comparison] = block.items;
-  return <div className="apt-input-comparison" data-content-id={block.id}>
-    <FigureGallery block={comparison} className="apt-before-after" />
-    <div className="apt-input-details">
-      <p className="ed-eyebrow">Input field details</p>
-      <div className="ed-media" data-content-id={details.id}>{details.items.map(image => <Block block={image} key={image.id} />)}</div>
-    </div>
-  </div>;
-}
-
-function HistoryComparison({ block }) {
-  const [timeline, updates, before] = block.items;
-  return <div className="apt-history-comparison" data-content-id={block.id} tabIndex={0} role="region" aria-label="Request history comparison; scroll to compare all three screens on smaller displays">
-    {[before, timeline, updates].map((item, index) => <figure key={item.id} data-content-id={item.id}>
-      <p className="ed-eyebrow">{index === 0 ? "Before" : index === 1 ? "After · Request history" : "After · Request details"}</p>
-      <div className="ed-image-stage ed-media"><Block block={item.media} /></div>
-      {item.copy && <figcaption><Copy block={item.copy} /></figcaption>}
-    </figure>)}
-  </div>;
-}
-
-function DesignDecisions({ block }) {
-  const [first, ...rest] = block.items;
-  const [intro, firstDecision] = first.items;
-  const [firstCopy, firstResponse] = firstDecision.items;
-  const decisions = [
-    { id: firstDecision.id, number: firstCopy.items[0], title: firstCopy.items[1], observation: firstCopy.items[2], response: firstResponse },
-    ...rest.map(item => {
-      const [number, title, body] = item.items;
-      const [copy, media] = body.type === "pair" ? [body.copy, body.media] : body.items;
-      return { id: item.id, number, title, observation: copy.items[0], response: copy.items[1], media };
-    }),
-  ];
-  return <div className="apt-decisions" data-content-id={block.id}>
-    <Copy block={intro} />
-    {decisions.map(item => <article className="apt-decision" key={item.id} data-content-id={item.id}>
-      <header className="ed-step-heading">
-        <span className="ed-step-number" data-content-id={item.number.id}>{textOf(item.number.text).padStart(2, "0")}</span>
-        <Heading block={item.title} />
-      </header>
-      <div className={item.media?.type === "image" ? "apt-decision-single" : "apt-decision-body"}>
-        <div className="ed-response-grid">
-          <div className="ed-observation"><p className="ed-eyebrow">What testing revealed</p><Copy block={item.observation} /></div>
-          <Takeaway><Copy block={item.response} /></Takeaway>
+function PrototypeFlows({ block }) {
+  return <div className="apt-prototype-flows" data-content-id={block.id}>
+    {block.flows.map((flow, flowIndex) => <article className="apt-prototype-flow" key={flow.id}
+      data-content-id={flow.id} aria-labelledby={flow.heading.id}>
+      <header className="apt-prototype-heading">
+        <div>
+          <p className="ed-eyebrow">Flow {String(flowIndex + 1).padStart(2, "0")}</p>
+          <Heading block={flow.heading} />
+          <Copy block={flow.description} />
         </div>
-        {item.media && <div className="apt-decision-media ed-media"><Block block={item.media} /></div>}
+        {flow.legend && <ul className="apt-prototype-legend" aria-label="Annotation key">
+          {flow.legend.map(item => <li key={item.kind} className={`apt-prototype-${item.kind}`}>
+            <span aria-hidden="true" />{item.label}
+          </li>)}
+        </ul>}
+      </header>
+      <p className="apt-prototype-scroll-hint" id={`${flow.id}-scroll-hint`}>Scroll to follow the flow <span aria-hidden="true">→</span></p>
+      <div className="apt-prototype-scroll" tabIndex={0} role="region"
+        aria-label={`${textOf(flow.heading.text)} — four screens in order`}
+        aria-describedby={`${flow.id}-scroll-hint`}>
+        <ol className="apt-prototype-strip">
+          {flow.items.map((item, index) => <li key={item.id}>
+            <figure data-content-id={item.id}>
+              <div className="apt-prototype-screen" data-content-id={item.media.id}>
+                <Media media={item.media} />
+                {item.regions && <svg className="apt-prototype-annotations" viewBox={`0 0 ${item.media.width} ${item.media.height}`}
+                  aria-hidden="true" focusable="false">
+                  {item.regions.map(region => <rect key={region.kind} className={`apt-prototype-${region.kind}`}
+                    x={region.x} y={region.y} width={region.width} height={region.height} rx="10" />)}
+                </svg>}
+                {index < flow.items.length - 1 && (item.connectors || [{ kind: "next", y: 340 }]).map(connector =>
+                  <span key={connector.kind} className={`apt-prototype-connector apt-prototype-${connector.kind}`}
+                    style={{ top: `${connector.y / item.media.height * 100}%` }} aria-hidden="true" />)}
+              </div>
+              <figcaption>
+                <span className="apt-prototype-step" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                <Copy block={item.caption} />
+              </figcaption>
+            </figure>
+          </li>)}
+        </ol>
       </div>
     </article>)}
   </div>;
@@ -199,7 +233,7 @@ function DesignDecisions({ block }) {
 
 const components = {
   "maintenance-staff-and-contractors-frequently-entered-units-2": NumberedPoints,
-  "current-maintenance-systems-fail-to-address-users-2": ({ block }) => <Takeaway label="Key findings"><div className="ed-response-grid" data-content-id={block.id}>{block.items.map(item => <Copy block={item} key={item.id} />)}</div></Takeaway>,
+  "current-maintenance-systems-fail-to-address-users-2": ({ block }) => <Takeaway emphasis label="Key findings"><div className="ed-response-grid" data-content-id={block.id}>{block.items.map(item => <Copy block={item} key={item.id} />)}</div></Takeaway>,
   "1-2": StepHeader,
   "2-2": StepHeader,
   "3-2": StepHeader,
@@ -218,10 +252,8 @@ const components = {
   "strength-4": CompetitorStudy,
   "persona-storyboard-user-journey-visuals-2": PersonaJourney,
   "submit-requests-3": Wireframes,
-  "high-fi-prototype-visuals": ({ block }) => <div><FigureGallery block={block} className="apt-phone-gallery" label="Screen" /></div>,
-  "based-on-usability-testing-i-identified-several-3": DesignDecisions,
-  "before-4": InputComparison,
-  "redesigned-request-history-as-a-clear-status-based-3": HistoryComparison,
+  "high-fi-prototype-visuals": PrototypeFlows,
+  "based-on-usability-testing-i-identified-several-3": MaintenanceDecisions,
 };
 
 export default function MaintenanceCaseStudy() {

@@ -54,6 +54,32 @@ function InteractionRecording({ block }) {
   </div>;
 }
 
+function PrototypeShowcase({ block }) {
+  const [heading, link] = block.copy.items;
+  const [selectedRecording, setSelectedRecording] = useState(0);
+  const recording = block.media.items[selectedRecording];
+  const playerId = `${block.id}-player`;
+  return <section className="lc-prototype-showcase" data-content-id={block.id} aria-labelledby={heading.id}>
+    <header className="lc-prototype-header" data-content-id={block.copy.id}>
+      <h3 id={heading.id} data-content-id={heading.id}><RichText value={heading.text} /></h3>
+      <Block block={link} />
+    </header>
+    <div className="lc-prototype-player" data-content-id={block.media.id}>
+      <div className="lc-prototype-switcher" role="group" aria-label="Prototype recordings">
+        {block.media.items.map((clip, index) => <button type="button" key={clip.id}
+          aria-pressed={selectedRecording === index} aria-controls={playerId}
+          onClick={() => setSelectedRecording(index)}>
+          {clip.label}
+        </button>)}
+      </div>
+      <div className="lc-prototype-preview" id={playerId} role="region" aria-label={`${recording.label} prototype video`}
+        style={{ "--lc-prototype-ratio": `${recording.width} / ${recording.height}` }}>
+        <InteractionRecording key={recording.id} block={recording} />
+      </div>
+    </div>
+  </section>;
+}
+
 function TechnicalStudies({ block }) {
   return <div className="lc-technical-studies" data-content-id={block.id}>
     {block.items.map(study => {
@@ -181,6 +207,7 @@ function NavigationScreens({ block }) {
 
 const components = {
   ...researchComponents,
+  "final-prototype-showcase": PrototypeShowcase,
   "sitemap-and-user-flow": NavigationDiagrams,
   "designing-a-seasonal-journey-group-23984-1": NativeDiagram,
   "designing-a-seasonal-journey-user-map-1-1": NativeDiagram,

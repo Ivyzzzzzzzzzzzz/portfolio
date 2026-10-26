@@ -7,14 +7,24 @@ export const content = {
     "title": "A Living Calendar",
     "period": "2025.12-2026.4",
     "disciplines": ["Interactive Website", "UX/UI Design", "Creative Coding"],
-    "subtitle": "Reimagining the 24 Solar Terms",
-    "description": "An interactive website reinterpreting the Chinese 24 Solar Terms through data, culture, and personal reflection. The goal is to reconnect time with the environment and reimagine intangible cultural heritage as a living, contemporary experience.",
+    "subtitle": [
+      { "text": "Reconnecting daily life with " },
+      { "text": "seasonal change", "tone": "highlight" },
+      { "text": "." }
+    ],
+    "problem": "People recognized the 24 Solar Terms as cultural heritage, yet felt disconnected from the seasonal changes behind them in daily life.",
+    "description": "I designed and built an interactive calendar that connects daylight and shadow, cultural stories, and prompts for personal reflection, giving people ways to notice and engage with each season.",
     "link": {"text": "https://24-solar-terms-eta.vercel.app/intro", "href": "https://24-solar-terms-eta.vercel.app/intro"}
   },
   "sections": [
     {
       "id": "message-from-home",
       "title": "Message from home",
+      "takeaway": [
+        {"text": "A family ritual revealed my own "},
+        {"text": "distance from seasonal life", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "group",
@@ -35,11 +45,6 @@ export const content = {
                 },
                 {"text": "they had become little more than calendar notifications that I rarely noticed.", "strong": true, "tone": "olive"}
               ]
-            },
-            {
-              "type": "text",
-              "id": "this-simple-message-made-me-question-not",
-              "text": "This simple message made me question not only my relationship with the Solar Terms, but also my relationship with seasonal change itself."
             }
           ]
         }
@@ -48,16 +53,16 @@ export const content = {
     {
       "id": "the-disconnect",
       "title": "The Disconnect",
+      "takeaway": [
+        {"text": "Modern calendars organize our schedules while "},
+        {"text": "seasonal change fades into the background", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "group",
           "id": "a-temporal-gap-emerges-as-modern-calendrical-2",
           "items": [
-            {
-              "type": "text",
-              "id": "a-temporal-gap-emerges-as-modern-calendrical",
-              "text": "A temporal gap emerges as modern calendrical systems drift away from the climate-based logic of the 24 ST."
-            },
             {
               "type": "columns",
               "id": "before-digital-clocks-and-numerical-dates-humans-3",
@@ -164,13 +169,15 @@ export const content = {
     },
     {
       "id": "time-told-by-nature-not-numbers",
-      "title": "Time Told by Nature, Not Numbers",
+      "title": [
+        {"text": "Time Told by "},
+        {"text": "Nature, Not Numbers", "tone": "highlight"}
+      ],
       "blocks": [
         {
           "type": "group",
           "id": "whats-24-solar-terms-2",
           "items": [
-            {"type": "text", "id": "whats-24-solar-terms", "text": "What’s 24 Solar Terms"},
             {
               "type": "columns",
               "id": "the-24-solar-terms-are-a-traditional-3",
@@ -231,6 +238,11 @@ export const content = {
     {
       "id": "understanding-existing-connections",
       "title": "Understanding Existing Connections",
+      "takeaway": [
+        {"text": "Cultural recognition was high; "},
+        {"text": "everyday engagement was low", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "group",
@@ -239,7 +251,7 @@ export const content = {
             {
               "type": "text",
               "id": "since-the-solar-terms-originated-in-chinese",
-              "text": "Since the Solar Terms originated in Chinese culture, I first wanted to understand how people who grew up with them relate to them today."
+              "text": "I began with people who grew up with the Solar Terms, asking how they relate to them in daily life."
             },
             {
               "type": "columns",
@@ -358,7 +370,10 @@ export const content = {
                 {
                   "type": "text",
                   "id": "most-participants-associate-them-with-cultural-heritage",
-                  "text": "Most participants associate them with cultural heritage rather than ecological awareness"
+                  "text": [
+                    {"text": "Most participants associate them with "},
+                    {"text": "cultural heritage rather than ecological awareness", "strong": true}
+                  ]
                 }
               ]
             }
@@ -369,18 +384,25 @@ export const content = {
     {
       "id": "a-different-problem-emerged",
       "title": "A Different Problem Emerged",
+      "takeaway": [
+        {"text": "The focus shifted from preserving cultural knowledge to "},
+        {"text": "reconnecting people with seasonal change", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "text",
           "id": "i-initially-assumed-this-was-a-cultural",
+          "assumptionTitle": "Cultural preservation",
+          "findingTitle": "Ecological disconnection",
           "text": [
-            {"text": "I initially assumed this was a cultural preservation problem.", "tone": "gold"},
+            {"text": "I initially assumed this was a cultural preservation problem.", "tone": "muted"},
             {"text": "\n"},
             {"text": "However, the research revealed something different.", "strong": true, "tone": "muted"},
             {"text": "\n"},
-            {"text": "People knew the Solar Terms existed, ", "tone": "gold"},
+            {"text": "People knew the Solar Terms existed, ", "tone": "muted"},
             {"text": "yet still felt disconnected ", "strong": true, "tone": "muted"},
-            {"text": "from the ecological observations behind them.", "tone": "gold"}
+            {"text": "from the ecological observations behind them.", "tone": "muted"}
           ]
         }
       ]
@@ -388,16 +410,16 @@ export const content = {
     {
       "id": "expanding-the-audience",
       "title": "Expanding the Audience",
+      "takeaway": [
+        {"text": "Sensory cues offer a "},
+        {"text": "shared entry point across cultures", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "group",
           "id": "if-awareness-alone-wasn-t-enough-what-actually-2",
           "items": [
-            {
-              "type": "text",
-              "id": "if-awareness-alone-wasn-t-enough-what-actually",
-              "text": "If awareness alone wasn't enough, what actually helps people feel connected to seasons?"
-            },
             {
               "type": "columns",
               "id": "how-do-people-notice-seasonal-change-3",
@@ -593,6 +615,11 @@ export const content = {
     {
       "id": "key-insights",
       "title": "Key Insights",
+      "takeaway": [
+        {"text": "Seasonal connection grows through "},
+        {"text": "observation, sensory experience, and reflection", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "columns",
@@ -606,7 +633,11 @@ export const content = {
                 {
                   "type": "text",
                   "id": "people-recognize-the-st-but-rarely-experience",
-                  "text": "People recognize the ST but rarely experience their ecological meaning."
+                  "text": [
+                    {"text": "People recognize the ST but "},
+                    {"text": "rarely experience their ecological meaning", "strong": true},
+                    {"text": "."}
+                  ]
                 }
               ]
             },
@@ -618,7 +649,11 @@ export const content = {
                 {
                   "type": "text",
                   "id": "people-connect-through-observation-atmosphere-and-environmental",
-                  "text": "People connect through observation, atmosphere, and environmental change."
+                  "text": [
+                    {"text": "People connect through "},
+                    {"text": "observation, atmosphere, and environmental change", "strong": true},
+                    {"text": "."}
+                  ]
                 }
               ]
             },
@@ -630,7 +665,11 @@ export const content = {
                 {
                   "type": "text",
                   "id": "users-prefer-lightweight-moments-of-reflection-over",
-                  "text": "Users prefer lightweight moments of reflection over text-heavy learning."
+                  "text": [
+                    {"text": "Users prefer "},
+                    {"text": "lightweight moments of reflection", "strong": true},
+                    {"text": " over text-heavy learning."}
+                  ]
                 }
               ]
             },
@@ -642,7 +681,11 @@ export const content = {
                 {
                   "type": "text",
                   "id": "the-environmental-principles-behind-the-st-resonate",
-                  "text": "The environmental principles behind the ST resonate beyond their cultural origins."
+                  "text": [
+                    {"text": "The environmental principles behind the ST "},
+                    {"text": "resonate beyond their cultural origins", "strong": true},
+                    {"text": "."}
+                  ]
                 }
               ]
             }
@@ -657,23 +700,25 @@ export const content = {
         {
           "type": "text",
           "id": "how-might-we-help-people-reconnect-with",
-          "text": "How might we help people reconnect with seasonal rhythms through a contemporary digital experience while making the ecological wisdom of the 24 Solar Terms accessible across cultures?"
+          "text": [
+            {"text": "How might we help people "},
+            {"text": "reconnect with seasonal rhythms", "strong": true, "tone": "highlight"},
+            {"text": " through a contemporary digital experience while making the ecological wisdom of the 24 Solar Terms accessible across cultures?"}
+          ]
         }
       ]
     },
     {
       "id": "designing-for-three-layers-of-connection",
-      "title": "Designing for Three Layers of Connection",
+      "title": [
+        {"text": "Designing for "},
+        {"text": "Three Layers of Connection", "tone": "highlight"}
+      ],
       "blocks": [
         {
           "type": "group",
           "id": "to-support-different-ways-of-connecting-with-2",
           "items": [
-            {
-              "type": "text",
-              "id": "to-support-different-ways-of-connecting-with",
-              "text": "To support different ways of connecting with the seasons, I developed a three-layer framework."
-            },
             {
               "type": "columns",
               "id": "ecological-layer-3",
@@ -728,23 +773,23 @@ export const content = {
     {
       "id": "from-insights-to-features",
       "title": "From Insights to Features",
+      "takeaway": [
+        {"text": "Prioritize "},
+        {"text": "exploration and reflection", "strong": true, "tone": "highlight"},
+        {"text": " over content-heavy learning."}
+      ],
       "blocks": [
         {
           "type": "group",
           "id": "using-the-research-insights-i-translated-user-2",
           "items": [
             {
-              "type": "text",
-              "id": "using-the-research-insights-i-translated-user",
-              "text": "Using the research insights, I translated user needs into a prioritized feature set."
-            },
-            {
               "type": "pair",
               "id": "because-users-connected-most-strongly-through-observation-2",
               "copy": {
                 "type": "text",
                 "id": "because-users-connected-most-strongly-through-observation",
-                "text": "Because users connected most strongly through observation and reflection, features that encouraged exploration and seasonal awareness were prioritized over content-heavy educational\u00a0experiences."
+                "text": "Participants connected most strongly through observation and reflection. This guided the feature priorities shown here."
               },
               "media": {
                 "type": "image",
@@ -762,16 +807,16 @@ export const content = {
     {
       "id": "exploring-ways-to-experience-time",
       "title": "Exploring Ways to Experience Time",
+      "takeaway": [
+        {"text": "Early concepts exposed a tension between "},
+        {"text": "familiar navigation and seasonal immersion", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "group",
           "id": "i-explored-several-approaches-for-presenting-the-2",
           "items": [
-            {
-              "type": "text",
-              "id": "i-explored-several-approaches-for-presenting-the",
-              "text": "I explored several approaches for presenting the Solar Terms digitally."
-            },
             {
               "type": "text",
               "id": "visual-references-exploring-traditional-chinese-aesthetics-and",
@@ -1028,27 +1073,6 @@ export const content = {
           "id": "once-the-overall-direction-was-established-i-2",
           "items": [
             {
-              "type": "text",
-              "id": "once-the-overall-direction-was-established-i",
-              "text": [
-                {
-                  "text": "Once the overall direction was established, I mapped how users would move through the experience. I wanted to create a journey that encouraged ",
-                  "tone": "gold"
-                },
-                {"text": " "},
-                {"text": "observation, discovery, and reflection.", "strong": true, "tone": "muted"}
-              ]
-            },
-            {
-              "type": "text",
-              "id": "personas-who-am-i-designing-for",
-              "text": [
-                {"text": "Personas ", "strong": true, "tone": "muted"},
-                {"text": "(Who Am I Designing For? )", "strong": true, "tone": "olive"}
-              ]
-            },
-            {"type": "text", "id": "research-revealed-two-key-audience-groups", "text": "Research revealed two key audience groups:"},
-            {
               "type": "columns",
               "id": "users-familiar-with-the-solar-terms-but-3",
               "items": [
@@ -1056,15 +1080,28 @@ export const content = {
                   "type": "pair",
                   "id": "users-familiar-with-the-solar-terms-but-2",
                   "copy": {
-                    "type": "text",
+                    "type": "group",
                     "id": "users-familiar-with-the-solar-terms-but",
-                    "text": "Users familiar with the Solar Terms but disconnected from their ecological meaning"
+                    "items": [
+                      {
+                        "type": "heading",
+                        "id": "familiar-audience-title",
+                        "text": [
+                          {"text": "Chinese Cultural Background", "tone": "highlight"}
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "familiar-audience-need",
+                        "text": "Familiar with the Solar Terms through family traditions, but seeking a closer connection to nature in everyday life."
+                      }
+                    ]
                   },
                   "media": {
                     "type": "image",
                     "id": "designing-a-seasonal-journey-frame-1437254417-1",
                     "src": "/img/project-4/frame-1437254417-1.svg",
-                    "alt": "Users familiar with the Solar Terms but — design study",
+                    "alt": "Persona for an audience with a Chinese cultural background seeking to reconnect familiar Solar Term traditions with everyday nature",
                     "width": 628.0,
                     "height": 637.0
                   }
@@ -1073,15 +1110,28 @@ export const content = {
                   "type": "pair",
                   "id": "users-unfamiliar-with-the-solar-terms-but-2",
                   "copy": {
-                    "type": "text",
+                    "type": "group",
                     "id": "users-unfamiliar-with-the-solar-terms-but",
-                    "text": "Users unfamiliar with the Solar Terms but interested in seasonal awareness."
+                    "items": [
+                      {
+                        "type": "heading",
+                        "id": "new-audience-title",
+                        "text": [
+                          {"text": "Global Audience", "tone": "highlight"}
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "id": "new-audience-need",
+                        "text": "Curious about seasonal change and Chinese culture; need an accessible introduction to the Solar Terms."
+                      }
+                    ]
                   },
                   "media": {
                     "type": "image",
                     "id": "designing-a-seasonal-journey-frame-1437254418-1",
                     "src": "/img/project-4/frame-1437254418-1.svg",
-                    "alt": "Users unfamiliar with the Solar Terms but — design study",
+                    "alt": "Persona for a global audience discovering the Solar Terms through an interest in seasonal change and Chinese culture",
                     "width": 628.0,
                     "height": 637.0
                   }
@@ -1311,16 +1361,79 @@ export const content = {
     {
       "id": "bringing-the-experience-to-life",
       "title": "Bringing the Experience to Life",
+      "takeaway": [
+        {"text": "A seasonal dial and procedural animation make "},
+        {"text": "time navigable and seasonal change visible", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
+        {
+          "type": "pair",
+          "id": "final-prototype-showcase",
+          "copy": {
+            "type": "group",
+            "id": "final-prototype-heading",
+            "items": [
+              {"type": "heading", "id": "final-prototype-title", "text": "Final Prototype"},
+              {
+                "type": "link",
+                "id": "final-prototype-link",
+                "text": "Try the prototype",
+                "href": "https://24-solar-terms-eta.vercel.app/intro"
+              }
+            ]
+          },
+          "media": {
+            "type": "group",
+            "id": "final-prototype-recordings",
+            "items": [
+              {
+                "type": "video",
+                "id": "prototype-landing-recording",
+                "label": "Landing",
+                "src": "/videos/project-4/prototype-landing.mp4",
+                "poster": "/videos/project-4/prototype-landing-poster.jpg",
+                "alt": "Final prototype recording: exploring the Solar Terms on the landing page",
+                "width": 1920,
+                "height": 1198
+              },
+              {
+                "type": "video",
+                "id": "prototype-intro-recording",
+                "label": "Intro",
+                "src": "/videos/project-4/prototype-intro.mp4",
+                "poster": "/videos/project-4/prototype-intro-poster.jpg",
+                "alt": "Final prototype recording: the introduction to A Living Calendar",
+                "width": 1920,
+                "height": 1198
+              },
+              {
+                "type": "video",
+                "id": "prototype-term-detail-recording",
+                "label": "Term Details",
+                "src": "/videos/project-4/prototype-term-detail.mp4",
+                "poster": "/videos/project-4/prototype-term-detail-poster.jpg",
+                "alt": "Final prototype recording: exploring a Solar Term's details",
+                "width": 1920,
+                "height": 1198
+              },
+              {
+                "type": "video",
+                "id": "prototype-calendar-recording",
+                "label": "Calendar",
+                "src": "/videos/project-4/prototype-calendar.mp4",
+                "poster": "/videos/project-4/prototype-calendar-poster.jpg",
+                "alt": "Final prototype recording: exploring the year calendar",
+                "width": 1920,
+                "height": 1198
+              }
+            ]
+          }
+        },
         {
           "type": "group",
           "id": "i-explored-several-approaches-for-presenting-the-4",
           "items": [
-            {
-              "type": "text",
-              "id": "i-explored-several-approaches-for-presenting-the-3",
-              "text": "I explored several approaches for presenting the Solar Terms digitally."
-            },
             {"type": "text", "id": "interaction-prototype-exploration", "text": "Interaction Prototype Exploration"},
             {
               "type": "columns",
@@ -1536,7 +1649,10 @@ export const content = {
     },
     {
       "id": "from-prototype-to-product",
-      "title": "From Prototype to Product",
+      "title": [
+        {"text": "From Prototype to a "},
+        {"text": "Working Website", "tone": "highlight"}
+      ],
       "blocks": [
         {
           "type": "group",
@@ -1546,7 +1662,6 @@ export const content = {
               "type": "group",
               "id": "final-implementation-2",
               "items": [
-                {"type": "text", "id": "final-implementation", "text": "Final Implementation"},
                 {
                   "type": "text",
                   "id": "after-validating-the-interaction-concepts-through-prototyping",
@@ -1675,6 +1790,11 @@ export const content = {
     {
       "id": "testing-refinement",
       "title": "Testing & Refinement",
+      "takeaway": [
+        {"text": "Participants understood the seasonal concept, but needed "},
+        {"text": "clearer interaction cues", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "group",
@@ -1686,7 +1806,7 @@ export const content = {
               "text": [
                 {
                   "text": "I conducted moderated usability testing with ",
-                  "tone": "gold"
+                  "tone": "muted"
                 },
                 {
                   "text": "six participants across three tasks",
@@ -1694,8 +1814,8 @@ export const content = {
                   "tone": "muted"
                 },
                 {
-                  "text": " to evaluate discoverability, navigation, and interaction clarity. The findings below highlight what worked and where the experience needed refinement.",
-                  "tone": "gold"
+                  "text": " to evaluate discoverability, navigation, and interaction clarity.",
+                  "tone": "muted"
                 }
               ]
             },
@@ -1934,6 +2054,11 @@ export const content = {
     {
       "id": "a-living-calendar",
       "title": "A Living Calendar",
+      "takeaway": [
+        {"text": "An interactive calendar brings "},
+        {"text": "ecology, culture, and personal reflection", "strong": true, "tone": "highlight"},
+        {"text": " together."}
+      ],
       "blocks": [
         {
           "type": "group",
@@ -1942,13 +2067,8 @@ export const content = {
             {
               "type": "link",
               "id": "https-24-solar-terms-eta-vercel-app-intro-2",
-              "text": "https://24-solar-terms-eta.vercel.app/intro",
+      "text": "Explore the live calendar ↗",
               "href": "https://24-solar-terms-eta.vercel.app/intro"
-            },
-            {
-              "type": "text",
-              "id": "a-living-calendar-reimagines-the-24-solar",
-              "text": "A Living Calendar reimagines the 24 Solar Terms as an interactive experience that combines ecological observation, cultural meaning, and personal reflection."
             },
             {
               "type": "pair",
@@ -2205,6 +2325,11 @@ export const content = {
     {
       "id": "reflection",
       "title": "Reflection",
+      "takeaway": [
+        {"text": "Experimental interactions need "},
+        {"text": "clarity and atmosphere to work together", "strong": true, "tone": "highlight"},
+        {"text": "."}
+      ],
       "blocks": [
         {
           "type": "columns",
@@ -2218,7 +2343,11 @@ export const content = {
                 {
                   "type": "text",
                   "id": "designing-this-website-made-me-more-aware",
-                  "text": "Designing this website made me more aware that experimental interaction design is not only about inventing new forms, but about deciding how much unfamiliarity a user can meaningfully hold."
+                  "text": [
+                    {"text": "Designing this website made me more aware that experimental interaction design is not only about inventing new forms, but about deciding "},
+                    {"text": "how much unfamiliarity a user can meaningfully hold", "strong": true},
+                    {"text": "."}
+                  ]
                 }
               ]
             },
@@ -2230,7 +2359,11 @@ export const content = {
                 {
                   "type": "text",
                   "id": "i-was-constantly-balancing-clarity-with-atmosphere",
-                  "text": "I was constantly balancing clarity with atmosphere, and function with visual character."
+                  "text": [
+                    {"text": "I was constantly "},
+                    {"text": "balancing clarity with atmosphere", "strong": true},
+                    {"text": ", and function with visual character."}
+                  ]
                 }
               ]
             },
@@ -2242,7 +2375,11 @@ export const content = {
                 {
                   "type": "text",
                   "id": "rather-than-treating-usability-and-aesthetics-as",
-                  "text": "Rather than treating usability and aesthetics as opposites, this process pushed me to see them as two forces that must be negotiated together."
+                  "text": [
+                    {"text": "Rather than treating usability and aesthetics as opposites, this process pushed me to see them as "},
+                    {"text": "two forces that must be negotiated together", "strong": true},
+                    {"text": "."}
+                  ]
                 }
               ]
             }

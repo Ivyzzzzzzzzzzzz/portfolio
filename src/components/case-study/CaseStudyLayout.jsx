@@ -27,12 +27,14 @@ export default function CaseStudyLayout({ projectId, children }) {
     <main className={`case-study-page case-study-page--${projectId}`} style={themeStyle}>
       <nav className="case-study-toolbar" aria-label="Case study navigation">
         <a className="case-study-back-link" href="#/">
-          Back to projects
+          <span aria-hidden="true">↖</span> Back to work
         </a>
         {currentProject ? (
           <div className="case-study-project-nav">
             <div className="case-study-current" aria-label="Current project">
-              <span className="case-study-current-kicker">Viewing</span>
+              <span className="case-study-current-kicker" aria-label={`Project ${currentIndex + 1} of ${caseStudyProjects.length}`}>
+                ({String(currentIndex + 1).padStart(2, "0")} / {String(caseStudyProjects.length).padStart(2, "0")})
+              </span>
               <span className="case-study-current-title">{currentProject.title}</span>
             </div>
             <div className="case-study-project-actions">
@@ -42,11 +44,11 @@ export default function CaseStudyLayout({ projectId, children }) {
                   href={`#/projects/${previousProject.slug}`}
                   aria-label={`Previous project: ${previousProject.title}`}
                 >
-                  Previous
+                  <span aria-hidden="true">←</span> Previous
                 </a>
               ) : null}
               <details className="case-study-project-menu">
-                <summary>Jump to project</summary>
+                <summary>All projects <span className="case-study-menu-chevron" aria-hidden="true">⌄</span></summary>
                 <div className="case-study-project-list">
                   {caseStudyProjects.map((project, index) => {
                     const isCurrentProject = project.slug === currentProject.slug;
@@ -74,7 +76,7 @@ export default function CaseStudyLayout({ projectId, children }) {
                   href={`#/projects/${nextProject.slug}`}
                   aria-label={`Next project: ${nextProject.title}`}
                 >
-                  Next
+                  Next <span aria-hidden="true">→</span>
                 </a>
               ) : null}
             </div>

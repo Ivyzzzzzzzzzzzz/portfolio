@@ -7,15 +7,20 @@ export const content = {
     "title": "Apt Maintenance Redesign",
     "period": "2026.1 - 2026.2",
     "disciplines": ["UX Research", "UX/UI Design", "Coding"],
-    "subtitle": "“Fix Fast, Enter Respectfully”",
-    "description": "A redesign of the Expo at Forest Park resident app focused on making maintenance requests clearer, easier to submit, and easier to track.",
+    "subtitle": [
+      { "text": "Giving residents " },
+      { "text": "clarity and control", "tone": "highlight" },
+      { "text": " over repairs." }
+    ],
+    "problem": "Expo residents were left guessing how to file a repair request, when someone would enter their home, and what was happening after submission.",
+    "description": "I redesigned the maintenance flow around guided requests, preferred visit windows, and step-by-step status tracking, making the next step visible from submission to completion.",
     "logo": {
       "type": "image",
       "id": "introduction-frame-1437254185-1-1",
-      "src": "/img/project-2/Frame 1437254185 (1) 1.svg",
-      "alt": "Apt Maintenance Redesign — design study",
-      "width": 62.0,
-      "height": 62.0
+      "src": "/img/project-2/maintenance-mark.svg",
+      "alt": "Apt Maintenance — house and wrench logo",
+      "width": 32,
+      "height": 32
     }
   },
   "sections": [
@@ -526,59 +531,86 @@ export const content = {
             {
               "type": "text",
               "id": "as-part-of-competitor-analysis-i-documented",
-              "text": "As part of competitor analysis, I documented a parallel maintenance workflow from another apartment app through user screen recordings. Comparing ticket submission and history review flows revealed alternative approaches to navigation, feedback, and system transparency."
+              "text": "I reviewed Everly’s maintenance submission and request history through user screen recordings, looking for patterns to carry into the Expo redesign and gaps that still leave residents without control."
             },
             {
-              "type": "columns",
+              "type": "competitorAnalysis",
               "id": "strength-4",
-              "items": [
+              "screens": [
                 {
-                  "type": "group",
-                  "id": "strength-3",
-                  "items": [
-                    {"type": "label", "id": "strength", "text": "Strength"},
+                  "id": "everly-submission",
+                  "flow": "Flow 01 · Submit",
+                  "title": "Submitting a request",
+                  "viewBox": "65 15 174 165",
+                  "caption": "Everly submission screen · Detail with annotations",
+                  "media": {
+                    "type": "image",
+                    "id": "competitor-analysis-screenshot-2025-09-14-at-22-13-18",
+                    "src": "/img/project-2/screenshot-2025-09-14-at-22-13-18.svg",
+                    "alt": "Everly submission form with entry permission, location fields, an HVAC category, and a problem dropdown.",
+                    "width": 303,
+                    "height": 203
+                  },
+                  "findings": [
                     {
-                      "type": "text",
-                      "id": "submit-ticket-flow-uses-more-understandable-language",
-                      "text": "Submit Ticket flow uses more understandable language and sections: Location > Category > issue (living room > Air condition > vent/cooling).\nSupports multi-issue reporting in one session.\nView history cards are cleaner and can contain more ticket on one screen."
-                    },
-                    {"type": "label", "id": "weakness", "text": "Weakness"},
-                    {
-                      "type": "text",
-                      "id": "wording-is-not-user-orientated-for-example-hvac",
-                      "text": "Wording is not user-orientated, for example, HVAC.\nNo entry scheduling at submit: privacy remains pain points.\nNo search bar provided on category selection."
-                    }
-                  ]
-                },
-                {
-                  "type": "image",
-                  "id": "competitor-analysis-frame-1437254247-1",
-                  "src": "/img/project-2/frame-1437254247-1.svg",
-                  "alt": "Strength — design study",
-                  "width": 430.0,
-                  "height": 432.0
-                },
-                {
-                  "type": "group",
-                  "id": "competitor-analysis-visuals",
-                  "items": [
-                    {
-                      "type": "image",
-                      "id": "competitor-analysis-screenshot-2025-09-14-at-22-13-18",
-                      "src": "/img/project-2/screenshot-2025-09-14-at-22-13-18.svg",
-                      "alt": "Strength — design study",
-                      "width": 303.0,
-                      "height": 203.0
+                      "number": "1",
+                      "tone": "strength",
+                      "title": "A guided path to the issue",
+                      "text": "Breaking the request into location, category, and problem gives residents a clearer sequence.",
+                      "steps": ["Location", "Category", "Issue"],
+                      "flowLabel": "Everly issue selection sequence",
+                      "region": [71, 100, 157, 19]
                     },
                     {
-                      "type": "image",
-                      "id": "competitor-analysis-screenshot-2025-09-14-at-22-13-44",
-                      "src": "/img/project-2/screenshot-2025-09-14-at-22-13-44.svg",
-                      "alt": "Strength — design study",
-                      "width": 303.0,
-                      "height": 212.0
+                      "number": "2",
+                      "tone": "weakness",
+                      "title": "Categories still take work to decode",
+                      "text": "Technical labels such as “HVAC” are less familiar. Category selection also lacks search, leaving residents to browse the options.",
+                      "region": [71, 120, 136, 49]
+                    },
+                    {
+                      "number": "3",
+                      "tone": "weakness",
+                      "title": "Permission is not an appointment",
+                      "text": "An entry note and a yes/no toggle capture permission, but the recorded flow offers no time-slot selection.",
+                      "region": [71, 43, 157, 43]
                     }
-                  ]
+                  ],
+                  "takeaway": "Keep the guided sequence; add everyday labels, category search, and a way to schedule entry."
+                },
+                {
+                  "id": "everly-history",
+                  "flow": "Flow 02 · Review & continue",
+                  "title": "Managing multiple requests",
+                  "viewBox": "68 11 233 165",
+                  "caption": "Everly request history · Detail with annotation",
+                  "media": {
+                    "type": "image",
+                    "id": "competitor-analysis-screenshot-2025-09-14-at-22-13-44",
+                    "src": "/img/project-2/screenshot-2025-09-14-at-22-13-44.svg",
+                    "alt": "Everly history screen with Open Requests and Past Requests tabs and a grid of cards showing location, issue, priority, and completion date.",
+                    "width": 303,
+                    "height": 212
+                  },
+                  "findings": [
+                    {
+                      "number": "4",
+                      "tone": "strength",
+                      "title": "More requests, easier to scan",
+                      "text": "Compact cards repeat the same hierarchy: location, issue, priority, and completion date. Open and past requests have separate tabs.",
+                      "region": [73, 64, 219, 84]
+                    },
+                    {
+                      "number": "5",
+                      "tone": "strength",
+                      "source": "Recorded submit flow",
+                      "title": "Keep reporting in one session",
+                      "text": "“Submit & Add Another Issue” supports multiple reports in one session. This finding comes from the workflow comparison, beyond the screens shown here.",
+                      "steps": ["Submit request", "Add another issue"],
+                      "flowLabel": "Multi-issue reporting in the recorded Everly workflow"
+                    }
+                  ],
+                  "takeaway": "Keep request summaries compact and consistent, and make it easy to report another issue."
                 }
               ]
             }
@@ -712,72 +744,280 @@ export const content = {
       "title": "High-fi Prototype",
       "blocks": [
         {
-          "type": "columns",
+          "type": "prototypeFlows",
           "id": "high-fi-prototype-visuals",
-          "items": [
+          "flows": [
             {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-9-1",
-              "src": "/img/project-2/android-large-9-1.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
+              "type": "group",
+              "id": "prototype-submit-flow",
+              "heading": {
+                "type": "heading",
+                "id": "prototype-submit-title",
+                "text": "Submit a maintenance request"
+              },
+              "description": {
+                "type": "text",
+                "id": "prototype-submit-description",
+                "text": "Describe the issue, choose a visit time, and submit the request."
+              },
+              "legend": [
+                {
+                  "kind": "details",
+                  "label": "Request details"
+                },
+                {
+                  "kind": "schedule",
+                  "label": "Preferred arrival time"
+                }
+              ],
+              "items": [
+                {
+                  "type": "figure",
+                  "id": "prototype-submit-01",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-submit-01-caption",
+                    "text": "Start a new request"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-submit-01-image",
+                    "src": "/img/project-2/prototype-submit-01-empty.png",
+                    "alt": "Empty maintenance request form with location, category, description, and an inactive arrival-time picker.",
+                    "width": 362,
+                    "height": 774
+                  },
+                  "regions": [
+                    {
+                      "kind": "details",
+                      "x": 14,
+                      "y": 102,
+                      "width": 334,
+                      "height": 370
+                    },
+                    {
+                      "kind": "schedule",
+                      "x": 14,
+                      "y": 504,
+                      "width": 334,
+                      "height": 151
+                    }
+                  ],
+                  "connectors": [
+                    {
+                      "kind": "details",
+                      "y": 274
+                    },
+                    {
+                      "kind": "schedule",
+                      "y": 608
+                    }
+                  ]
+                },
+                {
+                  "type": "figure",
+                  "id": "prototype-submit-02",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-submit-02-caption",
+                    "text": "Add issue details"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-submit-02-image",
+                    "src": "/img/project-2/prototype-submit-02-details.png",
+                    "alt": "Maintenance request for an AC issue in the common space, with suggested description tags and the Save action enabled.",
+                    "width": 362,
+                    "height": 774
+                  },
+                  "regions": [
+                    {
+                      "kind": "details",
+                      "x": 14,
+                      "y": 102,
+                      "width": 334,
+                      "height": 421
+                    },
+                    {
+                      "kind": "schedule",
+                      "x": 14,
+                      "y": 556,
+                      "width": 334,
+                      "height": 142
+                    }
+                  ],
+                  "connectors": [
+                    {
+                      "kind": "details",
+                      "y": 274
+                    },
+                    {
+                      "kind": "schedule",
+                      "y": 632
+                    }
+                  ]
+                },
+                {
+                  "type": "figure",
+                  "id": "prototype-submit-03",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-submit-03-caption",
+                    "text": "Choose a visit date"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-submit-03-image",
+                    "src": "/img/project-2/prototype-submit-03-date.png",
+                    "alt": "Completed issue details with Friday, October 10 selected and available visit times shown.",
+                    "width": 362,
+                    "height": 773
+                  },
+                  "regions": [
+                    {
+                      "kind": "details",
+                      "x": 14,
+                      "y": 102,
+                      "width": 334,
+                      "height": 370
+                    },
+                    {
+                      "kind": "schedule",
+                      "x": 14,
+                      "y": 504,
+                      "width": 334,
+                      "height": 193
+                    }
+                  ],
+                  "connectors": [
+                    {
+                      "kind": "details",
+                      "y": 274
+                    },
+                    {
+                      "kind": "schedule",
+                      "y": 586
+                    }
+                  ]
+                },
+                {
+                  "type": "figure",
+                  "id": "prototype-submit-04",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-submit-04-caption",
+                    "text": "Choose a time and submit"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-submit-04-image",
+                    "src": "/img/project-2/prototype-submit-04-time.png",
+                    "alt": "The 11:30–14:30 arrival window is selected, with separate Save and Submit actions.",
+                    "width": 362,
+                    "height": 774
+                  },
+                  "regions": [
+                    {
+                      "kind": "details",
+                      "x": 14,
+                      "y": 102,
+                      "width": 334,
+                      "height": 288
+                    },
+                    {
+                      "kind": "schedule",
+                      "x": 14,
+                      "y": 421,
+                      "width": 334,
+                      "height": 259
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-10",
-              "src": "/img/project-2/android-large-10.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
-            },
-            {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-6",
-              "src": "/img/project-2/android-large-6.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
-            },
-            {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-9",
-              "src": "/img/project-2/android-large-9.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
-            },
-            {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-6-2",
-              "src": "/img/project-2/Android Large - 6.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
-            },
-            {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-9-2",
-              "src": "/img/project-2/Android Large - 9.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
-            },
-            {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-9-1-2",
-              "src": "/img/project-2/Android Large - 9-1.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
-            },
-            {
-              "type": "image",
-              "id": "high-fi-prototype-android-large-10-2",
-              "src": "/img/project-2/Android Large - 10.svg",
-              "alt": "High-fi Prototype — design study",
-              "width": 248.0,
-              "height": 541.0
+              "type": "group",
+              "id": "prototype-track-flow",
+              "heading": {
+                "type": "heading",
+                "id": "prototype-track-title",
+                "text": "Track and review requests"
+              },
+              "description": {
+                "type": "text",
+                "id": "prototype-track-description",
+                "text": "Confirm receipt, review request history, and check progress and maintenance notes."
+              },
+              "items": [
+                {
+                  "type": "figure",
+                  "id": "prototype-track-01",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-track-01-caption",
+                    "text": "Receive confirmation"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-track-01-image",
+                    "src": "/img/project-2/prototype-track-01-confirmation.png",
+                    "alt": "Submission confirmation for an AC request, including its scheduled visit time, request number, and In Review status.",
+                    "width": 362,
+                    "height": 774
+                  }
+                },
+                {
+                  "type": "figure",
+                  "id": "prototype-track-02",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-track-02-caption",
+                    "text": "Browse request history"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-track-02-image",
+                    "src": "/img/project-2/prototype-track-02-history.png",
+                    "alt": "Maintenance history showing requests grouped visually by In Review, In Progress, and Completed status.",
+                    "width": 362,
+                    "height": 774
+                  }
+                },
+                {
+                  "type": "figure",
+                  "id": "prototype-track-03",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-track-03-caption",
+                    "text": "Check request progress"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-track-03-image",
+                    "src": "/img/project-2/prototype-track-03-review.png",
+                    "alt": "An AC request detail page with In Review expanded, followed by In Progress and Completed steps.",
+                    "width": 362,
+                    "height": 773
+                  }
+                },
+                {
+                  "type": "figure",
+                  "id": "prototype-track-04",
+                  "caption": {
+                    "type": "text",
+                    "id": "prototype-track-04-caption",
+                    "text": "Review completed work"
+                  },
+                  "media": {
+                    "type": "image",
+                    "id": "prototype-track-04-image",
+                    "src": "/img/project-2/prototype-track-04-completed.png",
+                    "alt": "A completed lighting request with its completion time and maintenance notes explaining the repair.",
+                    "width": 362,
+                    "height": 774
+                  }
+                }
+              ]
             }
           ]
         }
@@ -788,284 +1028,441 @@ export const content = {
       "title": "Design Decisions \nBased on User Testing",
       "blocks": [
         {
-          "type": "group",
+          "type": "testingDecisions",
           "id": "based-on-usability-testing-i-identified-several-3",
           "items": [
             {
               "type": "group",
-              "id": "based-on-usability-testing-i-identified-several-2",
-              "items": [
-                {
-                  "type": "text",
-                  "id": "based-on-usability-testing-i-identified-several",
-                  "text": "Based on usability testing, I identified several friction points in the maintenance request workflow. These insights informed a set of targeted design decisions aimed at improving clarity, reducing cognitive load, and creating a more guided experience."
-                },
-                {
-                  "type": "group",
-                  "id": "1-7",
-                  "items": [
-                    {
-                      "type": "group",
-                      "id": "1-6",
-                      "items": [
-                        {"type": "label", "id": "1-5", "text": "1"},
-                    {"type": "label", "id": "remove-priority-selection", "text": "Remove “Priority”\u00a0Selection"},
-                        {
-                          "type": "text",
-                          "id": "users-consistently-selected-high-even-when-guidance",
-                          "text": "Users consistently selected “high,” even when guidance was available.\nThe priority field introduced unnecessary decision-making without meaningful differentiation."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "priority-is-no-longer-user-defined-and-is",
-                      "text": [
-                        {"text": "Priority is no longer user-defined ", "strong": true, "tone": "dark"},
-                        {"text": " "},
-                        {"text": "and is instead determined by the maintenance team,", "strong": true, "tone": "dark"},
-                        {"text": " "},
-                        {"text": " reducing ambiguity and preventing misuse.", "strong": true, "tone": "dark"}
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "id": "2-5",
-              "items": [
-                {"type": "label", "id": "2-4", "text": "2"},
-                {
-                  "type": "label",
-                  "id": "clarify-structure-and-language-of-input-fields",
-                  "text": "Clarify Structure and Language of Input Fields"
-                },
-                {
-                  "type": "columns",
-                  "id": "users-struggled-with-the-relationship-between-issue-3",
-                  "items": [
-                    {
-                      "type": "group",
-                      "id": "users-struggled-with-the-relationship-between-issue-2",
-                      "items": [
-                        {
-                          "type": "text",
-                          "id": "users-struggled-with-the-relationship-between-issue",
-                          "text": "Users struggled with the relationship between issue location, category, and description. Terminology such as “HVAC” and unclear category hierarchies created hesitation."
-                        },
-                        {
-                          "type": "text",
-                          "id": "reordered-the-flow-to-match-user-logic",
-                          "text": [
-                            {"text": "Reordered the flow to match user logic: ", "strong": true, "tone": "dark"},
-                            {"text": " "},
-                            {
-                              "text": "start with issue location (room), then narrow down to relevant facilities,",
-                              "strong": true,
-                              "tone": "dark"
-                            },
-                            {"text": " "},
-                            {"text": " along with simplified labels and guided input to reduce guesswork.", "strong": true, "tone": "dark"}
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "columns",
-                      "id": "before-4",
-                      "items": [
-                        {
-                          "type": "columns",
-                          "id": "design-decisions-based-on-user-testing-visuals",
-                          "items": [
-                            {
-                              "type": "image",
-                              "id": "design-decisions-based-on-user-testing-frame-1437253863-2-1",
-                              "src": "/img/project-2/frame-1437253863-2-1.svg",
-                              "alt": "Before — design study",
-                              "width": 173.0,
-                              "height": 147.0
-                            },
-                            {
-                              "type": "image",
-                              "id": "design-decisions-based-on-user-testing-frame-1437253862-2-1",
-                              "src": "/img/project-2/frame-1437253862-2-1.svg",
-                              "alt": "Before — design study",
-                              "width": 173.0,
-                              "height": 215.0
-                            },
-                            {
-                              "type": "image",
-                              "id": "design-decisions-based-on-user-testing-place-image-here-1",
-                              "src": "/img/project-2/place-image-here-1.svg",
-                              "alt": "Before — design study",
-                              "width": 173.0,
-                              "height": 99.0
-                            }
-                          ]
-                        },
-                        {
-                          "type": "columns",
-                          "id": "before-3",
-                          "items": [
-                            {
-                              "type": "figure",
-                              "id": "before-2",
-                              "caption": {"type": "text", "id": "before", "text": "Before"},
-                              "media": {
-                                "type": "image",
-                                "id": "design-decisions-based-on-user-testing-img-2786",
-                                "src": "/img/project-2/IMG-2786.svg",
-                                "alt": "Before — design study",
-                                "width": 168.0,
-                                "height": 354.0
-                              }
-                            },
-                            {
-                              "type": "figure",
-                              "id": "after-2",
-                              "caption": {"type": "text", "id": "after", "text": "After"},
-                              "media": {
-                                "type": "image",
-                                "id": "design-decisions-based-on-user-testing-596-2",
-                                "src": "/img/project-2/596-2.svg",
-                                "alt": "After — design study",
-                                "width": 166.0,
-                                "height": 353.0
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "id": "3-5",
-              "items": [
-                {"type": "label", "id": "3-4", "text": "3"},
-                {"type": "label", "id": "introduce-a-defined-time-window-for-visits", "text": "Introduce a Defined Time Window for Visits"},
-                {
-                  "type": "pair",
-                  "id": "users-expressed-uncertainty-when-submitting-requests-particularl-3",
-                  "copy": {
-                    "type": "group",
-                    "id": "users-expressed-uncertainty-when-submitting-requests-particularl-2",
-                    "items": [
-                      {
-                        "type": "text",
-                        "id": "users-expressed-uncertainty-when-submitting-requests-particularl",
-                        "text": "Users expressed uncertainty when submitting requests, particularly around when maintenance would arrive. This lack of clarity led to second-guessing and concern about unexpected visits."
-                      },
-                      {
-                        "type": "text",
-                        "id": "added-a-preferred-time-window-selection-during",
-                        "text": "Added a “preferred time window” selection during submission, allowing users to specify availability and feel more in control of the process."
-                      }
-                    ]
+              "id": "decision-priority",
+              "heading": {
+                "type": "heading",
+                "id": "decision-priority-title",
+                "text": "Move priority assessment to the maintenance team"
+              },
+              "finding": {
+                "type": "text",
+                "id": "decision-priority-finding",
+                "text": [
+                  {
+                    "text": "Residents consistently "
                   },
-                  "media": {
-                    "type": "image",
-                    "id": "design-decisions-based-on-user-testing-frame-1437254268",
-                    "src": "/img/project-2/frame-1437254268.svg",
-                    "alt": "Users expressed uncertainty when submitting requests, particularly — design study",
-                    "width": 164.0,
-                    "height": 351.0
+                  {
+                    "text": "selected “High,” even with guidance",
+                    "strong": true,
+                    "tone": "highlight"
+                  },
+                  {
+                    "text": "."
                   }
-                }
-              ]
+                ]
+              },
+              "before": {
+                "type": "group",
+                "id": "priority-before",
+                "label": "Resident-selected urgency",
+                "media": {
+                  "type": "image",
+                  "id": "priority-field-detail",
+                  "src": "/img/project-2/IMG-2786.svg",
+                  "alt": "Detail of the original Priority dropdown in the resident submission form.",
+                  "width": 168,
+                  "height": 354
+                },
+                "crop": [
+                  20,
+                  42,
+                  112,
+                  34
+                ],
+                "notes": [
+                  {
+                    "number": 1,
+                    "text": "Self-reported priority",
+                    "region": [
+                      23,
+                      44,
+                      94,
+                      25
+                    ],
+                    "position": 52
+                  }
+                ]
+              },
+              "after": {
+                "type": "group",
+                "id": "priority-after",
+                "label": "Team-assigned priority",
+                "steps": [
+                  {
+                    "role": "Resident",
+                    "action": "Describe the issue"
+                  },
+                  {
+                    "role": "Maintenance team",
+                    "action": "Set priority"
+                  }
+                ]
+              },
+              "rationale": {
+                "type": "text",
+                "id": "decision-priority-rationale",
+                "text": "I separated problem reporting from urgency assessment, assigning that judgment to the maintenance team."
+              }
             },
             {
               "type": "group",
-              "id": "4-2",
-              "items": [
-                {"type": "label", "id": "4", "text": "4"},
-                {
-                  "type": "label",
-                  "id": "reframe-request-history-as-an-ongoing-status",
-                  "text": "Reframe Request History as an Ongoing Status Loop"
+              "id": "decision-arrival",
+              "heading": {
+                "type": "heading",
+                "id": "decision-arrival-title",
+                "text": "Balance predictable visits with practical scheduling"
+              },
+              "finding": {
+                "type": "text",
+                "id": "decision-arrival-finding",
+                "text": [
+                  {
+                    "text": "Residents needed a "
+                  },
+                  {
+                    "text": "predictable time window",
+                    "strong": true,
+                    "tone": "highlight"
+                  },
+                  {
+                    "text": " to plan around maintenance visits."
+                  }
+                ]
+              },
+              "before": {
+                "type": "group",
+                "id": "arrival-before",
+                "label": "Entry permission only",
+                "media": {
+                  "type": "image",
+                  "id": "arrival-original-detail",
+                  "src": "/img/project-2/IMG-2786.svg",
+                  "alt": "Original access instructions and Permission to Enter fields, without a date or time picker.",
+                  "width": 168,
+                  "height": 354
                 },
-                {
-                  "type": "columns",
-                  "id": "after-submission-users-felt-disconnected-from-the-3",
-                  "items": [
-                    {
-                      "type": "group",
-                      "id": "after-submission-users-felt-disconnected-from-the-2",
-                      "items": [
-                        {
-                          "type": "text",
-                          "id": "after-submission-users-felt-disconnected-from-the",
-                          "text": "After submission, users felt disconnected from the process. The existing history view did not clearly communicate status progression or provide reassurance about what happens next."
-                        },
-                        {
-                          "type": "text",
-                          "id": "added-a-preferred-time-window-selection-during-2",
-                          "text": "Redesigned request history as a clear, status-based timeline, with quick access to request details, updates, and maintenance notes."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "columns",
-                      "id": "redesigned-request-history-as-a-clear-status-based-3",
-                      "items": [
-                        {
-                          "type": "pair",
-                          "id": "redesigned-request-history-as-a-clear-status-based-2",
-                          "copy": {
-                            "type": "text",
-                            "id": "redesigned-request-history-as-a-clear-status-based",
-                            "text": "Redesigned request history as a clear, status-based timeline.\n\nEmphasized quick access to key details within each request."
-                          },
-                          "media": {
-                            "type": "image",
-                            "id": "design-decisions-based-on-user-testing-605-2",
-                            "src": "/img/project-2/605-2.svg",
-                            "alt": "Redesigned request history as a clear, status-based — design study",
-                            "width": 166.0,
-                            "height": 352.0
-                          }
-                        },
-                        {
-                          "type": "pair",
-                          "id": "improved-visibility-of-updates-and-maintenance-notes-2",
-                          "copy": {
-                            "type": "text",
-                            "id": "improved-visibility-of-updates-and-maintenance-notes",
-                            "text": "Improved visibility of updates and maintenance notes"
-                          },
-                          "media": {
-                            "type": "image",
-                            "id": "design-decisions-based-on-user-testing-603-2",
-                            "src": "/img/project-2/603-2.svg",
-                            "alt": "Improved visibility of updates and maintenance notes — design study",
-                            "width": 166.0,
-                            "height": 352.0
-                          }
-                        },
-                        {
-                          "type": "figure",
-                          "id": "before-6",
-                          "caption": {"type": "text", "id": "before-5", "text": "Before"},
-                          "media": {
-                            "type": "image",
-                            "id": "design-decisions-based-on-user-testing-img-2800",
-                            "src": "/img/project-2/IMG-2800.svg",
-                            "alt": "Before — design study",
-                            "width": 156.0,
-                            "height": 329.0
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+                "crop": [
+                  20,
+                  247,
+                  112,
+                  77
+                ],
+                "notes": [
+                  {
+                    "number": 1,
+                    "text": "No arrival time",
+                    "region": [
+                      23,
+                      250,
+                      94,
+                      66
+                    ],
+                    "position": 50
+                  }
+                ]
+              },
+              "after": {
+                "type": "group",
+                "id": "arrival-after",
+                "label": "Preferred 2–3-hour arrival windows",
+                "media": {
+                  "type": "image",
+                  "id": "arrival-redesigned-detail",
+                  "src": "/img/project-2/prototype-submit-04-time.png",
+                  "alt": "Preferred arrival time control with October 10 and 11:30–14:30 selected.",
+                  "width": 362,
+                  "height": 774
+                },
+                "crop": [
+                  12,
+                  394,
+                  338,
+                  288
+                ],
+                "notes": [
+                  {
+                    "number": 1,
+                    "text": "Plan the day",
+                    "region": [
+                      34,
+                      491,
+                      294,
+                      62
+                    ],
+                    "position": 39
+                  },
+                  {
+                    "number": 2,
+                    "text": "3-hour window",
+                    "region": [
+                      34,
+                      590,
+                      294,
+                      35
+                    ],
+                    "position": 75
+                  }
+                ]
+              },
+              "rationale": {
+                "type": "text",
+                "id": "decision-arrival-rationale",
+                "text": "I chose 2–3-hour arrival windows to give tenants predictability while preserving the maintenance team’s scheduling flexibility."
+              },
+              "constraint": {
+                "type": "text",
+                "id": "decision-arrival-constraint",
+                "text": [
+                  {
+                    "text": "Maintenance staff "
+                  },
+                  {
+                    "text": "cannot reliably commit to narrow arrival slots",
+                    "strong": true,
+                    "tone": "highlight"
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              }
+            },
+            {
+              "type": "group",
+              "id": "decision-progress",
+              "heading": {
+                "type": "heading",
+                "id": "decision-progress-title",
+                "text": "Make request history a communication channel"
+              },
+              "finding": {
+                "type": "text",
+                "id": "decision-progress-finding",
+                "text": [
+                  {
+                    "text": "After submitting, residents "
+                  },
+                  {
+                    "text": "could not tell what would happen next",
+                    "strong": true,
+                    "tone": "highlight"
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              },
+              "before": {
+                "type": "group",
+                "id": "progress-before",
+                "label": "Status inside a record",
+                "media": {
+                  "type": "image",
+                  "id": "progress-original-detail",
+                  "src": "/img/project-2/IMG-2800.svg",
+                  "alt": "Original history record with Work Completed shown among dense request details.",
+                  "width": 156,
+                  "height": 329
+                },
+                "crop": [
+                  19,
+                  36,
+                  115,
+                  142
+                ],
+                "notes": [
+                  {
+                    "number": 1,
+                    "text": "Status buried in details",
+                    "region": [
+                      22,
+                      122,
+                      108,
+                      16
+                    ],
+                    "position": 66
+                  }
+                ]
+              },
+              "after": {
+                "type": "group",
+                "id": "progress-after",
+                "label": "Progress and resolution",
+                "media": {
+                  "type": "image",
+                  "id": "progress-redesigned-detail",
+                  "src": "/img/project-2/prototype-track-04-completed.png",
+                  "alt": "Request detail with In Review, In Progress, and Completed steps, plus maintenance notes.",
+                  "width": 362,
+                  "height": 774
+                },
+                "crop": [
+                  12,
+                  155,
+                  338,
+                  453
+                ],
+                "notes": [
+                  {
+                    "number": 1,
+                    "text": "Follow each stage",
+                    "region": [
+                      21,
+                      163,
+                      320,
+                      221
+                    ],
+                    "position": 28
+                  },
+                  {
+                    "number": 2,
+                    "text": "See what was repaired",
+                    "region": [
+                      36,
+                      499,
+                      290,
+                      84
+                    ],
+                    "position": 82
+                  }
+                ]
+              },
+              "rationale": {
+                "type": "text",
+                "id": "decision-progress-rationale",
+                "text": "I organized history around review, progress, and completion so residents could follow the process and see what was repaired."
+              }
+            },
+            {
+              "type": "group",
+              "id": "decision-input",
+              "heading": {
+                "type": "heading",
+                "id": "decision-input-title",
+                "text": "Guide reporting from room to issue"
+              },
+              "finding": {
+                "type": "text",
+                "id": "decision-input-finding",
+                "text": [
+                  {
+                    "text": "Technical labels and unclear field order",
+                    "strong": true,
+                    "tone": "highlight"
+                  },
+                  {
+                    "text": " caused hesitation."
+                  }
+                ]
+              },
+              "before": {
+                "type": "group",
+                "id": "input-before",
+                "label": "Category comes first",
+                "media": {
+                  "type": "image",
+                  "id": "input-original-detail",
+                  "src": "/img/project-2/IMG-2786.svg",
+                  "alt": "Original Category, Sub Category, and Full Description fields, with no location-first guidance.",
+                  "width": 168,
+                  "height": 354
+                },
+                "crop": [
+                  20,
+                  80,
+                  112,
+                  161
+                ],
+                "notes": [
+                  {
+                    "number": 1,
+                    "text": "Unclear hierarchy",
+                    "region": [
+                      23,
+                      83,
+                      94,
+                      61
+                    ],
+                    "position": 25
+                  },
+                  {
+                    "number": 2,
+                    "text": "Unguided description",
+                    "region": [
+                      23,
+                      155,
+                      94,
+                      75
+                    ],
+                    "position": 73
+                  }
+                ]
+              },
+              "after": {
+                "type": "group",
+                "id": "input-after",
+                "label": "Location → Category → Description",
+                "media": {
+                  "type": "image",
+                  "id": "input-redesigned-detail",
+                  "src": "/img/project-2/prototype-submit-02-details.png",
+                  "alt": "Redesigned form showing Common space, AC, and suggested issue descriptions.",
+                  "width": 362,
+                  "height": 774
+                },
+                "crop": [
+                  12,
+                  158,
+                  338,
+                  365
+                ],
+                "notes": [
+                  {
+                    "number": 1,
+                    "text": "Room first",
+                    "region": [
+                      22,
+                      167,
+                      318,
+                      73
+                    ],
+                    "position": 13
+                  },
+                  {
+                    "number": 2,
+                    "text": "Everyday labels",
+                    "region": [
+                      22,
+                      254,
+                      318,
+                      73
+                    ],
+                    "position": 40
+                  },
+                  {
+                    "number": 3,
+                    "text": "Suggested issues",
+                    "region": [
+                      22,
+                      340,
+                      318,
+                      156
+                    ],
+                    "position": 76
+                  }
+                ]
+              },
+              "rationale": {
+                "type": "text",
+                "id": "decision-input-rationale",
+                "text": "I organized the form around where the problem occurs, then what is wrong, using familiar labels and suggested descriptions."
+              },
+              "supporting": true
             }
           ]
         }

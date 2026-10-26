@@ -1,0 +1,147 @@
+/* Shared portfolio typography and navigation, loaded after project styles.
+   Project palettes, content grids, artwork, and section spacing stay local. */
+:root {
+  --portfolio-font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --portfolio-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.case-study-page .study {
+  --study-body-font: var(--portfolio-font-sans);
+  --study-heading-font: var(--portfolio-font-sans);
+}
+
+.case-study-page .study h1 {
+  font-family: var(--portfolio-font-mono);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+.case-study-page .study :is(.study-subtitle, .study-section > h2) {
+  letter-spacing: -0.025em;
+}
+
+.case-study-page .study :is(.study-period, .study-disciplines) {
+  font-family: var(--portfolio-font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.case-study-page .study .study-disciplines {
+  gap: 4px 0;
+}
+
+.case-study-page .study .study-disciplines li {
+  text-decoration: none;
+}
+
+.case-study-page .study .study-disciplines li:not(:last-child)::after {
+  content: "/";
+  margin: 0 8px;
+}
+
+.case-study-page :is(.je-chapter-label, .ed-chapter-label, .lc-chapter-label) {
+  font-family: var(--portfolio-font-mono);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Keep each project's existing navigation colors; use the home's flat links. */
+.case-study-page .case-study-toolbar {
+  width: min(calc(100% - 64px), 1384px);
+  min-height: 62px;
+  padding: 12px 0;
+  backdrop-filter: none;
+}
+
+.case-study-page :is(.case-study-back-link, .case-study-project-step, .case-study-project-menu summary) {
+  gap: 8px;
+  border-color: transparent;
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--portfolio-font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  text-underline-offset: 5px;
+}
+
+.case-study-page .case-study-back-link {
+  padding-left: 0;
+}
+
+.case-study-page :is(.case-study-back-link, .case-study-project-step, .case-study-project-menu summary):hover {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+.case-study-page :is(.case-study-back-link, .case-study-project-step, .case-study-project-menu summary):focus-visible {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.case-study-page :is(.case-study-current-kicker, .case-study-project-number) {
+  font-family: var(--portfolio-font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.case-study-page .case-study-current-title {
+  font-family: var(--portfolio-font-sans);
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.case-study-page .case-study-project-menu summary {
+  border-bottom-color: var(--portfolio-line);
+}
+
+.case-study-project-menu[open] .case-study-menu-chevron {
+  transform: rotate(180deg);
+}
+
+.case-study-page .case-study-project-list {
+  border-radius: 4px;
+  box-shadow: 0 12px 28px rgb(18 19 63 / 0.08);
+}
+
+.case-study-page .case-study-project-option {
+  border-radius: 2px;
+  font-family: var(--portfolio-font-sans);
+  font-weight: 400;
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .case-study-page .case-study-toolbar {
+    width: calc(100% - 2 * clamp(20px, 5vw, 80px));
+  }
+}
+
+@media (max-width: 899px) {
+  .case-study-page .case-study-toolbar {
+    width: calc(100% - 36px);
+    min-height: 98px;
+    padding: 10px 0;
+  }
+
+  .case-study-page .case-study-current-title {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 560px) {
+  .case-study-page .case-study-current-title {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study-page .case-study-toolbar :is(a, summary) {
+    transition: none;
+  }
+}

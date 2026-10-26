@@ -109,7 +109,7 @@ function MarketInsights({ block }) {
         <div className="quiq-wellness-examples ed-media"><Block block={wellnessBody.media} /></div>
       </article>
     </div>
-    <Takeaway label={<span data-content-id={label.id}>{textOf(label.text)}</span>}><Copy block={conclusion} /></Takeaway>
+    <Takeaway emphasis label={<span data-content-id={label.id}>{textOf(label.text)}</span>}><Copy block={conclusion} /></Takeaway>
   </div>;
 }
 

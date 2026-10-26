@@ -169,6 +169,7 @@ export function CaseStudySection({ section, children }) {
       fontWeight: rule.headingWeight,
       fontFamily: rule.headingFont === "body" ? "var(--study-body-font)" : undefined,
     }}><RichText value={section.title} /></h2>
+    {section.takeaway && <p className="study-section-takeaway"><RichText value={section.takeaway} /></p>}
     <div className="study-section-body">
       {children || section.blocks.map((block, index) => <Block block={block} key={block.id || index} />)}
     </div>
@@ -188,7 +189,16 @@ function CaseStudyHero({ hero }) {
     </div>
     <div className="study-hero-copy">
       <p className="study-subtitle"><RichText value={hero.subtitle} /></p>
-      <p><RichText value={hero.description} /></p>
+      <dl className="study-hero-brief">
+        <div className="study-hero-problem">
+          <dt>The problem</dt>
+          <dd><RichText value={hero.problem} /></dd>
+        </div>
+        <div className="study-hero-response">
+          <dt>My response</dt>
+          <dd><RichText value={hero.description} /></dd>
+        </div>
+      </dl>
     </div>
   </header>;
 }

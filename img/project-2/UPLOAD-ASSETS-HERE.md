@@ -57,12 +57,20 @@ I normalized the uploaded SVG filenames so the website can load them. These file
 - `Android Large - 9-1.svg`
 - `Android Large - 10.svg`
 
-These uploaded screen exports are now displayed in the High-fi Prototype horizontal scroll section:
+The High-fi Prototype section now uses the eight PNG exports in two separate flows:
 
-- `android-large-6.svg`
-- `android-large-9.svg`
-- `android-large-9-1.svg`
-- `android-large-10.svg`
+| Flow | Step | File |
+| --- | --- | --- |
+| Submit a maintenance request | 1. Start a new request | `prototype-submit-01-empty.png` |
+| Submit a maintenance request | 2. Add issue details | `prototype-submit-02-details.png` |
+| Submit a maintenance request | 3. Choose a visit date | `prototype-submit-03-date.png` |
+| Submit a maintenance request | 4. Choose a time and submit | `prototype-submit-04-time.png` |
+| Track and review requests | 1. Receive confirmation | `prototype-track-01-confirmation.png` |
+| Track and review requests | 2. Browse request history | `prototype-track-02-history.png` |
+| Track and review requests | 3. Check request progress | `prototype-track-03-review.png` |
+| Track and review requests | 4. Review completed work | `prototype-track-04-completed.png` |
+
+These are unchanged copies of the user's exports. The first flow follows the supplied reference screenshot, with pink outlines for request details and yellow outlines for preferred arrival time. Annotation regions and connector positions are editable in `src/content/project-2/content.js`; the original PNGs contain no added annotations. Each flow keeps its four-screen order and scrolls horizontally on smaller displays. The older SVG exports remain available for other sections.
 
 These filenames appeared in the latest pasted export, but are not in `img/project-2/` yet:
 

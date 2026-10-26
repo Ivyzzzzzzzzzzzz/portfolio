@@ -11,8 +11,13 @@ export const content = {
       "UX/UI Design",
       "Prototyping"
     ],
-    "subtitle": "Food allergy order service",
-    "description": "A dine-in ordering app that shows personal allergen warnings to optimizes the hassle of dine-in ordering for people with food allergies .",
+    "subtitle": [
+      { "text": "Helping diners spot " },
+      { "text": "allergen conflicts", "tone": "highlight" },
+      { "text": " before they order." }
+    ],
+    "problem": "Diners with food allergies have to cross-check ingredients and explain dietary needs while everyone else is ready to order.",
+    "description": "I designed a dine-in ordering app that puts dish-level allergen warnings and shared dietary profiles directly in the menu, so diners can check for themselves and their table.",
     "logo": {
       "type": "image",
       "id": "introduction-group-8261",
@@ -35,7 +40,7 @@ export const content = {
             {
               "type": "text",
               "id": "eating-out-with-a-food-allergy-is",
-              "text": "Eating out with a food allergy is not a simple choice, it is a high-stakes decision made in fast, social, and often unpredictable environments."
+              "text": "Dining with food allergies means making high-stakes decisions in a fast-moving social setting."
             },
             {
               "type": "columns",
@@ -44,17 +49,41 @@ export const content = {
                 {
                   "type": "label",
                   "id": "33-000-000-americans-have-food-allergies",
-                  "text": "33,000,000 Americans have \nfood allergies"
+                  "text": [
+                    {
+                      "text": "33 million",
+                      "strong": true
+                    },
+                    {
+                      "text": " Americans have food allergies."
+                    }
+                  ]
                 },
                 {
                   "type": "label",
                   "id": "25-of-severe-reactions-happen-in-food",
-                  "text": "25% of severe reactions happen in \nfood service"
+                  "text": [
+                    {
+                      "text": "25%",
+                      "strong": true
+                    },
+                    {
+                      "text": " of severe reactions happen in food service."
+                    }
+                  ]
                 },
                 {
                   "type": "text",
                   "id": "more-than-50-of-restaurant-related-allergic-reactions",
-                  "text": "More than 50% of restaurant-related allergic reactions occur after diners inform staff of their allergy"
+                  "text": [
+                    {
+                      "text": "More than 50%",
+                      "strong": true
+                    },
+                    {
+                      "text": " of restaurant-related allergic reactions occur after diners inform staff of their allergy."
+                    }
+                  ]
                 }
               ]
             }
@@ -65,6 +94,19 @@ export const content = {
     {
       "id": "gap",
       "title": "Gap",
+      "takeaway": [
+        {
+          "text": "Existing apps leave a gap "
+        },
+        {
+          "text": "at the moment of ordering",
+          "strong": true,
+          "tone": "highlight"
+        },
+        {
+          "text": "."
+        }
+      ],
       "blocks": [
         {
           "type": "group",
@@ -73,7 +115,7 @@ export const content = {
             {
               "type": "text",
               "id": "existing-apps-largely-focus-on-individual-preparation",
-              "text": "Existing apps largely focus on individual preparation or post-purchase decision-making, rather than the real-time complexity of dine-in experiences."
+              "text": "I compared three approaches: ingredient lookup, packaged-food scanning, and restaurant discovery."
             },
             {
               "type": "columns",
@@ -523,6 +565,19 @@ export const content = {
     {
       "id": "ux-research",
       "title": "UX Research",
+      "takeaway": [
+        {
+          "text": "Ingredient checking adds "
+        },
+        {
+          "text": "mental effort and social pressure",
+          "strong": true,
+          "tone": "highlight"
+        },
+        {
+          "text": " to eating out."
+        }
+      ],
       "blocks": [
         {
           "type": "group",
@@ -551,7 +606,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "pretended-to-have-a-severe-egg-allergy",
-                  "text": "Pretended to have a severe egg allergy for one week to experience everyday food decisions under real risk."
+                  "text": "I followed an egg-free diet for one week to explore the everyday effort of checking ingredients while dining out."
                 }
               ]
             },
@@ -748,7 +803,18 @@ export const content = {
                         {
                           "type": "label",
                           "id": "its-awkward-to-be-the-only-person",
-                          "text": "“It’s awkward to be the only person not eating.”"
+                          "text": [
+                            {
+                              "text": "“It’s awkward to be "
+                            },
+                            {
+                              "text": "the only person not eating",
+                              "strong": true
+                            },
+                            {
+                              "text": ".”"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -788,7 +854,18 @@ export const content = {
                         {
                           "type": "label",
                           "id": "i-have-to-be-in-control-which",
-                          "text": "“I have to be in control which is hard in situations where you don’t have control.”"
+                          "text": [
+                            {
+                              "text": "“"
+                            },
+                            {
+                              "text": "I have to be in control",
+                              "strong": true
+                            },
+                            {
+                              "text": " which is hard in situations where you don’t have control.”"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -813,7 +890,18 @@ export const content = {
                         {
                           "type": "label",
                           "id": "its-hard-to-have-a-dairy-allergy",
-                          "text": "“It’s hard to have a dairy allergy because of how prevalent dairy is in everyday items.”"
+                          "text": [
+                            {
+                              "text": "“It’s hard to have a dairy allergy because of "
+                            },
+                            {
+                              "text": "how prevalent dairy is",
+                              "strong": true
+                            },
+                            {
+                              "text": " in everyday items.”"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -838,7 +926,18 @@ export const content = {
                         {
                           "type": "label",
                           "id": "they-wont-let-you-know-whether-the",
-                          "text": "“They won’t let you know whether the cheesecake is using lactose-free milk or not.”"
+                          "text": [
+                            {
+                              "text": "“"
+                            },
+                            {
+                              "text": "They won’t let you know",
+                              "strong": true
+                            },
+                            {
+                              "text": " whether the cheesecake is using lactose-free milk or not.”"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -863,7 +962,18 @@ export const content = {
                         {
                           "type": "text",
                           "id": "is-the-stomach-ache-worth-it-am",
-                          "text": "“Is the stomach ache worth it? Am I just trying to fit in at a dinner and not be the Gluten Free, allergy girl? I don’t know.”"
+                          "text": [
+                            {
+                              "text": "“Is the stomach ache worth it? Am I just "
+                            },
+                            {
+                              "text": "trying to fit in at a dinner",
+                              "strong": true
+                            },
+                            {
+                              "text": " and not be the Gluten Free, allergy girl? I don’t know.”"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -884,7 +994,18 @@ export const content = {
                         {
                           "type": "label",
                           "id": "theres-no-way-i-can-know-what",
-                          "text": "“There’s no way I can know what kind of apple I’m eating.”"
+                          "text": [
+                            {
+                              "text": "“"
+                            },
+                            {
+                              "text": "There’s no way I can know",
+                              "strong": true
+                            },
+                            {
+                              "text": " what kind of apple I’m eating.”"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -918,108 +1039,19 @@ export const content = {
       "title": "Design Goal",
       "blocks": [
         {
-          "type": "group",
-          "id": "design-goal-2",
-          "items": [
-            {
-              "type": "columns",
-              "id": "1-3",
-              "items": [
-                {
-                  "type": "card",
-                  "id": "1-2",
-                  "items": [
-                    {
-                      "type": "label",
-                      "id": "1",
-                      "text": "1"
-                    },
-                    {
-                      "type": "label",
-                      "id": "enable-fast-confident-choices-at-the-table",
-                      "text": "Enable fast, confident choices at the table, during ordering, not before \nor after."
-                    }
-                  ]
-                },
-                {
-                  "type": "card",
-                  "id": "2-2",
-                  "items": [
-                    {
-                      "type": "label",
-                      "id": "2",
-                      "text": "2"
-                    },
-                    {
-                      "type": "label",
-                      "id": "acknowledge-group-settings-by-supporting-shared-awareness",
-                      "text": "Acknowledge group settings by supporting shared awareness without forcing awkward conversations."
-                    }
-                  ]
-                },
-                {
-                  "type": "card",
-                  "id": "3-2",
-                  "items": [
-                    {
-                      "type": "label",
-                      "id": "3",
-                      "text": "3"
-                    },
-                    {
-                      "type": "label",
-                      "id": "use-clear-glanceable-signals-and-prioritized-warnings",
-                      "text": "Use clear, glanceable signals and prioritized warnings."
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "type": "text",
           "id": "how-might-we-provide-a-clear-and",
           "text": [
             {
-              "text": "How might we provide a clear and efficient way to ",
-              "tone": "muted"
+              "text": "How might we help diners check allergens and share dietary needs so everyone can "
             },
             {
-              "text": "identify safe dishes",
+              "text": "order with confidence",
               "strong": true,
-              "tone": "ink"
+              "tone": "highlight"
             },
             {
-              "text": " for people with food allergies and help them ",
-              "tone": "muted"
-            },
-            {
-              "text": "communicate dietary needs",
-              "strong": true,
-              "tone": "ink"
-            },
-            {
-              "text": " at restaurants so that they can ",
-              "tone": "muted"
-            },
-            {
-              "text": "dine confidently",
-              "strong": true,
-              "tone": "accent"
-            },
-            {
-              "text": " and ",
-              "tone": "muted"
-            },
-            {
-              "text": "enjoy an inclusive, stress-free experience shared equally",
-              "strong": true,
-              "tone": "accent"
-            },
-            {
-              "text": " with others.",
-              "tone": "muted"
+              "text": "?"
             }
           ]
         }
@@ -1036,27 +1068,7 @@ export const content = {
             {
               "type": "text",
               "id": "in-the-brainstorming-phase-i-explored-a",
-              "text": [
-                {
-                  "text": "In the brainstorming phase, I explored a wide range of ideas across ",
-                  "tone": "muted"
-                },
-                {
-                  "text": "Non-mobile app based, mobile app based, and analog",
-                  "tone": "ink"
-                },
-                {
-                  "text": " approaches. ",
-                  "tone": "muted"
-                },
-                {
-                  "text": "\n\n"
-                },
-                {
-                  "text": "Sketching across formats helped me quickly compare how different touch points could reduce uncertainty and social friction around food allergies.",
-                  "tone": "muted"
-                }
-              ]
+              "text": "I compared mobile, wearable, and analog concepts for reducing uncertainty and social friction around food allergies. Storyboards explore shared dining and individual pickup."
             },
             {
               "type": "columns",
@@ -1236,16 +1248,24 @@ export const content = {
     {
       "id": "design-concept",
       "title": "Design Concept",
+      "takeaway": [
+        {
+          "text": "Bring "
+        },
+        {
+          "text": "personalized allergen warnings",
+          "strong": true,
+          "tone": "highlight"
+        },
+        {
+          "text": " into the ordering moment."
+        }
+      ],
       "blocks": [
         {
           "type": "group",
           "id": "my-final-design-concept-is-a-dine-infocused-2",
           "items": [
-            {
-              "type": "text",
-              "id": "my-final-design-concept-is-a-dine-infocused",
-              "text": "My final design concept is a dine-in–focused food allergy device that supports people with allergies at the exact moment they need it: for ordering and eating in restaurants."
-            },
             {
               "type": "columns",
               "id": "scan-the-qr-code-4",
@@ -1265,7 +1285,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "after-entering-the-restaurant-and-taking-their",
-                        "text": "After entering the restaurant and taking their seats, customers scanned their phones to order."
+                        "text": "Scan the table’s QR code to start ordering."
                       }
                     ]
                   },
@@ -1293,7 +1313,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "matching-a-user-input-allergy-profile-with-dish",
-                        "text": "Matching a user-input allergy profile with dish ingredients and preparation details from the restaurant."
+                        "text": "Match dietary profiles with the restaurant’s dish ingredients and preparation details."
                       }
                     ]
                   },
@@ -1321,7 +1341,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "when-a-user-views-a-menu-or",
-                        "text": "When a user views a menu or selects a dish, the system highlights safe options and surfaces immediate warnings for items contain allergens."
+                        "text": "See personal allergen warnings while browsing the menu and choosing a dish."
                       }
                     ]
                   },
@@ -1349,7 +1369,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "viewing-cart-and-placing-order",
-                        "text": "Viewing cart and placing order."
+                        "text": "Review the cart and place the order."
                       }
                     ]
                   },
@@ -1378,7 +1398,7 @@ export const content = {
           "copy": {
             "type": "text",
             "id": "i-chose-the-app-s-single-user-ordering",
-            "text": "I chose the app's single user ordering process and draw this user flow to help me clear all the process."
+            "text": "This flow focuses on a single diner, from entering dietary preferences to reviewing dishes and checking out."
           },
           "media": {
             "type": "image",
@@ -1400,11 +1420,6 @@ export const content = {
           "id": "i-drew-wireframes-based-on-the-main-2",
           "items": [
             {
-              "type": "text",
-              "id": "i-drew-wireframes-based-on-the-main",
-              "text": "I drew wireframes based on the main user flow, and then further reflected on my design and delved deeper into the details of the interface."
-            },
-            {
               "type": "columns",
               "id": "main-elements-food-photo-dish-name-price-2",
               "items": [
@@ -1414,72 +1429,17 @@ export const content = {
                   "text": [
                     {
                       "text": "Main elements",
-                      "strong": true,
-                      "tone": "ink"
+                      "strong": true
                     },
                     {
-                      "text": "\n"
+                      "text": "\nFood photo\nDish name (price, rating)\nDish details\nView cart\n"
                     },
                     {
-                      "text": "Food photo",
-                      "strong": true,
-                      "tone": "ink"
+                      "text": "Allergen warnings",
+                      "strong": true
                     },
                     {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Dish name (price, rating)",
-                      "strong": true,
-                      "tone": "ink"
-                    },
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Dish details",
-                      "strong": true,
-                      "tone": "ink"
-                    },
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "View cart",
-                      "strong": true,
-                      "tone": "ink"
-                    },
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Allergies highlights",
-                      "strong": true,
-                      "tone": "ink"
-                    },
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Order detail",
-                      "strong": true,
-                      "tone": "ink"
-                    },
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Flavor, Source, etc",
-                      "strong": true,
-                      "tone": "ink"
-                    },
-                    {
-                      "text": "\n"
-                    },
-                    {
-                      "text": "Frequently bought together",
-                      "strong": true,
-                      "tone": "ink"
+                      "text": "\nOrder detail\nFlavor, source, etc.\nFrequently bought together"
                     }
                   ]
                 },
@@ -1697,7 +1657,7 @@ export const content = {
               "caption": {
                 "type": "label",
                 "id": "scan-qr-code-and-create-allergen-profile",
-                "text": "Scan QR code and create allergen profile."
+                "text": "Set dietary needs"
               },
               "media": {
                 "type": "video",
@@ -1714,7 +1674,7 @@ export const content = {
               "caption": {
                 "type": "label",
                 "id": "place-an-order",
-                "text": "Place an order."
+                "text": "Review warnings and order"
               },
               "media": {
                 "type": "video",
@@ -1731,7 +1691,7 @@ export const content = {
               "caption": {
                 "type": "label",
                 "id": "view-profile",
-                "text": "View profile"
+                "text": "Reuse saved profiles"
               },
               "media": {
                 "type": "video",
@@ -2362,8 +2322,8 @@ export const content = {
                                 "id": "i-designed-the-system-to-first-show-2",
                                 "copy": {
                                   "type": "text",
-                                "id": "i-designed-the-system-to-first-show",
-                                "text": "Avatar indicators identify diners with a potential allergen conflict."
+                                  "id": "i-designed-the-system-to-first-show",
+                                  "text": "Avatar indicators identify diners with a potential allergen conflict."
                                 },
                                 "media": {
                                   "type": "image",
@@ -2417,7 +2377,7 @@ export const content = {
               "caption": {
                 "type": "label",
                 "id": "responsive-layout",
-                "text": "Responsive layout"
+                "text": "Responsive layout: mobile and tablet"
               },
               "media": {
                 "type": "columns",

@@ -11,9 +11,6 @@
 }
 .study--project-4 :is(.study-text, .study-label, .study-heading) { max-width: min(100%, 62ch); }
 .study--project-4 .study-text { line-height: 1.65; }
-.study--project-4 .study-hero { grid-template-columns: 1fr 1.5fr; gap: 64px; padding-bottom: 48px; }
-.study--project-4 .study-hero-copy { max-width: 450px; gap: 16px; }
-.study--project-4 .study-project-meta { align-content: start; }
 .study--project-4 .study-project-link { border-radius: 4px; background: var(--lc-soft); }
 .study--project-4 .study-section {
   margin-top: 88px;
@@ -33,6 +30,22 @@
 .study--project-4 .study-space-tight { gap: 12px; }
 .study--project-4 .study-label { line-height: 1.4; }
 .study--project-4 h2:focus { outline: none; }
+
+/* Emphasize the title when it carries the conclusion; otherwise use one short takeaway. */
+.study--project-4 .study-section-takeaway {
+  max-width: 62ch;
+  margin-top: 14px;
+  color: #4f5238;
+  font: 500 18px/1.6 var(--study-body-font);
+}
+.study--project-4 .study-section .study-tone-highlight {
+  color: #4f5238;
+  background: linear-gradient(transparent 52%, #efe3ac 52%, #efe3ac 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.study--project-4 .study-section .study-tone-highlight strong { font-weight: 600; }
+.study--project-4 .study-text strong { color: #4f5238; font-weight: 600; }
 
 /* The same sticky chapter rail and compact menu used by Food Allergy. */
 .study--project-4.study-has-sidebar {
@@ -160,7 +173,7 @@
 .study--project-4 .lc-research-shift { display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; max-width: 1040px; }
 .study--project-4 .lc-research-shift > div { display: grid; align-content: start; gap: 12px; padding: 24px; border-top: 2px solid var(--lc-line); }
 .study--project-4 .lc-research-shift > div + div { background: #f5f2e5; border-color: #a5aa75; }
-.study--project-4 .lc-shift-transition { font-size: 13px; }
+.study--project-4 .lc-research-shift h3 { margin: 0; color: #4f5238; font: 600 22px/1.4 var(--study-body-font); text-wrap: auto; }
 .study--project-4 .lc-journey-heading { display: grid; gap: 6px; padding-top: 28px; border-top: 1px solid var(--lc-line); }
 .study--project-4 .lc-journey-heading > p { color: var(--study-muted); font-size: 14px; line-height: 1.5; }
 
@@ -292,12 +305,6 @@
   gap: 56px;
   align-items: start;
 }
-.study--project-4 #from-insights-to-features [data-content-id="because-users-connected-most-strongly-through-observation"] {
-  padding: 16px 0 16px 20px;
-  border-left: 3px solid #d7c15c;
-  font-size: 18px;
-}
-
 /* Preserve the two authored process diagrams while giving them a clear web flow. */
 .study--project-4 #the-disconnect [data-content-id="before-digital-clocks-and-numerical-dates-humans-3"] {
   grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr) 24px minmax(0, 1fr);
@@ -349,6 +356,15 @@
   border-radius: 10px;
   background: var(--lc-paper);
 }
+.study--project-4 #designing-a-seasonal-journey [data-content-id="users-familiar-with-the-solar-terms-but-3"] .study-heading {
+  color: #4f5238;
+  font: 600 20px/1.4 var(--study-body-font);
+  text-wrap: auto;
+}
+.study--project-4 #designing-a-seasonal-journey [data-content-id="users-familiar-with-the-solar-terms-but-3"] .study-text {
+  color: var(--study-muted);
+  font-size: 16px;
+}
 .study--project-4 .lc-storyboard {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -360,6 +376,42 @@
 .study--project-4 .lc-storyboard-image :is(.study-image-frame, img) { width: 100%; height: 100%; max-height: 220px; object-fit: contain; }
 .study--project-4 .lc-storyboard-image .study-image { height: 100%; }
 .study--project-4 .lc-storyboard-panel .study-text { font: 400 13px/1.6 var(--study-body-font); color: var(--study-muted); }
+
+/* Start the interaction chapter with the finished prototype and a direct way to try it. */
+.study--project-4 .lc-prototype-showcase { display: grid; gap: 20px; min-width: 0; }
+.study--project-4 .lc-prototype-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 24px; }
+.study--project-4 .lc-prototype-header h3 { color: #4f5238; font: 600 20px/1.4 var(--study-body-font); }
+.study--project-4 .lc-prototype-header .study-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #d5c792;
+  border-radius: 6px;
+  background: var(--lc-soft);
+  color: #4f5238;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+.study--project-4 .lc-prototype-header .study-link:hover { background: #eee6c7; }
+.study--project-4 .lc-prototype-player { display: grid; gap: 16px; min-width: 0; }
+.study--project-4 .lc-prototype-switcher { display: flex; flex-wrap: wrap; gap: 8px; }
+.study--project-4 .lc-prototype-switcher button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--lc-line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--study-muted);
+  font: 500 14px/1.4 var(--study-body-font);
+  cursor: pointer;
+}
+.study--project-4 .lc-prototype-switcher button:hover { background: #f5f2e5; color: #4f5238; }
+.study--project-4 .lc-prototype-switcher button[aria-pressed="true"] { border-color: #b8b68c; background: #eae9d8; color: #4f5238; }
+.study--project-4 .lc-prototype-switcher button:focus-visible { outline: 2px solid var(--study-accent); outline-offset: 3px; }
+.study--project-4 .lc-prototype-preview { min-width: 0; }
+.study--project-4 .lc-prototype-preview :is(.lc-recording, .lc-recording video) { aspect-ratio: var(--lc-prototype-ratio); }
 
 /* Read each interaction's three iterations from left to right. */
 .study--project-4 .lc-progressions { display: grid; gap: 40px; }
@@ -560,7 +612,6 @@
   .study--project-4 .lc-connection-panel { grid-template-rows: auto; grid-row: auto; }
   .study--project-4 .lc-connection-donut { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 24px; }
   .study--project-4 { padding-top: 32px; }
-  .study--project-4 .study-hero { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
   .study--project-4 .study-sidebar { --lc-menu-top: 98px; }
   .study--project-4 .study-section { margin-top: 56px; padding-top: 24px; scroll-margin-top: 164px; }
   .study--project-4 .study-section-body { margin-top: 24px; }
