@@ -136,14 +136,27 @@ function VisualReferences({ block }) {
 }
 
 function ConceptStudy({ block }) {
-  const [concept, notes] = block.items;
+  const [concept] = block.items;
   return <article className="lc-concept" data-content-id={block.id}>
     <div className="lc-concept-intro">
       <Block block={concept.copy} />
-      <div className="lc-concept-notes"><Block block={notes} /></div>
     </div>
     <Block block={concept.media} />
   </article>;
+}
+
+function ConceptComparison({ block }) {
+  return <section className="lc-concept-comparison" data-content-id={block.id} aria-labelledby={block.heading.id}>
+    <h3 id={block.heading.id} data-content-id={block.heading.id}><RichText value={block.heading.text} /></h3>
+    <table aria-labelledby={block.heading.id}>
+      <thead><tr>{block.columns.map(column => <th key={column} scope="col">{column}</th>)}</tr></thead>
+      <tbody>{block.rows.map(row => <tr key={row.criterion}>
+        <th scope="row">{row.criterion}</th>
+        {row.cells.map(cell => <td key={cell.id}><Block block={cell} /></td>)}
+      </tr>)}</tbody>
+    </table>
+    <div className="lc-concept-decision"><Block block={block.decision} /></div>
+  </section>;
 }
 
 function Storyboard({ block }) {
@@ -174,15 +187,13 @@ function InteractionProgression({ block }) {
 function TestingFindings({ block }) {
   return <div className="lc-testing" data-content-id={block.id}>
     {block.items.map(item => {
-      const annotated = item.media.annotations || item.media.items?.some(media => media.annotations);
       return <article className="lc-testing-row" key={item.id} data-content-id={item.id}>
         <div className="lc-testing-copy">
           <Block block={item.copy} />
-          {annotated ? <Block block={item.findings[0]} /> :
-            <ul>{item.findings.map(finding => <li key={finding.id}><Block block={finding} /></li>)}</ul>}
+          {item.findings.slice(0, -1).map(finding => <Block key={finding.id} block={finding} />)}
         </div>
         <div className="lc-testing-images"><Block block={item.media} /></div>
-        {annotated && <div className="lc-testing-refinement"><Block block={item.findings.at(-1)} /></div>}
+        <div className="lc-testing-refinement"><Block block={item.findings.at(-1)} /></div>
       </article>;
     })}
   </div>;
@@ -222,6 +233,7 @@ const components = {
   "exploring-ways-to-experience-time-visuals-3": VisualReferences,
   "concept-sketches-1-calendar-inspired-interface-4": ConceptStudy,
   "concept-sketches-2-time-as-a-cycle-4": ConceptStudy,
+  "concept-comparison": ConceptComparison,
   "maya-feels-overwhelmed-by-numbered-calendars-days-3": Storyboard,
   "dial-navigation-3": InteractionProgression,
   "landing-page-users-understood-the-wheels-cyclical-3": TestingFindings,

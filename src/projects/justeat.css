@@ -264,7 +264,9 @@
 .study--project-1 .je-wireframe-notes > .study-text { font-size: 16px; font-weight: 400; }
 .study--project-1 .je-wireframe-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: 24px; }
 .study--project-1 .je-wireframe-flow { display: grid; align-content: start; gap: 20px; padding: 20px; border-radius: 10px; background: #f2f3ee; }
-.study--project-1 .je-wireframe-flow figcaption { font-weight: 700; }
+.study--project-1 .je-wireframe-flow figcaption .study-group { gap: 8px; }
+.study--project-1 .je-wireframe-flow figcaption .study-text:first-child { font-weight: 700; }
+.study--project-1 .je-wireframe-flow figcaption .study-text + .study-text { font-size: 14px; line-height: 1.55; }
 .study--project-1 .je-wireframe-screens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 12px; }
 /* Every flow uses the same screen size, including the two-screen cart flow. */
 .study--project-1 .je-wireframe-screens > .study-image-frame { min-width: 0; aspect-ratio: 9 / 20 !important; background: #fff; }
@@ -301,6 +303,8 @@
   aspect-ratio: 844 / 1674;
 }
 .study--project-1 .je-prototype .study-label { font-size: 18px; }
+.study--project-1 .je-prototype figcaption .study-group { gap: 10px; }
+.study--project-1 .je-prototype figcaption .study-text { font-size: 15px; line-height: 1.55; }
 /* The frame controls layout; each recording fits inside it at its native ratio. */
 .study--project-1 .je-prototype .study-video-player {
   position: absolute;

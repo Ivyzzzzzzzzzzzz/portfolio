@@ -39,7 +39,7 @@ export default function LandingPage({ projects }) {
             <h1 id="portfolio-title">Ivy <em>Li</em><span className="home-period">.</span></h1>
             <div className="home-masthead-note">
               <span className="home-asterisk" aria-hidden="true">✳︎</span>
-              <p>Product &<br />interaction design.</p>
+              <p>Product &{" "}<br />interaction design.</p>
             </div>
           </div>
 
@@ -47,10 +47,17 @@ export default function LandingPage({ projects }) {
             <p className="home-label">A little introduction</p>
             <div className="home-intro-copy">
               <p>
-                I’m Ivy, a designer working across <em>research, interfaces, and code.</em>{" "}
-                I make everyday things a little easier to navigate.
+                I'm Ivy, a designer working at the intersection of{" "}
+                <em>human behavior, digital experiences, and creative technology.</em>{" "}
+                I turn overlooked everyday frictions into thoughtful, intuitive interactions.
               </p>
-              <span className="home-intro-detail">UX research / UI design / Prototyping</span>
+              <span className="home-intro-detail">
+                <span>UX Research</span>{" / "}
+                <span>Interaction Design</span>{" / "}
+                <span>Creative Prototyping</span>
+              </span>
+              {/* TODO(contact): Add an Email link here once a public email address is verified. */}
+              {/* TODO(contact): Add a Resume link here once a resume file or URL is verified. */}
             </div>
           </div>
         </section>

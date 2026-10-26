@@ -12,9 +12,16 @@ export const content = {
       "Prototyping"
     ],
     "subtitle": [
-      { "text": "Helping diners spot " },
-      { "text": "allergen conflicts", "tone": "highlight" },
-      { "text": " before they order." }
+      {
+        "text": "Helping diners spot "
+      },
+      {
+        "text": "allergen conflicts",
+        "tone": "highlight"
+      },
+      {
+        "text": " before they order."
+      }
     ],
     "problem": "Diners with food allergies have to cross-check ingredients and explain dietary needs while everyone else is ready to order.",
     "description": "I designed a dine-in ordering app that puts dish-level allergen warnings and shared dietary profiles directly in the menu, so diners can check for themselves and their table.",
@@ -40,7 +47,7 @@ export const content = {
             {
               "type": "text",
               "id": "eating-out-with-a-food-allergy-is",
-              "text": "Dining with food allergies means making high-stakes decisions in a fast-moving social setting."
+              "text": "At a restaurant table, checking a dish means piecing together menu details, separate allergen lists, and answers from staff while other diners wait. This project focuses on making that check part of ordering."
             },
             {
               "type": "columns",
@@ -96,10 +103,10 @@ export const content = {
       "title": "Gap",
       "takeaway": [
         {
-          "text": "Existing apps leave a gap "
+          "text": "The apps I reviewed helped with preparation, but left a gap "
         },
         {
-          "text": "at the moment of ordering",
+          "text": "at the restaurant table",
           "strong": true,
           "tone": "highlight"
         },
@@ -115,7 +122,7 @@ export const content = {
             {
               "type": "text",
               "id": "existing-apps-largely-focus-on-individual-preparation",
-              "text": "I compared three approaches: ingredient lookup, packaged-food scanning, and restaurant discovery."
+              "text": "I reviewed ingredient lookup, packaged-food scanning, and restaurant discovery to see what each offered a diner already choosing from a menu."
             },
             {
               "type": "columns",
@@ -368,7 +375,7 @@ export const content = {
                           "copy": {
                             "type": "text",
                             "id": "scanning-interaction-clear-hierachy",
-                            "text": "Scanning interaction & clear hierachy"
+                            "text": "Scanning interaction & clear hierarchy"
                           }
                         },
                         {
@@ -551,7 +558,7 @@ export const content = {
                       "copy": {
                         "type": "text",
                         "id": "features-misaligned-with-core-purpose",
-                        "text": "Features misaligned with core purpose"
+                        "text": "Discovery does not resolve dish-level questions"
                       }
                     }
                   ]
@@ -606,7 +613,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "pretended-to-have-a-severe-egg-allergy",
-                  "text": "I followed an egg-free diet for one week to explore the everyday effort of checking ingredients while dining out."
+                  "text": "I followed an egg-free diet for one week to document ingredient-checking steps. This was a personal observation exercise; the six interviews below supplied lived experiences."
                 }
               ]
             },
@@ -624,18 +631,12 @@ export const content = {
                       {
                         "type": "label",
                         "id": "what-i-feel",
-                        "text": [
-                          {
-                            "text": "What I feel",
-                            "strong": true,
-                            "tone": "ink"
-                          }
-                        ]
+                        "text": "What I observed"
                       },
                       {
                         "type": "label",
                         "id": "insights",
-                        "text": "Insights"
+                        "text": "Design implication"
                       }
                     ]
                   },
@@ -646,17 +647,14 @@ export const content = {
                       {
                         "type": "text",
                         "id": "constant-mental-reminders-you-cant-eat-that",
-                        "text": "Constant mental reminders: “You can’t eat that”; everyday foods (bread, snacks) suddenly felt unsafe: no room to “ignore it”."
+                        "text": "I repeatedly checked everyday foods, including bread and snacks, for egg ingredients."
                       },
                       {
                         "type": "label",
                         "id": "food-allergies-create-constant-cognitive-load",
                         "text": [
                           {
-                            "text": "Food allergies create "
-                          },
-                          {
-                            "text": "constant cognitive load",
+                            "text": "Keep restrictions available throughout the order.",
                             "tone": "highlight"
                           }
                         ]
@@ -670,17 +668,14 @@ export const content = {
                       {
                         "type": "text",
                         "id": "while-using-menu-salt-smoke-allergens",
-                        "text": "While using menu (Salt & Smoke), allergens are listed separately from dishes which required flipping back and forth; took ~30 minutes to assess “what I can eat”."
+                        "text": "At Salt + Smoke, I spent about 30 minutes comparing dishes with a separate allergen guide."
                       },
                       {
                         "type": "label",
                         "id": "allergy-safety-directly-affects-social-comfort-and",
                         "text": [
                           {
-                            "text": "Allergy safety directly affects "
-                          },
-                          {
-                            "text": "social comfort and participation",
+                            "text": "Put allergen information beside the dish.",
                             "tone": "highlight"
                           }
                         ]
@@ -694,17 +689,14 @@ export const content = {
                       {
                         "type": "text",
                         "id": "my-friends-needed-to-wait-me-forever",
-                        "text": "My friends needed to wait me forever and I felt frustrating and socially awkward."
+                        "text": "My friends waited while I checked the menu; I felt frustrated and awkward."
                       },
                       {
                         "type": "label",
                         "id": "current-dine-in-systems-dont-support-real-time-decisions",
                         "text": [
                           {
-                            "text": "Current dine-in systems "
-                          },
-                          {
-                            "text": "don’t support real-time decisions",
+                            "text": "Support checking while the table chooses together.",
                             "tone": "highlight"
                           }
                         ]
@@ -1017,9 +1009,15 @@ export const content = {
               "type": "figure",
               "id": "persona-2",
               "caption": {
-                "type": "heading",
-                "id": "persona",
-                "text": "Persona"
+                "type": "group",
+                "id": "persona-2-caption",
+                "items": [
+                  {
+                    "type": "heading",
+                    "id": "persona",
+                    "text": "Persona"
+                  }
+                ]
               },
               "media": {
                 "type": "image",
@@ -1043,15 +1041,14 @@ export const content = {
           "id": "how-might-we-provide-a-clear-and",
           "text": [
             {
-              "text": "How might we help diners check allergens and share dietary needs so everyone can "
+              "text": "How might we help diners "
             },
             {
-              "text": "order with confidence",
-              "strong": true,
+              "text": "check a dish against their dietary needs",
               "tone": "highlight"
             },
             {
-              "text": "?"
+              "text": " while keeping up with the table’s order?"
             }
           ]
         }
@@ -1068,7 +1065,7 @@ export const content = {
             {
               "type": "text",
               "id": "in-the-brainstorming-phase-i-explored-a",
-              "text": "I compared mobile, wearable, and analog concepts for reducing uncertainty and social friction around food allergies. Storyboards explore shared dining and individual pickup."
+              "text": "I explored ways to bring ingredient checks into the meal. The sketches cover wearables, communication aids, and a QR-linked menu; the storyboards compare group dining with individual pickup."
             },
             {
               "type": "columns",
@@ -1209,7 +1206,7 @@ export const content = {
                       "copy": {
                         "type": "text",
                         "id": "multiple-people-dine-in-1-input-table",
-                        "text": "Multiple people dine in:\n1. Input table #\n2. Input Allergens\n3. Start order on phone"
+                        "text": "Group dining: connect to a table, enter dietary needs, and check dishes on a phone while ordering together. This became the main scenario."
                       },
                       "media": {
                         "type": "image",
@@ -1226,7 +1223,7 @@ export const content = {
                       "caption": {
                         "type": "text",
                         "id": "single-person-pick-up-1-input-allergens-2",
-                        "text": "Single person pick-up:\n1. Input Allergens\n2. Start order on tablet"
+                        "text": "Individual pickup: enter dietary needs and order on a restaurant tablet. This exploration informed the tablet layout."
                       },
                       "media": {
                         "type": "image",
@@ -1267,6 +1264,11 @@ export const content = {
           "id": "my-final-design-concept-is-a-dine-infocused-2",
           "items": [
             {
+              "type": "text",
+              "id": "concept-selection-rationale",
+              "text": "I chose a table-linked mobile menu because it puts ingredient checks where the delay occurred: while choosing dishes. The core flow serves one diner; saved family profiles and table sharing extend that check to people ordering together."
+            },
+            {
               "type": "columns",
               "id": "scan-the-qr-code-4",
               "items": [
@@ -1285,7 +1287,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "after-entering-the-restaurant-and-taking-their",
-                        "text": "Scan the table’s QR code to start ordering."
+                        "text": "Open the restaurant menu from the table, where the ingredient check is needed."
                       }
                     ]
                   },
@@ -1313,7 +1315,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "matching-a-user-input-allergy-profile-with-dish",
-                        "text": "Match dietary profiles with the restaurant’s dish ingredients and preparation details."
+                        "text": "Enter or select whose dietary needs the menu should use."
                       }
                     ]
                   },
@@ -1341,7 +1343,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "when-a-user-views-a-menu-or",
-                        "text": "See personal allergen warnings while browsing the menu and choosing a dish."
+                        "text": "Compare dish information with the selected profile before adding food to the cart."
                       }
                     ]
                   },
@@ -1369,7 +1371,7 @@ export const content = {
                       {
                         "type": "text",
                         "id": "viewing-cart-and-placing-order",
-                        "text": "Review the cart and place the order."
+                        "text": "Review selected dishes together before submitting the order."
                       }
                     ]
                   },
@@ -1398,7 +1400,7 @@ export const content = {
           "copy": {
             "type": "text",
             "id": "i-chose-the-app-s-single-user-ordering",
-            "text": "This flow focuses on a single diner, from entering dietary preferences to reviewing dishes and checking out."
+            "text": "I mapped the single-diner path first: set dietary needs, inspect a dish, then review the order. The final screens extend the same check to saved profiles and shared dishes."
           },
           "media": {
             "type": "image",
@@ -1426,22 +1428,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "main-elements-food-photo-dish-name-price",
-                  "text": [
-                    {
-                      "text": "Main elements",
-                      "strong": true
-                    },
-                    {
-                      "text": "\nFood photo\nDish name (price, rating)\nDish details\nView cart\n"
-                    },
-                    {
-                      "text": "Allergen warnings",
-                      "strong": true
-                    },
-                    {
-                      "text": "\nOrder detail\nFlavor, source, etc.\nFrequently bought together"
-                    }
-                  ]
+                  "text": "I used the wireframes to place dietary setup before browsing and keep allergen cues beside dish information. The sketches explore how menu, dish, and cart screens connect."
                 },
                 {
                   "type": "columns",
@@ -1481,9 +1468,20 @@ export const content = {
                               "type": "figure",
                               "id": "enter-food-preferences-2",
                               "caption": {
-                                "type": "text",
-                                "id": "enter-food-preferences",
-                                "text": "Enter food preferences"
+                                "type": "group",
+                                "id": "enter-food-preferences-2-caption",
+                                "items": [
+                                  {
+                                    "type": "text",
+                                    "id": "enter-food-preferences",
+                                    "text": "Set dietary needs"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "id": "enter-food-preferences-2-purpose",
+                                    "text": "Enter restrictions or select a saved profile before checking the menu."
+                                  }
+                                ]
                               },
                               "media": {
                                 "type": "columns",
@@ -1520,9 +1518,20 @@ export const content = {
                               "type": "figure",
                               "id": "dish-details-2",
                               "caption": {
-                                "type": "text",
-                                "id": "dish-details",
-                                "text": "Dish details"
+                                "type": "group",
+                                "id": "dish-details-2-caption",
+                                "items": [
+                                  {
+                                    "type": "text",
+                                    "id": "dish-details",
+                                    "text": "Inspect a dish"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "id": "dish-details-2-purpose",
+                                    "text": "Place ingredient warnings next to the dish and its selectable options."
+                                  }
+                                ]
                               },
                               "media": {
                                 "type": "columns",
@@ -1565,9 +1574,20 @@ export const content = {
                               "type": "figure",
                               "id": "order-detail-2",
                               "caption": {
-                                "type": "text",
-                                "id": "order-detail",
-                                "text": "Order detail"
+                                "type": "group",
+                                "id": "order-detail-2-caption",
+                                "items": [
+                                  {
+                                    "type": "text",
+                                    "id": "order-detail",
+                                    "text": "Compare menu items"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "id": "order-detail-2-purpose",
+                                    "text": "Keep allergen cues beside dishes while comparing what to order."
+                                  }
+                                ]
                               },
                               "media": {
                                 "type": "columns",
@@ -1604,9 +1624,20 @@ export const content = {
                               "type": "figure",
                               "id": "view-cart-2",
                               "caption": {
-                                "type": "text",
-                                "id": "view-cart",
-                                "text": "View cart"
+                                "type": "group",
+                                "id": "view-cart-2-caption",
+                                "items": [
+                                  {
+                                    "type": "text",
+                                    "id": "view-cart",
+                                    "text": "Review the order"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "id": "view-cart-2-purpose",
+                                    "text": "Bring selected items together for a final review before checkout."
+                                  }
+                                ]
                               },
                               "media": {
                                 "type": "columns",
@@ -1655,9 +1686,20 @@ export const content = {
               "type": "figure",
               "id": "scan-qr-code-and-create-allergen-profile-2",
               "caption": {
-                "type": "label",
-                "id": "scan-qr-code-and-create-allergen-profile",
-                "text": "Set dietary needs"
+                "type": "group",
+                "id": "scan-qr-code-and-create-allergen-profile-2-caption",
+                "items": [
+                  {
+                    "type": "label",
+                    "id": "scan-qr-code-and-create-allergen-profile",
+                    "text": "Set dietary needs"
+                  },
+                  {
+                    "type": "text",
+                    "id": "scan-qr-code-and-create-allergen-profile-2-purpose",
+                    "text": "Enter dietary needs before browsing, so later dish warnings have a profile to reference."
+                  }
+                ]
               },
               "media": {
                 "type": "video",
@@ -1672,9 +1714,20 @@ export const content = {
               "type": "figure",
               "id": "place-an-order-2",
               "caption": {
-                "type": "label",
-                "id": "place-an-order",
-                "text": "Review warnings and order"
+                "type": "group",
+                "id": "place-an-order-2-caption",
+                "items": [
+                  {
+                    "type": "label",
+                    "id": "place-an-order",
+                    "text": "Review warnings and order"
+                  },
+                  {
+                    "type": "text",
+                    "id": "place-an-order-2-purpose",
+                    "text": "Move from menu cues to dish details and the cart, keeping the ingredient check within ordering."
+                  }
+                ]
               },
               "media": {
                 "type": "video",
@@ -1689,9 +1742,20 @@ export const content = {
               "type": "figure",
               "id": "view-profile-demo",
               "caption": {
-                "type": "label",
-                "id": "view-profile",
-                "text": "Reuse saved profiles"
+                "type": "group",
+                "id": "view-profile-demo-caption",
+                "items": [
+                  {
+                    "type": "label",
+                    "id": "view-profile",
+                    "text": "Reuse saved profiles"
+                  },
+                  {
+                    "type": "text",
+                    "id": "view-profile-demo-purpose",
+                    "text": "Revisit saved profiles to check existing settings instead of rebuilding them for another order."
+                  }
+                ]
               },
               "media": {
                 "type": "video",
@@ -2375,9 +2439,20 @@ export const content = {
               "type": "figure",
               "id": "responsive-layout-2",
               "caption": {
-                "type": "label",
-                "id": "responsive-layout",
-                "text": "Responsive layout: mobile and tablet"
+                "type": "group",
+                "id": "responsive-layout-2-caption",
+                "items": [
+                  {
+                    "type": "label",
+                    "id": "responsive-layout",
+                    "text": "Responsive layout: mobile and tablet"
+                  },
+                  {
+                    "type": "text",
+                    "id": "responsive-layout-2-purpose",
+                    "text": "Phone and tablet layouts keep dietary profiles and allergen cues beside the menu, carrying the same checking task across the two formats."
+                  }
+                ]
               },
               "media": {
                 "type": "columns",
@@ -2540,7 +2615,7 @@ export const content = {
                           "caption": {
                             "type": "text",
                             "id": "dish-card-tablet",
-                            "text": "Dish card-tablet"
+                            "text": "Tablet dish card: keep allergen cues with the photo, name, and price during comparison."
                           },
                           "media": {
                             "type": "image",
@@ -2557,7 +2632,7 @@ export const content = {
                           "caption": {
                             "type": "text",
                             "id": "dish-card-mobile",
-                            "text": "Dish card-mobile"
+                            "text": "Mobile dish row: preserve those cues in the narrower menu list."
                           },
                           "media": {
                             "type": "image",
@@ -2574,7 +2649,7 @@ export const content = {
                           "caption": {
                             "type": "text",
                             "id": "allergy-profile-card",
-                            "text": "Allergy profile card"
+                            "text": "Profile card: keep a person’s restrictions together when selecting whose needs to check."
                           },
                           "media": {
                             "type": "image",

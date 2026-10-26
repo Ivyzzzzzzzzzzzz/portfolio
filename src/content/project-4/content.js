@@ -13,7 +13,7 @@ export const content = {
       { "text": "." }
     ],
     "problem": "People recognized the 24 Solar Terms as cultural heritage, yet felt disconnected from the seasonal changes behind them in daily life.",
-    "description": "I designed and built an interactive calendar that connects daylight and shadow, cultural stories, and prompts for personal reflection, giving people ways to notice and engage with each season.",
+    "description": "I built an interactive calendar combining daylight and shadow, cultural stories, and prompts for seasonal reflection.",
     "link": {"text": "https://24-solar-terms-eta.vercel.app/intro", "href": "https://24-solar-terms-eta.vercel.app/intro"}
   },
   "sections": [
@@ -38,13 +38,7 @@ export const content = {
             {
               "type": "text",
               "id": "growing-up-in-china-the-24-solar",
-              "text": [
-                {
-                  "text": "Growing up in China, the 24 Solar Terms quietly shaped everyday life through seasonal foods, traditions, and observations of nature. Yet after studying abroad, I realized ",
-                  "tone": "muted"
-                },
-                {"text": "they had become little more than calendar notifications that I rarely noticed.", "strong": true, "tone": "olive"}
-              ]
+              "text": "In China, seasonal foods and family traditions connected me to the Solar Terms. After moving abroad, I barely noticed their calendar notifications."
             }
           ]
         }
@@ -73,10 +67,7 @@ export const content = {
                   "copy": {
                     "type": "text",
                     "id": "before-digital-clocks-and-numerical-dates-humans",
-                    "text": [
-                      {"text": "Before digital clocks and numerical dates, humans read the world through ", "tone": "muted"},
-                      {"text": "light, wind, shadows, and natural cycles.", "strong": true, "tone": "muted"}
-                    ]
+                    "text": "Light, wind, and shadows once helped people read seasonal change."
                   },
                   "media": {
                     "type": "composition",
@@ -132,11 +123,7 @@ export const content = {
                   "copy": {
                     "type": "text",
                     "id": "today-our-modern-calendar-shows-holidays-deadlines",
-                    "text": [
-                      {"text": "Today, our modern calendar shows holidays, deadlines, and meeting schedules in ", "tone": "muted"},
-                      {"text": "numbers", "strong": true, "tone": "muted"},
-                      {"text": ".", "tone": "muted"}
-                    ]
+                    "text": "Digital calendars foreground holidays, deadlines, and meetings."
                   },
                   "media": {
                     "type": "image",
@@ -159,7 +146,7 @@ export const content = {
                 {
                   "type": "heading",
                   "id": "ecology-gets-flattened-and-removed-so-the",
-                  "text": "Ecology gets flattened and removed, so the transformation in nature stops being lived when it is no longer experienced."
+                  "text": "Environmental cues disappear from our view of time."
                 }
               ]
             }
@@ -188,23 +175,7 @@ export const content = {
                   "copy": {
                     "type": "text",
                     "id": "the-24-solar-terms-are-a-traditional",
-                    "text": [
-                      {
-                        "text": "The 24 Solar Terms are a traditional East Asian calendrical system. Rather than measuring time only through numbers, it ",
-                        "tone": "muted"
-                      },
-                      {"text": "describes time through transformation in the nature", "strong": true, "tone": "muted"},
-                      {"text": ": the first rain of spring, the arrival of frost, ect.", "tone": "muted"},
-                      {"text": "\n\n"},
-                      {"text": "Historically, the 24 Solar Terms were used to ", "tone": "muted"},
-                      {"text": "guide agricultural labor", "strong": true, "tone": "muted"},
-                      {
-                        "text": ", helping people know when to sow, harvest, prepare, or adapt to environmental change. Over time, they also became ",
-                        "tone": "muted"
-                      },
-                      {"text": "embedded in everyday life", "strong": true, "tone": "muted"},
-                      {"text": " through food customs, poetry and festivals.", "tone": "muted"}
-                    ]
+                    "text": "The 24 Solar Terms mark seasonal changes, from spring rain to frost. This traditional East Asian calendar guided sowing, harvesting, and preparation for changing conditions. It also shaped food customs, poetry, and festivals."
                   },
                   "media": {
                     "type": "image",
@@ -227,7 +198,7 @@ export const content = {
                 {
                   "type": "heading",
                   "id": "the-system-functions-not-only-as-a",
-                  "text": "The system functions not only as a way of counting time, but as a way of living with it."
+                  "text": "Seasonal observation connected farming with everyday rituals."
                 }
               ]
             }
@@ -251,7 +222,7 @@ export const content = {
             {
               "type": "text",
               "id": "since-the-solar-terms-originated-in-chinese",
-              "text": "I began with people who grew up with the Solar Terms, asking how they relate to them in daily life."
+              "text": "I asked people who grew up with the Solar Terms how they relate to them today."
             },
             {
               "type": "columns",
@@ -395,15 +366,7 @@ export const content = {
           "id": "i-initially-assumed-this-was-a-cultural",
           "assumptionTitle": "Cultural preservation",
           "findingTitle": "Ecological disconnection",
-          "text": [
-            {"text": "I initially assumed this was a cultural preservation problem.", "tone": "muted"},
-            {"text": "\n"},
-            {"text": "However, the research revealed something different.", "strong": true, "tone": "muted"},
-            {"text": "\n"},
-            {"text": "People knew the Solar Terms existed, ", "tone": "muted"},
-            {"text": "yet still felt disconnected ", "strong": true, "tone": "muted"},
-            {"text": "from the ecological observations behind them.", "tone": "muted"}
-          ]
+          "text": "I expected cultural knowledge to be fading.\nThe research shifted the focus.\nParticipants recognized the Solar Terms but felt disconnected from their ecological meaning."
         }
       ]
     },
@@ -507,7 +470,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "to-better-understand-how-cultural-knowledge-can",
-                  "text": "To better understand how cultural knowledge can be translated across contexts, I reviewed research on cultural memory and phenomenology."
+                  "text": "Research on cultural memory and phenology informed the sensory approach."
                 },
                 {
                   "type": "columns",
@@ -700,11 +663,7 @@ export const content = {
         {
           "type": "text",
           "id": "how-might-we-help-people-reconnect-with",
-          "text": [
-            {"text": "How might we help people "},
-            {"text": "reconnect with seasonal rhythms", "strong": true, "tone": "highlight"},
-            {"text": " through a contemporary digital experience while making the ecological wisdom of the 24 Solar Terms accessible across cultures?"}
-          ]
+          "text": [{"text": "How might we help people "}, {"text": "reconnect with seasonal rhythms", "strong": true, "tone": "highlight"}, {"text": " through the 24 Solar Terms, across cultures?"}]
         }
       ]
     },
@@ -731,7 +690,7 @@ export const content = {
                     {
                       "type": "text",
                       "id": "helping-users-notice-seasonal-changes-through-environmental",
-                      "text": "Helping users notice seasonal changes through environmental cues (weather patterns, shadows, ect.)."
+                      "text": "Notice seasonal changes through weather, daylight, and shadows."
                     }
                   ]
                 },
@@ -743,7 +702,7 @@ export const content = {
                     {
                       "type": "text",
                       "id": "providing-access-to-the-traditions-rituals-stories",
-                      "text": "Providing access to the traditions, rituals, stories, and knowledge associated with each Solar Term."
+                      "text": "Explore each term’s traditions, rituals, stories, and poems."
                     }
                   ]
                 },
@@ -755,16 +714,11 @@ export const content = {
                     {
                       "type": "text",
                       "id": "creating-opportunities-for-users-to-reflect-on",
-                      "text": "Creating opportunities for users to reflect on and relate seasonal change to their own experiences."
+                      "text": "Relate seasonal change to personal observations and everyday life."
                     }
                   ]
                 }
               ]
-            },
-            {
-              "type": "label",
-              "id": "together-these-three-layers-transform-the-solar",
-              "text": "Together, these three layers transform the Solar Terms from information to experience."
             }
           ]
         }
@@ -789,7 +743,7 @@ export const content = {
               "copy": {
                 "type": "text",
                 "id": "because-users-connected-most-strongly-through-observation",
-                "text": "Participants connected most strongly through observation and reflection. This guided the feature priorities shown here."
+                "text": "80% chose noticing nature and 70% stepping outside as meaningful interactions."
               },
               "media": {
                 "type": "image",
@@ -820,7 +774,7 @@ export const content = {
             {
               "type": "text",
               "id": "visual-references-exploring-traditional-chinese-aesthetics-and",
-              "text": "Visual references exploring traditional Chinese aesthetics and seasonal motifs."
+              "text": "Visual references: Chinese aesthetics and seasonal motifs."
             },
             {
               "type": "columns",
@@ -950,12 +904,12 @@ export const content = {
                       {
                         "type": "text",
                         "id": "concept-sketches-1-calendar-inspired-interface",
-                        "text": "Concept Sketches 1: Calendar-inspired Interface"
+                        "text": "Concept 1: Linear Calendar Interface"
                       },
                       {
                         "type": "text",
                         "id": "explore-a-familiar-and-accessible-way-of",
-                        "text": "Explore a familiar and accessible way of navigating the 24 Solar Terms (linear timeline)."
+                        "text": "A familiar timeline arranges the 24 Solar Terms in sequence."
                       }
                     ]
                   },
@@ -989,14 +943,6 @@ export const content = {
                       }
                     ]
                   }
-                },
-                {
-                  "type": "group",
-                  "id": "low-learning-curve-2",
-                  "items": [
-                    {"type": "text", "id": "low-learning-curve", "text": "Low learning curve"},
-                    {"type": "text", "id": "weak-seasonal-immersion", "text": "Weak seasonal immersion"}
-                  ]
                 }
               ]
             },
@@ -1011,11 +957,11 @@ export const content = {
                     "type": "group",
                     "id": "concept-sketches-2-time-as-a-cycle-2",
                     "items": [
-                      {"type": "text", "id": "concept-sketches-2-time-as-a-cycle", "text": "Concept Sketches 2: Time as a Cycle"},
+                      {"type": "text", "id": "concept-sketches-2-time-as-a-cycle", "text": "Concept 2: Circular / Cyclical Navigation"},
                       {
                         "type": "text",
                         "id": "explore-whether-the-astronomical-foundations-of-the",
-                        "text": "Explore whether the astronomical foundations of the Solar Terms could become the primary interaction model."
+                        "text": "A circular dial connects solar longitude with the recurring seasonal cycle."
                       }
                     ]
                   },
@@ -1049,16 +995,67 @@ export const content = {
                       }
                     ]
                   }
-                },
-                {
-                  "type": "group",
-                  "id": "better-seasonal-representation-2",
-                  "items": [
-                    {"type": "text", "id": "better-seasonal-representation", "text": "Better seasonal representation"},
-                    {"type": "text", "id": "too-abstract", "text": "Too abstract"}
-                  ]
                 }
               ]
+            },
+            {
+              "type": "group",
+              "id": "concept-comparison",
+              "heading": {
+                "type": "heading",
+                "id": "concept-comparison-title",
+                "text": "Comparing the Concepts"
+              },
+              "columns": [
+                "Decision criterion",
+                "Linear calendar",
+                "Circular / cyclical model"
+              ],
+              "rows": [
+                {
+                  "criterion": "First-use clarity",
+                  "cells": [
+                    {
+                      "type": "text",
+                      "id": "low-learning-curve",
+                      "text": "Familiar calendar conventions offer a low learning barrier."
+                    },
+                    {
+                      "type": "text",
+                      "id": "too-abstract",
+                      "text": "The abstract dial needs cues for rotation and term selection."
+                    }
+                  ]
+                },
+                {
+                  "criterion": "Seasonal expression",
+                  "cells": [
+                    {
+                      "type": "text",
+                      "id": "weak-seasonal-immersion",
+                      "text": "A sequence is easy to scan, but gives less sense of a continuous cycle."
+                    },
+                    {
+                      "type": "text",
+                      "id": "better-seasonal-representation",
+                      "text": "The circular form makes annual recurrence and seasonal progression visible."
+                    }
+                  ]
+                }
+              ],
+              "decision": {
+                "type": "text",
+                "id": "concept-comparison-decision",
+                "text": [
+                  {
+                    "text": "Decision: ",
+                    "strong": true
+                  },
+                  {
+                    "text": "I chose the circular dial for seasonal exploration and kept a year calendar for date lookup. This prioritized seasonal connection, while accepting a less familiar interaction that would need clearer cues."
+                  }
+                ]
+              }
             }
           ]
         }
@@ -1158,11 +1155,6 @@ export const content = {
               ]
             },
             {
-              "type": "text",
-              "id": "to-understand-where-engagement-breaks-down-i",
-              "text": "To understand where engagement breaks down, I mapped the journey of someone attempting to explore seasonal knowledge."
-            },
-            {
               "type": "image",
               "id": "designing-a-seasonal-journey-journey-map-1",
               "src": "/img/project-4/journey-map-1.svg",
@@ -1223,7 +1215,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "with-the-overall-structure-established-i-mapped",
-                  "text": "With the overall structure established, I mapped how users would navigate between these layers."
+                  "text": "From the current term, users can browse the list, open details, or continue to another term."
                 },
                 {
                   "type": "diagram",
@@ -1261,7 +1253,7 @@ export const content = {
             {
               "type": "text",
               "id": "finally-i-visualized-how-a-user-might",
-              "text": "Finally, I visualized how a user might encounter and engage with the experience in everyday life."
+              "text": "An imagined encounter: Maya connects a digital seasonal cue to the view outside her window."
             },
             {
               "type": "columns",
@@ -1290,7 +1282,7 @@ export const content = {
                   "copy": {
                     "type": "text",
                     "id": "while-studying-with-a-friend-maya-notices",
-                    "text": "While studying with a friend, Maya notices a small glowing orb floating on the corner of their laptop screen. It’s breathing lively."
+                    "text": "While studying, Maya notices a gently pulsing orb on her friend’s laptop."
                   },
                   "media": {
                     "type": "image",
@@ -1434,7 +1426,6 @@ export const content = {
           "type": "group",
           "id": "i-explored-several-approaches-for-presenting-the-4",
           "items": [
-            {"type": "text", "id": "interaction-prototype-exploration", "text": "Interaction Prototype Exploration"},
             {
               "type": "columns",
               "id": "dial-navigation-3",
@@ -1665,7 +1656,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "after-validating-the-interaction-concepts-through-prototyping",
-                  "text": "After validating the interaction concepts through prototyping, I developed the final website using vibe coding."
+                  "text": "I used vibe coding to build the animations, dial, and year calendar shown below."
                 }
               ]
             },
@@ -1820,6 +1811,43 @@ export const content = {
               ]
             },
             {
+              "type": "group",
+              "id": "testing-change-status",
+              "items": [
+                {
+                  "type": "heading",
+                  "id": "testing-change-status-title",
+                  "text": "What Changed — and What Remains Proposed"
+                },
+                {
+                  "type": "text",
+                  "id": "testing-built-status",
+                  "text": [
+                    {
+                      "text": "Already built: ",
+                      "strong": true
+                    },
+                    {
+                      "text": "The circular dial, seasonal animations, and year calendar are shown in the implementation recordings."
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "testing-post-test-status",
+                  "text": [
+                    {
+                      "text": "Changes after testing: ",
+                      "strong": true
+                    },
+                    {
+                      "text": "No completed fixes or follow-up test results are documented. The improvements below remain proposals, not validated outcomes."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "type": "columns",
               "id": "landing-page-users-understood-the-wheels-cyclical-3",
               "items": [
@@ -1837,7 +1865,7 @@ export const content = {
                       "id": "testing-landing-concept",
                       "text": [
                         {
-                          "text": "What worked: ",
+                          "text": "Understood: ",
                           "strong": true
                         },
                         {
@@ -1847,16 +1875,21 @@ export const content = {
                     },
                     {
                       "type": "text",
-                      "id": "testing-landing-priority",
+                      "id": "testing-landing-friction",
                       "text": [
                         {
-                          "text": "Refinement priority: ",
+                          "text": "Struggled with: ",
                           "strong": true
                         },
                         {
-                          "text": "Make rotation easier to discover and support selecting a term directly from its label."
+                          "text": "Some participants preferred clicking term labels over dragging; the wheel’s interactive behavior was not obvious."
                         }
                       ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "testing-landing-priority",
+                      "text": [{"text": "Proposed improvement: ", "strong": true}, {"text": "Add a visible drag cue and direct term selection through labels. Re-test whether both paths are discoverable."}]
                     }
                   ],
                   "media": {
@@ -1880,7 +1913,7 @@ export const content = {
                           "side": "right",
                           "position": 61,
                           "title": "Clicking felt more natural",
-                          "text": "One participant clicked the term labels instead of dragging the wheel. The drag gesture needed a clearer cue."
+                          "text": "One participant tried the term labels instead of dragging the wheel, illustrating the preference for direct selection."
                         }
                       ]
                     }
@@ -1900,7 +1933,7 @@ export const content = {
                       "id": "testing-detail-comprehension",
                       "text": [
                         {
-                          "text": "What worked: ",
+                          "text": "Understood: ",
                           "strong": true
                         },
                         {
@@ -1910,16 +1943,21 @@ export const content = {
                     },
                     {
                       "type": "text",
-                      "id": "testing-detail-priority",
+                      "id": "testing-detail-friction",
                       "text": [
                         {
-                          "text": "Refinement priority: ",
+                          "text": "Struggled with: ",
                           "strong": true
                         },
                         {
-                          "text": "Clarify clickable targets and the solar graphic, and make content changes explicit and user-controlled."
+                          "text": "Navigation controls and the solar-longitude panel were unclear. Automatic content changes reduced control and obscured the link between the menu and current text."
                         }
                       ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "testing-detail-priority",
+                      "text": [{"text": "Proposed improvement: ", "strong": true}, {"text": "Label navigation targets, explain solar longitude, and let users change content explicitly rather than automatically."}]
                     }
                   ],
                   "media": {
@@ -1966,7 +2004,7 @@ export const content = {
                               "side": "left",
                               "position": 79,
                               "title": "Autoplay broke the connection",
-                              "text": "Automatic content changes made it hard to connect the menu with the current text."
+                              "text": "Text changed automatically, reducing control over reading pace and making the menu-to-content connection hard to follow."
                             }
                           ]
                         },
@@ -1990,7 +2028,7 @@ export const content = {
                       "id": "testing-calendar-expectations",
                       "text": [
                         {
-                          "text": "What worked: ",
+                          "text": "Understood: ",
                           "strong": true
                         },
                         {
@@ -2000,16 +2038,21 @@ export const content = {
                     },
                     {
                       "type": "text",
-                      "id": "testing-calendar-priority",
+                      "id": "testing-calendar-friction",
                       "text": [
                         {
-                          "text": "Refinement priority: ",
+                          "text": "Struggled with: ",
                           "strong": true
                         },
                         {
-                          "text": "Give the date toggle a clear label and visible state so users can move between reading dates and exploring seasonal color."
+                          "text": "The date toggle was overlooked, wheel-to-grid links were unclear, and some interactions felt disconnected."
                         }
                       ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "testing-calendar-priority",
+                      "text": [{"text": "Proposed improvement: ", "strong": true}, {"text": "Label the date toggle, show its current state, and clarify the relationship between the wheel and grid."}]
                     }
                   ],
                   "media": {
@@ -2343,11 +2386,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "designing-this-website-made-me-more-aware",
-                  "text": [
-                    {"text": "Designing this website made me more aware that experimental interaction design is not only about inventing new forms, but about deciding "},
-                    {"text": "how much unfamiliarity a user can meaningfully hold", "strong": true},
-                    {"text": "."}
-                  ]
+                  "text": "Understanding the seasonal metaphor did not make its controls discoverable."
                 }
               ]
             },
@@ -2359,11 +2398,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "i-was-constantly-balancing-clarity-with-atmosphere",
-                  "text": [
-                    {"text": "I was constantly "},
-                    {"text": "balancing clarity with atmosphere", "strong": true},
-                    {"text": ", and function with visual character."}
-                  ]
+                  "text": "The dial supports exploration; the year calendar supports date lookup. Both need clear interaction cues."
                 }
               ]
             },
@@ -2375,11 +2410,7 @@ export const content = {
                 {
                   "type": "text",
                   "id": "rather-than-treating-usability-and-aesthetics-as",
-                  "text": [
-                    {"text": "Rather than treating usability and aesthetics as opposites, this process pushed me to see them as "},
-                    {"text": "two forces that must be negotiated together", "strong": true},
-                    {"text": "."}
-                  ]
+                  "text": "Next, test whether clearer labels and user-controlled content resolve the observed friction."
                 }
               ]
             }

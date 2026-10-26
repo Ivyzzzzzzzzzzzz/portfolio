@@ -39,11 +39,19 @@ function ContextJourney({ block }) {
 function MarketData({ block }) {
   return <div className="quiq-market-data" data-content-id={block.id}>
     {block.items.map((item, index) => <article className="ed-note-panel" key={item.id} data-content-id={item.id}>
-      <h3 className="ed-heading">{index === 0 ? "The current OTC landscape" : "The opportunity: efficacy + emotion"}</h3>
+      <h4 className="ed-heading">{index === 0 ? "OTC market notes" : "Adjacent category notes"}</h4>
       <p className="ed-copy quiq-market-summary" data-content-id={item.items[0].id}><RichText value={item.items[0].text} /></p>
       <Block block={item.items[1]} />
     </article>)}
   </div>;
+}
+
+function ResearchData({ block }) {
+  const [title, note, charts] = block.items;
+  return <details className="quiq-research-details" data-content-id={block.id}>
+    <summary data-content-id={title.id}>{textOf(title.text)}</summary>
+    <div className="quiq-research-details-body"><Copy block={note} /><Block block={charts} /></div>
+  </details>;
 }
 
 function TargetAudiences({ block }) {
@@ -68,19 +76,6 @@ function TargetAudiences({ block }) {
         })}
       </div>
     </article>
-  </div>;
-}
-
-function UserNeeds({ block }) {
-  return <div className="ed-response-grid quiq-needs" data-content-id={block.id}>
-    {block.items.map(item => {
-      const [need, label, response] = item.items;
-      return <article className="ed-response-card" key={item.id} data-content-id={item.id}>
-        <StepHeader block={{ ...need, items: need.items.slice(0, 2) }} />
-        <div className="ed-observation"><p className="ed-eyebrow">User need</p><Copy block={need.items[2]} /></div>
-        <Takeaway label={<span data-content-id={label.id}>{textOf(label.text)}</span>}><Copy block={response} /></Takeaway>
-      </article>;
-    })}
   </div>;
 }
 
@@ -119,6 +114,18 @@ function BrandApproach({ block }) {
       <span className="ed-step-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
       <Heading block={item.items[0]} /><Copy block={item.items[1]} />
     </article>)}
+  </div>;
+}
+
+function PackagingGallery({ block }) {
+  return <div className="quiq-package-gallery" data-content-id={block.id}>
+    {block.items.map(item => <figure key={item.id} data-content-id={item.id}>
+      <div className="ed-image-stage ed-media"><Block block={item.media} /></div>
+      <figcaption data-content-id={item.caption.id}>
+        <Heading block={item.caption.items[0]} />
+        <Copy block={item.caption.items[1]} />
+      </figcaption>
+    </figure>)}
   </div>;
 }
 
@@ -172,10 +179,11 @@ function PackagingCopy({ block }) {
     {block.items.map(item => {
       const [title, ingredients, help, ...details] = item.items;
       return <article key={item.id} data-content-id={item.id}>
-        <Heading block={title} /><LabeledParagraph block={help} />
+        <Heading block={title} />
         <details>
-          <summary>View label copy</summary>
+          <summary>View original label draft</summary>
           <div className="quiq-label-details">
+            <LabeledParagraph block={help} />
             <div><p className="ed-eyebrow">Ingredients</p><Copy block={ingredients} /></div>
             {details.map(detail => <LabeledParagraph block={detail} key={detail.id} />)}
           </div>
@@ -198,7 +206,7 @@ function DesignConcepts({ block }) {
     {block.items.map(item => {
       const copy = item.copy || item.items[0];
       const media = item.media ? [item.media] : item.items.slice(1);
-      return <article key={item.id} data-content-id={item.id}>
+      return <article className={item.selected ? "quiq-concept-selected" : undefined} key={item.id} data-content-id={item.id}>
         <div className="quiq-concept-copy" data-content-id={copy.id}>
           <p className="ed-eyebrow" data-content-id={copy.items[0].id}>{textOf(copy.items[0].text).replace(/:$/, "")}</p>
           <Heading block={copy.items[1]} /><Copy block={copy.items[2]} />
@@ -224,14 +232,15 @@ const components = {
   "brand-palette": BrandPalette,
   "i-often-had-headaches-and-fevers-back-3": ContextJourney,
   "top-brands-like-tylenol-and-advil-hold-3": MarketData,
+  "data-collection": ResearchData,
   "top-brands-3": QuiqMarketChart,
   "health-sector-grow-4": QuiqMarketChart,
   "1-4": TargetAudiences,
-  "1-8": UserNeeds,
   "1-12": MarketInsights,
   "tylenol-2": BrandExamples,
   "advil-2": BrandExamples,
   "design-approach-3": BrandApproach,
+  "packaging-design-visuals": PackagingGallery,
   "quiq-7": BrandBrief,
   "tone-of-messaging-2": ToneOfVoice,
   "1-16": Brainstorming,

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Block, Media } from "../components/case-study/CaseStudy.jsx";
 import EditorialCaseStudy, { Copy, CopyList, Heading, NumberedPoints, StepHeader, Takeaway, textOf } from "../components/case-study/EditorialCaseStudy.jsx";
 import MaintenanceDecisions from "./MaintenanceDecisions.jsx";
@@ -162,15 +163,100 @@ function CompetitorStudy({ block }) {
   </div>;
 }
 
-function PersonaJourney({ block }) {
+function ResearchArtifactsGallery({ block }) {
   const [persona, storyboard] = block.items[0].items;
   const journey = block.items[1];
-  return <div className="apt-persona-journey ed-media" data-content-id={block.id}>
-    <figure className="apt-persona"><figcaption>Persona</figcaption><Block block={persona} /></figure>
-    <div className="apt-journey-pair">
-      <figure><figcaption>Storyboard</figcaption><Block block={storyboard} /></figure>
-      <figure><figcaption>User journey</figcaption><Block block={journey} /></figure>
+  const artifacts = [persona, storyboard, journey];
+  const [selected, setSelected] = useState(null);
+  const isOpen = selected !== null;
+  const selectedIndex = artifacts.indexOf(selected);
+  const dialogRef = useRef(null);
+  const viewportRef = useRef(null);
+  const dialogId = `${block.id}-viewer`;
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const dialog = dialogRef.current;
+    const previousOverflow = document.body.style.overflow;
+    dialog.showModal();
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      if (dialog.open) dialog.close();
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    viewportRef.current?.scrollTo({ top: 0, left: 0 });
+  }, [selected]);
+
+  const switchArtifact = direction => {
+    setSelected(current => current
+      ? artifacts[(artifacts.indexOf(current) + direction + artifacts.length) % artifacts.length]
+      : null);
+  };
+
+  const handleArrowKeys = event => {
+    // Keep native scrolling keys available when the image canvas is focused.
+    if (event.target === viewportRef.current || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      switchArtifact(event.key === "ArrowLeft" ? -1 : 1);
+    }
+  };
+
+  const closeOnBackdrop = event => {
+    if (event.target !== event.currentTarget) return;
+    const { left, right, top, bottom } = event.currentTarget.getBoundingClientRect();
+    if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) {
+      event.currentTarget.close();
+    }
+  };
+
+  return <div className="apt-artifacts" data-content-id={block.id}>
+    <p className="apt-artifact-swipe-hint">Swipe to explore all three artifacts <span aria-hidden="true">→</span></p>
+    <div className="apt-artifact-grid" role="region" aria-label="Research artifact previews">
+      {artifacts.map(media => <figure className="apt-artifact-card" key={media.id}>
+        <button type="button" className="apt-artifact-preview" aria-label={`Enlarge ${media.label}`}
+          aria-haspopup="dialog" aria-controls={dialogId} onClick={() => setSelected(media)}>
+          <span className="apt-artifact-thumbnail" data-content-id={media.id}>
+            <img src={assetPath(media.src)} alt={media.alt} width={media.width} height={media.height}
+              loading="lazy" decoding="async" />
+          </span>
+        </button>
+        <figcaption>{media.label}</figcaption>
+      </figure>)}
     </div>
+    <dialog className="apt-artifact-dialog" id={dialogId} ref={dialogRef}
+      aria-labelledby={`${dialogId}-title`}
+      onClick={closeOnBackdrop} onKeyDown={handleArrowKeys} onClose={event => {
+        if (!event.currentTarget.open) setSelected(null);
+      }}>
+      {selected && <>
+        <header className="apt-artifact-toolbar">
+          <h3 id={`${dialogId}-title`} aria-live="polite" aria-atomic="true">{selected.label}</h3>
+          <button type="button" className="apt-artifact-close" aria-label={`Close ${selected.label} preview`}
+            autoFocus onClick={() => dialogRef.current.close()}><span aria-hidden="true">×</span></button>
+        </header>
+        <div className="apt-artifact-viewer">
+          <button type="button" className="apt-artifact-step apt-artifact-step--previous" aria-controls={`${dialogId}-canvas`}
+            aria-label={`Previous artifact: ${artifacts[(selectedIndex - 1 + artifacts.length) % artifacts.length].label}`}
+            onClick={() => switchArtifact(-1)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 6-6 6 6 6" /></svg>
+          </button>
+          <div ref={viewportRef} id={`${dialogId}-canvas`} className={`apt-artifact-canvas${selected === storyboard ? " apt-artifact-canvas--contained" : ""}`}
+            role="region" tabIndex={0} aria-label={`${selected.label}, scroll to explore`}
+            style={{ "--apt-artifact-reading-width": `${Math.max(1000, selected.width * 1.75)}px` }}>
+            <img src={assetPath(selected.src)} alt={selected.alt} width={selected.width} height={selected.height} />
+          </div>
+          <button type="button" className="apt-artifact-step apt-artifact-step--next" aria-controls={`${dialogId}-canvas`}
+            aria-label={`Next artifact: ${artifacts[(selectedIndex + 1) % artifacts.length].label}`}
+            onClick={() => switchArtifact(1)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6" /></svg>
+          </button>
+        </div>
+      </>}
+    </dialog>
   </div>;
 }
 
@@ -250,7 +336,7 @@ const components = {
   "submit-request-4": ProblemQuestions,
   "flow-a-submit-a-maintenance-request-3": WorkflowTests,
   "strength-4": CompetitorStudy,
-  "persona-storyboard-user-journey-visuals-2": PersonaJourney,
+  "persona-storyboard-user-journey-visuals-2": ResearchArtifactsGallery,
   "submit-requests-3": Wireframes,
   "high-fi-prototype-visuals": PrototypeFlows,
   "based-on-usability-testing-i-identified-several-3": MaintenanceDecisions,

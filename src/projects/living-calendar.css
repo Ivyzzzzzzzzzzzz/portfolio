@@ -292,13 +292,6 @@
   border-radius: 10px;
   background: var(--lc-paper);
 }
-.study--project-4 #designing-for-three-layers-of-connection [data-content-id="together-these-three-layers-transform-the-solar"] {
-  max-width: 42rem;
-  padding-left: 20px;
-  border-left: 3px solid var(--study-accent);
-  font-size: 18px;
-}
-
 /* Narrative/media rows mirror Food Allergy's design-decision rows. */
 .study--project-4 #from-insights-to-features [data-content-id="because-users-connected-most-strongly-through-observation-2"] {
   grid-template-columns: 320px minmax(0, 1fr);
@@ -342,10 +335,17 @@
 .study--project-4 .lc-concept-intro { display: flex; justify-content: space-between; align-items: start; gap: 32px; }
 .study--project-4 .lc-concept-intro > .study-group { gap: 12px; }
 .study--project-4 .lc-concept-intro > .study-group > .study-text:first-child { font-weight: 600; }
-.study--project-4 .lc-concept-notes { flex: 0 0 auto; padding: 12px 16px; background: var(--lc-soft); border-radius: 6px; }
-.study--project-4 .lc-concept-notes > .study-group { gap: 8px; }
-.study--project-4 .lc-concept-notes .study-text { font-size: 14px; }
 .study--project-4 .lc-concept > .study-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.study--project-4 .lc-concept-comparison { display: grid; gap: 18px; min-width: 0; }
+.study--project-4 .lc-concept-comparison h3 { color: #4f5238; font: 600 20px/1.4 var(--study-body-font); }
+.study--project-4 .lc-concept-comparison table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.study--project-4 .lc-concept-comparison :is(th, td) { padding: 16px; border-bottom: 1px solid var(--lc-line); text-align: left; vertical-align: top; }
+.study--project-4 .lc-concept-comparison th { color: #4f5238; font-size: 15px; font-weight: 600; }
+.study--project-4 .lc-concept-comparison thead { background: var(--lc-soft); }
+.study--project-4 .lc-concept-comparison th:first-child { width: 25%; }
+.study--project-4 .lc-concept-comparison td .study-text { max-width: 100%; color: var(--study-muted); font-size: 15px; }
+.study--project-4 .lc-concept-decision { padding-left: 20px; border-left: 3px solid var(--study-accent); }
+.study--project-4 .lc-concept-decision .study-text { max-width: 78ch; }
 
 .study--project-4 #designing-a-seasonal-journey [data-content-id="users-familiar-with-the-solar-terms-but-3"] {
   gap: 24px;
@@ -503,6 +503,9 @@
 
 /* Short findings sit above large, parallel annotated screens. */
 .study--project-4 .lc-testing { display: grid; gap: 40px; }
+.study--project-4 [data-content-id="testing-change-status"] { gap: 12px; padding: 20px 24px; border: 1px solid var(--lc-line); border-radius: 6px; background: var(--lc-soft); }
+.study--project-4 [data-content-id="testing-change-status"] .study-heading { font: 600 18px/1.4 var(--study-body-font); }
+.study--project-4 [data-content-id="testing-change-status"] .study-text { max-width: 78ch; color: var(--study-muted); font-size: 15px; }
 .study--project-4 .lc-testing-row { display: grid; gap: 24px; padding-top: 24px; border-top: 1px solid var(--lc-line); }
 .study--project-4 .lc-testing-copy { display: grid; gap: 16px; max-width: 78ch; color: var(--study-muted); }
 .study--project-4 .lc-testing-copy > .study-heading { color: var(--study-ink); font: 600 18px/1.4 var(--study-body-font); }
@@ -619,7 +622,6 @@
   .study--project-4 .lc-moodboard > .study-image { height: 180px; }
   .study--project-4 .lc-moodboard img { max-height: 180px; }
   .study--project-4 .lc-concept-intro { flex-direction: column; gap: 20px; }
-  .study--project-4 .lc-concept-notes > .study-group { display: flex; flex-wrap: wrap; gap: 12px 24px; }
   .study--project-4 .lc-storyboard {
     grid-template-columns: repeat(5, minmax(190px, 1fr));
     overflow-x: auto;
@@ -670,6 +672,9 @@
 }
 
 @media (max-width: 599px) {
+  .study--project-4 .lc-concept-comparison :is(th, td) { padding: 12px 8px; overflow-wrap: anywhere; }
+  .study--project-4 .lc-concept-comparison th { font-size: 13px; }
+  .study--project-4 .lc-concept-comparison td .study-text { font-size: 14px; }
   .study--project-4 .lc-response-count { display: block; margin-right: 0; }
   .study--project-4 .lc-connection-panel { padding: 20px; }
   .study--project-4 .lc-connection-donut { grid-template-columns: minmax(0, 1fr); gap: 16px; }
